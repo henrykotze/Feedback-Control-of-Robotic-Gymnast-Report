@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {2}Review of Fundamental Concepts}{4}
+\contentsline {section}{\numberline {3}Derivation of Double Pendulum}{4}
+\contentsline {section}{\numberline {4}Swing Up of the Double Pendulum}{5}
+\contentsline {section}{\numberline {5}Balancing of the Double Pendulum}{6}
+\contentsline {section}{\numberline {6}Null Controllability Region}{7}
+\contentsline {section}{\numberline {7}Simulating the Double Pendulum}{8}
+\contentsline {section}{\numberline {8}Experimental Analysis of Double Pendulum}{8}
+\contentsline {section}{\numberline {9}Why Designing in the Continuous Time Domain is Sufficient}{9}
+\contentsline {section}{\numberline {10}Mechanical Design of the Double Pendulum}{9}
+\contentsline {section}{\numberline {11}Electronic Design of the Double Pendulum}{10}
+\contentsline {subsection}{\numberline {11.1}System Description}{10}
+\contentsline {subsection}{\numberline {11.2}Voltage Regulation}{11}
+\contentsline {subsection}{\numberline {11.3}PC UART Interface }{11}
+\contentsline {subsection}{\numberline {11.4}Signal Conditioning}{11}
+\contentsline {subsection}{\numberline {11.5}Motor Driver}{12}
+\contentsline {subsection}{\numberline {11.6}AND Digital Logic Circuit}{12}
+\contentsline {subsection}{\numberline {11.7}JK FlipFlop's Digital Logic Circuit}{13}
+\contentsline {section}{\numberline {12}Verification of Model}{14}
+\contentsline {section}{Appendices}{16}
+\contentsline {section}{\numberline {A}Derivation of the Double Pendulum}{16}
+\contentsline {section}{\numberline {B}Linearisation of the Double Pendulum}{18}
+\contentsline {section}{\numberline {C}De-coupling of the Linearised System into 2 Independent Equations}{19}
+\contentsline {section}{\numberline {D}Collocated Linearisation}{20}
+\contentsline {section}{\numberline {E}Proof of Pumping Energy into System}{21}

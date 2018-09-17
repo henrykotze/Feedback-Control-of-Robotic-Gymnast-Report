@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Report.aux
+The style file: IEEEtran.bst
+Database file #1: IEEEabrv.bib
+Database file #2: references.bib
+Warning--string name "spring" is undefined
+--line 90 of file references.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty author in murray
+Warning--empty author in spong_swingup
+Warning--empty author in null_controllability
+Warning--empty author in simple_null_controllability
+
+Done.
+(There were 5 warnings)

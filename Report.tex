@@ -1,0 +1,361 @@
+\documentclass[a4paper,12pt]{article}
+
+
+
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tikz-dimline}
+\usepackage[toc,page]{appendix}
+\usepackage{verbatim}
+\usepackage{todonotes}
+\usepackage{pdfpages}
+\usepackage[siunitx]{circuitikz}
+%\usepackage[us]{circuitikz} % TiKZ Library for US Logic Circuits.
+
+%\usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
+
+\begin{document}
+%	\includepdf[pages=1]{progress_front.pdf}
+	\newpage
+	\tableofcontents
+	\newpage
+	
+	\section{Introduction}
+	The feedback control of a robotic gymnast attempt to model a gymnast swinging from the hanging position to the inverted balancing position on a bar as a double pendulum connected with a hinge. The lower pendulum in the stable equilibrium position is actuated by a motor to model the behaviour of the swinging legs. This system describe in the mathematical sense lends itself to be a underactuated system. Underactuated systems are where the control input cannot command an instantaneous acceleration in any direction of the state variables describing the system. The robotic gymnast needs to use the coupling between the actuated pendulum and unactuated pendulum to swing and balance the gymnast from it's stable equilibrium position to the unstable equilibrium position \cite{tedrake}.
+	\\
+	
+	The field of underactuated robotics are becoming increasingly more important due to multiple fields such as the rocket,satellite,aerospace and the consumer products relying more on control systems which needs to control a underactuated system. Examples such as the James Webb Telescope for the satellite industries, SpaceX landing of their rockets, and drones for consumers products are easily media attention seekers that are underactuated systems. 
+	\\
+	
+	The double pendulum that consist of a swing-up and balancing parts, is a underactuated problem, that employs fundamental concepts which exist in most underactuated problems. An complex non-linear problem of the swing-up part and the well defined linearised system of balancing the inverted double pendulum. The double pendulum is a great introductory problem to solve to step into the world of underactuated robotics.
+	\\
+	
+	% Project Overview
+	The process of achieving the swing up and balance of the robotic gymnast consist of a sequence of steps that is critical to the success of the project. The project starts of by doing a literature study to learn and understand new concepts and the design paradigms towards the characteristic properties of a underactuated system. The literature study equips the reader to solve problems by understanding the fundamental behaviour of the system. Simulation of the system is done to verify the newly learned concepts, learn the impact of system properties on system behaviour and test different design paradigms. This will entail the use of information technology and engineering tools to implement the system on a simulation package and make use of scientific and engineering knowledge to distinguish between conflicting and authentic behaviour describe by models and supported by the literature study. The mechanical design of the system is to follow based on the requirements and specification determined during simulation and to verify the accuracy of the model. The electronic design will occur simultaneously to measure the state variables and perform signal conditioning allowing the control system to be implemented. These designs will require the synthesis of components, system and procedural design. The project will come to life by integrating the mechanical and electronic designs to allow the verification of the experimental data with simulation data. Problem solving and the application of engineering knowledge will be key to identify and verify any hypothesis in behaviour of the system. Reporting on the project will occur during the various phases described above and will demonstrate the competence to communicate effectively in writing. The project will be supervised by a researcher who will give critical feedback on the student's performance and project task. The relationship will illustrate the individual, team and multidisciplinary working during the project.
+	\\
+	
+	% Report Outline
+	This report will document the process as describe in the preceding paragraph. The first chapter will provide a review of the essential concepts in control theory. This will be followed by the model describing the robotic gymnast and the assumptions made during the derivation of the model. Next the report describe the design paradigms to solving the non-linear swing-up of the gymnast. The report then describe the balancing of the gymnast in the unstable equilibrium position. Next the report discuss how the transition between the non-linear swing-up and the linearised will function.
+	
+	\section{Review of Fundamental Concepts}
+	
+	\section{Derivation of Double Pendulum}
+	\begin{figure}
+		\centering
+		\input{doublePendulumImage.tikz}
+		\caption{Free Body Diagram of the Double Pendulum}
+		\label{fig:doublePen}
+	\end{figure}
+
+	The robotic gymnast is modeled as two pendulums connected together with a hinge. Each pendulum is modeled as having their mass distributed arbitrary along their axis and a torque actuating the lower pendulum. Friction is modeled as proportional to the angular velocity of the pendulums. The friction that develops at the hinge connecting the 2 pendulums are a function of the relative motion between the two pendulums. The angle, $\phi$ was purposefully chosen relative to angle, $\theta$. Figure \ref{fig:doublePen} displays the free body diagram of the robotic gymnast.
+	\\
+	
+	Deriving the equation of motion of the robotic gymnast can be approached on different methods, but by exploring the system it can be shown that the system's energy is easily defined. The energy in the system are the potential energy of the 2 pendulums, the rotational kinetic energy of the underactuated pendulum and the velocity- and rotational kinetic energy of the actuated pendulum. The system's energy is easily defined and for this reason the Lagrange-Euler equation is used to derive the differential equation describing the system dynamics. The derivation of the differential equation can be found in Appendix A.
+	\\
+	
+	The equation of motion for the robotic gymnast is non-linear. It contains terms that is a function of squared angular velocity, sine and more. These non-linearity can be linearised around a working point, but during the swing-up of the robotic gymnast, where the gymnast will operate in a large operating region linearisation will cause dramatic errors and thus these non-linearities need to be taken into account. How to overcome these non-linearities is discussed in the following section.
+ 
+	
+	
+	\section{Swing Up of the Double Pendulum}
+	
+	It has been shown that it is not possible to linearise the dynamics of the gymnast by means of static state feedback and non-linear transformation \cite{murray}, but it is possible to achieve a linear response from one of the state variables by implementing a non-linear feedback. This non-linear feedback is the partial feedback linearisation, where any of the 2 responses of the state variables can be linearised. 
+	\\
+	
+	Collocated linearisation of the non-linear model is done to linearise the response of the actuated pendulum resulting in being proportional to the input of the system. The derivation of the collocated linearisation is shown in appendix C. This input can be selected to force the actuated pendulum to follow a desired trajectory \cite{spong_swingup}. 
+	\\
+	
+	To force the actuated pendulum to follow a desired trajectory, it is possible to pump energy into the system. The desired trajectory for ${\phi}^{d}$ is chosen as $${\phi}^{d} = \alpha \arctan(\dot{\theta}) $$ \cite{spong_swingup}. The $\alpha$ coefficient constrains the actuated pendulum to stay within a interval of $ \phi \in [-\alpha,\alpha] $ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable inverted position to switch over to the linearised model. 
+	
+		  
+	\section{Balancing of the Double Pendulum}
+	
+	The balancing of the gymnast will be achieved by catching the gymnast when the swing-up control algorithm has brought the gymnast to the null controllability region. The null controllability region is the set of states that can be steered to inverted unstable equilibrium position in a fixed time with a constrained control input \cite{null_controllability}.
+	
+	Within the null controllability region the gymnast can be approximated as a linear system. Linearising the model at $$\vec{Q_{s}} = [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$ the unstable inverted equilibrium position using the Taylor Series Expansion the model can be written in the state space form. The linearisation of the gymnast model is shown in Appendix B. The state space variables are chosen as $\Delta{q}$ and $\Delta{\dot{q}}$ which results in the state space representation as:  $$ \dot{\vec{x}} = \boldsymbol{A}\vec{x} + \boldsymbol{B}u $$ and $$ \vec{y} = \boldsymbol{D}\vec{x} + \boldsymbol{0}u $$.
+	
+	% since I am mentioning the linearised system do I have to mention the unstable inverted equilibirum position, since it is linearised around this point
+	When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. The instability of the system can be identified by examining the poles of the systems. The linearised model contains 4 real, 2 positive and 2 negative poles, and these poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts. This allows the higher-order system response to be characterised as a second-order response \cite{textbook}. The linearised model already has 2 negative real poles which is chosen to stay the same. The real positive poles were selected based on the following specifications.
+	
+	These specification was selected on increasing the null controllability region with a low settling time. Due the approximation of the linearised model the null controllability region may be larger than the derived sized \cite{simple_null_controllability}. 
+	
+	
+	\section{Null Controllability Region}
+	
+	The null controllability region is the set of states, $\vec{x_{0}} \in \Re $ which can be steered with a constrained input in finite time to the origin. This region is important because it provides the boundary where the linear controller is capable of catching the swinging gymnast. The possibility exist that the set might be larger due to approximation in the working point during linearisation of the system \cite{simple_null_controllability}. 
+	
+	To determine the null controllability region requires a transformation into independent equation and followed by a technique describe in .. . The linearised system are coupled and due to damping effect results in a quadratic eigenvalue problem. The de-coupling can be done by using phase-synchronisation describe in \cite{independent_eqaution} and shown in Appendix XXX. The phase-synchronisation results in 2 transformed eigenvalues, $\lambda'$ and creates 2 damping ratio's, $\zeta'$ to from two independent second-order equations. The values for $\lambda'$'s and $\zeta'$'s is as follows: $$ \boldsymbol{\lambda} = [ ]^{T} $$ $$ \boldsymbol{\zeta} = []^{T} $$
+	
+	From these two independent second-order equations the null controllability region can be determine using time-reversal describe in \cite{null_controllability}.
+	
+	$$ \vec{x} = e^{\boldsymbol{A}t}\vec{x_{0}} + \int_{t_{1}}^{t_{2}} e^{-\boldsymbol{A}t}\boldsymbol{B}u dt $$ 
+	
+	$$\mathcal{R} = {-\int_{-\infty}^{0} e^{A\tau}bsgn(c'e^{A\tau})d\tau }  $$
+	
+	$$\mathcal{C} $$ 
+	
+	
+	
+	\section{Simulating the Double Pendulum}
+	
+	Simulation of the gymnast was done using MATLAB Simulink.The differential equation was implemented and non-linearities such as saturation of the motor, sampling delays, and computational integration delays to approximate the state variables that are not measured directly. 
+	
+	System characteristic values such as inertia and pendulum lengths was unavailable during simulations owning to the mechanical design that was incomplete. Initially the system variables such as inertia and pendulum lengths was selected of values that represent a physical system. The accuracy of these values were credible being taken from a previous physical model. From these simulation motor specification could be determine and the influence of system variables could be analysed. Damping coefficient was chosen at random and the influence on the behaviour of the system was analaysed.
+	
+	\section{Experimental Analysis of Double Pendulum}
+	
+	Experiments was performed on the physical model to determine the various unknown coefficients such as the friction coefficient in the bearings, the friction coefficient between the stator and rotor of the motor and physical properties such as the centroid of each pendulum. 
+	
+	The damping coefficient is proportional to the normal force between the two bodies. The assumption is made that the damping coefficient is proportional to the angular velocity, but this is only true if the inertia stays constant. This is not the case due to actuated pendulum swinging relative to the under-actuated pendulum and the inertia the bearings are seeing will be changing. This uncertainty is accepted due to the difficult in measuring this time,angle and starting condition dependent variable. (Chaos theory). The bearing damping coefficient is measured at keeping $\phi = 0 rad$ and recording the response of the system when disturbed from $\theta = \pi$, the unstable equilibrium position. The damping coefficient can be determined from the response shown in Figure XXX by....
+	
+	The damping coefficient of the DC motor will be determine by analysing the step response of the motor. The assumption is made that the DC motor can be model as a LTI second order system and by analysing the step response the damping coefficient can be calculated. Figure XXX show the step response of the DC motor.
+	
+	\section{Why Designing in the Continuous Time Domain is Sufficient}
+	
+	\section{Mechanical Design of the Double Pendulum}
+	
+	%Translating the abstract model into a true physical representation it is of extreme importance that the assumptions made during the derivation of the model remains in the physical model. These assumption include planar translation, rigid body dynamics and friction proportional to angular velocity. These assumptions needs to true in the physical model.
+	
+	%These assumptions was implemented by using contact ball bearings
+	\newpage
+	\section{Electronic Design of the Double Pendulum}
+	
+	\subsection{System Description}
+	
+	% Show block diagram of the system and explain the functioning og the system
+	\begin{figure}[h]
+		\centering
+		\input{"./Electronic_System/ElectronicSystemOverview.tikz"}
+		\caption{Electronic System Overview}
+		\label{fig:electronicSystemOverview}
+	\end{figure}
+	
+	
+	Figure \ref{fig:electronicSystemOverview} provides/yields a system overview and how the different parts functions together. The micro-controller receives the different signals that has been correctly conditioned from supporting circuitry to interpret the dynamics of the system. From the observed condition it is able to output the correct signals to instruct the next command.
+	
+	The digital logic circuit that consist of logic level converters acquires the signal from the micro-controller and performs signal conditioning to interface with the motor driver and determines the correct direction to rotate the motor. 
+	
+	The motor driver controls the DC brushed motor based of the digital signals and provides a proportional feedback current that is fed/deliver to buffer.
+	
+	The motor contains a encoder that indicates the direction and position of the rotor through digital signals that is sent through a digital logic filter to retrieve only critical information from the encoder signals. 
+	
+	The physical model contains a potentiometer that measures the non-actuated pendulums angle and is sent to the buffer.
+	
+	The microcontroller will use the UART interface as it's data acquisition protocol to send the necessary information to the computer. 
+	
+	The micro-controller is programmed using the Serial Wire Debug (SWD) protocol to transfer the binaries from the computer.
+	
+	Power is provided using a external 12V power-supply, which will power the motor, but also using a regulator to down convert/step to a 5V and 3.3V to power the microcontoller and the other peripherals.
+	
+	\subsection{Voltage Regulation}
+	
+	\subsection{PC UART Interface }
+	
+	The purpose of the UART to serial communication is for data acquisition of the system response and for debugging purposes. The data being sent follows a structure to ensure the reliability of the data. Figure (ref) shows the format of the data being sent.
+	
+	The data being sent across the UART to serial circuit is retrieved by a computer executing a Python script, listening for any activity on the computer's driver ports and writing the data into a comma-separated value (csv) file that can later be use to analyse the data.
+	
+	
+	The UART to serial circuit has been tested by doing a loopback test and using a digital logic analyser to verify the data being sent. The loopback test consist of connecting the Tx and Rx lines together and forcefully echo what has been sent to the circuit to be sent back. Figure (ref) in Appendix XXX shows the digital signals sent and received and confirms the working of the UART to Serial circuit.
+	
+	\subsection{Signal Conditioning}
+	
+	The analog signals from the various components is received that will be conditioned to interface with the micro-controller Analog-to-Digital Converter (ADC) to interpret the signal.
+	
+	The signal from the potentiometer that provides measurements about the angle of the shaft varies between 0-5V. This signal is sent through a simple resistive voltage divider circuit to scale the signal between 0-3V. 
+	
+	The scaled voltage is sent through a unity gain amplifier, where the mirrored output signal is fed into the ADC. The unity gain amplifier has the characteristic of a high input impedance and low output impedance. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \cite{stm32_ADC:2017}. The SAR ADC's contains internal capacitor that has suffers from the effect of being depleted if the sampling period is to high. The low impendance from the unity gain amplifier reduces the risk of depleting this internal capacitor because of the low current being pulled.
+	
+	The current feedback signal that is provided from the motor drive IC varies between 0 and 3V fed into the unity gain operation amplifier. This is done for the same reasons discussed above.
+	
+	The chosen operational amplifier is the MCP602. 
+	
+	\subsection{Motor Driver}
+	
+	The motor driver IC is responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that controls the direction and speed of the motor. The 2 H-half bridges form a full H-bridge which are Pulse-Width-Modulated(PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. 
+	
+	The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge(reference). This current is sent through resistor of XXX $\Omega$ to provide a voltage signal to represent the current.
+	
+	The MC33887 is capable of providing up to 6A of continuous current to the motor, while withstanding the high current transients due to the fast switching of a inductive load (ref). The motor driver IC is able to provide the motor with the 12V DC which is externally provided by a DC power supply.
+	
+	The schematic of supporting passive components to allow the motor driver IC to work is shown in Appendix XXX.
+	
+	\subsection{AND Digital Logic Circuit}
+	
+	The digital logic circuit is responsible for interfacing between the microcontroller and the motor driver IC, and providing the motor driver with the correct PWM signal based on a signal from the microcontroller to determine the desired direction.
+	
+	The microcontroller is only able to provide a logical high and low by representing it as a 3.3V and 0V respectively. The motor driver IC's minimum threshold for a logical high is 3.5V \cite{motorIC}. Thus it is required to use a logic level converter circuit to interface between the 2 devices. This is accomplished using the BSS138 transistor in the schematic shown in Figure \ref{fig:interterCirc}. 
+	
+	\begin{figure}[h]
+		\centering
+		\input{"./Logic_Level_Converter/LogicLevelConverterAndInverter.tikz"}
+		\caption{Logic Level Converter \& Inverter Circuit}
+		\label{fig:interterCirc}
+	\end{figure}
+	
+	This identical circuit shown in Figure \ref{fig:interterCirc} is capable of operating as a inverter and working alongside AND gates the direction of the motor can be controlled as shown in Figure (ref). Add truth table
+	
+	\subsection{JK FlipFlop's Digital Logic Circuit}
+	
+	\begin{figure}[h]
+		\centering
+		\input{"JK_XOR_gates/jk_xor_nor.tikz"}
+		\caption{Digital Logic Circuit with JK-Flipflops, XOR- and NOR Gates}
+		\label{fig:jk_xor}
+	\end{figure}
+	
+	The motor hall sensor incremental encoder produces 2 digital signals  that has a 90 degree phase between each other shown in Figure (ref). This signal will be read by the microcontroller using interrupts when a rising edge is present. The amount of servicing of theses signals can be reduced by using a J-K Flipflop and NOR logic gates circuit shown in Figure \ref{fig:jk_xor}. 
+	
+	This circuit produces 2 output signals. The first signal will be a logical high or low indicating a change in rotation. The other signal will be a square wave, where each rising edge indicate a incremental rotation of the shaft. 
+	
+	
+	
+	\section{Verification of Model}
+	
+
+	\newpage
+	%\section{Bibliography}
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,references}
+	
+	\newpage
+	\begin{appendices}
+		\section{Derivation of the Double Pendulum}
+		$$x_{1}= l_{1}\cos(\theta)$$
+		$$y_{1} = -l_{1}\sin(\theta)$$
+		
+		$$x_{2} = L_{1}\sin(\theta) + l_{2}\sin(\theta + \phi)$$
+		$$y_{2} = -L_{1}\cos(\theta) - l_{2}\cos(\theta + \phi)$$
+		
+		$$\dot{x_{2}} = L_{1}\cos(\theta)\dot{\theta} - l_{2}\cos(\theta+\phi)(\dot{\theta}+\dot{\phi}) $$
+		$$\dot{y_{2}} = L_{1}\sin(\theta)\dot{\theta}+l_{2}\sin(\theta+\phi)(\dot{\theta}+\dot{\phi})$$
+		
+		$$x_{2}^2 = L_{1}^2\cos(\theta)^2\theta^2 +l_{2}^2\cos(\theta+\phi)^2(\dot{\theta}+\dot{\phi})^2 + 2L_{1}l_{2}\dot{\theta}(\dot{\theta}+\dot{\theta})\cos(\theta)\cos(\theta+\phi)$$
+		$$y_{2}^2 = L_{1}^2\sin(\theta)^2\theta^2 +l_{2}^2\sin(\theta+\phi)^2(\dot{\theta}+\dot{\phi})^2 + 2L_{1}l_{2}\dot{\theta}(\dot{\theta}+\dot{\theta})\sin(\theta)\sin(\theta+\phi)$$
+		
+		$$x_{2}^2+y_{2}^2 = L_{1}^2\theta^2[\cos(\theta)^2+\sin(\theta)^2]+l_{2}^2(\dot{\theta}+\dot{\phi})^2[\cos(\theta+\phi)^2+\sin(\theta+\phi)^2] +$$
+		$$ 2L_{1}l_{2}\dot{\theta}(\dot{\theta}+\dot{\phi})[\cos(\theta)\cos(\theta+\phi)+\sin(\theta)\sin(\theta+\phi)]$$	
+		
+		Using the following trigonometric identities $$ \cos(\gamma)^2 + \sin(\gamma)^2 = 1 $$ 
+		$$ \cos(\gamma)\cos(\alpha)+\sin(\gamma)\sin(\alpha) = \cos(\gamma - \alpha) $$ the above equation resolves to: $$ V_{2}^2 = L_{1}\dot{\theta}^2+l_{2}^2(\dot{\theta}+\dot{\phi})^2 + 
+		2L_{1}l_{2}(\dot{\theta}+\dot{\phi})\dot{\theta}\cos(\phi)$$
+		
+		The kinetic energy in the system consist of the fixed rotation of the underactuated  pendulum and the rotation and velocity of the actuated pendulum.
+		
+		$$ T = \frac{1}{2}I_{A}\dot{\theta}^2 + \frac{1}{2}I_{B}(\dot{\theta}+\dot{\phi})^2 + \frac{1}{2}m_{2}V_{2}^2$$
+		$$ T = \frac{1}{2}I_{A}\dot{\theta}^2 + \frac{1}{2}I_{B}(\dot{\theta}+\dot{\phi})^2 + \frac{1}{2}m_{2}[L_{1}\dot{\theta}^2+l_{2}^2(\dot{\theta}+\dot{\phi})^2 + 
+		2L_{1}l_{2}(\dot{\theta}+\dot{\phi})\dot{\theta}\cos(\phi)]^2$$
+		
+		The potential energy in the system is defined as
+		$$V=-m_{1}gl_{1}\cos(\theta)-m_{2}g[L_{1}\cos(\theta)+l_{2}\cos(\theta+\phi)]$$
+		
+		The Lagrange is defined as 
+		$$\mathcal{L}=T-V$$
+		$$\mathcal{L} = \frac{1}{2}I_{A}\dot{\theta}^2 + \frac{1}{2}I_{B}(\dot{\theta}+\dot{\phi})^2 + \frac{1}{2}m_{2}[L_{1}\dot{\theta}^2+l_{2}^2(\dot{\theta}+\dot{\phi})^2 + 
+		2L_{1}l_{2}(\dot{\theta}+\dot{\phi})\dot{\theta}\cos(\phi)]^2+m_{1}gl_{1}\cos(\theta)+$$
+		$$m_{2}g[L_{1}\cos(\theta)+l_{2}\cos(\theta+\phi)]$$
+		
+		$$\frac{\partial\mathcal{L}}{\partial\theta} = -m_{1}gl_{1}\sin(\theta)-m_{2}gL_{2}\sin(\theta)-m_{2}gl_{2}\sin(\theta+\phi)$$
+		$$\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\theta}} = I_{A}\ddot{\theta}+I_{B}\ddot{\theta}+I_{B}\ddot{\phi}+m_{2}L_{1}^2\ddot{\theta}+m_{2}l_{2}^2\ddot{\theta}+m_{2}l_{2}\ddot{\phi}+2m_{2}L_{1}l{2}\ddot{\theta}\cos(\phi)-2m_{2}L_{1}l_{2}\dot{\theta}\dot{\phi}\sin(\phi)+$$
+		$$m_{2}L_{1}l_{2}\ddot{\phi}\cos(\phi)-m_{2}L_{1}l_{2}\dot{\phi}^2\sin(\phi)$$
+		
+		
+		$$\frac{\partial\mathcal{L}}{\partial\phi} = -m_{2}L_{1}l_{2}(\dot{\theta}+\dot{\phi})\dot{\theta}\sin(\phi)-m_{2}gl_{2}\sin(\theta+\phi)$$
+		
+		$$\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\dot{\phi}}=I_{B}\ddot{\theta}+I_{B}\ddot{\phi}+m_{2}l_{2}^2\ddot{\theta}+m_{2}l_{2}^2\ddot{\phi}+m_{2}L_{1}l_{2}\ddot{\theta}\cos(\phi)-m_{2}L_{1}l_{2}\dot{\theta}\dot{\phi}\sin(\phi)$$
+		
+		The differential equation describing the dynamics of the system is
+		$$\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\vec{\dot{q}}}-\frac{\partial\mathcal{L}}{\partial q} = B(\dot{q})+\tau(q)$$ 
+		where  $ q = 
+		\begin{bmatrix}
+		\theta \\
+		\phi
+		\end{bmatrix}
+		$
+		
+		\newpage
+		\section{Linearisation of the Double Pendulum}
+			
+		The system will be linearised using the Taylor Series Expansion around the operating point $$ \vec{Q_{s}} = [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$ and approximate the system as $$F([\vec{q},\dot{\vec{q}},\ddot{\vec{q}} ]^{T}) = F(\vec{Q}) \approx F(\vec{Q_{s}})+[\Delta{\vec{Q}}\cdot\nabla F(\vec{Q_{s}})] $$
+		where $\Delta{\vec{Q}} = \vec{Q} - \vec{Q_{s}} $. Resulting in 2 linear dependent equations:
+		
+		\begin{align}
+		\Delta{\ddot{\theta}}(I_{A}+I_{B}+m_{2}l_{2}^2+m_{2}L_{1}^2+2m_{2}l_{2}L_{1})+\Delta{\ddot{\phi}(I_{B}+m_{2}l_{2}^2+m_{2}L_{1}l_{2})}+ \notag \\
+		\Delta{\theta(-m_{1}gl_{1}-m_{2}gL_{1}-m_{2}gl_{2})}+\Delta{\phi(-m_{2}gl_{2})}=\Delta{\dot{\theta}}b_{1}
+		\end{align}
+		
+		\begin{align}
+		\Delta{\ddot{\theta}(I_{B}+m_{2}l_{2}^2+m_{2}L_{1}l_{2})}+\Delta{\ddot{\phi}(I_{B}+m_{2}l_{2}^2)}+\Delta{\theta(-m_{2}gl_{2})}+\notag \\ 
+		\Delta{\phi(-m_{2}gl_{2})}=\tau + (\Delta{\dot{\theta}}+\Delta{\dot{\phi}})b_{2} 
+		\end{align}
+		
+		Equation (1) and (2) can be rewritten in state-space form by substituting the 2 equations into each other to remove the angular acceleration term of the other respectable angle. 
+		
+		The state space variables are chosen as $\Delta{q}$ and $\Delta{\dot{q}}$ which results in the state space representation as:
+		\[		
+		\begin{bmatrix}
+			\Delta{\dot{\theta}} \\
+			\Delta{\dot{\phi}}	\\
+			\Delta{\ddot{\theta}} \\
+			\Delta{\ddot{\phi}}
+		\end{bmatrix} 
+		=
+		\begin{bmatrix}
+		x & x & x & x \\
+		x & x & x & x \\
+		0 & 0 & 1 & 0 \\
+		0 & 0 & 0 & 1
+		\end{bmatrix}
+		\begin{bmatrix}
+		\Delta{\theta}	\\
+		\Delta{\phi}	\\
+		\Delta{\dot{\theta}} \\
+		\Delta{\dot{\phi}}
+		\end{bmatrix}
+		+
+		\begin{bmatrix}
+		0 \\
+		1 \\
+		0 \\
+		0 \\
+		\end{bmatrix}
+		\tau
+		\]
+		\[
+		\begin{bmatrix}
+		\Delta{\theta}	\\
+		\Delta{\phi}	\\
+		\Delta{\dot{\theta}} \\
+		\Delta{\dot{\phi}}
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+		1 & 0 & 0 & 0 \\
+		0 & 1 & 0 & 0 \\
+		0 & 0 & 1 & 0 \\
+		0 & 0 & 0 & 1
+		\end{bmatrix}
+		\begin{bmatrix}
+		\Delta{\theta}	\\
+		\Delta{\phi}	\\
+		\Delta{\dot{\theta}} \\
+		\Delta{\dot{\phi}}
+		\end{bmatrix}
+		+
+		\begin{bmatrix}
+		0 
+		\end{bmatrix}
+		\tau
+		\]
+		
+		The compact form will be used as $$ \dot{\vec{x}} = \boldsymbol{A}\vec{x} + \boldsymbol{B}\vec{u} $$ and $$ \vec{y} = \boldsymbol{D}\vec{x} + \boldsymbol{0}\vec{u} $$
+		\newpage
+		\section{De-coupling of the Linearised System into 2 Independent Equations}
+		
+		\newpage
+		\section{Collocated Linearisation}
+		\newpage
+		\section{Proof of Pumping Energy into System}
+	\end{appendices}
+	
+\end{document}
