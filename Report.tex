@@ -208,6 +208,8 @@
 	
 	The digital logic circuit is responsible for interfacing between the microcontroller and the motor driver IC, and providing the motor driver with the correct PWM signal based on a signal from the microcontroller to determine the desired direction.
 	
+	
+	
 	The microcontroller is only able to provide a logical high and low by representing it as a 3.3V and 0V respectively. The motor driver IC's minimum threshold for a logical high is 3.5V \cite{motorIC}. Thus it is required to use a logic level converter circuit to interface between the 2 devices. This is accomplished using the BSS138 transistor in the schematic shown in Figure \ref{fig:interterCirc}. 
 	
 	\begin{figure}[h]
@@ -224,7 +226,7 @@
 	\begin{figure}[h]
 		\centering
 		\input{"JK_XOR_gates/jk_xor_nor.tikz"}
-		\caption{Digital Logic Circuit with JK-Flipflops, XOR- and NOR Gates}
+		\caption{Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}
 		\label{fig:jk_xor}
 	\end{figure}
 	
