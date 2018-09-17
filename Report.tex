@@ -149,6 +149,30 @@
 	
 	\subsection{Voltage Regulation}
 	
+	The various components require different supply voltages in the electronic design. The diffenrent supply voltage is tabulated in table \ref{table:supplyVoltage}.
+	
+		\begin{table}[]
+			\begin{tabular}{|c|c|}
+				\hline
+				Component & Supply Voltage [\SI{}{V}] \\
+				\hline
+				Digital Logic Components & \SI{5}{} \\
+				\hline
+				$\mu$Controller & \SI{3.3}{} \\
+				\hline
+				Motor Driver & \SI{12}{} \\
+				\hline
+			\end{tabular}
+		\caption{Suppy Voltage's for the different components}
+		\label{table:supplyVoltage}
+		\end{table}
+	
+	
+	The table indicates 3 different supply voltages that will be required: \SI{3.3}{V}, \SI{5}{V} and \SI{12}{V}. This is achieved by using a \SI{5}{V} and \SI{3.3}{V} linear voltage regulators and the \SI{12}{V} is supply by a external source.
+	
+	The schematic for each voltage regulator is shown in Appendix XX, where each voltage regulator circuit includes a Light Emitting Diode (LED) to ensure the minimum load is met for each regulator. The LED also acts as a visual debugging method.
+
+	
 	\subsection{PC UART Interface }
 	
 	The purpose of the UART to serial communication is for data acquisition of the system response and for debugging purposes. The data being sent follows a structure to ensure the reliability of the data. Figure (ref) shows the format of the data being sent.
@@ -164,7 +188,7 @@
 	
 	The signal from the potentiometer that provides measurements about the angle of the shaft varies between 0-5V. This signal is sent through a simple resistive voltage divider circuit to scale the signal between 0-3V. 
 	
-	The scaled voltage is sent through a unity gain amplifier, where the mirrored output signal is fed into the ADC. The unity gain amplifier has the characteristic of a high input impedance and low output impedance. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \cite{stm32_ADC:2017}. The SAR ADC's contains internal capacitor that has suffers from the effect of being depleted if the sampling period is to high. The low impendance from the unity gain amplifier reduces the risk of depleting this internal capacitor because of the low current being pulled.
+	The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The unity gain amplifier has the characteristic of a high input impedance and low output impedance. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \cite{stm32_ADC:2017}. The SAR ADC's contains internal capacitor that has suffers from the effect of being depleted if the sampling period is to high. The low impendance from the unity gain amplifier reduces the risk of depleting this internal capacitor because of the low current being pulled.
 	
 	The current feedback signal that is provided from the motor drive IC varies between 0 and 3V fed into the unity gain operation amplifier. This is done for the same reasons discussed above.
 	

@@ -12,9 +12,9 @@
 \contentsline {subsection}{\numberline {11.1}System Description}{10}
 \contentsline {subsection}{\numberline {11.2}Voltage Regulation}{11}
 \contentsline {subsection}{\numberline {11.3}PC UART Interface }{11}
-\contentsline {subsection}{\numberline {11.4}Signal Conditioning}{11}
+\contentsline {subsection}{\numberline {11.4}Signal Conditioning}{12}
 \contentsline {subsection}{\numberline {11.5}Motor Driver}{12}
-\contentsline {subsection}{\numberline {11.6}AND Digital Logic Circuit}{12}
+\contentsline {subsection}{\numberline {11.6}AND Digital Logic Circuit}{13}
 \contentsline {subsection}{\numberline {11.7}JK FlipFlop's Digital Logic Circuit}{13}
 \contentsline {section}{\numberline {12}Verification of Model}{14}
 \contentsline {section}{Appendices}{16}
