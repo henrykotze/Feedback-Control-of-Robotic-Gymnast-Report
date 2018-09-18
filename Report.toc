@@ -4,21 +4,24 @@
 \contentsline {section}{\numberline {4}Swing Up of the Double Pendulum}{5}
 \contentsline {section}{\numberline {5}Balancing of the Double Pendulum}{6}
 \contentsline {section}{\numberline {6}Null Controllability Region}{7}
-\contentsline {section}{\numberline {7}Simulating the Double Pendulum}{8}
-\contentsline {section}{\numberline {8}Experimental Analysis of Double Pendulum}{8}
-\contentsline {section}{\numberline {9}Why Designing in the Continuous Time Domain is Sufficient}{9}
-\contentsline {section}{\numberline {10}Mechanical Design of the Double Pendulum}{9}
-\contentsline {section}{\numberline {11}Electronic Design of the Double Pendulum}{10}
-\contentsline {subsection}{\numberline {11.1}System Description}{10}
-\contentsline {subsection}{\numberline {11.2}Voltage Regulation}{11}
-\contentsline {subsection}{\numberline {11.3}Programming / Debug Interface}{11}
-\contentsline {subsection}{\numberline {11.4}PC UART Interface }{11}
-\contentsline {subsection}{\numberline {11.5}Signal Conditioning}{12}
-\contentsline {subsection}{\numberline {11.6}Motor Driver}{12}
-\contentsline {subsection}{\numberline {11.7}AND Digital Logic Circuit}{13}
-\contentsline {subsection}{\numberline {11.8}JK FlipFlop's Digital Logic Circuit}{14}
-\contentsline {subsection}{\numberline {11.9}Microcontroller}{14}
-\contentsline {section}{\numberline {12}Verification of Model}{14}
+\contentsline {section}{\numberline {7}System Identification}{8}
+\contentsline {section}{\numberline {8}Simulating the Double Pendulum}{8}
+\contentsline {subsection}{\numberline {8.1}Feedback Control for Balancing Controller}{8}
+\contentsline {subsection}{\numberline {8.2}Feedback Control for Swing-up Controller}{9}
+\contentsline {section}{\numberline {9}Experimental Analysis of Double Pendulum}{9}
+\contentsline {section}{\numberline {10}Why Designing in the Continuous Time Domain is Sufficient}{9}
+\contentsline {section}{\numberline {11}Mechanical Design of the Double Pendulum}{9}
+\contentsline {section}{\numberline {12}Electronic Design of the Double Pendulum}{10}
+\contentsline {subsection}{\numberline {12.1}System Description}{10}
+\contentsline {subsection}{\numberline {12.2}Voltage Regulation}{11}
+\contentsline {subsection}{\numberline {12.3}Programming / Debug Interface}{11}
+\contentsline {subsection}{\numberline {12.4}PC UART Interface }{11}
+\contentsline {subsection}{\numberline {12.5}Signal Conditioning}{12}
+\contentsline {subsection}{\numberline {12.6}Motor Driver}{12}
+\contentsline {subsection}{\numberline {12.7}AND Digital Logic Circuit}{13}
+\contentsline {subsection}{\numberline {12.8}JK FlipFlop's Digital Logic Circuit}{14}
+\contentsline {subsection}{\numberline {12.9}Microcontroller}{14}
+\contentsline {section}{\numberline {13}Verification of Model}{14}
 \contentsline {section}{Appendices}{16}
 \contentsline {section}{\numberline {A}Derivation of the Double Pendulum}{16}
 \contentsline {section}{\numberline {B}Linearisation of the Double Pendulum}{18}

@@ -95,12 +95,33 @@
 	$$\mathcal{C} $$ 
 	
 	
+	\section{System Identification}
+	
+	
 	
 	\section{Simulating the Double Pendulum}
 	
-	Simulation of the gymnast was done using MATLAB Simulink.The differential equation was implemented and non-linearities such as saturation of the motor, sampling delays, and computational integration delays to approximate the state variables that are not measured directly. 
+	Simulation of the gymnast was done using MATLAB Simulink. The differential equations is implemented and non-linearities such as saturation of the motor, gearbox backlash and quantisation of sensory data is implemented to represent the true system as close as possible.
 	
-	System characteristic values such as inertia and pendulum lengths was unavailable during simulations owning to the mechanical design that was incomplete. Initially the system variables such as inertia and pendulum lengths was selected of values that represent a physical system. The accuracy of these values were credible being taken from a previous physical model. From these simulation motor specification could be determine and the influence of system variables could be analysed. Damping coefficient was chosen at random and the influence on the behaviour of the system was analaysed.
+	System characteristic values such as inertia and pendulum lengths was unavailable during simulations owning to the mechanical design that was incomplete. Initially the system variables such as inertia and pendulum lengths was selected of values that represent a physical system. The accuracy of these values were credible being taken from a previous physical model. From these simulation motor specification could be determine and the influence of system variables could be analysed. Damping coefficient was chosen at random and the influence on the behaviour of the system was analaysed. (Describe how they influence the behaviour of the system).
+	
+	Once the mechanical system was designed and manufactured and the system identification was completed the true system parameters could be used in the simulation. The system parameters used is shown in Table \ref{table:system_param}.
+	
+	Using the system parameters shown in Table \ref{table:system_param} the natural frequencies of the linearised system, the feedback gain matrix for the balancing control and the gain constants for the swing-up control is determined.
+	
+	\subsection{Feedback Control for Balancing Controller}
+	
+	The balancing controller is responsible for catching the swinging pendulums and let the system rest at it's unstable equilibrium position. The balancing controller is thus required to take the system from a initial condition in the vicinity of the unstable equilibrium position and reach a steady state of balancing in the unstable equilibrium position.
+	
+	The system will have unstable poles when in the vicinity of the unstable equilibrium position as shown in Table \ref{table:poles_of_system}. The feedback gain matrix must move these poles to a stable location with desired system response properties.
+	
+	The desired system response 
+	
+	
+	
+	
+	\subsection{Feedback Control for Swing-up Controller}
+	
 	
 	\section{Experimental Analysis of Double Pendulum}
 	
