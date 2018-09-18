@@ -172,6 +172,7 @@
 	
 	The schematic for each voltage regulator is shown in Appendix XX, where each voltage regulator circuit includes a Light Emitting Diode (LED) to ensure the minimum load is met for each regulator. The LED also acts as a visual debugging method.
 
+	\subsection{Programming / Debug Interface}
 	
 	\subsection{PC UART Interface }
 	
@@ -198,7 +199,7 @@
 	
 	The motor driver IC is responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that controls the direction and speed of the motor. The 2 H-half bridges form a full H-bridge which are Pulse-Width-Modulated(PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. 
 	
-	The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge(reference). This current is sent through resistor of XXX $\Omega$ to provide a voltage signal to represent the current.
+	The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge(reference). This current is sent through resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current.
 	
 	The MC33887 is capable of providing up to 6A of continuous current to the motor, while withstanding the high current transients due to the fast switching of a inductive load (ref). The motor driver IC is able to provide the motor with the 12V DC which is externally provided by a DC power supply.
 	
@@ -206,11 +207,9 @@
 	
 	\subsection{AND Digital Logic Circuit}
 	
-	The digital logic circuit is responsible for interfacing between the microcontroller and the motor driver IC, and providing the motor driver with the correct PWM signal based on a signal from the microcontroller to determine the desired direction.
+	The digital logic circuit is responsible for interfacing between the microcontroller and the motor driver IC, and providing the motor driver with the correct PWM signal.
 	
-	
-	
-	The microcontroller is only able to provide a logical high and low by representing it as a 3.3V and 0V respectively. The motor driver IC's minimum threshold for a logical high is 3.5V \cite{motorIC}. Thus it is required to use a logic level converter circuit to interface between the 2 devices. This is accomplished using the BSS138 transistor in the schematic shown in Figure \ref{fig:interterCirc}. 
+	The microcontroller is only able to provide a logical high and low by representing it as a \SI{3.3}{V} and \SI{0}{V} respectively. The motor driver IC's minimum threshold for a logical high is 3.5V \cite{motorIC}. Thus it is required to use a logic level converter circuit to interface between the 2 devices. This is accomplished using the BSS138 transistor in the circuit diagram shown in Figure \ref{fig:interterCirc}. 
 	
 	\begin{figure}[h]
 		\centering
@@ -218,8 +217,10 @@
 		\caption{Logic Level Converter \& Inverter Circuit}
 		\label{fig:interterCirc}
 	\end{figure}
+
+	This identical circuit shown in Figure \ref{fig:interterCirc} is a inverter and combining the 2 inputs from the microcontroller, the PWM-signal and directional signal with the inverter and AND-gates the motor speed and direction can be controlled. 
 	
-	This identical circuit shown in Figure \ref{fig:interterCirc} is capable of operating as a inverter and working alongside AND gates the direction of the motor can be controlled as shown in Figure (ref). Add truth table
+	Figure \ref{fig:motor_control_system} shows the overview of the system
 	
 	\subsection{JK FlipFlop's Digital Logic Circuit}
 	
@@ -233,6 +234,8 @@
 	The motor hall sensor incremental encoder produces 2 digital signals  that has a 90 degree phase between each other shown in Figure (ref). This signal will be read by the microcontroller using interrupts when a rising edge is present. The amount of servicing of theses signals can be reduced by using a J-K Flipflop and NOR logic gates circuit shown in Figure \ref{fig:jk_xor}. 
 	
 	This circuit produces 2 output signals. The first signal will be a logical high or low indicating a change in rotation. The other signal will be a square wave, where each rising edge indicate a incremental rotation of the shaft. 
+	
+	\subsection{Microcontroller}
 	
 	
 	
