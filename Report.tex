@@ -1,7 +1,7 @@
 \documentclass[a4paper,12pt]{article}
 
-
-
+\usepackage{graphics}
+\usepackage{epstopdf}
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{tikz-dimline}
@@ -10,6 +10,8 @@
 \usepackage{todonotes}
 \usepackage{pdfpages}
 \usepackage[siunitx]{circuitikz}
+\usepackage{epstopdf}
+
 %\usepackage[us]{circuitikz} % TiKZ Library for US Logic Circuits.
 
 %\usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
@@ -96,6 +98,50 @@
 	
 	
 	\section{System Identification}
+	
+	(Discuss what do we expect, it is a 2dof system, thus 2 natural frequencies)
+	
+	The system identification test are done to determine the characteristics that describe behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position.
+	
+	The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$.
+	
+	The accuracy of the initial condition is of little importance due to the assumption being made that the damping coefficient are independent of the initial condition. The logarithmic decrement is used to determine the damping ratio of the response having the equation of $$ \zeta = \frac{1}{ \sqrt{1 + ( \frac{2 \pi}{\delta})}} $$ where $$ \delta  = \frac{1}{n} \ln( \frac{x(t)}{x(t+nT)}) $$ where $x(t)$ is the amplitude at time $t$ and $x(t+nT)$ is the amplitude of the peak $n$ periods away \cite{log_decrement}. 
+	
+	The FFT of the response are shown in figure \ref{fig:fft_system_response}
+	
+		\begin{figure}[h]
+			\centering
+			\includegraphics[scale=0.8]{FFT_system.eps}
+			\caption{Initial Condition System Response while $ \phi = \SI{0}{rad} $ }
+			\label{fig:fft_system_response}
+		\end{figure}
+	
+	Figure \ref{fig:q1_response} shows the decaying function with properties that are shown in Table \ref{table:system_response_prop} and it is visible that the calculated values provides a acceptable approximation of the measured data.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{q1_initial_response.eps}
+		\caption{Initial Condition System Response while $ \phi = \SI{0}{rad} $ }
+		\label{fig:q1_response}
+	\end{figure}
+	
+%	\begin{figure}[h]
+%		\centering
+	%	\input{"./Electronic_System/ElectronicSystemOverview.tikz"}
+%		\caption{Initial Condition System Response while $\phi = \SI{0}{rad}$ }
+%		\label{fig:q1_response}
+%	\end{figure}
+	
+	The second natural frequency is determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{rad}$. Figure \ref{fig:q2_response} shows the measured response of the system with an approximated response that is determined by the parameters shown in Table \ref{table:system_response_prop}. These parameter were determine by using the least square method to determine $\zeta$.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{q2_initial_response.eps}
+		\caption{Initial Condition System Response while $ \theta = \SI{0}{rad} $ }
+		\label{fig:q2_response}
+	\end{figure}
+
+	
 	
 	
 	
