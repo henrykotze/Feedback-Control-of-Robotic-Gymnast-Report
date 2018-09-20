@@ -107,14 +107,30 @@
 	
 	The accuracy of the initial condition is of little importance due to the assumption being made that the damping coefficient are independent of the initial condition. The logarithmic decrement is used to determine the damping ratio of the response having the equation of $$ \zeta = \frac{1}{ \sqrt{1 + ( \frac{2 \pi}{\delta})}} $$ where $$ \delta  = \frac{1}{n} \ln( \frac{x(t)}{x(t+nT)}) $$ where $x(t)$ is the amplitude at time $t$ and $x(t+nT)$ is the amplitude of the peak $n$ periods away \cite{log_decrement}. 
 	
-	The FFT of the response are shown in figure \ref{fig:fft_system_response}
+	The natural frequencies of the system is identified by inspecting the frequency content of the time-domain responses. The frequency content of the initial condition responses of both experiments are shown in Figure \ref{fig:fft_system_response}, by applying the Fast Fourier Transform (FFT) algorithm to the time-domain signals. The FFT indicates the natural frequencies by the predominant peaks across the frequency spectrum which are tabulated in Table \ref{table:nat_freq_system}.
 	
-		\begin{figure}[h]
-			\centering
-			\includegraphics[scale=0.8]{FFT_system.eps}
-			\caption{Initial Condition System Response while $ \phi = \SI{0}{rad} $ }
-			\label{fig:fft_system_response}
-		\end{figure}
+	\begin{table}[]
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			 Natural Frequency & Frequency [\SI{}{Hz}] & Mean & Standard Deviation\\
+			\hline
+			$f_{1}$ & \SI{2}{} & & \\
+			\hline
+			$f_{2}$ & \SI{3.9}{} & & \\ 
+			\hline
+	\end{tabular}
+	\caption{Natural Frequencies of the System \& their Repeatibility from 10 Experiments}
+	\label{table:nat_freq_system}
+	\end{table}
+
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.8]{FFT_system.eps}
+		\caption{Frequency Content of Time-Domain Initial Condition Responses}
+		\label{fig:fft_system_response}
+	\end{figure}
 	
 	Figure \ref{fig:q1_response} shows the decaying function with properties that are shown in Table \ref{table:system_response_prop} and it is visible that the calculated values provides a acceptable approximation of the measured data.
 	
@@ -219,6 +235,7 @@
 	The various components require different supply voltages in the electronic design. The diffenrent supply voltage is tabulated in table \ref{table:supplyVoltage}.
 	
 		\begin{table}[]
+			\centering
 			\begin{tabular}{|c|c|}
 				\hline
 				Component & Supply Voltage [\SI{}{V}] \\
