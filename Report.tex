@@ -99,35 +99,38 @@
 	
 	\section{System Identification}
 	
-	(Discuss what do we expect, it is a 2dof system, thus 2 natural frequencies)
+	The system identification test are done to determine the characteristics that describe behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position. The system is describe by 2 parameters, $\theta$ and $\phi$ which provides the position of the non-actuated and actuated pendulums. The system is thus a 2 degree of freedom (2DOF) system and 
 	
-	The system identification test are done to determine the characteristics that describe behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position.
+	The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$. The accuracy of the initial conditions is of little importance, but must allow the system to contain a few oscillation to accurately determine the parameters of interest.
 	
-	The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$.
+	The natural frequencies of the system is identified by inspecting the frequency content of the time-domain responses. The frequency content of the initial condition responses of both experiments are shown in Figure \ref{fig:fft_system_response}, by applying the Fast Fourier Transform (FFT) algorithm to the time-domain signals. The FFT indicates the natural frequencies by the predominant peaks across the frequency spectrum which are tabulated in Table \ref{table:system_characteristic}.
 	
-	The accuracy of the initial condition is of little importance due to the assumption being made that the damping coefficient are independent of the initial condition. The logarithmic decrement is used to determine the damping ratio of the response having the equation of $$ \zeta = \frac{1}{ \sqrt{1 + ( \frac{2 \pi}{\delta})}} $$ where $$ \delta  = \frac{1}{n} \ln( \frac{x(t)}{x(t+nT)}) $$ where $x(t)$ is the amplitude at time $t$ and $x(t+nT)$ is the amplitude of the peak $n$ periods away \cite{log_decrement}. 
-	
-	The natural frequencies of the system is identified by inspecting the frequency content of the time-domain responses. The frequency content of the initial condition responses of both experiments are shown in Figure \ref{fig:fft_system_response}, by applying the Fast Fourier Transform (FFT) algorithm to the time-domain signals. The FFT indicates the natural frequencies by the predominant peaks across the frequency spectrum which are tabulated in Table \ref{table:nat_freq_system}.
+	The input to the system is the torque delivered by the motor and determined by the control laws. These control laws is based on the mechanical model of the system and it is assumed the torque required is instantaneously available. This is inaccurate due to the DC motor model describing the response of torque by the input of a voltage. The model of the DC motor is not derived 
 	
 	\begin{table}[]
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			 Natural Frequency & Frequency [\SI{}{Hz}] & Mean & Standard Deviation\\
+			 System Characteristic & Value & Mean & Standard Deviation\\
 			\hline
-			$f_{1}$ & \SI{2}{} & & \\
 			\hline
-			$f_{2}$ & \SI{3.9}{} & & \\ 
+			$f_{1}$ & \SI{2}{Hz} & & \\
 			\hline
+			$f_{2}$ & \SI{3.9}{Hz} & & \\ 
+			\hline
+			$\zeta_{1}$ & & & \\
+			\hline
+ 			$\zeta_{2}$ & & & \\
+ 			\hline
 	\end{tabular}
-	\caption{Natural Frequencies of the System \& their Repeatibility from 10 Experiments}
-	\label{table:nat_freq_system}
+	\caption{System Characteristic \& their Statistical Properties from 10 Experiments}
+	\label{table:system_characteristic}
 	\end{table}
 
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.8]{FFT_system.eps}
+		\includegraphics[scale=1]{FFT_system.eps}
 		\caption{Frequency Content of Time-Domain Initial Condition Responses}
 		\label{fig:fft_system_response}
 	\end{figure}
@@ -136,30 +139,30 @@
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.5]{q1_initial_response.eps}
+		\includegraphics[scale=1]{q1_initial_response.eps}
 		\caption{Initial Condition System Response while $ \phi = \SI{0}{rad} $ }
 		\label{fig:q1_response}
 	\end{figure}
-	
-%	\begin{figure}[h]
-%		\centering
-	%	\input{"./Electronic_System/ElectronicSystemOverview.tikz"}
-%		\caption{Initial Condition System Response while $\phi = \SI{0}{rad}$ }
-%		\label{fig:q1_response}
-%	\end{figure}
-	
+		
 	The second natural frequency is determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{rad}$. Figure \ref{fig:q2_response} shows the measured response of the system with an approximated response that is determined by the parameters shown in Table \ref{table:system_response_prop}. These parameter were determine by using the least square method to determine $\zeta$.
 	
 	\begin{figure}[h]
 		\centering
-		\includegraphics[scale=0.5]{q2_initial_response.eps}
+		\includegraphics[scale=1]{q2_initial_response.eps}
 		\caption{Initial Condition System Response while $ \theta = \SI{0}{rad} $ }
 		\label{fig:q2_response}
 	\end{figure}
 
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{dutycycle_vs_current.eps}
+	\caption{Relationship between Duty-Cycle of PWM Signal and Current through Motor}
+	\label{fig:dutycycle_vs_current}
+\end{figure}
+
+
 	
-	
-	
+
 	
 	\section{Simulating the Double Pendulum}
 	
@@ -239,6 +242,7 @@
 			\begin{tabular}{|c|c|}
 				\hline
 				Component & Supply Voltage [\SI{}{V}] \\
+				\hline
 				\hline
 				Digital Logic Components & \SI{5}{} \\
 				\hline
