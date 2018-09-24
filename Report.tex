@@ -99,13 +99,17 @@
 	
 	\section{System Identification}
 	
-	The system identification test are done to determine the characteristics that describe behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position. The system is describe by 2 parameters, $\theta$ and $\phi$ which provides the position of the non-actuated and actuated pendulums. The system is thus a 2 degree of freedom (2DOF) system and 
+	The system identification tests are done to determine the characteristics that describe the behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position. The system are describe by 2 independent parameters, $\theta$ and $\phi$ which defines the position of the non-actuated and actuated pendulums. The system is thus a 2 degree of freedom (2DOF) system and it is expected to contain 2 natural frequencies each accompanied by a damping coefficient.
 	
-	The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$. The accuracy of the initial conditions is of little importance, but must allow the system to contain a few oscillation to accurately determine the parameters of interest.
+	The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$ constant throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$. The accuracy of the initial conditions is of little importance, but the initial condition must allow the response to contain a few oscillation to accurately determine the parameters of interest. The second natural frequency is determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{rad}$ throughout the response. This was accomplished by constraining the non-actuated pendulum using hard stops. Figure \ref{fig:q2_response} shows the measured response of the system when $\phi$ starts at a initial condition and keeping $\theta$ constant.ith with an approximated response that is determined by the parameters shown in Table \ref{table:system_response_prop}.
 	
 	The natural frequencies of the system is identified by inspecting the frequency content of the time-domain responses. The frequency content of the initial condition responses of both experiments are shown in Figure \ref{fig:fft_system_response}, by applying the Fast Fourier Transform (FFT) algorithm to the time-domain signals. The FFT indicates the natural frequencies by the predominant peaks across the frequency spectrum which are tabulated in Table \ref{table:system_characteristic}.
 	
-	The input to the system is the torque delivered by the motor and determined by the control laws. These control laws is based on the mechanical model of the system and it is assumed the torque required is instantaneously available. This is inaccurate due to the DC motor model describing the response of torque by the input of a voltage. The model of the DC motor is not derived 
+	The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} are decaying with time and this decaying behaviour can be modeled by the following equation: $$\tau(t) = -\zeta \omega_{n} t$$ Where $\omega_{n}$ is the natural frequency of the system and $\zeta$ the damping ratio of the system. The natural frequencies of the system has already been determined and thus linear regression can be used to determine the best $\zeta$ that will fit the measured data. The decaying functions are shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} with the best fit $\zeta$ values shown in Table \ref{table:system_characteristic}. It is visible from the responses that the damping ratio changes when the response are near steady state. These new damping ratio's are also tabulated in Table \ref{table:system_characteristic} and shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response}.
+	
+	The input to the system is the torque delivered by the motor and the magnitude and direction is determined by the control laws. The model describing the system in (1) assumes the torque delivered to the system is instantaneously available. This is inaccurate due to the DC motor model describing the torque delivered by the model when applying a DC voltage. The input that the motor will be receiving is a Pulse-Width-Modulated (PWM) signal to represent a DC voltage.
+	
+	Experiments are done to determine the relationship of between the duty-cycle of the PWM signal and the torque provided by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hardstop. The motor-driver that controls the motor has a feedback pin that provides a proportional current of $\frac{1}{375}$ of the current flowing through the motor. This proportional current is allowed to flow through a known resistor. The voltage across the resistor is measured and provides a indication of the current flowing through the motor. The mean value of the voltage measured on the oscilloscope is taken and mapped backwards to determine the current. Figure \ref{fig:dutycycle_vs_current} shows the measured data with a line of best fit. It is clear that there exist a linear relationship between the duty-cycle of the PWM signal and the torque the motor can provide.
 	
 	\begin{table}[]
 		\centering
@@ -118,9 +122,13 @@
 			\hline
 			$f_{2}$ & \SI{3.9}{Hz} & & \\ 
 			\hline
-			$\zeta_{1}$ & & & \\
+			$\zeta_{11}$ & & & \\
 			\hline
- 			$\zeta_{2}$ & & & \\
+ 			$\zeta_{21}$ & & & \\
+ 			\hline
+ 			$\zeta_{12}$ & & & \\
+ 			\hline
+ 			$\zeta_{22}$ & & & \\
  			\hline
 	\end{tabular}
 	\caption{System Characteristic \& their Statistical Properties from 10 Experiments}
@@ -144,7 +152,6 @@
 		\label{fig:q1_response}
 	\end{figure}
 		
-	The second natural frequency is determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{rad}$. Figure \ref{fig:q2_response} shows the measured response of the system with an approximated response that is determined by the parameters shown in Table \ref{table:system_response_prop}. These parameter were determine by using the least square method to determine $\zeta$.
 	
 	\begin{figure}[h]
 		\centering
