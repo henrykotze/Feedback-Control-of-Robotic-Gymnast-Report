@@ -99,6 +99,10 @@
 	
 	\section{System Identification}
 	
+	%WHAT you are going to present in this chapter/section
+	%WHY you are presenting it, and
+	%HOW you are going to present it?
+	
 	The system identification tests are done to determine the characteristics that describe the behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position. The system are describe by 2 independent parameters, $\theta$ and $\phi$ which defines the position of the non-actuated and actuated pendulums. The system is thus a 2 degree of freedom (2DOF) system and it is expected to contain 2 natural frequencies each accompanied by a damping coefficient.
 	
 	The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$ constant throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$. The accuracy of the initial conditions is of little importance, but the initial condition must allow the response to contain a few oscillation to accurately determine the parameters of interest. The second natural frequency is determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{rad}$ throughout the response. This was accomplished by constraining the non-actuated pendulum using hard stops. Figure \ref{fig:q2_response} shows the measured response of the system when $\phi$ starts at a initial condition and keeping $\theta$ constant.ith with an approximated response that is determined by the parameters shown in Table \ref{table:system_response_prop}.
@@ -184,7 +188,9 @@
 	
 	Once the mechanical system was designed and manufactured and the system identification was completed the true system parameters could be used in the simulation. These system parameters are shown in Table \ref{table:system_param}. Using the system parameters shown in Table \ref{table:system_param} the natural frequencies of the linearised system, the feedback gain matrix for the balancing control and the gain constants for the swing-up control were determined. 
 	
-	Figure \ref{fig:swingup&balance} shows the simulated swing-up and balance of the double pendulum. As discussed in the Swing-up Controller section the $\alpha$ value control the relative angle between actuated pendulum and the non-actuated pendulum. This $\alpha$ value is decreased throughout the swing-up of the robotic gymnast to ensure the robotic gymnast can be approximated as a single pendulum to allow the linear
+	Figure \ref{fig:swingup&balance} shows the simulated swing-up and balance of the double pendulum. As discussed in the Swing-up Controller section the $\alpha$ value controls the relative angle between actuated pendulum and the non-actuated pendulum. This $\alpha$ value is decreased throughout the swing-up of the robotic gymnast to ensure the robotic gymnast can be approximated as a single pendulum to allow the linear controller to catch the swinging pendulums. This decreasing $\alpha$ is visible in the response as the system nears the unstable equilibrium the amplitude of $\phi$ descreases.
+	
+	Figure \ref{fig:balancing} shows the response of the system when given a initial condition that is within the region of controllability in which the balancing controller moves the system to the unstable equilibrium position. The response shows that the balancing controller is capable of balancing the robotic gymnast.
 	
 	
 		\begin{table}[]
@@ -227,19 +233,14 @@
 	
 	
 	\subsection{Feedback Control for Swing-up Controller}
-	
-	
-	\section{Experimental Analysis of Double Pendulum}
-	
-	Experiments was performed on the physical model to determine the various unknown coefficients such as the friction coefficient in the bearings, the friction coefficient between the stator and rotor of the motor and physical properties such as the centroid of each pendulum. 
-	
-	The damping coefficient is proportional to the normal force between the two bodies. The assumption is made that the damping coefficient is proportional to the angular velocity, but this is only true if the inertia stays constant. This is not the case due to actuated pendulum swinging relative to the under-actuated pendulum and the inertia the bearings are seeing will be changing. This uncertainty is accepted due to the difficult in measuring this time,angle and starting condition dependent variable. (Chaos theory). The bearing damping coefficient is measured at keeping $\phi = 0 rad$ and recording the response of the system when disturbed from $\theta = \pi$, the unstable equilibrium position. The damping coefficient can be determined from the response shown in Figure XXX by....
-	
-	The damping coefficient of the DC motor will be determine by analysing the step response of the motor. The assumption is made that the DC motor can be model as a LTI second order system and by analysing the step response the damping coefficient can be calculated. Figure XXX show the step response of the DC motor.
+
 	
 	\section{Why Designing in the Continuous Time Domain is Sufficient}
 	
 	\section{Mechanical Design of the Double Pendulum}
+	%WHAT you are going to present in this chapter/section
+	%WHY you are presenting it, and
+	%HOW you are going to present it?
 	
 	%Translating the abstract model into a true physical representation it is of extreme importance that the assumptions made during the derivation of the model remains in the physical model. These assumption include planar translation, rigid body dynamics and friction proportional to angular velocity. These assumptions needs to true in the physical model.
 	
@@ -369,7 +370,9 @@
 	
 	
 	\section{Verification of Model}
-	
+	%WHAT you are going to present in this chapter/section
+	%WHY you are presenting it, and
+	%HOW you are going to present it?
 
 	\newpage
 	%\section{Bibliography}
