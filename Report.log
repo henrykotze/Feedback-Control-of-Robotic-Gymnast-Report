@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  24 SEP 2018 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  25 SEP 2018 09:35
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -1301,19 +1301,21 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [9]
 
-LaTeX Warning: Reference `table:system_param' on page 10 undefined on input lin
-e 180.
+LaTeX Warning: Reference `fig:mechanical_energy' on page 10 undefined on input 
+line 181.
 
 
-LaTeX Warning: Reference `table:system_param' on page 10 undefined on input lin
-e 182.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 190.
 
+[10]
 
-LaTeX Warning: Reference `table:poles_of_system' on page 10 undefined on input 
-line 188.
+LaTeX Warning: Reference `table:poles_of_system' on page 11 undefined on input 
+line 222.
 
-[10] [11 <./FFT_system-eps-converted-to.pdf>] [12 <./q1_initial_response-eps-co
-nverted-to.pdf>] [13 <./q2_initial_response-eps-converted-to.pdf>]
+[11 <./FFT_system-eps-converted-to.pdf>] [12 <./q1_initial_response-eps-convert
+ed-to.pdf>] [13 <./q2_initial_response-eps-converted-to.pdf>] [14 <./dutycycle_
+vs_current-eps-converted-to.pdf>]
 (Electronic_System/ElectronicSystemOverview.tikz
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 libraryshadows.code.tex"
@@ -1331,19 +1333,18 @@ File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
 \pgf@layerboxsaved@background=\box69
 \pgf@layerbox@foreground=\box70
 \pgf@layerboxsaved@foreground=\box71
-)
+) [15]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 281.
+
+[16] [17] (Logic_Level_Converter/LogicLevelConverterAndInverter.tikz)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14 <./dutycycle_vs_current-eps-converted-to.pdf>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 247.
-
-[15] [16] [17] (Logic_Level_Converter/LogicLevelConverterAndInverter.tikz)
 
 LaTeX Warning: Reference `fig:motor_control_system' on page 18 undefined on inp
-ut line 318.
+ut line 352.
 
 (JK_XOR_gates/jk_xor_nor.tikz
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\circ
@@ -1358,8 +1359,12 @@ uits\tikzlibrarycircuits.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\circuits\pgflibr
 aryshapes.gates.logic.US.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\circuits\pgflibr
-aryshapes.gates.logic.code.tex")))) [18] [19] (Report.bbl) [20]
-Overfull \hbox (38.0489pt too wide) detected at line 379
+aryshapes.gates.logic.code.tex"))))
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18] [19] (Report.bbl) [20]
+Overfull \hbox (38.0489pt too wide) detected at line 413
 \OMS/cmsy/m/n/12 L \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 I[][] \OT1/cmr/m/n/12 +
  []\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 ([] + [])[] + []\OML/cmm/m/it/12 m[]\OT1
 /cmr/m/n/12 [\OML/cmm/m/it/12 L[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 l[]\OT1/
@@ -1369,7 +1374,7 @@ cmr/m/n/12 ([] + [])[] + 2\OML/cmm/m/it/12 L[]l[]\OT1/cmr/m/n/12 ([] + [])[] []
  []
 
 [21]
-Overfull \hbox (48.20831pt too wide) detected at line 383
+Overfull \hbox (48.20831pt too wide) detected at line 417
 [][] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/1
 2 I[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 I[][] \OT1/cmr/m/n/12 + \OML/cmm/m/i
 t/12 m[]L[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]l[][] \OT1/cmr/m/n/12 + \OM
@@ -1385,13 +1390,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43398 strings out of 492973
- 1096135 string characters out of 3135932
- 1289647 words of memory out of 3000000
- 46684 multiletter control sequences out of 15000+200000
+ 43399 strings out of 492973
+ 1096158 string characters out of 3135932
+ 1291062 words of memory out of 3000000
+ 46685 multiletter control sequences out of 15000+200000
  543140 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,12n,98p,2002b,1109s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,18n,98p,2002b,1109s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
@@ -1404,7 +1409,7 @@ cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on Report.pdf (26 pages, 707245 bytes).
+Output written on Report.pdf (26 pages, 708433 bytes).
 PDF statistics:
  181 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

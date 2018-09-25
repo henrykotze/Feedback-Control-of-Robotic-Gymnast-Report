@@ -172,14 +172,48 @@
 
 	
 	\section{Simulating the Double Pendulum}
+	%WHAT you are going to present in this chapter/section
+	%WHY you are presenting it, and
+	%HOW you are going to present it?
 	
-	Simulation of the gymnast was done using MATLAB Simulink. The differential equations is implemented and non-linearities such as saturation of the motor, gearbox backlash and quantisation of sensory data is implemented to represent the true system as close as possible.
+	The process of simulating the robotic gymnast and ensuring the simulation provide a true representation of the system is discussed. Simulation of the robotic gymnast plays a important role during the design process. It allows the designer to develop a intuition for the system, enables the verification of dynamics and the creation of specification for the mechanical design. It will be presented by discussing how the simulation is a true representation of the system, how design specifications were determined and the influence of these parameters.
+
+	Simulation of the gymnast was done using MATLAB Simulink. The differential equations were implemented shown in (1) and non-linearities such as saturation of the motor, gearbox backlash and quantisation of sensory data were implemented to represent a true system. Verification of successful implementation of the differential equations were done by removing all non-linearities created by hardware and removing the damping effects. When the system is given a initial condition it is expected that the mechanical energy in the system will remain constant. This behaviour is shown in Figure \ref{fig:mechanical_energy} and verifies the correct implementation of the mathematical model. 
 	
-	System characteristic values such as inertia and pendulum lengths was unavailable during simulations owning to the mechanical design that was incomplete. Initially the system variables such as inertia and pendulum lengths was selected of values that represent a physical system. The accuracy of these values were credible being taken from a previous physical model. From these simulation motor specification could be determine and the influence of system variables could be analysed. Damping coefficient was chosen at random and the influence on the behaviour of the system was analaysed. (Describe how they influence the behaviour of the system).
+	System characteristic values such as inertia and pendulum lengths were unavailable during simulations owning to the mechanical design that was incomplete. Initially the system variables such as inertia and pendulum lengths were selected from values that represent a physical system. The accuracy of these values were credible being taken from a previous physical model. From these simulation motor specification could be determine and the influence of system variables could be analysed. Damping coefficients were chosen at random and the influence on the behaviour of the system was analaysed. (Describe how they influence the behaviour of the system).
 	
-	Once the mechanical system was designed and manufactured and the system identification was completed the true system parameters could be used in the simulation. The system parameters used is shown in Table \ref{table:system_param}.
+	Once the mechanical system was designed and manufactured and the system identification was completed the true system parameters could be used in the simulation. These system parameters are shown in Table \ref{table:system_param}. Using the system parameters shown in Table \ref{table:system_param} the natural frequencies of the linearised system, the feedback gain matrix for the balancing control and the gain constants for the swing-up control were determined. 
 	
-	Using the system parameters shown in Table \ref{table:system_param} the natural frequencies of the linearised system, the feedback gain matrix for the balancing control and the gain constants for the swing-up control is determined.
+	Figure \ref{fig:swingup&balance} shows the simulated swing-up and balance of the double pendulum. As discussed in the Swing-up Controller section the $\alpha$ value control the relative angle between actuated pendulum and the non-actuated pendulum. This $\alpha$ value is decreased throughout the swing-up of the robotic gymnast to ensure the robotic gymnast can be approximated as a single pendulum to allow the linear
+	
+	
+		\begin{table}[]
+		\centering
+		\begin{tabular}{|c|c|}
+			\hline
+			System Parameter & Value \\
+			\hline
+			\hline
+			$L_{1}$ & \SI{2}{m} \\
+			\hline
+			$L_{2}$ & \SI{3.9}{m} \\ 
+			\hline
+			$I_{A}$ & \SI{2}{kg\cdot m^3}\\
+			\hline
+			$I_{B}$ & \SI{2}{kg\cdot m^3}\\
+			\hline
+			$m_{1}$ & \SI{2}{kg}\\
+			\hline
+			$m_{2}$ & \SI{2}{kg} \\
+			\hline
+			$l_{1}$ & \SI{2}{m}\\
+			\hline
+			$l_{2}$ & \SI{2}{m}\\
+			\hline
+		\end{tabular}
+		\caption{System Parameters}
+		\label{table:system_param}
+	\end{table}
 	
 	\subsection{Feedback Control for Balancing Controller}
 	
