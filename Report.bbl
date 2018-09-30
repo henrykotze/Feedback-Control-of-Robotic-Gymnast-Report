@@ -36,11 +36,6 @@ R.~Tedrake. Underactuated robotics: Algorithms for walking, running, swimming,
 ``The swing up control problem for the acrobat,'' \emph{IEEE Control Systems},
   vol.~47, no.~10, pp. 50--55, 1995.
 
-\bibitem{null_controllability}
-``An explicit description of null controllable regions of linear systems with
-  saturating actuators,'' \emph{Systems \& Control Letters}, vol.~47, no.~10,
-  pp. 65--78, 2002.
-
 \bibitem{textbook}
 e.~a. Gene F.~Franklin, J. David~Powell, \emph{Feedback Control of Dynamic
   Systems}, 7th~ed.\hskip 1em plus 0.5em minus 0.4em\relax Edingburgh Gate,
@@ -55,6 +50,11 @@ e.~a. Gene F.~Franklin, J. David~Powell, \emph{Feedback Control of Dynamic
 M.~Morzfeld, ``The transformation of second-order linear systems into
   independent equations,'' Ph.D. dissertation, University of California,
   Berkeley, 2011.
+
+\bibitem{null_controllability}
+``An explicit description of null controllable regions of linear systems with
+  saturating actuators,'' \emph{Systems \& Control Letters}, vol.~47, no.~10,
+  pp. 65--78, 2002.
 
 \bibitem{stm32_ADC:2017}
 \emph{How to get the best ADC accuracy in the STM32 microcontrollers}, AN2834

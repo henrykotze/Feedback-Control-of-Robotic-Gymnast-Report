@@ -42,6 +42,9 @@
 	\section{Review of Fundamental Concepts}
 	
 	\section{Derivation of Double Pendulum}
+	%WHAT you are going to present in this chapter/section
+	%WHY you are presenting it, and
+	%HOW you are going to present it
 	\begin{figure}
 		\centering
 		\input{doublePendulumImage.tikz}
@@ -49,32 +52,97 @@
 		\label{fig:doublePen}
 	\end{figure}
 
-	The robotic gymnast is modeled as two pendulums connected together with a hinge. Each pendulum is modeled as having their mass distributed arbitrary along their axis and a torque actuating the lower pendulum. Friction is modeled as proportional to the angular velocity of the pendulums. The friction that develops at the hinge connecting the 2 pendulums are a function of the relative motion between the two pendulums. The angle, $\phi$ was purposefully chosen relative to angle, $\theta$. Figure \ref{fig:doublePen} displays the free body diagram of the robotic gymnast.
-	\\
+	The approach taken to derive the mathematical model of the robotic gymnast will be discussed in this section. It is presented to allow the reader to understand parameters mentioned in the report. The swing-up of the robotic gymnast consist of non-linear behaviour and is require to fully derive the dynamics of the system. The strenuous mathematical steps are removed from the reader, which is provided in Appendix A, and a summary of the motivation and paradigm approach to the derivation is provided.
+
+	The robotic gymnast is modeled as two pendulums connected together with a hinge, where each pendulum is modeled as having their mass distributed arbitrary along their axis. There is a torque actuating the lower pendulum seen in Figure \ref{fig:doublePen} and friction is modeled as proportional to the angular velocity of the pendulums. The friction that develops at the hinge is proportional to the relative motion of the actuated pendulum and non-actuated pendulum. The angle, $\phi$ was purposefully chosen relative to $\theta$ to ease the identification of this friction. Figure \ref{fig:doublePen} displays the free body diagram of the robotic gymnast.
 	
-	Deriving the equation of motion of the robotic gymnast can be approached on different methods, but by exploring the system it can be shown that the system's energy is easily defined. The energy in the system are the potential energy of the 2 pendulums, the rotational kinetic energy of the underactuated pendulum and the velocity- and rotational kinetic energy of the actuated pendulum. The system's energy is easily defined and for this reason the Lagrange-Euler equation is used to derive the differential equation describing the system dynamics. The derivation of the differential equation can be found in Appendix A.
-	\\
+	Deriving the equation of motion of the robotic gymnast can be approached using different methods, but by exploring the system it can be shown that the system's energy is easily defined. The energy in the system is the potential energy of the 2 pendulums, the rotational kinetic energy of the non-actuated pendulum and the velocity- and rotational kinetic energy of the actuated pendulum. The Euler-Lagrange equation is chosen to derive the differential equation describing the system dynamics because of the easily defined energy. Using the Euler-Lagrange equation leads to the condense equations shown in (\ref{eq:condense1}) and (\ref{eq:condense2}),
+	\begin{equation} \label{eq:condense1}
+		d_{11}\ddot{\theta}+d_{12}\ddot{\phi} + h_{1} + \psi_{1} = 0
+	\end{equation}
+	\begin{equation} \label{eq:condense2}
+			d_{21}\ddot{\theta} + d_{22}\ddot{\phi} + h_{2} + \psi_{2} = \tau
+	\end{equation}
+	where
+		\begin{equation} \label{eq:d11}
+	d_{11} = I_{a} + I_{b} + m_{2}(L_{1}^2 + l_{2}^2+2L_{1}l_{2}\cos(\phi))
+	\end{equation}
+		\begin{equation} \label{eq:d12}
+	d_{12} = I_{b} +m_{2}(l_{2}^2 L_{1}l_{2}\cos(\phi))
+	\end{equation}
+		\begin{equation} \label{eq:h1}
+	h_{1} = -m_{2}L_{1}l_{2}\sin(\phi)\dot{\phi^2}-2m_{2}L_{1}l_{2}\sin(\phi)\dot{\phi}\dot{\theta}
+	\end{equation}
+		\begin{equation} \label{eq:psi1}
+	\psi_{1} = (m_{2}l_{1}+m_{2}L_{1})g\cos(\theta) + m_{2}l_{2}g\cos(\theta+\phi)
+	\end{equation}
+		\begin{equation} \label{eq:d21}
+	d_{21}=
+	\end{equation}
+		\begin{equation} \label{eq:d22}
+	d_{22}=
+	\end{equation}
+		\begin{equation} \label{eq:h2}
+	h_{2}=
+	\end{equation}
+		\begin{equation} \label{eq:psi2}
+	\psi_{2}=
+	\end{equation}
 	
-	The equation of motion for the robotic gymnast is non-linear. It contains terms that is a function of squared angular velocity, sine and more. These non-linearity can be linearised around a working point, but during the swing-up of the robotic gymnast, where the gymnast will operate in a large operating region linearisation will cause dramatic errors and thus these non-linearities need to be taken into account. How to overcome these non-linearities is discussed in the following section.
+	
+	
+	The equation of motion for the robotic gymnast is very non-linear containing multiple terms of squared angular velocities and cosine functions. These non-linearities is hidden in the in the $\psi$ and $h$ terms. The non-linearities can be linearised around a working point, but during the swing-up of the robotic gymnast they must be taken into account.
  
 	
 	
 	\section{Swing Up of the Double Pendulum}
+	% WHAT you are going to present in this chapter/section
+	% WHY you are presenting it, and
+	% HOW you are going to present it	
+	The swing up of the robotic gymnast is done by the non-linear feedback control system. For the robotic gymnast to swing from the stable equilibrium position to the unstable equilibrium position the feedback control must incorporate the non-linearities of the system. How these non-linearities of the system is incorporated and the design paradigm of the approach will be explained in following text.
 	
-	It has been shown that it is not possible to linearise the dynamics of the gymnast by means of static state feedback and non-linear transformation \cite{murray}, but it is possible to achieve a linear response from one of the state variables by implementing a non-linear feedback. This non-linear feedback is the partial feedback linearisation, where any of the 2 responses of the state variables can be linearised. 
-	\\
+	It has been shown that it is not possible to linearise the dynamics of the gymnast by means of static state feedback and non-linear transformation \cite{murray}, but it is possible to achieve a linear response from one of the state variables by implementing a non-linear feedback. This non-linear feedback is the partial feedback linearisation.
 	
-	Collocated linearisation of the non-linear model is done to linearise the response of the actuated pendulum resulting in being proportional to the input of the system. The derivation of the collocated linearisation is shown in appendix C. This input can be selected to force the actuated pendulum to follow a desired trajectory \cite{spong_swingup}. 
-	\\
+	Collocated linearisation is a form of partial feedback linearisation where a non-linear control input $\tau$ is used to linearise the response of the actuated pendulum. By analysing equation (\ref{eq:collocated_lin2}), the input $\tau$ is chosen to cancel all the non-linearities of the system and add an additional outer loop control input $v_{2}$. This outer loop control input can be selected to force the actuated pendulum to follow a desired trajectory \cite{spong_swingup}. The derivation of the collocated linearisation is shown in appendix C.
 	
-	To force the actuated pendulum to follow a desired trajectory, it is possible to pump energy into the system. The desired trajectory for ${\phi}^{d}$ is chosen as $${\phi}^{d} = \alpha \arctan(\dot{\theta}) $$ \cite{spong_swingup}. The $\alpha$ coefficient constrains the actuated pendulum to stay within a interval of $ \phi \in [-\alpha,\alpha] $ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable inverted position to switch over to the linearised model. 
+	\begin{equation} \label{eq:collocated_lin1}
+	d_{11}\ddot{\theta} + h_{1} + \psi_{1} = -d_{12}v_{2}
+	\end{equation}
+	\begin{equation} \label{eq:collocated_lin2}
+	\ddot{\phi} = v_{2}
+	\end{equation}
+	
+	The ability to control the actuated pendulum to follow a desired trajectory, provides the possibility to increase the energy of the system if the correct trajectory is chosen. The increase of energy in the system will cause the pendulums to rise from their stable equilibrium position and thus start swinging upwards. The desired trajectory for ${\phi}$ is chosen as equation (\ref{eq:desired_phi}) determined by W.Spong in \cite{spong_swingup}.
+	\begin{equation} \label{eq:desired_phi}
+	\phi^{d} =  \alpha \arctan(\dot{\theta})
+	\end{equation}
+	
+	The outer loop control input, $v_{2}$, is chosen as 
+	\begin{equation} \label{eq:v2}
+	v_{2} = K_{p}(\phi^{d}-\phi)-K_{d}\dot{\phi}
+	\end{equation}
+	
+	The desired trajectory is chosen to increase the energy in the system, approach is to allow the actuated pendulum swing in phase with the non-actuated pendulum. By this approach the energy of the actuated pendulum is transferred to the non-actuated pendulum \cite{spong_swingup}. Appendix E shows how this approach is expected to work.
+	
+	Returning to the desired trajectory of $\phi$, the coefficient $\alpha$ constrains the actuated pendulum to stay within a interval of $ \phi \in [-\alpha,\alpha] $ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable inverted position.
 	
 		  
 	\section{Balancing of the Double Pendulum}
+	% WHAT you are going to present in this chapter/section
+	% WHY you are presenting it, and
+	% HOW you are going to present it
 	
-	The balancing of the gymnast will be achieved by catching the gymnast when the swing-up control algorithm has brought the gymnast to the null controllability region. The null controllability region is the set of states that can be steered to inverted unstable equilibrium position in a fixed time with a constrained control input \cite{null_controllability}.
+	Provided the robotic gymnast is within the region of controllability, a balancing controller is required to bring the system to the unstable equilibrium position. The design approach is based on the premises that the swing-up controller will swing the robotic gymnast within the region of controllability where the balancing controller will steer the robotic gymnast to balancing.
 	
-	Within the null controllability region the gymnast can be approximated as a linear system. Linearising the model at $$\vec{Q_{s}} = [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$ the unstable inverted equilibrium position using the Taylor Series Expansion the model can be written in the state space form. The linearisation of the gymnast model is shown in Appendix B. The state space variables are chosen as $\Delta{q}$ and $\Delta{\dot{q}}$ which results in the state space representation as:  $$ \dot{\vec{x}} = \boldsymbol{A}\vec{x} + \boldsymbol{B}u $$ and $$ \vec{y} = \boldsymbol{D}\vec{x} + \boldsymbol{0}u $$.
+	%The balancing of the gymnast will be achieved by catching the gymnast when the swing-up control algorithm has brought the gymnast to the null controllability region. The null controllability region is the set of states that can be steered to inverted unstable equilibrium position in a fixed time with a constrained control input \cite{null_controllability}.
+	The independent parameters, $\phi$ and $\theta$, will be condensed from now on as a vector describes as $$ \vec{q} = 
+	\begin{bmatrix}
+	\theta \\
+	\phi
+	\end{bmatrix}
+	$$
+	
+	The system can be approximated as a linear system when in the vicinity of the unstable equilibrium position. The system is thus linearised at $$\vec{Q_{s}} = [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$ the unstable equilibrium position using the Taylor Series Expansion shown in detail in Appendix B. This linearised model can than be written in the state space form to implement a feedback gain. The state space variables are chosen as $\Delta{\vec{q}}$ and $\Delta{\dot{\vec{q}}}$ which results in the state space representation as:  $$ \dot{\vec{q}} = \boldsymbol{A}\Delta{\vec{q}} + \boldsymbol{B}u $$ and $$ \vec{y} = \boldsymbol{D}\Delta{\vec{q}} + \boldsymbol{0}u $$.
 	
 	% since I am mentioning the linearised system do I have to mention the unstable inverted equilibirum position, since it is linearised around this point
 	When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. The instability of the system can be identified by examining the poles of the systems. The linearised model contains 4 real, 2 positive and 2 negative poles, and these poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts. This allows the higher-order system response to be characterised as a second-order response \cite{textbook}. The linearised model already has 2 negative real poles which is chosen to stay the same. The real positive poles were selected based on the following specifications.
@@ -103,36 +171,33 @@
 	%WHY you are presenting it, and
 	%HOW you are going to present it?
 	
-	The system identification tests are done to determine the characteristics that describe the behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position. The system are describe by 2 independent parameters, $\theta$ and $\phi$ which defines the position of the non-actuated and actuated pendulums. The system is thus a 2 degree of freedom (2DOF) system and it is expected to contain 2 natural frequencies each accompanied by a damping coefficient.
+	The system identification tests are done to determine the characteristics that describe the behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position. The system are described by 2 independent parameters, $\theta$ and $\phi$ which defines the position of the non-actuated and actuated pendulums. The system is thus a 2 degree of freedom (2DOF) system and it is expected to contain 2 natural frequencies each accompanied by a damping coefficient.
 	
-	The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$ constant throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$. The accuracy of the initial conditions is of little importance, but the initial condition must allow the response to contain a few oscillation to accurately determine the parameters of interest. The second natural frequency is determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{rad}$ throughout the response. This was accomplished by constraining the non-actuated pendulum using hard stops. Figure \ref{fig:q2_response} shows the measured response of the system when $\phi$ starts at a initial condition and keeping $\theta$ constant.ith with an approximated response that is determined by the parameters shown in Table \ref{table:system_response_prop}.
+	The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$ constant throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$. The accuracy of the initial conditions is of little importance, but the initial condition must allow the response to contain a few oscillation to accurately determine the parameters of interest. The second natural frequency is determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{rad}$ throughout the response. This was accomplished by constraining the non-actuated pendulum using hard stops. Figure \ref{fig:q2_response} shows the measured response of the system when $\phi$ starts at a initial condition and keeping $\theta$ constant.%ith with an approximated response that is determined by the parameters shown in Table \ref{table:system_response_prop}.
 	
 	The natural frequencies of the system is identified by inspecting the frequency content of the time-domain responses. The frequency content of the initial condition responses of both experiments are shown in Figure \ref{fig:fft_system_response}, by applying the Fast Fourier Transform (FFT) algorithm to the time-domain signals. The FFT indicates the natural frequencies by the predominant peaks across the frequency spectrum which are tabulated in Table \ref{table:system_characteristic}.
 	
-	The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} are decaying with time and this decaying behaviour can be modeled by the following equation: $$\tau(t) = -\zeta \omega_{n} t$$ Where $\omega_{n}$ is the natural frequency of the system and $\zeta$ the damping ratio of the system. The natural frequencies of the system has already been determined and thus linear regression can be used to determine the best $\zeta$ that will fit the measured data. The decaying functions are shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} with the best fit $\zeta$ values shown in Table \ref{table:system_characteristic}. It is visible from the responses that the damping ratio changes when the response are near steady state. These new damping ratio's are also tabulated in Table \ref{table:system_characteristic} and shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response}.
+	The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} are decaying with time and this decaying behaviour can be modeled by the following equation: $$\tau(t) = -\zeta \omega_{n} t$$ Where $\omega_{n}$ is the natural frequency of the system and $\zeta$ the damping ratio of the system. The natural frequencies of the system has already been determined and thus linear regression can be used to determine the best $\zeta$ that will fit the measured data. The decaying functions are shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} with the best fit $\zeta$ values shown in Table \ref{table:system_characteristic}. It is visible from the responses that the damping ratio changes when the response are nears steady state. This change of damping ratio is neglible due to the controllers being implement are robust to changes in $\zeta$.
 	
-	The input to the system is the torque delivered by the motor and the magnitude and direction is determined by the control laws. The model describing the system in (1) assumes the torque delivered to the system is instantaneously available. This is inaccurate due to the DC motor model describing the torque delivered by the model when applying a DC voltage. The input that the motor will be receiving is a Pulse-Width-Modulated (PWM) signal to represent a DC voltage.
+	The input to the system is the torque delivered by the motor and the magnitude and direction is determined by the control laws. The model describing the system in equation \ref{eq:condense2} assumes the torque delivered to the system is instantaneously available. This is inaccurate due to the DC motor model describing the torque delivered by the model when applying a DC voltage. The input that the motor will be receiving is a Pulse-Width-Modulated (PWM) signal to represent a DC voltage.
 	
-	Experiments are done to determine the relationship of between the duty-cycle of the PWM signal and the torque provided by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hardstop. The motor-driver that controls the motor has a feedback pin that provides a proportional current of $\frac{1}{375}$ of the current flowing through the motor. This proportional current is allowed to flow through a known resistor. The voltage across the resistor is measured and provides a indication of the current flowing through the motor. The mean value of the voltage measured on the oscilloscope is taken and mapped backwards to determine the current. Figure \ref{fig:dutycycle_vs_current} shows the measured data with a line of best fit. It is clear that there exist a linear relationship between the duty-cycle of the PWM signal and the torque the motor can provide.
+	Experiments were done to determine the relationship between the duty-cycle of the PWM signal and the torque delivered by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hard-stop. The motor-driver that controls the motor has a feedback pin that provides a proportional current of $\frac{1}{375}$ of the current flowing through the motor. This proportional current is allowed to flow through a known resistor. The voltage across the resistor is measured and provides a indication of the current flowing through the motor. The mean value of the voltage measured on the oscilloscope is taken and mapped backwards to determine the current. Figure \ref{fig:dutycycle_vs_current} shows the measured data with a line of best fit. It is clear that there exist a linear relationship between the duty-cycle of the PWM signal and the torque the motor can provide.
 	
 	\begin{table}[]
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			 System Characteristic & Value & Mean & Standard Deviation\\
+			 System Characteristic & Mean & Standard Deviation\\
 			\hline
 			\hline
-			$f_{1}$ & \SI{2}{Hz} & & \\
+			$f_{1}$ & \SI{}{Hz} &  \\
 			\hline
-			$f_{2}$ & \SI{3.9}{Hz} & & \\ 
+			$f_{2}$ & \SI{3.62902}{Hz} & 0.04029 \\ 
 			\hline
-			$\zeta_{11}$ & & & \\
+			$\zeta_{1}$ & $1.6931 \cdot10^{-5}$ & $4.823\cdot 10^{-6}$
+			 \\
 			\hline
- 			$\zeta_{21}$ & & & \\
- 			\hline
- 			$\zeta_{12}$ & & & \\
- 			\hline
- 			$\zeta_{22}$ & & & \\
+ 			$\zeta_{2}$ & & \\
  			\hline
 	\end{tabular}
 	\caption{System Characteristic \& their Statistical Properties from 10 Experiments}
@@ -182,13 +247,15 @@
 	
 	The process of simulating the robotic gymnast and ensuring the simulation provide a true representation of the system is discussed. Simulation of the robotic gymnast plays a important role during the design process. It allows the designer to develop a intuition for the system, enables the verification of dynamics and the creation of specification for the mechanical design. It will be presented by discussing how the simulation is a true representation of the system, how design specifications were determined and the influence of these parameters.
 
-	Simulation of the gymnast was done using MATLAB Simulink. The differential equations were implemented shown in (1) and non-linearities such as saturation of the motor, gearbox backlash and quantisation of sensory data were implemented to represent a true system. Verification of successful implementation of the differential equations were done by removing all non-linearities created by hardware and removing the damping effects. When the system is given a initial condition it is expected that the mechanical energy in the system will remain constant. This behaviour is shown in Figure \ref{fig:mechanical_energy} and verifies the correct implementation of the mathematical model. 
+	Simulation of the gymnast was done using MATLAB Simulink. The differential equations were implemented shown in equations \ref{eq:condense1} and \ref{eq:condense2} and non-linearities such as saturation of the motor, gearbox backlash and quantisation of sensory data were implemented to represent a true system. Verification of successful implementation of the differential equations were done by removing all non-linearities created by hardware and removing the damping effects. When the system is given a initial condition it is expected that the mechanical energy in the system will remain constant. This behaviour is shown in Figure \ref{fig:mechanical_energy} and verifies the correct implementation of the mathematical model. 
 	
-	System characteristic values such as inertia and pendulum lengths were unavailable during simulations owning to the mechanical design that was incomplete. Initially the system variables such as inertia and pendulum lengths were selected from values that represent a physical system. The accuracy of these values were credible being taken from a previous physical model. From these simulation motor specification could be determine and the influence of system variables could be analysed. Damping coefficients were chosen at random and the influence on the behaviour of the system was analaysed. (Describe how they influence the behaviour of the system).
+	System characteristic values such as inertia and pendulum lengths were unavailable during simulations owning to the mechanical design that was incomplete. Initially the system variables such as inertia and pendulum lengths were selected from values that represented a physical system. The accuracy of these values were credible being taken from a previous physical model. From these simulation motor specification could be determine and the influence of system variables could be analysed. System variables that influenced the ability of the control system to swing the robotic gymnast is the ratio of the inertia's of the 2 pendulums, $\frac{I_{b}}{I_{a}}$. It was witnessed that the control system took significantly longer to swing the gymnast to the upright position between a ratio of 0.5 and 1. This is due to the amount of energy that the actuated pendulum can transfer is much less, and thus requires longer time to swing up.
+	
+	Damping coefficients were given a realisitic value
 	
 	Once the mechanical system was designed and manufactured and the system identification was completed the true system parameters could be used in the simulation. These system parameters are shown in Table \ref{table:system_param}. Using the system parameters shown in Table \ref{table:system_param} the natural frequencies of the linearised system, the feedback gain matrix for the balancing control and the gain constants for the swing-up control were determined. 
 	
-	Figure \ref{fig:swingup&balance} shows the simulated swing-up and balance of the double pendulum. As discussed in the Swing-up Controller section the $\alpha$ value controls the relative angle between actuated pendulum and the non-actuated pendulum. This $\alpha$ value is decreased throughout the swing-up of the robotic gymnast to ensure the robotic gymnast can be approximated as a single pendulum to allow the linear controller to catch the swinging pendulums. This decreasing $\alpha$ is visible in the response as the system nears the unstable equilibrium the amplitude of $\phi$ descreases.
+	Figure \ref{fig:swingup&balance} shows the simulated swing-up and balance of the double pendulum. As discussed in the Swing-up Controller section the $\alpha$ value controls the relative angle between actuated pendulum and the non-actuated pendulum. This $\alpha$ value is decreased throughout the swing-up of the robotic gymnast to ensure the robotic gymnast can be approximated as a single pendulum to allow the linear controller to catch the swinging pendulums. This decreasing $\alpha$ is visible in the response as the system nears the unstable equilibrium.
 	
 	Figure \ref{fig:balancing} shows the response of the system when given a initial condition that is within the region of controllability in which the balancing controller moves the system to the unstable equilibrium position. The response shows that the balancing controller is capable of balancing the robotic gymnast.
 	
@@ -200,21 +267,21 @@
 			System Parameter & Value \\
 			\hline
 			\hline
-			$L_{1}$ & \SI{2}{m} \\
+			$L_{1}$ & \SI{0.235}{m} \\
 			\hline
-			$L_{2}$ & \SI{3.9}{m} \\ 
+			$L_{2}$ & \SI{0.245}{m} \\ 
 			\hline
-			$I_{A}$ & \SI{2}{kg\cdot m^3}\\
+			$I_{A}$ & \SI{0.0265}{kg\cdot m^2}\\
 			\hline
-			$I_{B}$ & \SI{2}{kg\cdot m^3}\\
+			$I_{B}$ & \SI{0.0221}{kg\cdot m^2}\\
 			\hline
-			$m_{1}$ & \SI{2}{kg}\\
+			$m_{1}$ & \SI{0.5763}{kg}\\
 			\hline
-			$m_{2}$ & \SI{2}{kg} \\
+			$m_{2}$ & \SI{0.4928}{kg} \\
 			\hline
-			$l_{1}$ & \SI{2}{m}\\
+			$l_{1}$ & \SI{0.235}{m}\\
 			\hline
-			$l_{2}$ & \SI{2}{m}\\
+			$l_{2}$ & \SI{0.245}{m}\\
 			\hline
 		\end{tabular}
 		\caption{System Parameters}
@@ -242,7 +309,7 @@
 	%WHY you are presenting it, and
 	%HOW you are going to present it?
 	
-	%Translating the abstract model into a true physical representation it is of extreme importance that the assumptions made during the derivation of the model remains in the physical model. These assumption include planar translation, rigid body dynamics and friction proportional to angular velocity. These assumptions needs to true in the physical model.
+	Translating the mathematical model into a true physical representation it is important that the assumptions made during the derivation of the model remains in the physical model. These assumption include planar translation, rigid body dynamics and friction that is proportional to angular velocity. The section will discuss how the mechanical design was done according to these assumptions.
 	
 	%These assumptions was implemented by using contact ball bearings
 	\newpage
@@ -304,6 +371,8 @@
 
 	\subsection{Programming / Debug Interface}
 	
+	The \textit{Atollic TrueSTUDIO for ARM 8.0.0} Integrated Development Environment (IDE) is used for writing the source code which converts the source code to the Executable and Linkable Format (.elf) file. These .elf files is then written using the Serial Wire Debug (SWD) protocol to the $\mu$C. Debugging of the source code occur using the same IDE which allows the programmer to inspect variables, timers and logic.
+	
 	\subsection{PC UART Interface }
 	
 	The purpose of the UART to serial communication is for data acquisition of the system response and for debugging purposes. The data being sent follows a structure to ensure the reliability of the data. Figure (ref) shows the format of the data being sent.
@@ -319,7 +388,7 @@
 	
 	The signal from the potentiometer that provides measurements about the angle of the shaft varies between 0-5V. This signal is sent through a simple resistive voltage divider circuit to scale the signal between 0-3V. 
 	
-	The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The unity gain amplifier has the characteristic of a high input impedance and low output impedance. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \cite{stm32_ADC:2017}. The SAR ADC's contains internal capacitor that has suffers from the effect of being depleted if the sampling period is to high. The low impendance from the unity gain amplifier reduces the risk of depleting this internal capacitor because of the low current being pulled.
+	The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The unity gain amplifier has the characteristic of a high input impedance and low output impedance. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \cite{stm32_ADC:2017}. The SAR ADC's contains internal capacitor that suffers from the effect of being depleted if the sampling frequency is to high. The low impendance from the unity gain amplifier reduces the risk of depleting this internal capacitor because of the low current being pulled.
 	
 	The current feedback signal that is provided from the motor drive IC varies between 0 and 3V fed into the unity gain operation amplifier. This is done for the same reasons discussed above.
 	
@@ -327,19 +396,24 @@
 	
 	\subsection{Motor Driver}
 	
-	The motor driver IC is responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that controls the direction and speed of the motor. The 2 H-half bridges form a full H-bridge which are Pulse-Width-Modulated(PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. 
+	The motor driver IC is responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that controls the direction and speed of the motor. The 2 H-half bridges form a full H-bridge which are Pulse-Width-Modulated (PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. 
 	
-	The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge(reference). This current is sent through resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current.
+	The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge(reference). This current is sent through a resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current.
 	
 	The MC33887 is capable of providing up to 6A of continuous current to the motor, while withstanding the high current transients due to the fast switching of a inductive load (ref). The motor driver IC is able to provide the motor with the 12V DC which is externally provided by a DC power supply.
 	
 	The schematic of supporting passive components to allow the motor driver IC to work is shown in Appendix XXX.
 	
+	\subsection{Logic Level Converter}
+	
+	The $\mu$C is required to interface with the motor driver. The $\mu$C represent a logical high and low as a \SI{3.3}{V} and \SI{0}{V} respectively. The motor driver IC's logical high threshold is \SI{3.5}{V}. It is thus required to use a logic level converter to allow reliable communication between the two devices.
+	
+	The logic level converter used is the circuit shown in Figure \ref{fig:interterCirc} using the BSS128 transistor. The circuit has the side effect of being a inverter. A logic low, \SI{0}{V} by the $\mu$C will be converted to a \SI{5}{V} and a logic high, \SI{3.3}{V} will be converted to \SI{0}{V}. This side effect is overcome by inverting the logic in software.
+	
 	\subsection{AND Digital Logic Circuit}
 	
-	The digital logic circuit is responsible for interfacing between the microcontroller and the motor driver IC, and providing the motor driver with the correct PWM signal.
 	
-	The microcontroller is only able to provide a logical high and low by representing it as a \SI{3.3}{V} and \SI{0}{V} respectively. The motor driver IC's minimum threshold for a logical high is 3.5V \cite{motorIC}. Thus it is required to use a logic level converter circuit to interface between the 2 devices. This is accomplished using the BSS138 transistor in the circuit diagram shown in Figure \ref{fig:interterCirc}. 
+	
 	
 	\begin{figure}[h]
 		\centering
@@ -347,8 +421,6 @@
 		\caption{Logic Level Converter \& Inverter Circuit}
 		\label{fig:interterCirc}
 	\end{figure}
-
-	This identical circuit shown in Figure \ref{fig:interterCirc} is a inverter and combining the 2 inputs from the microcontroller, the PWM-signal and directional signal with the inverter and AND-gates the motor speed and direction can be controlled. 
 	
 	Figure \ref{fig:motor_control_system} shows the overview of the system
 	
@@ -361,11 +433,31 @@
 		\label{fig:jk_xor}
 	\end{figure}
 	
-	The motor hall sensor incremental encoder produces 2 digital signals  that has a 90 degree phase between each other shown in Figure (ref). This signal will be read by the microcontroller using interrupts when a rising edge is present. The amount of servicing of theses signals can be reduced by using a J-K Flipflop and NOR logic gates circuit shown in Figure \ref{fig:jk_xor}. 
+	The motor incremental encoder produces 2 digital signals  that has a 90 degree phase between each other shown in Figure (ref). These signals will under go a hardware filter that will produce 2 signals that indicates the direction of the motor and the incremental position. The hardware filter is implemented to reduce the processing time of the $\mu$C on the original signals.
 	
-	This circuit produces 2 output signals. The first signal will be a logical high or low indicating a change in rotation. The other signal will be a square wave, where each rising edge indicate a incremental rotation of the shaft. 
+	The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figure \ref{fig:jk_xor} and the schematic shown in Figure \ref{sch:jk_xor}. The XOR gate produces the incremental position of the motor whereas the NOR and JK-Flipflop combination produces the direction of the motor by a logical 1 or 0.
+	
+	%% Explain the effect of the gates maybe produce a signal table
+	
+	
+	
+	
+	 These signals will be read by the $\mu$C using interrupts when a rising- \& falling edge are present.
+	 
+	 The encoder provides 16 lines per revolution, equal to a combined 32 rising- \& falling edges per line. The encoder provides 2 lines increasing the resolution to 64. The motor is connected to a gearbox with a reduction stage of 14:1. The encoder will thus rotate 14 times per shaft revolution, increasing the resolution to 896 per revolution.
 	
 	\subsection{Microcontroller}
+	The microcontroller chosen is the STM32F030Mxx. The selection was done according the ease of setting up, memory size, physical dimensions and the peripherals it provided.
+	
+	The STM32F030MXX is based of the ARM M0 architecture which is ARM's entry level micro-controller. It requires little support to have a up and running microcontroller requiring only the SWD protocol to program and a few by-pass capacitors.
+	
+	It was difficult to determine the memory size specification for the project. This uncertainty ensured that the largest memory size the ARM M0 architecture could provide was selected.
+	
+	The Electrical and Electronic Department's Printed Circuit Board (PCB) manufacturing machine can only provide a  minimum track width \SI{0.3}{mm}. This resulted in choosing a microcontroller whose footprint would meet the requirement.
+	
+	Based on the conceptual design, the chosen microcontroller required to contain 2 ADC's, minimum of 5 GPIO's and 1 serial communication peripheral.
+	
+	
 	
 	
 	
@@ -373,6 +465,12 @@
 	%WHAT you are going to present in this chapter/section
 	%WHY you are presenting it, and
 	%HOW you are going to present it?
+	
+	The simulation is required to be a acceptable representation of the physical system to allow any further development to continue on the simulated model. It is thus important to verify whether the simulated model provides a acceptable representation of the system.
+	
+	
+	
+	
 
 	\newpage
 	%\section{Bibliography}
