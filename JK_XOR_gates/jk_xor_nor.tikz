@@ -11,8 +11,8 @@
 		\draw (0,0.8) node[right] {$J$} -- +(-0.25,0) coordinate (#2 J);
 	\end{scope}
 }	
-\usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
-\usetikzlibrary{calc,arrows}	
+%\usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
+%\usetikzlibrary{calc,arrows}	
 \begin{tikzpicture}[every path/.style={},>=triangle 45,circuit logic US, every circuit symbol/.style={}]
 		
 		% JK FLIP FLIP LOCATION

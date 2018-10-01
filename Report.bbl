@@ -60,8 +60,4 @@ M.~Morzfeld, ``The transformation of second-order linear systems into
 \emph{How to get the best ADC accuracy in the STM32 microcontrollers}, AN2834
   Application note, ST Electronics, 2017.
 
-\bibitem{motorIC}
-\emph{5.0 A H-Bridge woth Load Current Feeback}, 12th~ed., Freescale
-  Semiconductor, 2 2007, document Number: MC33887.
-
 \end{thebibliography}

@@ -4,29 +4,26 @@
 %%%<
 \usepackage{verbatim}
 %%%>
-\begin{comment}
-:Title: Block Diagram for TTL IC Multiplexer 74HC153
-:Tags: Circuits;Electrical engineering
-:Author: RamÃ³n Jaramillo
-:Slug: multiplexer
+\usetikzlibrary{calc,arrows}
+\usepackage{tikz}
+\usepackage[]{circuitikz} % TiKZ Library for US Logic Circuits.
+\usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
 
-This image was taken from a handbook about TTL Logic devices.
-\end{comment}
 \usepackage{tikz}
 \usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
 \begin{document}
-	\begin{tikzpicture}[circuit logic US, every circuit symbol/.style={thick}]
+	\begin{tikzpicture}[every path/.style={},>=triangle 45,circuit logic US, every circuit symbol/.style={}]
 	% Logic Gates
 	\node[and gate,inputs={nn}, point right] (and1) at (2,-1)    {};
 	\node[and gate,inputs={nn}, point right] (and2) at (2,-2)    {};
-	\node[not gate, point right]               (not1) at (-1,-1) {};
+	\node[not gate, point right] (not1) at (0,-0.5) {};
 	
 	
-	\draw (not1.output) -| (1,-1) -- (and1.input 1);
+	\draw (not1.output)[thick] -| (1,-0.9) -- (and1.input 1);
 	
 	%Outputs
-	\draw (and1.output) [thick]-- (3,-1);
-	\draw (and2.output) [thick]-- (3,-2);
+	\draw (and1.output) [thick]-- (3,-1) node[ocirc,label={right:IN 1} ](in1) {};
+	\draw (and2.output) [thick]-- (3,-2) node[ocirc,label={right:IN 2} ](in2) {};
 	
 	
 	

@@ -11,6 +11,8 @@
 \usepackage{pdfpages}
 \usepackage[siunitx]{circuitikz}
 \usepackage{epstopdf}
+\usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
+\usetikzlibrary{calc,arrows}
 
 %\usepackage[us]{circuitikz} % TiKZ Library for US Logic Circuits.
 
@@ -290,7 +292,7 @@
 	
 	\subsection{Feedback Control for Balancing Controller}
 	
-	The balancing controller is responsible for catching the swinging pendulums and let the system rest at it's unstable equilibrium position. The balancing controller is thus required to take the system from a initial condition in the vicinity of the unstable equilibrium position and reach a steady state of balancing in the unstable equilibrium position.
+	The balancing controller is responsible for catching the swinging pendulums and bring the system to rest at the unstable equilibrium position. The balancing controller is required to bring the system from a initial condition in the vicinity of the unstable equilibrium position to reach steady state of balancing in the unstable equilibrium position. The system can be portrayed as seen in Figure \ref{fig:linearSys}.
 	
 	The system will have unstable poles when in the vicinity of the unstable equilibrium position as shown in Table \ref{table:poles_of_system}. The feedback gain matrix must move these poles to a stable location with desired system response properties.
 	
@@ -396,13 +398,11 @@
 	
 	\subsection{Motor Driver}
 	
-	The motor driver IC is responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that controls the direction and speed of the motor. The 2 H-half bridges form a full H-bridge which are Pulse-Width-Modulated (PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. 
+	The motor driver IC is connected directly to the motor and responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that forms a full H-bridge which are Pulse-Width-Modulated (PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. As discussed previously, the signals' logic level is first converted and than sent through the AND digital filter before the motor driver receives it. Figure \ref{fig:motor_control_overview}.
 	
-	The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge(reference). This current is sent through a resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current.
+	The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge(reference). This current is sent through a resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current. This voltage is sent through a unity-gain amplifier before it is sampled by the $\mu$C as shown in Figure \ref{fig:torque_control_cir}. This closes the feedback loop to implement torque control by the control system.
 	
-	The MC33887 is capable of providing up to 6A of continuous current to the motor, while withstanding the high current transients due to the fast switching of a inductive load (ref). The motor driver IC is able to provide the motor with the 12V DC which is externally provided by a DC power supply.
-	
-	The schematic of supporting passive components to allow the motor driver IC to work is shown in Appendix XXX.
+	The MC33887 is capable of providing up to 6A of continuous current to the motor, while withstanding the high current transients due to the fast switching of a inductive load (ref). The motor driver IC provides the motor with 12V DC which is externally provided by a DC power supply. The schematic of the motor driver is shown in Appendix XXX.
 	
 	\subsection{Logic Level Converter}
 	
@@ -411,6 +411,19 @@
 	The logic level converter used is the circuit shown in Figure \ref{fig:interterCirc} using the BSS128 transistor. The circuit has the side effect of being a inverter. A logic low, \SI{0}{V} by the $\mu$C will be converted to a \SI{5}{V} and a logic high, \SI{3.3}{V} will be converted to \SI{0}{V}. This side effect is overcome by inverting the logic in software.
 	
 	\subsection{AND Digital Logic Circuit}
+	
+	The AND digital gates in combination with a inverter shown in Figure \ref{fig:andCircuit} is responsible for providing the motor IC's with the desired direction signals alongside the PWM signal produced by the $\mu$C.
+	
+	The AND circuit receives 2 signals from the $\mu$C after it has been converted to the correct logic level: the PWM signal and a logic level signal indicating the desired direction. Based on the directional signal the AND circuit will switch the PWM signal between the 2 inputs of the motor IC's while holding the other low. % Show the waveform table to explain beter
+	
+	This switching of PWM signal between the 2 inputs of the motor IC and keeping the other signal low controls the direction of the motor. This hardware directional control was done in order to reduce the processing time of the $\mu$C is required to do.
+	
+\begin{figure}[h]
+	\centering
+	\input{"./AND_gates/ANDgates.tikz"}
+	\caption{AND digital logic with inverter}
+	\label{fig:andCircuit}
+\end{figure}
 	
 	
 	
@@ -421,8 +434,6 @@
 		\caption{Logic Level Converter \& Inverter Circuit}
 		\label{fig:interterCirc}
 	\end{figure}
-	
-	Figure \ref{fig:motor_control_system} shows the overview of the system
 	
 	\subsection{JK FlipFlop's Digital Logic Circuit}
 	
