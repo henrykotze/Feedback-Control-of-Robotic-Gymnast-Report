@@ -2,7 +2,7 @@
 
 \usepackage{graphics}
 \usepackage{epstopdf}
-\usepackage{amsmath}
+\usepackage{amsmath,bm}
 \usepackage{tikz}
 \usepackage{tikz-dimline}
 \usepackage[toc,page]{appendix}
@@ -12,7 +12,9 @@
 \usepackage[siunitx]{circuitikz}
 \usepackage{epstopdf}
 \usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
-\usetikzlibrary{calc,arrows}
+\usetikzlibrary{calc,arrows,shapes,shadows}
+
+
 
 %\usepackage[us]{circuitikz} % TiKZ Library for US Logic Circuits.
 
@@ -42,6 +44,43 @@
 	This report will document the process as describe in the preceding paragraph. The first chapter will provide a review of the essential concepts in control theory. This will be followed by the model describing the robotic gymnast and the assumptions made during the derivation of the model. Next the report describe the design paradigms to solving the non-linear swing-up of the gymnast. The report then describe the balancing of the gymnast in the unstable equilibrium position. Next the report discuss how the transition between the non-linear swing-up and the linearised will function.
 	
 	\section{Review of Fundamental Concepts}
+	% WHAT you are going to present in this chapter/section
+	% WHY you are presenting it, and
+	% HOW you are going to present it	
+	The fundamental concepts that provides the foundation for the concepts discussed in the report will be summarise here. It acts as a refresher for those familiar to control theory. 
+	
+	The ordinary differential equations (ODE's) describing a system can be arranged as a set of linear differential equations. Describing a system in such a way is known as the State Space design approach, where the solution is the trajectory of the chosen state variables.\cite{textbook}
+	
+	These ODE's are required to be written as vectors in the state-variable form seen in equation (\ref{eq:statespace1}) and (\ref{eq:statespace2})
+	\begin{equation} \label{eq:statespace1}
+	\centering
+	\boldsymbol{\dot{x}} = \boldsymbol{A}\boldsymbol{x} + \boldsymbol{B}u
+	\end{equation}
+	\begin{equation} \label{eq:statespace2}
+	\centering
+	\boldsymbol{y} = \boldsymbol{C}\boldsymbol{x} + Du
+	\end{equation}
+	 The \textit{n}th-column vector $\boldsymbol{x}$ is called the state of the system for a \textit{n}th-order system. The \textbf{A} matrix is the system matrix, containing \textit{n}$\times$\textit{n} elements and the input matrix is the \textit{n}$\times 1$ \textbf{B} matrix. \textbf{C} is a $1\times$\textit{n} row matrix called the output matrix and the scalar D is known as the direct transmission term \cite{textbook}.
+	 
+	 A system parameter of great interest to control engineers are the poles of the system. It provides the characteristic response of the system starting at a initial condition with no forcing function. These poles,\textbf{s}, are the natural frequencies of the system and the state space representation allow these poles to be easy identified. The poles are the solution to the eigenvalue problem of the \textbf{A} matrix shown in equation (\ref{eq:statespace_eigen}) \cite{textbook}.
+	 \begin{equation} \label{eq:statespace_eigen}
+	 \centering
+	 \text{det}(s\boldsymbol{I} - \boldsymbol{A}) = 0
+	 \end{equation}
+	 
+	 The poles of the system can be assigned new positions to satisfy dynamic response specification by introducing feedback. The feedback is a linear combination of the state variables $\boldsymbol{x}$ resulting in the input of the system $u$ to be transformed as seen in equation (\ref{eq:feedbackgain}) and represented in Figure \ref{fig:linearSys}. The \textbf{K} matrix will contain
+	 \begin{equation} \label{eq:feedbackgain}
+	 \centering
+	 u = -\boldsymbol{K}\boldsymbol{x}
+	 \end{equation}
+	 
+	 \begin{figure}
+	 	\centering
+	 	\input{"./linear_control/linear_sys.tikz"}
+	 	\caption{State Space Representation with Feedback Gain}
+	 	\label{fig:linearSys}
+	 \end{figure}
+	
 	
 	\section{Derivation of Double Pendulum}
 	%WHAT you are going to present in this chapter/section
@@ -79,16 +118,16 @@
 	\psi_{1} = (m_{2}l_{1}+m_{2}L_{1})g\cos(\theta) + m_{2}l_{2}g\cos(\theta+\phi)
 	\end{equation}
 		\begin{equation} \label{eq:d21}
-	d_{21}=
+	d_{21}= I_{b}+m_{2}(l_{2}^2+L_{1}l_{2}\cos(\phi))
 	\end{equation}
 		\begin{equation} \label{eq:d22}
-	d_{22}=
+	d_{22}= I_{b}+ m_{2}l_{2}^2
 	\end{equation}
 		\begin{equation} \label{eq:h2}
-	h_{2}=
+	h_{2}= m_{2}L_{1}l_{2}\sin(\phi)\dot{\theta^2}
 	\end{equation}
 		\begin{equation} \label{eq:psi2}
-	\psi_{2}=
+	\psi_{2}= m_{2}l_{2}g\cos(\theta+\phi)
 	\end{equation}
 	
 	
@@ -125,7 +164,7 @@
 	\end{equation}
 	
 	The desired trajectory is chosen to increase the energy in the system, approach is to allow the actuated pendulum swing in phase with the non-actuated pendulum. By this approach the energy of the actuated pendulum is transferred to the non-actuated pendulum \cite{spong_swingup}. Appendix E shows how this approach is expected to work.
-	
+
 	Returning to the desired trajectory of $\phi$, the coefficient $\alpha$ constrains the actuated pendulum to stay within a interval of $ \phi \in [-\alpha,\alpha] $ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable inverted position.
 	
 		  
@@ -146,8 +185,21 @@
 	
 	The system can be approximated as a linear system when in the vicinity of the unstable equilibrium position. The system is thus linearised at $$\vec{Q_{s}} = [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$ the unstable equilibrium position using the Taylor Series Expansion shown in detail in Appendix B. This linearised model can than be written in the state space form to implement a feedback gain. The state space variables are chosen as $\Delta{\vec{q}}$ and $\Delta{\dot{\vec{q}}}$ which results in the state space representation as:  $$ \dot{\vec{q}} = \boldsymbol{A}\Delta{\vec{q}} + \boldsymbol{B}u $$ and $$ \vec{y} = \boldsymbol{D}\Delta{\vec{q}} + \boldsymbol{0}u $$.
 	
-	% since I am mentioning the linearised system do I have to mention the unstable inverted equilibirum position, since it is linearised around this point
-	When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. The instability of the system can be identified by examining the poles of the systems. The linearised model contains 4 real, 2 positive and 2 negative poles, and these poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts. This allows the higher-order system response to be characterised as a second-order response \cite{textbook}. The linearised model already has 2 negative real poles which is chosen to stay the same. The real positive poles were selected based on the following specifications.
+	The linearised system remains a coupled system which results that the quadratic eigenvalue problem is required to be solved to identified the poles of the system. The solved quadratic eigenvalue problem results in the following poles from the system parameters in Table \ref{table:system_param}.
+	$$
+	\vec{s} = 
+	\begin{bmatrix}
+		-8.2 \\
+		-4.2	\\
+		8.2 \\
+		4.2 \\
+		
+	\end{bmatrix}
+	$$
+	
+	The poles of the system are pairs of positive and negative real poles that indicates an unstable system. This is expected due to the system being linearised in the unstable equilibrium position. When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. \\
+	\\
+	These poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts. This allows the higher-order system response to be characterised as a second-order response \cite{textbook}. The linearised model already has 2 negative real poles which is chosen to stay the same. The real positive poles were selected based on the following specifications.
 	
 	These specification was selected on increasing the null controllability region with a low settling time. Due the approximation of the linearised model the null controllability region may be larger than the derived sized \cite{simple_null_controllability}. 
 	
@@ -192,14 +244,14 @@
 			 System Characteristic & Mean & Standard Deviation\\
 			\hline
 			\hline
-			$f_{1}$ & \SI{}{Hz} &  \\
+			$f_{1}$ & \SI{3.93}{Hz} &  \\
 			\hline
-			$f_{2}$ & \SI{3.62902}{Hz} & 0.04029 \\ 
+			$f_{2}$ & \SI{3.62}{Hz} & 0.04029 \\ 
 			\hline
 			$\zeta_{1}$ & $1.6931 \cdot10^{-5}$ & $4.823\cdot 10^{-6}$
 			 \\
 			\hline
- 			$\zeta_{2}$ & & \\
+ 			$\zeta_{2}$ & $5.85184 \cdot 10^{-5}$ & \\
  			\hline
 	\end{tabular}
 	\caption{System Characteristic \& their Statistical Properties from 10 Experiments}
@@ -257,7 +309,16 @@
 	
 	Once the mechanical system was designed and manufactured and the system identification was completed the true system parameters could be used in the simulation. These system parameters are shown in Table \ref{table:system_param}. Using the system parameters shown in Table \ref{table:system_param} the natural frequencies of the linearised system, the feedback gain matrix for the balancing control and the gain constants for the swing-up control were determined. 
 	
-	Figure \ref{fig:swingup&balance} shows the simulated swing-up and balance of the double pendulum. As discussed in the Swing-up Controller section the $\alpha$ value controls the relative angle between actuated pendulum and the non-actuated pendulum. This $\alpha$ value is decreased throughout the swing-up of the robotic gymnast to ensure the robotic gymnast can be approximated as a single pendulum to allow the linear controller to catch the swinging pendulums. This decreasing $\alpha$ is visible in the response as the system nears the unstable equilibrium.
+	Figure \ref{fig:swingup&balance} shows the simulated swing-up and balance of the double pendulum. As discussed in the Swing-up Controller section the $\alpha$ value controls the relative angle between actuated pendulum and the non-actuated pendulum. This $\alpha$ value is decreased throughout the swing-up of the robotic gymnast to ensure the robotic gymnast can be approximated as a single pendulum to allow the linear controller to catch the swinging pendulums.
+	
+		
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=1]{swingup_balance.eps}
+		\caption{Swing-up \& Balancing of Robotic Gymnast in Simulation }
+		\label{fig:swingup&balance}
+	\end{figure}
+	
 	
 	Figure \ref{fig:balancing} shows the response of the system when given a initial condition that is within the region of controllability in which the balancing controller moves the system to the unstable equilibrium position. The response shows that the balancing controller is capable of balancing the robotic gymnast.
 	

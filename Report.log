@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  1 OCT 2018 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  2 OCT 2018 23:57
 entering extended mode
 **./Report.tex
 (Report.tex
@@ -150,6 +150,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
@@ -1026,27 +1034,111 @@ uits\tikzlibrarycircuits.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\circuits\pgflibr
 aryshapes.gates.logic.US.code.tex"
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\circuits\pgflibr
-aryshapes.gates.logic.code.tex"))) (Report.aux)
+aryshapes.gates.logic.code.tex")))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshapes.code.tex"
+File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshapes.geometric.code.tex"
+File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
+.geometric.code.tex"
+File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshapes.misc.code.tex"
+File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
+.misc.code.tex"
+File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.5)
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshapes.symbols.code.tex"
+File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
+.symbols.code.tex"
+File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.1a (rcs-revision 1.6)
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshapes.arrows.code.tex"
+File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
+.arrows.code.tex"
+File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
+))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshapes.callouts.code.tex"
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
+.callouts.code.tex"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshapes.multipart.code.tex"
+File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
+)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
+.multipart.code.tex"
+File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
+
+\pgfnodepartlowerbox=\box66
+\pgfnodeparttwobox=\box67
+\pgfnodepartthreebox=\box68
+\pgfnodepartfourbox=\box69
+\pgfnodeparttwentybox=\box70
+\pgfnodepartnineteenbox=\box71
+\pgfnodeparteighteenbox=\box72
+\pgfnodepartseventeenbox=\box73
+\pgfnodepartsixteenbox=\box74
+\pgfnodepartfifteenbox=\box75
+\pgfnodepartfourteenbox=\box76
+\pgfnodepartthirteenbox=\box77
+\pgfnodeparttwelvebox=\box78
+\pgfnodepartelevenbox=\box79
+\pgfnodeparttenbox=\box80
+\pgfnodepartninebox=\box81
+\pgfnodeparteightbox=\box82
+\pgfnodepartsevenbox=\box83
+\pgfnodepartsixbox=\box84
+\pgfnodepartfivebox=\box85
+)))
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryshadows.code.tex"
+File: tikzlibraryshadows.code.tex 2008/01/13 v3.0.1a (rcs-revision 1.3)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
+libraryfadings.code.tex"
+File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.
+tex"
+File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
+))) (Report.aux)
 \openout1 = `Report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count312
 \scratchdimen=\dimen293
-\scratchbox=\box66
+\scratchbox=\box86
 \nofMPsegments=\count313
 \nofMParguments=\count314
 \everyMPshowfont=\toks43
@@ -1060,15 +1152,15 @@ LaTeX Font Info:    ... okay on input line 21.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 21.
+ on input line 23.
 
 
 Package todonotes Warning: The length marginparwidth is less than 2cm and will 
 most likely cause issues with the appearance of inserted todonotes. The issue c
 an be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to 
-loading the todonotes package. on input line 21.
+loading the todonotes package. on input line 23.
 
-\AtBeginShipoutBox=\box67
+\AtBeginShipoutBox=\box87
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
 
@@ -1170,54 +1262,70 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 \openout5 = `Report.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 28--30
+Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--33
+Underfull \hbox (badness 10000) in paragraph at lines 33--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--36
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-[3] (doublePendulumImage.tikz
+[3] [4] (linear_control/linear_sys.tikz
+\pgf@layerbox@background=\box88
+\pgf@layerboxsaved@background=\box89
+\pgf@layerbox@foreground=\box90
+\pgf@layerboxsaved@foreground=\box91
+) (doublePendulumImage.tikz
 Missing character: There is no ` in font nullfont!
-) [4] [5] [6] [7] [8] [9]
+) [5]
+[6] [7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 200--203
+
+ []
+
+[9] [10] [11]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 188.
+               Default added (so using `tbp') on input line 240.
 
 Package epstopdf Info: Source file: <FFT_system.eps>
-(epstopdf)                    date: 2018-09-20 20:22:02
-(epstopdf)                    size: 155467 bytes
+(epstopdf)                    date: 2018-10-01 22:35:58
+(epstopdf)                    size: 158434 bytes
 (epstopdf)             Output file: <FFT_system-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-09-20 20:22:24
-(epstopdf)                    size: 62877 bytes
+(epstopdf)                    date: 2018-10-01 22:37:13
+(epstopdf)                    size: 62954 bytes
 (epstopdf)             Command: <epstopdf --outfile=FFT_system-eps-converted-to
 .pdf FFT_system.eps>
-(epstopdf)             \includegraphics on input line 212.
+(epstopdf)             \includegraphics on input line 264.
 Package epstopdf Info: Output file is already uptodate.
-<FFT_system-eps-converted-to.pdf, id=44, 366.36874pt x 305.14pt>
+<FFT_system-eps-converted-to.pdf, id=75, 421.575pt x 316.18124pt>
 File: FFT_system-eps-converted-to.pdf Graphic file (type pdf)
 <use FFT_system-eps-converted-to.pdf>
-Package pdftex.def Info: FFT_system-eps-converted-to.pdf  used on input line 21
-2.
-(pdftex.def)             Requested size: 366.36784pt x 305.13924pt.
+Package pdftex.def Info: FFT_system-eps-converted-to.pdf  used on input line 26
+4.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+
+Overfull \hbox (31.57396pt too wide) in paragraph at lines 264--265
+ [][] 
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `table:system_response_prop' on page 10 undefined on i
-nput line 217.
+LaTeX Warning: Reference `table:system_response_prop' on page 12 undefined on i
+nput line 269.
 
 Package epstopdf Info: Source file: <q1_initial_response.eps>
 (epstopdf)                    date: 2018-09-20 14:31:28
@@ -1227,16 +1335,16 @@ Package epstopdf Info: Source file: <q1_initial_response.eps>
 (epstopdf)                    size: 287802 bytes
 (epstopdf)             Command: <epstopdf --outfile=q1_initial_response-eps-con
 verted-to.pdf q1_initial_response.eps>
-(epstopdf)             \includegraphics on input line 221.
+(epstopdf)             \includegraphics on input line 273.
 Package epstopdf Info: Output file is already uptodate.
-<q1_initial_response-eps-converted-to.pdf, id=45, 392.46625pt x 309.155pt>
+<q1_initial_response-eps-converted-to.pdf, id=76, 392.46625pt x 309.155pt>
 File: q1_initial_response-eps-converted-to.pdf Graphic file (type pdf)
 <use q1_initial_response-eps-converted-to.pdf>
 Package pdftex.def Info: q1_initial_response-eps-converted-to.pdf  used on inpu
-t line 221.
+t line 273.
 (pdftex.def)             Requested size: 392.46527pt x 309.15424pt.
 
-Overfull \hbox (2.46527pt too wide) in paragraph at lines 221--222
+Overfull \hbox (2.46527pt too wide) in paragraph at lines 273--274
  [][] 
  []
 
@@ -1244,23 +1352,23 @@ Overfull \hbox (2.46527pt too wide) in paragraph at lines 221--222
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package epstopdf Info: Source file: <q2_initial_response.eps>
-(epstopdf)                    date: 2018-09-20 14:31:28
-(epstopdf)                    size: 133183 bytes
+(epstopdf)                    date: 2018-10-01 22:38:59
+(epstopdf)                    size: 209981 bytes
 (epstopdf)             Output file: <q2_initial_response-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-09-20 14:33:19
-(epstopdf)                    size: 71888 bytes
+(epstopdf)                    date: 2018-10-01 22:40:13
+(epstopdf)                    size: 133447 bytes
 (epstopdf)             Command: <epstopdf --outfile=q2_initial_response-eps-con
 verted-to.pdf q2_initial_response.eps>
-(epstopdf)             \includegraphics on input line 229.
+(epstopdf)             \includegraphics on input line 281.
 Package epstopdf Info: Output file is already uptodate.
-<q2_initial_response-eps-converted-to.pdf, id=46, 392.46625pt x 309.155pt>
+<q2_initial_response-eps-converted-to.pdf, id=77, 421.575pt x 316.18124pt>
 File: q2_initial_response-eps-converted-to.pdf Graphic file (type pdf)
 <use q2_initial_response-eps-converted-to.pdf>
 Package pdftex.def Info: q2_initial_response-eps-converted-to.pdf  used on inpu
-t line 229.
-(pdftex.def)             Requested size: 392.46527pt x 309.15424pt.
+t line 281.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-Overfull \hbox (2.46527pt too wide) in paragraph at lines 229--230
+Overfull \hbox (31.57396pt too wide) in paragraph at lines 281--282
  [][] 
  []
 
@@ -1276,77 +1384,84 @@ Package epstopdf Info: Source file: <dutycycle_vs_current.eps>
 (epstopdf)                    size: 61113 bytes
 (epstopdf)             Command: <epstopdf --outfile=dutycycle_vs_current-eps-co
 nverted-to.pdf dutycycle_vs_current.eps>
-(epstopdf)             \includegraphics on input line 236.
+(epstopdf)             \includegraphics on input line 288.
 Package epstopdf Info: Output file is already uptodate.
-<dutycycle_vs_current-eps-converted-to.pdf, id=47, 382.42876pt x 309.155pt>
+<dutycycle_vs_current-eps-converted-to.pdf, id=78, 382.42876pt x 309.155pt>
 File: dutycycle_vs_current-eps-converted-to.pdf Graphic file (type pdf)
 <use dutycycle_vs_current-eps-converted-to.pdf>
 Package pdftex.def Info: dutycycle_vs_current-eps-converted-to.pdf  used on inp
-ut line 236.
+ut line 288.
 (pdftex.def)             Requested size: 382.42781pt x 309.15424pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[10]
 
-LaTeX Warning: Reference `fig:mechanical_energy' on page 11 undefined on input 
-line 252.
+LaTeX Warning: Reference `fig:mechanical_energy' on page 12 undefined on input 
+line 304.
 
-[11]
+[12] [13 <./FFT_system-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <swingup_balance.eps>
+(epstopdf)                    date: 2018-10-02 09:35:23
+(epstopdf)                    size: 136845 bytes
+(epstopdf)             Output file: <swingup_balance-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-10-02 09:37:55
+(epstopdf)                    size: 51475 bytes
+(epstopdf)             Command: <epstopdf --outfile=swingup_balance-eps-convert
+ed-to.pdf swingup_balance.eps>
+(epstopdf)             \includegraphics on input line 317.
+Package epstopdf Info: Output file is already uptodate.
+<swingup_balance-eps-converted-to.pdf, id=90, 421.575pt x 316.18124pt>
+File: swingup_balance-eps-converted-to.pdf Graphic file (type pdf)
+<use swingup_balance-eps-converted-to.pdf>
+Package pdftex.def Info: swingup_balance-eps-converted-to.pdf  used on input li
+ne 317.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-LaTeX Warning: Reference `fig:swingup&balance' on page 12 undefined on input li
-ne 260.
-
-
-LaTeX Warning: Reference `fig:balancing' on page 12 undefined on input line 262
-.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 265.
-
-
-LaTeX Warning: Reference `fig:linearSys' on page 12 undefined on input line 295
-.
-
-[12 <./FFT_system-eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `table:poles_of_system' on page 13 undefined on input 
-line 297.
-
-
-Overfull \hbox (3.70576pt too wide) in paragraph at lines 307--307
-[]\OT1/cmr/bx/n/17.28 Why De-sign-ing in the Con-tin-u-ous Time Do-
+Overfull \hbox (31.57396pt too wide) in paragraph at lines 317--318
+ [][] 
  []
 
-[13 <./q1_initial_response-eps-converted-to.pdf>] [14 <./q2_initial_response-ep
-s-converted-to.pdf>] (Electronic_System/ElectronicSystemOverview.tikz
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshadows.code.tex"
-File: tikzlibraryshadows.code.tex 2008/01/13 v3.0.1a (rcs-revision 1.3)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryfadings.code.tex"
-File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.
-tex"
-File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
-)))
-\pgf@layerbox@background=\box68
-\pgf@layerboxsaved@background=\box69
-\pgf@layerbox@foreground=\box70
-\pgf@layerboxsaved@foreground=\box71
-)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15 <./dutycycle_vs_current-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `fig:balancing' on page 14 undefined on input line 323
+.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 351.
+               Default added (so using `tbp') on input line 326.
 
-[16] [17] [18] (AND_gates/ANDgates.tikz)
+[14 <./q1_initial_response-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `table:poles_of_system' on page 15 undefined on input 
+line 358.
+
+
+Overfull \hbox (3.70576pt too wide) in paragraph at lines 368--368
+[]\OT1/cmr/bx/n/17.28 Why De-sign-ing in the Con-tin-u-ous Time Do-
+ []
+
+[15 <./q2_initial_response-eps-converted-to.pdf>] [16 <./dutycycle_vs_current-e
+ps-converted-to.pdf>] (Electronic_System/ElectronicSystemOverview.tikz)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17 <./swingup_balance-eps-converted-to.pdf>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 412.
+
+[18] [19]
+
+LaTeX Warning: Reference `fig:motor_control_overview' on page 20 undefined on i
+nput line 462.
+
+
+LaTeX Warning: Reference `fig:torque_control_cir' on page 20 undefined on input
+ line 464.
+
+[20] (AND_gates/ANDgates.tikz)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1358,12 +1473,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19]
+[21]
 
-LaTeX Warning: Reference `sch:jk_xor' on page 20 undefined on input line 451.
+LaTeX Warning: Reference `sch:jk_xor' on page 22 undefined on input line 510.
 
-[20] [21] (Report.bbl) [22]
-Overfull \hbox (38.0489pt too wide) detected at line 527
+[22] [23] (Report.bbl) [24]
+Overfull \hbox (38.0489pt too wide) detected at line 586
 \OMS/cmsy/m/n/12 L \OT1/cmr/m/n/12 = []\OML/cmm/m/it/12 I[][] \OT1/cmr/m/n/12 +
  []\OML/cmm/m/it/12 I[]\OT1/cmr/m/n/12 ([] + [])[] + []\OML/cmm/m/it/12 m[]\OT1
 /cmr/m/n/12 [\OML/cmm/m/it/12 L[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 l[]\OT1/
@@ -1372,8 +1487,8 @@ cmr/m/n/12 ([] + [])[] + 2\OML/cmm/m/it/12 L[]l[]\OT1/cmr/m/n/12 ([] + [])[] []
 /n/12 (\OML/cmm/m/it/12 \OT1/cmr/m/n/12 )+
  []
 
-[23]
-Overfull \hbox (48.20831pt too wide) detected at line 531
+[25]
+Overfull \hbox (48.20831pt too wide) detected at line 590
 [][] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 I[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/1
 2 I[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 I[][] \OT1/cmr/m/n/12 + \OML/cmm/m/i
 t/12 m[]L[][] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 m[]l[][] \OT1/cmr/m/n/12 + \OM
@@ -1383,19 +1498,19 @@ L/cmm/m/it/12 m[]l[][] \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 m[]L[]l\OT1/cmr/m/n/
 /m/n/12 )+
  []
 
-[24] [25] [26] [27] [28] (Report.aux)
+[26] [27] [28] [29] [30] (Report.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43464 strings out of 492973
- 1097286 string characters out of 3135932
- 1296682 words of memory out of 3000000
- 46745 multiletter control sequences out of 15000+200000
- 543140 words of font info for 62 fonts, out of 3000000 for 9000
+ 45430 strings out of 492973
+ 1153595 string characters out of 3135932
+ 1384028 words of memory out of 3000000
+ 48659 multiletter control sequences out of 15000+200000
+ 544056 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,18n,98p,2002b,1020s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,18n,98p,2002b,950s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
@@ -1409,9 +1524,9 @@ sfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on Report.pdf (28 pages, 724983 bytes).
+Output written on Report.pdf (30 pages, 843032 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
+ 201 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 129 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 134 words of extra memory for PDF output out of 10000 (max. 10000000)
 
