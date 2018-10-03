@@ -1,12 +1,12 @@
 \contentsline {figure}{\numberline {1}{\ignorespaces State Space Representation with Feedback Gain}}{7}
 \contentsline {figure}{\numberline {2}{\ignorespaces System Overview of the Feedback Control of Robotic Gymnast}}{8}
-\contentsline {figure}{\numberline {3}{\ignorespaces Free Body Diagram of the Double Pendulum}}{9}
-\contentsline {figure}{\numberline {4}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{16}
-\contentsline {figure}{\numberline {5}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{17}
-\contentsline {figure}{\numberline {6}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{18}
-\contentsline {figure}{\numberline {7}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{19}
-\contentsline {figure}{\numberline {8}{\ignorespaces Swing-up \& Balancing of Robotic Gymnast in Simulation }}{20}
-\contentsline {figure}{\numberline {9}{\ignorespaces Electronic System Overview}}{21}
-\contentsline {figure}{\numberline {10}{\ignorespaces AND digital logic with inverter}}{25}
-\contentsline {figure}{\numberline {11}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{25}
-\contentsline {figure}{\numberline {12}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{26}
+\contentsline {figure}{\numberline {3}{\ignorespaces Free Body Diagram of the Double Pendulum}}{10}
+\contentsline {figure}{\numberline {4}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{17}
+\contentsline {figure}{\numberline {5}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{18}
+\contentsline {figure}{\numberline {6}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{19}
+\contentsline {figure}{\numberline {7}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{20}
+\contentsline {figure}{\numberline {8}{\ignorespaces Swing-up \& Balancing of Robotic Gymnast in Simulation }}{21}
+\contentsline {figure}{\numberline {9}{\ignorespaces Electronic System Overview}}{23}
+\contentsline {figure}{\numberline {10}{\ignorespaces AND digital logic with inverter}}{26}
+\contentsline {figure}{\numberline {11}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{26}
+\contentsline {figure}{\numberline {12}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{27}

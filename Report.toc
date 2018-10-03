@@ -18,12 +18,12 @@
 \contentsline {subsection}{\numberline {14.2}Voltage Regulation}{22}
 \contentsline {subsection}{\numberline {14.3}Programming / Debug Interface}{23}
 \contentsline {subsection}{\numberline {14.4}PC UART Interface }{23}
-\contentsline {subsection}{\numberline {14.5}Signal Conditioning}{23}
+\contentsline {subsection}{\numberline {14.5}Signal Conditioning}{24}
 \contentsline {subsection}{\numberline {14.6}Motor Driver}{24}
-\contentsline {subsection}{\numberline {14.7}Logic Level Converter}{24}
+\contentsline {subsection}{\numberline {14.7}Logic Level Converter}{25}
 \contentsline {subsection}{\numberline {14.8}AND Digital Logic Circuit}{25}
 \contentsline {subsection}{\numberline {14.9}JK FlipFlop's Digital Logic Circuit}{26}
-\contentsline {subsection}{\numberline {14.10}Microcontroller}{26}
+\contentsline {subsection}{\numberline {14.10}Microcontroller}{27}
 \contentsline {section}{\numberline {15}Verification of Model}{27}
 \contentsline {section}{Appendices}{29}
 \contentsline {section}{\numberline {A}Derivation of the Double Pendulum}{29}
