@@ -25,7 +25,11 @@
 	\newpage
 	\tableofcontents
 	\newpage
-	
+	\listoffigures
+	\newpage
+	\listoftables
+	\newpage
+
 	\section{Introduction}
 	The feedback control of a robotic gymnast attempt to model a gymnast swinging from the hanging position to the inverted balancing position on a bar as a double pendulum connected with a hinge. The lower pendulum in the stable equilibrium position is actuated by a motor to model the behaviour of the swinging legs. This system describe in the mathematical sense lends itself to be a underactuated system. Underactuated systems are where the control input cannot command an instantaneous acceleration in any direction of the state variables describing the system. The robotic gymnast needs to use the coupling between the actuated pendulum and unactuated pendulum to swing and balance the gymnast from it's stable equilibrium position to the unstable equilibrium position \cite{tedrake}.
 	\\
@@ -43,7 +47,7 @@
 	% Report Outline
 	This report will document the process as describe in the preceding paragraph. The first chapter will provide a review of the essential concepts in control theory. This will be followed by the model describing the robotic gymnast and the assumptions made during the derivation of the model. Next the report describe the design paradigms to solving the non-linear swing-up of the gymnast. The report then describe the balancing of the gymnast in the unstable equilibrium position. Next the report discuss how the transition between the non-linear swing-up and the linearised will function.
 	
-	\section{Review of Fundamental Concepts}
+	\section{Literature Study}
 	% WHAT you are going to present in this chapter/section
 	% WHY you are presenting it, and
 	% HOW you are going to present it	
@@ -68,7 +72,7 @@
 	 \text{det}(s\boldsymbol{I} - \boldsymbol{A}) = 0
 	 \end{equation}
 	 
-	 The poles of the system can be assigned new positions to satisfy dynamic response specification by introducing feedback. The feedback is a linear combination of the state variables $\boldsymbol{x}$ resulting in the input of the system $u$ to be transformed as seen in equation (\ref{eq:feedbackgain}) and represented in Figure \ref{fig:linearSys}. The \textbf{K} matrix will contain
+	 The poles of the system can be assigned new positions to satisfy dynamic response specification by introducing feedback. The feedback is a linear combination of the state variables $\boldsymbol{x}$ resulting in the input of the system $u$ to be transformed as seen in equation (\ref{eq:feedbackgain}) and represented in Figure \ref{fig:linearSys}. Substituting equation (\ref{eq:feedbackgain}) into (\ref{eq:statespace1}) the characteristic equation is now describe as (\ref{eq:closedSysFeedback}). The corresponding characteristic equation is: $$\alpha_{s}=(s-s_{1})(s-s_{2})\ldots(s-s_{n}) $$ This shows by selecting the correct gain matrix \textbf{K} the poles of the system can be moved to a desired position.
 	 \begin{equation} \label{eq:feedbackgain}
 	 \centering
 	 u = -\boldsymbol{K}\boldsymbol{x}
@@ -80,13 +84,41 @@
 	 	\caption{State Space Representation with Feedback Gain}
 	 	\label{fig:linearSys}
 	 \end{figure}
-	
-	
+ 
+	\begin{equation} \label{eq:closedSysFeedback}
+ 	\centering
+ 	\text{det}[s\boldsymbol{I}-(\boldsymbol{A}-\boldsymbol{B}\boldsymbol{K})] = 0
+ 	\end{equation}
+ 	
+ 	The classical approach to controlling a system is by implementing a controller which reacts on the error of the desired state and the current state. These controllers are more commonly known as PID-controllers where the controller equation is shown in (\ref{eq:PID}).
+ 	
+ 	\begin{equation} \label{eq:PID}
+ 	\centering
+ 	u(t) = K[ e(t)+K_{I}\int_{0}^{t}e(\tau)d\tau +K_{D}\frac{de(t)}{dt}]
+ 	\end{equation}
+ 	
+ 	Each term represent an effect it has on the system response when the PID-controller is implemented shown in Figure \ref{fig:PIDcontroller}. If the system or plant is assumed to be a second-order differential equation represented by:
+ 	\begin{equation} \label{eq:PID_system}
+ 	\centering
+ 	 \dddot{q}+(2\zeta\omega_{n}+K_{D})\ddot{q}+(\omega_{n}^2+K_{P})\dot{q}+K_{I} = 0
+ 	\end{equation}
+ 	
+ 	From equation (7) it is visible that by tuning the PID constants the response of the system can controlled.
+ 	
+ 	
+ 	\section{System Overview}
+ 	%WHAT you are going to present in this chapter/section
+ 	%WHY you are presenting it, and
+ 	%HOW you are going to present it
+ 		
+ 	\section{Report Outline}
+ 	
+ 	
 	\section{Derivation of Double Pendulum}
 	%WHAT you are going to present in this chapter/section
 	%WHY you are presenting it, and
 	%HOW you are going to present it
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
 		\input{doublePendulumImage.tikz}
 		\caption{Free Body Diagram of the Double Pendulum}

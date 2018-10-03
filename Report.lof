@@ -1,0 +1,11 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces State Space Representation with Feedback Gain}}{7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Free Body Diagram of the Double Pendulum}}{8}
+\contentsline {figure}{\numberline {3}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{15}
+\contentsline {figure}{\numberline {4}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{16}
+\contentsline {figure}{\numberline {5}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{17}
+\contentsline {figure}{\numberline {6}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{18}
+\contentsline {figure}{\numberline {7}{\ignorespaces Swing-up \& Balancing of Robotic Gymnast in Simulation }}{19}
+\contentsline {figure}{\numberline {8}{\ignorespaces Electronic System Overview}}{20}
+\contentsline {figure}{\numberline {9}{\ignorespaces AND digital logic with inverter}}{24}
+\contentsline {figure}{\numberline {10}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{24}
+\contentsline {figure}{\numberline {11}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{25}
