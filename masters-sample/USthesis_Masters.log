@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  4 OCT 2018 01:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  4 OCT 2018 01:54
 entering extended mode
 **./USthesis_Masters.tex
 (USthesis_Masters.tex
@@ -1980,44 +1980,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 \openout2 = `contents/Chap-4.aux'.
 
  (contents/Chap-4.tex
-(figs/Electronic_System/ElectronicSystemOverview.tikz) [18
-
-
-
-]
-Overfull \hbox (6.88863pt too wide) in paragraph at lines 27--28
-[]\T1/cmr/m/n/12 The phys-i-cal model con-tains a po-ten-tiome-ter that mea-sur
-es the non-actuated
- []
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 51.
-
-[19] [20] [21] (figs/AND_gates/ANDgates.tikz)
-(figs/Logic_Level_Converter/LogicLevelConverterAndInverter.tikz)
-(figs/JK_XOR_gates/jk_xor_nor.tikz)
+(figs/Electronic_System/ElectronicSystemOverview.tikz)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
+Overfull \hbox (6.88863pt too wide) in paragraph at lines 31--32
+[]\T1/cmr/m/n/12 The phys-i-cal model con-tains a po-ten-tiome-ter that mea-sur
+es the non-actuated
+ []
+
+[18
+
+
+
+] [19]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 67.
+
+[20] (figs/JK_XOR_gates/jk_xor_nor.tikz)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-[22]
+[21]
 
-LaTeX Warning: Reference `sch:jk_xor' on page 23 undefined on input line 152.
-
-
-LaTeX Warning: Reference `fig:motor_control_overview' on page 23 undefined on i
-nput line 171.
+LaTeX Warning: Reference `sch:jk_xor' on page 22 undefined on input line 114.
 
 
-LaTeX Warning: Reference `fig:torque_control_cir' on page 23 undefined on input
- line 173.
+LaTeX Warning: Reference `fig:motor_control_overview' on page 22 undefined on i
+nput line 133.
 
-[23]) [24]
+
+LaTeX Warning: Reference `fig:torque_control_cir' on page 22 undefined on input
+ line 135.
+
+[22] (figs/Logic_Level_Converter/LogicLevelConverterAndInverter.tikz)
+(figs/AND_gates/ANDgates.tikz) [23]) [24]
 \openout2 = `contents/Chap-5.aux'.
 
  (contents/Chap-5.tex) [25
@@ -2027,7 +2031,8 @@ LaTeX Warning: Reference `fig:torque_control_cir' on page 23 undefined on input
 ]
 \openout2 = `contents/Chap-6.aux'.
 
- (contents/Chap-6.tex) [26
+
+(contents/Chap-6.tex) [26
 
 
 
@@ -2037,8 +2042,7 @@ LaTeX Warning: Reference `fig:torque_control_cir' on page 23 undefined on input
 ]
 \openout2 = `contents/App-1.aux'.
 
-
-(contents/App-1.tex
+ (contents/App-1.tex
 <figs/DEM-Def-Ball.pdf, id=211, 237.88875pt x 172.645pt>
 File: figs/DEM-Def-Ball.pdf Graphic file (type pdf)
 <use figs/DEM-Def-Ball.pdf>
@@ -2075,10 +2079,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 49781 strings out of 492973
- 1213617 string characters out of 3135932
- 1473700 words of memory out of 3000000
- 52854 multiletter control sequences out of 15000+200000
+ 49782 strings out of 492973
+ 1212845 string characters out of 3135932
+ 1473401 words of memory out of 3000000
+ 52855 multiletter control sequences out of 15000+200000
  567712 words of font info for 109 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,98p,1425b,948s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2117,9 +2121,9 @@ ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX
 blic/lm/lmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pf
 b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb>
-Output written on USthesis_Masters.pdf (40 pages, 1120529 bytes).
+Output written on USthesis_Masters.pdf (40 pages, 1119070 bytes).
 PDF statistics:
- 930 PDF objects out of 1000 (max. 8388607)
+ 926 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

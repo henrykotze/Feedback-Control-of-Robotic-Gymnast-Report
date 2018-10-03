@@ -40,22 +40,24 @@
 \contentsline {section}{\numberline {3.3}Simulation Results}{17}
 \contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{18}
 \contentsline {section}{\numberline {4.1}Mechanical Hardware}{18}
+\contentsline {subsection}{\numberline {4.1.1}Mechanical Components}{18}
+\contentsline {subsection}{\numberline {4.1.2}Motor}{18}
+\contentsline {subsection}{\numberline {4.1.3}Assembly}{18}
 \contentsline {section}{\numberline {4.2}Electronic Hardware}{18}
 \contentsline {subsection}{\numberline {4.2.1}System Description}{18}
 \contentsline {subsection}{\numberline {4.2.2}Microcontroller}{19}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{20}
+\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{20}
 \contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{20}
-\contentsline {subsection}{\numberline {4.2.4}Programming / Debug Interface}{20}
-\contentsline {subsection}{\numberline {4.2.5}PC UART Interface }{20}
-\contentsline {subsection}{\numberline {4.2.6}Signal Conditioning}{21}
-\contentsline {subsection}{\numberline {4.2.7}Logic Level Converter}{21}
-\contentsline {subsection}{\numberline {4.2.8}AND Digital Logic Circuit}{21}
-\contentsline {subsection}{\numberline {4.2.9}Potentiometer Sensor}{22}
-\contentsline {subsubsection}{\numberline {4.2.9.1}Working Principle}{22}
-\contentsline {subsubsection}{\numberline {4.2.9.2}Digital Interface}{22}
-\contentsline {subsection}{\numberline {4.2.10}Magnetic Encoder}{22}
-\contentsline {subsubsection}{\numberline {4.2.10.1}Working Principle}{22}
-\contentsline {subsubsection}{\numberline {4.2.10.2}Digital Interface}{23}
-\contentsline {subsection}{\numberline {4.2.11}Motor Driver}{23}
+\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{21}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{21}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{21}
+\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{21}
+\contentsline {subsubsection}{\numberline {4.2.5.1}Working Principle}{21}
+\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{21}
+\contentsline {subsection}{\numberline {4.2.6}Motor Driver}{22}
+\contentsline {subsubsection}{\numberline {4.2.6.1}Logic Level Converters}{23}
+\contentsline {subsubsection}{\numberline {4.2.6.2}AND Digitial Circuit}{23}
 \contentsline {chapter}{\chapternumberline {5}Software Design}{25}
 \contentsline {section}{\numberline {5.1}Software Requirements}{25}
 \contentsline {chapter}{\chapternumberline {6}Practical Results}{26}
