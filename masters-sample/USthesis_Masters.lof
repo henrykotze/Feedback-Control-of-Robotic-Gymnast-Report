@@ -1,0 +1,28 @@
+\babel@toc {english}{}
+\babel@toc {afrikaans}{}
+\babel@toc {english}{}
+\addvspace {10pt}
+\addvspace {10pt}
+\babel@toc {afrikaans}{}
+\babel@toc {english}{}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces State Space Representation with Feedback Gain}}{2}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces System Overview of the Feedback Control of Robotic Gymnast}}{3}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Free Body Diagram of the Double Pendulum}}{5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces MATLAB Simulink Model}}{7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{10}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{11}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{12}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{13}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Electronic System Overview}}{18}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces AND digital logic with inverter}}{22}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{22}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{23}
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Ball Element Parameters}}{28}

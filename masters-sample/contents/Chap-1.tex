@@ -1,0 +1,129 @@
+\chapter{Introduction}
+\label{chp:intro}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problem Statement}
+
+In granular or particle flow simulations with Discrete Element Method (DEM),
+the mechanical behavior of a system of particles are simulated. The basic
+building blocks of DEM are finite sized particles and walls. It is generally
+classified into two basically different approaches.
+
+The first is the ``hard sphere'', event-driven method
+\citep[e.g.][]{Luding-1994, Luding-2004}, where particles are assumed to be
+perfectly rigid and they follow an undisturbed motion until a collision
+occurs. Due to the rigidity of the interaction, the collisions occur
+instantaneously with accompanying momentum transfer. It is mainly used for
+collisional, dissipative granular gases.
+
+The second is the so-called ``soft particle'' molecular dynamics pioneered by
+\citet{Cundall-1979}, where the particles are allowed to overlap or penetrate
+each other. Constrains on the physical space that a particle can occupy at a
+specific time is included with contact or penalty forces related to the
+amount of overlap and contact velocity between particles or between particles
+and walls. The motion of the system is modelled by the integration of
+Newton-Euler equations for motion of every individual particle.
+
+\section{Literature Study}
+	% WHAT you are going to present in this chapter/section
+% WHY you are presenting it, and
+% HOW you are going to present it	
+The fundamental concepts that provides the foundation for the concepts discussed in the report will be summarise here. It acts as a refresher for those familiar to control theory. 
+
+The ordinary differential equations (ODE's) describing a system can be arranged as a set of linear differential equations. Describing a system in such a way is known as the State Space design approach, where the solution is the trajectory of the chosen state variables.\cite{textbook}
+
+These ODE's are required to be written as vectors in the state-variable form seen in equation (\ref{eq:statespace1}) and (\ref{eq:statespace2})
+\begin{equation} \label{eq:statespace1}
+\centering
+\boldsymbol{\dot{x}} = \boldsymbol{A}\boldsymbol{x} + \boldsymbol{B}u
+\end{equation}
+\begin{equation} \label{eq:statespace2}
+\centering
+\boldsymbol{y} = \boldsymbol{C}\boldsymbol{x} + Du
+\end{equation}
+The \textit{n}th-column vector $\boldsymbol{x}$ is called the state of the system for a \textit{n}th-order system. The \textbf{A} matrix is the system matrix, containing \textit{n}$\times$\textit{n} elements and the input matrix is the \textit{n}$\times 1$ \textbf{B} matrix. \textbf{C} is a $1\times$\textit{n} row matrix called the output matrix and the scalar D is known as the direct transmission term \cite{textbook}.
+
+A system parameter of great interest to control engineers are the poles of the system. It provides the characteristic response of the system starting at a initial condition with no forcing function. These poles,\textbf{s}, are the natural frequencies of the system and the state space representation allow these poles to be easy identified. The poles are the solution to the eigenvalue problem of the \textbf{A} matrix shown in equation (\ref{eq:statespace_eigen}) \cite{textbook}.
+\begin{equation} \label{eq:statespace_eigen}
+\centering
+\text{det}(s\boldsymbol{I} - \boldsymbol{A}) = 0
+\end{equation}
+
+The poles of the system can be assigned new positions to satisfy dynamic response specification by introducing feedback. The feedback is a linear combination of the state variables $\boldsymbol{x}$ resulting in the input of the system $u$ to be transformed as seen in equation (\ref{eq:feedbackgain}) and represented in Figure \ref{fig:linearSys}. Substituting equation (\ref{eq:feedbackgain}) into (\ref{eq:statespace1}) the characteristic equation is now describe as (\ref{eq:closedSysFeedback}). The corresponding characteristic equation is: $$\alpha_{s}=(s-s_{1})(s-s_{2})\ldots(s-s_{n}) $$ This shows by selecting the correct gain matrix \textbf{K} the poles of the system can be moved to a desired position.
+\begin{equation} \label{eq:feedbackgain}
+\centering
+u = -\boldsymbol{K}\boldsymbol{x}
+\end{equation}
+
+\begin{figure}
+	\centering
+	\input{"./figs/linear_control/linear_sys.tikz"}
+	\caption{State Space Representation with Feedback Gain}
+	\label{fig:linearSys}
+\end{figure}
+
+\begin{equation} \label{eq:closedSysFeedback}
+\centering
+\text{det}[s\boldsymbol{I}-(\boldsymbol{A}-\boldsymbol{B}\boldsymbol{K})] = 0
+\end{equation}
+
+The classical approach to controlling a system is by implementing a controller which reacts on the error of the desired state and the current state. These controllers are more commonly known as PID-controllers where the controller equation is shown in (\ref{eq:PID}).
+
+\begin{equation} \label{eq:PID}
+\centering
+u(t) = K[ e(t)+K_{I}\int_{0}^{t}e(\tau)d\tau +K_{D}\frac{de(t)}{dt}]
+\end{equation}
+
+Each term represent an effect it has on the system response when the PID-controller is implemented shown in Figure \ref{fig:PIDcontroller}. If the system or plant is assumed to be a second-order differential equation represented by:
+\begin{equation} \label{eq:PID_system}
+\centering
+\dddot{q}+(2\zeta\omega_{n}+K_{D})\ddot{q}+(\omega_{n}^2+K_{P})\dot{q}+K_{I} = 0
+\end{equation}
+
+From equation (7) it is visible that by tuning the PID constants the response of the system can controlled.
+
+\section{System Overview}
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+\begin{figure}[h]
+	\centering
+	\input{./figs/system_overview/system_overview.tikz}
+	\caption{System Overview of the Feedback Control of Robotic Gymnast}
+	\label{fig:system_overview}
+\end{figure}
+
+
+Figure \ref{fig:system_overview} provides an overview of the various subsystems the project will contain. The project is subdivided into these subsystems being developed separately with little interaction between the each other. An brief overview on each subsystem will be presented here.\\
+
+The external computer communicates with the electronic design sending instruction to start the system and for debugging purposes. The external computer will receive data from the electronic design and allows the verification of system parameters.
+
+The electronic design acts as the middle-man between the mechanical design and the external computer. It provides instructions to the mechanical design components based on the controller while sending data to the external computer. The electronic design contains the Printed Circuit Board (PCB) that conditions all the signals for processing.\\
+
+The mechanical design is responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors must be selected to measure the state variables and providing interfaces for the electronic design.
+
+\section{Project Execution}
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+% write as if i already happened
+
+The execution of the project occurs in a sequence of steps. First the mathematical model of the system is derived by using the appropriate approaches. The derived mathematical model is then implemented on a simulation program where the dynamics of the system can be verified and inspected.\\
+
+Following the successful implementation of the mathematical mode the various controllers will be designed and implemented on the simulation program. The behaviour of the simulated system will be inspected.\\
+
+From the simulation results the mechanical design specification will be determined. The mechanical design will then commence to create a physical model that provides an acceptable representation of the mathematical model.\\
+
+During manufacturing of the mechanical design the electronic design will start. Conceptual designs will be done to determine the various designs capable of meeting the requirements. The electronic design will be tested to ensure it performs as designed with the opportunity to create revisions of the design.\\
+
+The programming of the microcontroller, from now on as $\mu$C, will start. This includes the programming of the controller, data acquisition and the conversions of the sampled data.\\
+
+System identification will then occur to determine the various parameters required by the controllers. These newly determined parameters will then be implemented on the simulation program. New controllers will be designed and verified in simulation.
+
+The new controllers are then implemented onto the $\mu$C for the system experiments to start. From these system experiments the responses of the experiment will be compared by those of the simulation.\\
+
+The report was written throughout the sequence of steps mentioned above and will be completed and reviewed at the end.
+
+
+\section{Report Outline}

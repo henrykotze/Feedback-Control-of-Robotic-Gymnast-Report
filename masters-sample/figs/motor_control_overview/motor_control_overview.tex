@@ -1,0 +1,33 @@
+\documentclass{article}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\begin{document}
+
+
+\tikzstyle{block} = [draw, fill=blue!20, rectangle, 
+    minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+\tikzstyle{pinstyle} = [pin edge={to-,thin,black}]
+
+% The block diagram code is probably more verbose than necessary
+\begin{tikzpicture}[auto, node distance=3.5cm,>=latex']
+	\node [block](mcu){$\mu$C} {};
+	\node [block, right of=mcu] (LLC) {Logic Level Converter};
+	\node [block, right of=LLC] (AND) {And Digital Circuit};
+	\node [block, right of=AND] (motordriver) {Motor Driver};
+	\node [block, right of=motordriver] (motor) {Motor Driver};
+	
+	\draw [->] (mcu) -- (LLC);
+	\draw [->] (LLC) -- (AND);
+	\draw [->] (AND) -- (motordriver);
+	\draw [->] (motordriver) -- (motor);
+	
+	
+	
+	
+\end{tikzpicture}
+
+\end{document}

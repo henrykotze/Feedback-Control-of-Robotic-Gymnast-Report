@@ -1,0 +1,63 @@
+\begin{thebibliography}{7}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\edef\AFRstr{\string afrikaans}
+\ifx\AFRstr\languagename
+   \input{usbib.afr}%
+ \else
+   \input{usbib.eng}%
+\fi
+\newcommand{\Capitalize}[1]{\uppercase{#1}}
+\newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{mur(1990)}]{murray}
+ (1990).
+\newblock A case study in approximate linearization: The acrobat example.
+\newblock \emph{Proc. American Control Conference}.
+
+\bibitem[{spo(1995)}]{spong_swingup}
+ (1995).
+\newblock The swing up control problem for the acrobat.
+\newblock \emph{IEEE Control Systems}, \bblvol{}~47, \bblno{}~10, \bblpp{}
+  50--55.
+
+\bibitem[{sim(2006)}]{simple_null_controllability}
+ (2006).
+\newblock On stabilization of an inverted double pendulum with one control
+  torque.
+\newblock \emph{Journal of Compute and Systems Science International},
+  \bblvol{}~45, \bblno{}~3, \bblpp{} 337--334.
+
+\bibitem[{stm(2017)}]{stm32_ADC:2017}
+ (2017).
+\newblock \emph{How to get the best ADC accuracy in the STM32
+  microcontrollers}.
+\newblock ST Electronics.
+
+\bibitem[{\citenamefont{Faulhaber}(2011)}]{faulhaberencoder}
+\bibnamefont{Faulhaber} (2011).
+\newblock \emph{Encoders, Magnetic Encoder, Series IE2-16}.
+\newblock Faulhaber, 11\bblth{} \bbledn{}.
+
+\bibitem[{\citenamefont{Gene F.~Franklin}(2015)}]{textbook}
+\bibnamefont{Gene F.~Franklin}, \bibfnamefont{J.~David~Powell, e.a.} (2015).
+\newblock \emph{Feedback Control of Dynamic Systems}.
+\newblock 7\bblth{} \bbledn{}. Pearson Education Limited, Edingburgh Gate,
+  Harlow, Essex CM20 2JE, England.
+\newblock ISBN 1-29-206890-6.
+
+\bibitem[{\citenamefont{Instruments}(2006)}]{hallsensor}
+\bibnamefont{Instruments}, \bibfnamefont{N.} (2006 9).
+\newblock \emph{Magnetic Encoder Fundamentals}.
+\newblock 10. National Instruments, The address.
+
+\end{thebibliography}

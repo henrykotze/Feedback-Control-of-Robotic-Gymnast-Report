@@ -8,7 +8,7 @@
 \usepackage[toc,page]{appendix}
 \usepackage{verbatim}
 \usepackage{todonotes}
-\usepackage{pdfpages}
+\usepackage[final]{pdfpages}
 \usepackage[siunitx]{circuitikz}
 \usepackage{epstopdf}
 \usetikzlibrary{circuits.logic.US} % TiKZ Library for US Logic Circuits.
@@ -144,25 +144,15 @@
  	
  	System identification will then occur to determine the various parameters required by the controllers. These newly determined parameters will then be implemented on the simulation program. New controllers will be designed and verified in simulation.
  	
- 	The new controllers are then implemented onto the $\mu$C for the system experiments to start. From these system experiments the responses of the experiment will be compared by those of the simulation.
+ 	The new controllers are then implemented onto the $\mu$C for the system experiments to start. From these system experiments the responses of the experiment will be compared by those of the simulation.\\
  	
- 	The report 
- 	
- 	
- 	
- 	
- 	  
- 	
- 	
-  	
-  	
+ 	The report was written throughout the sequence of steps mentioned above and will be completed and reviewed at the end.  	
  	\section{Report Outline}
  	
  	
-
+ 	\section{System Concepts}
  	
- 	
-	\section{Derivation of Double Pendulum}
+	\section{Mathematical Model}
 	%WHAT you are going to present in this chapter/section
 	%WHY you are presenting it, and
 	%HOW you are going to present it
@@ -173,9 +163,9 @@
 		\label{fig:doublePen}
 	\end{figure}
 
-	The approach taken to derive the mathematical model of the robotic gymnast will be discussed in this section. It is presented to allow the reader to understand parameters mentioned in the report. The swing-up of the robotic gymnast consist of non-linear behaviour and is require to fully derive the dynamics of the system. The strenuous mathematical steps are removed from the reader, which is provided in Appendix A, and a summary of the motivation and paradigm approach to the derivation is provided.
-
-	The robotic gymnast is modeled as two pendulums connected together with a hinge, where each pendulum is modeled as having their mass distributed arbitrary along their axis. There is a torque actuating the lower pendulum seen in Figure \ref{fig:doublePen} and friction is modeled as proportional to the angular velocity of the pendulums. The friction that develops at the hinge is proportional to the relative motion of the actuated pendulum and non-actuated pendulum. The angle, $\phi$ was purposefully chosen relative to $\theta$ to ease the identification of this friction. Figure \ref{fig:doublePen} displays the free body diagram of the robotic gymnast.
+	The approach taken to derive the mathematical model of the robotic gymnast will be discussed in this section. It is presented to allow the reader to understand parameters mentioned in the report. The swing-up of the robotic gymnast consist of non-linear behaviour and is require to fully derive the dynamics of the system. The strenuous mathematical steps are removed from the reader, which is provided in Appendix A, and a summary of the motivation and paradigm approach to the derivation is provided.\\
+	
+	The robotic gymnast is modeled as two pendulums connected together with a hinge, where each pendulum is modeled as having their mass distributed arbitrary along their axis. There is a torque actuating the lower pendulum seen in Figure \ref{fig:doublePen} and friction is modeled as proportional to the angular velocity of the pendulums. The friction that develops at the hinge is proportional to the relative motion of the actuated pendulum and non-actuated pendulum. The angle, $\phi$ was purposefully chosen relative to $\theta$ to ease the identification of this friction. Figure \ref{fig:doublePen} displays the free body diagram of the robotic gymnast.\\
 	
 	Deriving the equation of motion of the robotic gymnast can be approached using different methods, but by exploring the system it can be shown that the system's energy is easily defined. The energy in the system is the potential energy of the 2 pendulums, the rotational kinetic energy of the non-actuated pendulum and the velocity- and rotational kinetic energy of the actuated pendulum. The Euler-Lagrange equation is chosen to derive the differential equation describing the system dynamics because of the easily defined energy. Using the Euler-Lagrange equation leads to the condense equations shown in (\ref{eq:condense1}) and (\ref{eq:condense2}),
 	\begin{equation} \label{eq:condense1}
@@ -213,8 +203,27 @@
 	
 	
 	The equation of motion for the robotic gymnast is very non-linear containing multiple terms of squared angular velocities and cosine functions. These non-linearities is hidden in the in the $\psi$ and $h$ terms. The non-linearities can be linearised around a working point, but during the swing-up of the robotic gymnast they must be taken into account.
- 
 	
+	\section{Simulation Model}
+ 	%WHAT you are going to present in this chapter/section
+ 	%WHY you are presenting it, and
+ 	%HOW you are going to present it
+ 	The mathematical model derived in the previous section is required to be implemented on a simulation program. Simulating the model allows the designer to understand how system parameters influence the dynamics of the system and the verification of controllers implemented. It will be presented by discussing how the simulation is a true representation of the system, how design specifications were determined and the influence of these parameters.
+	
+	Simulation of the robotic gymnast was done using MATLAB Simulink. The differential equations shown in equation (\ref{eq:condense1}) and (\ref{eq:condense2}) were implemented using the MATLAB function box. It was required to write these equation where $\ddot{\phi}$ and $\ddot{\theta}$ is the subject in each of the \textit{MATLAB Function} box to allow MATLAB to simulate the model.
+	
+	Other non-linearities introduced by sensors and components were added such as saturation of the motor, gearbox backlash and quantisation of sensory data. These non-linearities were implemented to allow the simulation to be an acceptable representation of the physical system. The Simulink Model is shown in Figure \ref{fig:sim_nonlinearfeedback}.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.3]{simulink_model.eps}
+		\caption{MATLAB Simulink Model}
+		\label{fig:sim_nonlinearfeedback}
+	\end{figure}
+
+	\section{System Identification}
+	
+	\section
 	
 	\section{Swing Up of the Double Pendulum}
 	% WHAT you are going to present in this chapter/section

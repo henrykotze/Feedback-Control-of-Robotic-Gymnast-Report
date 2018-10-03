@@ -2,32 +2,33 @@
 \contentsline {section}{\numberline {2}Literature Study}{6}
 \contentsline {section}{\numberline {3}System Overview}{8}
 \contentsline {section}{\numberline {4}Project Execution}{9}
-\contentsline {section}{\numberline {5}Report Outline}{9}
-\contentsline {section}{\numberline {6}Derivation of Double Pendulum}{9}
-\contentsline {section}{\numberline {7}Swing Up of the Double Pendulum}{11}
-\contentsline {section}{\numberline {8}Balancing of the Double Pendulum}{12}
-\contentsline {section}{\numberline {9}Null Controllability Region}{13}
-\contentsline {section}{\numberline {10}System Identification}{14}
-\contentsline {section}{\numberline {11}Simulating the Double Pendulum}{16}
-\contentsline {subsection}{\numberline {11.1}Feedback Control for Balancing Controller}{19}
-\contentsline {subsection}{\numberline {11.2}Feedback Control for Swing-up Controller}{20}
-\contentsline {section}{\numberline {12}Why Designing in the Continuous Time Domain is Sufficient}{20}
-\contentsline {section}{\numberline {13}Mechanical Design of the Double Pendulum}{20}
-\contentsline {section}{\numberline {14}Electronic Design of the Double Pendulum}{21}
-\contentsline {subsection}{\numberline {14.1}System Description}{21}
-\contentsline {subsection}{\numberline {14.2}Voltage Regulation}{22}
-\contentsline {subsection}{\numberline {14.3}Programming / Debug Interface}{23}
-\contentsline {subsection}{\numberline {14.4}PC UART Interface }{23}
-\contentsline {subsection}{\numberline {14.5}Signal Conditioning}{24}
-\contentsline {subsection}{\numberline {14.6}Motor Driver}{24}
-\contentsline {subsection}{\numberline {14.7}Logic Level Converter}{25}
-\contentsline {subsection}{\numberline {14.8}AND Digital Logic Circuit}{25}
-\contentsline {subsection}{\numberline {14.9}JK FlipFlop's Digital Logic Circuit}{26}
-\contentsline {subsection}{\numberline {14.10}Microcontroller}{27}
-\contentsline {section}{\numberline {15}Verification of Model}{27}
-\contentsline {section}{Appendices}{29}
-\contentsline {section}{\numberline {A}Derivation of the Double Pendulum}{29}
-\contentsline {section}{\numberline {B}Linearisation of the Double Pendulum}{31}
-\contentsline {section}{\numberline {C}De-coupling of the Linearised System into 2 Independent Equations}{32}
-\contentsline {section}{\numberline {D}Collocated Linearisation}{33}
-\contentsline {section}{\numberline {E}Proof of Pumping Energy into System}{34}
+\contentsline {section}{\numberline {5}Report Outline}{10}
+\contentsline {section}{\numberline {6}Derivation of Double Pendulum}{10}
+\contentsline {section}{\numberline {7}Simulation Model}{11}
+\contentsline {section}{\numberline {8}Swing Up of the Double Pendulum}{12}
+\contentsline {section}{\numberline {9}Balancing of the Double Pendulum}{13}
+\contentsline {section}{\numberline {10}Null Controllability Region}{15}
+\contentsline {section}{\numberline {11}System Identification}{15}
+\contentsline {section}{\numberline {12}Simulating the Double Pendulum}{17}
+\contentsline {subsection}{\numberline {12.1}Feedback Control for Balancing Controller}{20}
+\contentsline {subsection}{\numberline {12.2}Feedback Control for Swing-up Controller}{22}
+\contentsline {section}{\numberline {13}Why Designing in the Continuous Time Domain is Sufficient}{22}
+\contentsline {section}{\numberline {14}Mechanical Design of the Double Pendulum}{22}
+\contentsline {section}{\numberline {15}Electronic Design of the Double Pendulum}{23}
+\contentsline {subsection}{\numberline {15.1}System Description}{23}
+\contentsline {subsection}{\numberline {15.2}Voltage Regulation}{24}
+\contentsline {subsection}{\numberline {15.3}Programming / Debug Interface}{25}
+\contentsline {subsection}{\numberline {15.4}PC UART Interface }{25}
+\contentsline {subsection}{\numberline {15.5}Signal Conditioning}{25}
+\contentsline {subsection}{\numberline {15.6}Motor Driver}{26}
+\contentsline {subsection}{\numberline {15.7}Logic Level Converter}{26}
+\contentsline {subsection}{\numberline {15.8}AND Digital Logic Circuit}{27}
+\contentsline {subsection}{\numberline {15.9}JK FlipFlop's Digital Logic Circuit}{28}
+\contentsline {subsection}{\numberline {15.10}Microcontroller}{28}
+\contentsline {section}{\numberline {16}Verification of Model}{29}
+\contentsline {section}{Appendices}{31}
+\contentsline {section}{\numberline {A}Derivation of the Double Pendulum}{31}
+\contentsline {section}{\numberline {B}Linearisation of the Double Pendulum}{33}
+\contentsline {section}{\numberline {C}De-coupling of the Linearised System into 2 Independent Equations}{34}
+\contentsline {section}{\numberline {D}Collocated Linearisation}{35}
+\contentsline {section}{\numberline {E}Proof of Pumping Energy into System}{36}

@@ -1,0 +1,86 @@
+\chapter{Feedback Control Design}
+\label{chp:controller}
+
+\section{Balancing Controller}
+	% WHAT you are going to present in this chapter/section
+% WHY you are presenting it, and
+% HOW you are going to present it
+
+Provided the robotic gymnast is within the region of controllability, a balancing controller is required to bring the system to the unstable equilibrium position. The design approach is based on the premises that the swing-up controller will swing the robotic gymnast within the region of controllability where the balancing controller will steer the robotic gymnast to balancing.
+
+%The balancing of the gymnast will be achieved by catching the gymnast when the swing-up control algorithm has brought the gymnast to the null controllability region. The null controllability region is the set of states that can be steered to inverted unstable equilibrium position in a fixed time with a constrained control input \cite{null_controllability}.
+The independent parameters, $\phi$ and $\theta$, will be condensed from now on as a vector describes as $$ \vec{q} = 
+\begin{bmatrix}
+\theta \\
+\phi
+\end{bmatrix}
+$$
+
+The system can be approximated as a linear system when in the vicinity of the unstable equilibrium position. The system is thus linearised at $$\vec{Q_{s}} = [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$ the unstable equilibrium position using the Taylor Series Expansion shown in detail in Appendix B. This linearised model can than be written in the state space form to implement a feedback gain. The state space variables are chosen as $\Delta{\vec{q}}$ and $\Delta{\dot{\vec{q}}}$ which results in the state space representation as:  $$ \dot{\vec{q}} = \boldsymbol{A}\Delta{\vec{q}} + \boldsymbol{B}u $$ and $$ \vec{y} = \boldsymbol{D}\Delta{\vec{q}} + \boldsymbol{0}u $$.
+
+The linearised system remains a coupled system which results that the quadratic eigenvalue problem is required to be solved to identified the poles of the system. The solved quadratic eigenvalue problem results in the following poles from the system parameters in Table \ref{table:system_param}.
+$$
+\vec{s} = 
+\begin{bmatrix}
+-8.2 \\
+-4.2	\\
+8.2 \\
+4.2 \\
+
+\end{bmatrix}
+$$
+
+The poles of the system are pairs of positive and negative real poles that indicates an unstable system. This is expected due to the system being linearised in the unstable equilibrium position. When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. \\
+\\
+These poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts. This allows the higher-order system response to be characterised as a second-order response \cite{textbook}. The linearised model already has 2 negative real poles which is chosen to stay the same. The real positive poles were selected based on the following specifications.
+
+These specification was selected on increasing the null controllability region with a low settling time. Due the approximation of the linearised model the null controllability region may be larger than the derived sized \cite{simple_null_controllability}. 
+
+\subsection{Controller Architecture}
+\subsection{Requirements/Specifications and Constraints}
+\subsection{Plant Linearisation}
+\subsection{Full State Feedback Design}
+\subsection{Simulation Response}
+
+
+
+
+\section{Swingup Controller}
+	% WHAT you are going to present in this chapter/section
+% WHY you are presenting it, and
+% HOW you are going to present it	
+The swing up of the robotic gymnast is done by the non-linear feedback control system. For the robotic gymnast to swing from the stable equilibrium position to the unstable equilibrium position the feedback control must incorporate the non-linearities of the system. How these non-linearities of the system is incorporated and the design paradigm of the approach will be explained in following text.
+
+It has been shown that it is not possible to linearise the dynamics of the gymnast by means of static state feedback and non-linear transformation \cite{murray}, but it is possible to achieve a linear response from one of the state variables by implementing a non-linear feedback. This non-linear feedback is the partial feedback linearisation.
+
+Collocated linearisation is a form of partial feedback linearisation where a non-linear control input $\tau$ is used to linearise the response of the actuated pendulum. By analysing equation (\ref{eq:collocated_lin2}), the input $\tau$ is chosen to cancel all the non-linearities of the system and add an additional outer loop control input $v_{2}$. This outer loop control input can be selected to force the actuated pendulum to follow a desired trajectory \cite{spong_swingup}. The derivation of the collocated linearisation is shown in appendix C.
+
+\begin{equation} \label{eq:collocated_lin1}
+d_{11}\ddot{\theta} + h_{1} + \psi_{1} = -d_{12}v_{2}
+\end{equation}
+\begin{equation} \label{eq:collocated_lin2}
+\ddot{\phi} = v_{2}
+\end{equation}
+
+The ability to control the actuated pendulum to follow a desired trajectory, provides the possibility to increase the energy of the system if the correct trajectory is chosen. The increase of energy in the system will cause the pendulums to rise from their stable equilibrium position and thus start swinging upwards. The desired trajectory for ${\phi}$ is chosen as equation (\ref{eq:desired_phi}) determined by W.Spong in \cite{spong_swingup}.
+\begin{equation} \label{eq:desired_phi}
+\phi^{d} =  \alpha \arctan(\dot{\theta})
+\end{equation}
+
+The outer loop control input, $v_{2}$, is chosen as 
+\begin{equation} \label{eq:v2}
+v_{2} = K_{p}(\phi^{d}-\phi)-K_{d}\dot{\phi}
+\end{equation}
+
+The desired trajectory is chosen to increase the energy in the system, approach is to allow the actuated pendulum swing in phase with the non-actuated pendulum. By this approach the energy of the actuated pendulum is transferred to the non-actuated pendulum \cite{spong_swingup}. Appendix E shows how this approach is expected to work.
+
+Returning to the desired trajectory of $\phi$, the coefficient $\alpha$ constrains the actuated pendulum to stay within a interval of $ \phi \in [-\alpha,\alpha] $ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable inverted position.
+\subsection{Controller Architecture}
+\subsection{Requirements/Specifications and Constraints}
+\subsection{Feedback Linearisation}
+\subsection{Nonlinear Control Law}
+\subsection{Simulation Response}
+
+
+
+\section{Simulation Results}

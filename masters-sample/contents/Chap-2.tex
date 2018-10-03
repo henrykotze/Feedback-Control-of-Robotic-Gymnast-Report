@@ -1,0 +1,145 @@
+\chapter{Conceptualisation and Modelling}
+\label{chp:concept_model}
+
+
+\section{System Concepts}
+\section{Mathematical Model}
+	%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+\begin{figure}[h]
+	\centering
+	\input{"./figs/freebodydiagram/doublePendulumImage.tikz"}
+	\caption{Free Body Diagram of the Double Pendulum}
+	\label{fig:doublePen}
+\end{figure}
+
+The approach taken to derive the mathematical model of the robotic gymnast will be discussed in this section. It is presented to allow the reader to understand parameters mentioned in the report. The swing-up of the robotic gymnast consist of non-linear behaviour and is require to fully derive the dynamics of the system. The strenuous mathematical steps are removed from the reader, which is provided in Appendix A, and a summary of the motivation and paradigm approach to the derivation is provided.\\
+
+The robotic gymnast is modeled as two pendulums connected together with a hinge, where each pendulum is modeled as having their mass distributed arbitrary along their axis. There is a torque actuating the lower pendulum seen in Figure \ref{fig:doublePen} and friction is modeled as proportional to the angular velocity of the pendulums. The friction that develops at the hinge is proportional to the relative motion of the actuated pendulum and non-actuated pendulum. The angle, $\phi$ was purposefully chosen relative to $\theta$ to ease the identification of this friction. Figure \ref{fig:doublePen} displays the free body diagram of the robotic gymnast.\\
+
+Deriving the equation of motion of the robotic gymnast can be approached using different methods, but by exploring the system it can be shown that the system's energy is easily defined. The energy in the system is the potential energy of the 2 pendulums, the rotational kinetic energy of the non-actuated pendulum and the velocity- and rotational kinetic energy of the actuated pendulum. The Euler-Lagrange equation is chosen to derive the differential equation describing the system dynamics because of the easily defined energy. Using the Euler-Lagrange equation leads to the condense equations shown in (\ref{eq:condense1}) and (\ref{eq:condense2}),
+\begin{equation} \label{eq:condense1}
+d_{11}\ddot{\theta}+d_{12}\ddot{\phi} + h_{1} + \psi_{1} = 0
+\end{equation}
+\begin{equation} \label{eq:condense2}
+d_{21}\ddot{\theta} + d_{22}\ddot{\phi} + h_{2} + \psi_{2} = \tau
+\end{equation}
+where
+\begin{equation} \label{eq:d11}
+d_{11} = I_{a} + I_{b} + m_{2}(L_{1}^2 + l_{2}^2+2L_{1}l_{2}\cos(\phi))
+\end{equation}
+\begin{equation} \label{eq:d12}
+d_{12} = I_{b} +m_{2}(l_{2}^2 L_{1}l_{2}\cos(\phi))
+\end{equation}
+\begin{equation} \label{eq:h1}
+h_{1} = -m_{2}L_{1}l_{2}\sin(\phi)\dot{\phi^2}-2m_{2}L_{1}l_{2}\sin(\phi)\dot{\phi}\dot{\theta}
+\end{equation}
+\begin{equation} \label{eq:psi1}
+\psi_{1} = (m_{2}l_{1}+m_{2}L_{1})g\cos(\theta) + m_{2}l_{2}g\cos(\theta+\phi)
+\end{equation}
+\begin{equation} \label{eq:d21}
+d_{21}= I_{b}+m_{2}(l_{2}^2+L_{1}l_{2}\cos(\phi))
+\end{equation}
+\begin{equation} \label{eq:d22}
+d_{22}= I_{b}+ m_{2}l_{2}^2
+\end{equation}
+\begin{equation} \label{eq:h2}
+h_{2}= m_{2}L_{1}l_{2}\sin(\phi)\dot{\theta^2}
+\end{equation}
+\begin{equation} \label{eq:psi2}
+\psi_{2}= m_{2}l_{2}g\cos(\theta+\phi)
+\end{equation}
+
+
+
+The equation of motion for the robotic gymnast is very non-linear containing multiple terms of squared angular velocities and cosine functions. These non-linearities is hidden in the in the $\psi$ and $h$ terms. The non-linearities can be linearised around a working point, but during the swing-up of the robotic gymnast they must be taken into account.
+
+
+\section{Simulation Model}
+	%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+The mathematical model derived in the previous section is required to be implemented on a simulation program. Simulating the model allows the designer to understand how system parameters influence the dynamics of the system and the verification of controllers implemented. It will be presented by discussing how the simulation is a true representation of the system, how design specifications were determined and the influence of these parameters.
+
+Simulation of the robotic gymnast was done using MATLAB Simulink. The differential equations shown in equation (\ref{eq:condense1}) and (\ref{eq:condense2}) were implemented using the MATLAB function box. It was required to write these equation where $\ddot{\phi}$ and $\ddot{\theta}$ is the subject in each of the \textit{MATLAB Function} box to allow MATLAB to simulate the model.
+
+Other non-linearities introduced by sensors and components were added such as saturation of the motor, gearbox backlash and quantisation of sensory data. These non-linearities were implemented to allow the simulation to be an acceptable representation of the physical system. The Simulink Model is shown in Figure \ref{fig:sim_nonlinearfeedback}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.3]{./figs/simulink/simulink_model.eps}
+	\caption{MATLAB Simulink Model}
+	\label{fig:sim_nonlinearfeedback}
+\end{figure}
+
+\section{System Identification}
+	%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it?
+
+The system identification tests are done to determine the characteristics that describe the behavior of the system. These characteristics include the damping ratio's and natural frequencies of the system around the unstable equilibrium position. The system are described by 2 independent parameters, $\theta$ and $\phi$ which defines the position of the non-actuated and actuated pendulums. The system is thus a 2 degree of freedom (2DOF) system and it is expected to contain 2 natural frequencies each accompanied by a damping coefficient.
+
+The first natural frequency of the system is determine by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{rad}$ constant throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and non-actuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{rad}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{2}$. The accuracy of the initial conditions is of little importance, but the initial condition must allow the response to contain a few oscillation to accurately determine the parameters of interest. The second natural frequency is determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{rad}$ throughout the response. This was accomplished by constraining the non-actuated pendulum using hard stops. Figure \ref{fig:q2_response} shows the measured response of the system when $\phi$ starts at a initial condition and keeping $\theta$ constant.%ith with an approximated response that is determined by the parameters shown in Table \ref{table:system_response_prop}.
+
+The natural frequencies of the system is identified by inspecting the frequency content of the time-domain responses. The frequency content of the initial condition responses of both experiments are shown in Figure \ref{fig:fft_system_response}, by applying the Fast Fourier Transform (FFT) algorithm to the time-domain signals. The FFT indicates the natural frequencies by the predominant peaks across the frequency spectrum which are tabulated in Table \ref{table:system_characteristic}.
+
+The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} are decaying with time and this decaying behaviour can be modeled by the following equation: $$\tau(t) = -\zeta \omega_{n} t$$ Where $\omega_{n}$ is the natural frequency of the system and $\zeta$ the damping ratio of the system. The natural frequencies of the system has already been determined and thus linear regression can be used to determine the best $\zeta$ that will fit the measured data. The decaying functions are shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} with the best fit $\zeta$ values shown in Table \ref{table:system_characteristic}. It is visible from the responses that the damping ratio changes when the response are nears steady state. This change of damping ratio is neglible due to the controllers being implement are robust to changes in $\zeta$.
+
+The input to the system is the torque delivered by the motor and the magnitude and direction is determined by the control laws. The model describing the system in equation \ref{eq:condense2} assumes the torque delivered to the system is instantaneously available. This is inaccurate due to the DC motor model describing the torque delivered by the model when applying a DC voltage. The input that the motor will be receiving is a Pulse-Width-Modulated (PWM) signal to represent a DC voltage.
+
+Experiments were done to determine the relationship between the duty-cycle of the PWM signal and the torque delivered by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hard-stop. The motor-driver that controls the motor has a feedback pin that provides a proportional current of $\frac{1}{375}$ of the current flowing through the motor. This proportional current is allowed to flow through a known resistor. The voltage across the resistor is measured and provides a indication of the current flowing through the motor. The mean value of the voltage measured on the oscilloscope is taken and mapped backwards to determine the current. Figure \ref{fig:dutycycle_vs_current} shows the measured data with a line of best fit. It is clear that there exist a linear relationship between the duty-cycle of the PWM signal and the torque the motor can provide.
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		System Characteristic & Mean & Standard Deviation\\
+		\hline
+		\hline
+		$f_{1}$ & \SI{3.93}{Hz} &  \\
+		\hline
+		$f_{2}$ & \SI{3.62}{Hz} & 0.04029 \\ 
+		\hline
+		$\zeta_{1}$ & $1.6931 \cdot10^{-5}$ & $4.823\cdot 10^{-6}$
+		\\
+		\hline
+		$\zeta_{2}$ & $5.85184 \cdot 10^{-5}$ & \\
+		\hline
+	\end{tabular}
+	\caption{System Characteristic \& their Statistical Properties from 10 Experiments}
+	\label{table:system_characteristic}
+\end{table}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{./figs/FFT_system.eps}
+	\caption{Frequency Content of Time-Domain Initial Condition Responses}
+	\label{fig:fft_system_response}
+\end{figure}
+
+Figure \ref{fig:q1_response} shows the decaying function with properties that are shown in Table \ref{table:system_response_prop} and it is visible that the calculated values provides a acceptable approximation of the measured data.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{./figs/q1_initial_response.eps}
+	\caption{Initial Condition System Response while $ \phi = \SI{0}{rad} $ }
+	\label{fig:q1_response}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{./figs/q2_initial_response.eps}
+	\caption{Initial Condition System Response while $ \theta = \SI{0}{rad} $ }
+	\label{fig:q2_response}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{./figs/dutycycle_vs_current.eps}
+	\caption{Relationship between Duty-Cycle of PWM Signal and Current through Motor}
+	\label{fig:dutycycle_vs_current}
+\end{figure}
+\section{Model Validation}
