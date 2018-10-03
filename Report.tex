@@ -110,8 +110,36 @@
  	%WHAT you are going to present in this chapter/section
  	%WHY you are presenting it, and
  	%HOW you are going to present it
- 		
+ 	\begin{figure}[h]
+ 		\centering
+ 		\input{./system_overview/system_overview.tikz}
+ 		\caption{System Overview of the Feedback Control of Robotic Gymnast}
+ 		\label{fig:system_overview}
+ 	\end{figure}
+ 	
+ 	
+ 	Figure \ref{fig:system_overview} provides an overview of the various subsystems the project will contain. The project is subdivided into these subsystems being developed separately with little interaction between the each other. An brief overview on each subsystem will be presented here.\\
+ 	
+ 	The external computer communicates with the electronic design sending instruction to start the system and for debugging purposes. The external computer will receive data from the electronic design and allows the verification of system parameters.
+ 	
+ 	The electronic design acts as the middle-man between the mechanical design and the external computer. It provides instructions to the mechanical design components based on the controller while sending data to the external computer. The electronic design contains the Printed Circuit Board (PCB) that conditions all the signals for processing.\\
+ 	
+ 	The mechanical design is responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors must be selected to measure the state variables and providing interfaces for the electronic design.
+  	
+  	\section{Project Execution}
+ 	%WHAT you are going to present in this chapter/section
+ 	%WHY you are presenting it, and
+ 	%HOW you are going to present it
+ 	
+ 	The execution of the project occurs in a sequence of steps. First the mathematical model of the system is derived by using the appropriate approaches. The derived mathematical model is then implemented on a simulation program where the dynamics of the system can be verified and inspected.
+ 	
+ 	
+  	
+  	
  	\section{Report Outline}
+ 	
+ 	
+
  	
  	
 	\section{Derivation of Double Pendulum}
