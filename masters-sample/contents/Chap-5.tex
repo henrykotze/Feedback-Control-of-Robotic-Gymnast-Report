@@ -42,3 +42,14 @@ The other state in which communication occured was bi-directional used for debug
 	\label{fig:software_flow}
 \end{figure}
 
+Figure \ref{fig:software_flow} shows the main execution flow of the microcontroller based on factors that influence their states. A brief overview of the execution flow is describe below.\\
+
+On startup of the microcontroller, it will initialise the various peripherals required for operation. They include timers for PWM generation, ADC and interrupts for encoder signals. The microcontroller will than initialise the various variables required for operation.\\
+
+Once initialisation is completed the microcontroller will check via an interrupt if a byte over the serial communication has been received. If a byte has been received it, the microncontroller will verify the command structure and execute based on this command.
+
+Every 0.1ms the microcontroller will inspect the data arrays of the sampled signals. Direct Memory Access (DMA) is used for sampling and results in these sampling data being automatically refreshed by hardware.
+
+The micrcontroller will than react whether a interrupt has occur to indicate a rising or falling edge of the encoder signal. This falling and rising edge indicates a incremental change of the position of the actuated pendulum the microcontroller will behave accordingly.
+
+The microcontroller will than verify whether it is required to stream the data every 1ms to the external computer. 

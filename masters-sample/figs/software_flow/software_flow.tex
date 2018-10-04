@@ -21,21 +21,20 @@
     \node [block] (init_perip) {Initialise Peripherals};
     \node [block, below of=init_perip] (init_vars) {Initialise Variables};
     \node [decision, below of=init_vars] (uart) {Byte received?};
-    \node [decision, below of=uart] (uart) {};
-    %\node [block, below of=init_vars] (evaluate) {evaluate candidate models};
-    %\node [block, left of=evaluate, node distance=3cm] (update) {update model};
-    %\node [decision, below of=evaluate] (decide) {is best candidate better?};
+    \node [decision, below of=uart] (adc) {Inspect Sampling Data};
+    \node [decision, below of=adc] (encoder) {Edge on Encoder Signal};
+  %  \node [block, left of=evaluate, node distance=3cm] (update) {update model};
+    \node [decision, below of=encoder] (stream) {Stream data to PC?};
     %\node [block, below of=decide, node distance=3cm] (stop) {stop};
     
     \node [cloud, left of=init_perip] (expert) {expert};
     \node [cloud, right of=init_perip] (system) {system};
     % Draw edges
-   % \path [line] (init) -- (identify);
-  %  \path [line] (identify) -- (evaluate);
-  %  \path [line] (evaluate) -- (decide);
-  %  \path [line] (decide) -| node [near start] {yes} (update);
-   % \path [line] (update) |- (identify);
-   % \path [line] (decide) -- node {no}(stop);
+    \path [line] (init_perip) -- (init_vars);
+   	\path [line] (init_vars) -- (uart);
+    \path [line] (uart) -- node[near start]{no} (adc);
+    \path [line] (adc) -- node [near start]{no}(encoder);
+    \path [line] (encoder) -- node[near start] {no}(stream);
   %  \path [line,dashed] (expert) -- (init);
   %  \path [line,dashed] (system) -- (init);
   %  \path [line,dashed] (system) |- (evaluate);

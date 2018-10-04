@@ -9,9 +9,9 @@
     
 \begin{tikzpicture}[node distance = 2cm, auto]
     % Place nodes
-    \node [block] (init_perip) {Initialise Peripherals};
-    \node [block, below of=init_perip] (init_vars) {Initialise Variables};
-    \node [decision, below of=init_vars] (uart) {Byte received?};
+    \node [block] (initperip) {Initialise Peripherals};
+    \node [block, below of=initperip] (initvars) {Initialise Variables};
+    \node [decision, below of=initvars] (uart) {Byte received?};
     \node [decision, below of=uart] (uart) {};
     %\node [block, below of=init_vars] (evaluate) {evaluate candidate models};
     %\node [block, left of=evaluate, node distance=3cm] (update) {update model};
@@ -21,10 +21,10 @@
     \node [cloud, left of=init_perip] (expert) {expert};
     \node [cloud, right of=init_perip] (system) {system};
     % Draw edges
-   % \path [line] (init) -- (identify);
+   \path [line] (initperip) -- (initvars);
   %  \path [line] (identify) -- (evaluate);
   %  \path [line] (evaluate) -- (decide);
-  %  \path [line] (decide) -| node [near start] {yes} (update);
+  %	\path [line] (uart) -| node [near start] {yes} ();
    % \path [line] (update) |- (identify);
    % \path [line] (decide) -- node {no}(stop);
   %  \path [line,dashed] (expert) -- (init);
