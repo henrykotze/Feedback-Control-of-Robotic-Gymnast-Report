@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  4 OCT 2018 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  4 OCT 2018 13:34
 entering extended mode
 **./USthesis_Masters.tex
 (USthesis_Masters.tex
@@ -1632,7 +1632,7 @@ Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 (USthesis_Masters.aux (frontmatter/Chap-Front.aux) (frontmatter/Nomencl.aux)
 (contents/Chap-1.aux) (contents/Chap-2.aux) (contents/Chap-3.aux)
 (contents/Chap-4.aux) (contents/Chap-5.aux) (contents/Chap-6.aux)
-(contents/App-1.aux
+(contents/Chap-7.aux) (contents/App-1.aux
 
 LaTeX Warning: Label `chp2:concept_model' multiply defined.
 
@@ -1810,7 +1810,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-) [4] [5]
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+) [5]
 \openout2 = `contents/Chap-2.aux'.
 
  (contents/Chap-2.tex
@@ -2060,13 +2090,20 @@ Package pdftex.def Info: ./figs/dutycycle_vs_current-eps-converted-to.pdf  used
 
 
 
-] [29
+]
+\openout2 = `contents/Chap-7.aux'.
+
+ (contents/Chap-7.tex) [29
+
+
+
+] [30
 
 
 ]
 \openout2 = `contents/App-1.aux'.
 
- (contents/App-1.tex [30
+ (contents/App-1.tex [31
 
 
 ]
@@ -2091,10 +2128,10 @@ L/cmm/m/it/12 m[]l[][] \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 m[]L[]l\OT1/cmr/m/n/
  []
 
 
-LaTeX Warning: Reference `fig:BallDef' on page 31 undefined on input line 69.
+LaTeX Warning: Reference `fig:BallDef' on page 32 undefined on input line 69.
 
-[31]) [32] (USthesis_Masters.bbl
-("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [33
+[32]) [33] (USthesis_Masters.bbl
+("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [34
 
 
 
@@ -2112,7 +2149,7 @@ LaTeX Warning: Reference `fig:BallDef' on page 31 undefined on input line 69.
 (USthesis_Masters.aux (frontmatter/Chap-Front.aux) (frontmatter/Nomencl.aux)
 (contents/Chap-1.aux) (contents/Chap-2.aux) (contents/Chap-3.aux)
 (contents/Chap-4.aux) (contents/Chap-5.aux) (contents/Chap-6.aux)
-(contents/App-1.aux))
+(contents/Chap-7.aux) (contents/App-1.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2121,10 +2158,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 50270 strings out of 492973
- 1225026 string characters out of 3135932
- 1475895 words of memory out of 3000000
- 53327 multiletter control sequences out of 15000+200000
+ 50281 strings out of 492973
+ 1225500 string characters out of 3135932
+ 1476840 words of memory out of 3000000
+ 53331 multiletter control sequences out of 15000+200000
  568859 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,18n,98p,1030b,1073s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2161,9 +2198,9 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on USthesis_Masters.pdf (44 pages, 1098483 bytes).
+Output written on USthesis_Masters.pdf (45 pages, 1101111 bytes).
 PDF statistics:
- 935 PDF objects out of 1000 (max. 8388607)
+ 940 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

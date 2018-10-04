@@ -8,15 +8,13 @@ A level-1 auxiliary file: contents/Chap-3.aux
 A level-1 auxiliary file: contents/Chap-4.aux
 A level-1 auxiliary file: contents/Chap-5.aux
 A level-1 auxiliary file: contents/Chap-6.aux
+A level-1 auxiliary file: contents/Chap-7.aux
 A level-1 auxiliary file: contents/App-1.aux
 Database file #1: backmatter/USbib-sample.bib
 I was expecting a `,' or a `}'---line 16 of file backmatter/USbib-sample.bib
  :  year         = 2011
  :                     -2012,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Luding-1994"
-Warning--I didn't find a database entry for "Luding-2004"
-Warning--I didn't find a database entry for "Cundall-1979"
 Warning--to sort, need author or key in simple_null_controllability
 Warning--to sort, need author or key in murray
 Warning--to sort, need author or key in spong_swingup

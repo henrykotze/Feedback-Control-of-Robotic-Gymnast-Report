@@ -68,8 +68,11 @@
 \contentsline {section}{\numberline {6.1}Swingup Controller}{28}
 \contentsline {section}{\numberline {6.2}Balancing Controller}{28}
 \contentsline {section}{\numberline {6.3}Swingup and Balancing}{28}
-\contentsline {chapter}{Appendices}{29}
-\contentsline {appendix}{\chapternumberline {A}Derivation of the Double Pendulum}{30}
-\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{30}
-\contentsline {subsection}{\numberline {A.1.1}Ball mass and inertia parameters}{32}
-\contentsline {chapter}{List of References}{33}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{29}
+\contentsline {section}{\numberline {7.1}Summary}{29}
+\contentsline {section}{\numberline {7.2}Recommendation}{29}
+\contentsline {chapter}{Appendices}{30}
+\contentsline {appendix}{\chapternumberline {A}Derivation of the Double Pendulum}{31}
+\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{31}
+\contentsline {subsection}{\numberline {A.1.1}Ball mass and inertia parameters}{33}
+\contentsline {chapter}{List of References}{34}
