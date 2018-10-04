@@ -10,21 +10,21 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces State Space Representation with Feedback Gain}}{2}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces System Overview of the Feedback Control of Robotic Gymnast}}{3}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Free Body Diagram of the Double Pendulum}}{6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces MATLAB Simulink Model}}{8}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{9}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{10}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Free Body Diagram of the Double Pendulum}}{7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces MATLAB Simulink Model}}{9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{10}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{11}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{12}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Electronic System Overview}}{18}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Model of a Potentiometer}}{20}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Unity Gain Amplifier Circuit}}{21}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{21}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Simplified Circuit of Motor Feedback}}{22}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{23}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces AND digital logic with inverter}}{23}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{24}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Electronic System Overview}}{19}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Model of a Potentiometer}}{21}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Unity Gain Amplifier Circuit}}{22}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{22}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Simplified Circuit of Motor Feedback}}{23}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{24}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces AND digital logic with inverter}}{24}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{25}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}

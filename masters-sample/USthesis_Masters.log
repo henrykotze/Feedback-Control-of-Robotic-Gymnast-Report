@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  4 OCT 2018 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  4 OCT 2018 12:57
 entering extended mode
 **./USthesis_Masters.tex
 (USthesis_Masters.tex
@@ -1750,20 +1750,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 ]
 \openout2 = `contents/Chap-1.aux'.
 
- (contents/Chap-1.tex
-
-Package natbib Warning: Citation `Luding-1994' on page 1 undefined on input lin
-e 14.
-
-
-Package natbib Warning: Citation `Luding-2004' on page 1 undefined on input lin
-e 14.
-
-
-Package natbib Warning: Citation `Cundall-1979' on page 1 undefined on input li
-ne 21.
-
-[1
+ (contents/Chap-1.tex [1
 
 
 
@@ -1776,7 +1763,7 @@ ne 21.
 ) [2]
 
 LaTeX Warning: Reference `fig:PIDcontroller' on page 3 undefined on input line 
-78.
+65.
 
 (figs/system_overview/system_overview.tikz
 Overfull \hbox (37.64163pt too wide) in paragraph at lines 50--51
@@ -1784,46 +1771,46 @@ Overfull \hbox (37.64163pt too wide) in paragraph at lines 50--51
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
 
  []
 
-) [4]
+) [4] [5]
 \openout2 = `contents/Chap-2.aux'.
 
  (contents/Chap-2.tex
@@ -1852,11 +1839,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-[5
+[6
 
 
 
-] [6]
+] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
@@ -1877,7 +1864,7 @@ ed-to.pdf>
 del-eps-converted-to.pdf ./figs/simulink/simulink_model.eps>
 (epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/simulink/simulink_model-eps-converted-to.pdf, id=108, 1282.7925pt x 863
+<./figs/simulink/simulink_model-eps-converted-to.pdf, id=111, 1282.7925pt x 863
 .225pt>
 File: ./figs/simulink/simulink_model-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -1888,7 +1875,7 @@ sed on input line 91.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7]
+[8]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 105.
@@ -1898,7 +1885,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
-[8 <./figs/simulink/simulink_model-eps-converted-to.pdf>]
+[9 <./figs/simulink/simulink_model-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figs/q1_initial_response.eps>
 (epstopdf)                    date: 2018-09-20 14:31:28
 (epstopdf)                    size: 423479 bytes
@@ -1910,7 +1897,7 @@ o.pdf>
 eps-converted-to.pdf ./figs/q1_initial_response.eps>
 (epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/q1_initial_response-eps-converted-to.pdf, id=131, 392.46625pt x 309.155
+<./figs/q1_initial_response-eps-converted-to.pdf, id=134, 392.46625pt x 309.155
 pt>
 File: ./figs/q1_initial_response-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/q1_initial_response-eps-converted-to.pdf>
@@ -1928,7 +1915,7 @@ o.pdf>
 eps-converted-to.pdf ./figs/q2_initial_response.eps>
 (epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/q2_initial_response-eps-converted-to.pdf, id=132, 421.575pt x 316.18124
+<./figs/q2_initial_response-eps-converted-to.pdf, id=135, 421.575pt x 316.18124
 pt>
 File: ./figs/q2_initial_response-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/q2_initial_response-eps-converted-to.pdf>
@@ -1958,7 +1945,7 @@ Package epstopdf Info: Source file: <./figs/FFT_system.eps>
 rted-to.pdf ./figs/FFT_system.eps>
 (epstopdf)             \includegraphics on input line 159.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/FFT_system-eps-converted-to.pdf, id=133, 421.575pt x 316.18124pt>
+<./figs/FFT_system-eps-converted-to.pdf, id=136, 421.575pt x 316.18124pt>
 File: ./figs/FFT_system-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/FFT_system-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/FFT_system-eps-converted-to.pdf  used on input 
@@ -1969,7 +1956,7 @@ Overfull \hbox (23.57396pt too wide) in paragraph at lines 159--160
  [][] 
  []
 
-[9 <./figs/q1_initial_response-eps-converted-to.pdf>]
+[10 <./figs/q1_initial_response-eps-converted-to.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1978,19 +1965,19 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 166.
 
 
-LaTeX Warning: Reference `table:system_response_prop' on page 10 undefined on i
+LaTeX Warning: Reference `table:system_response_prop' on page 11 undefined on i
 nput line 187.
 
-[10 <./figs/q2_initial_response-eps-converted-to.pdf>]
+[11 <./figs/q2_initial_response-eps-converted-to.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 195.
 
-) [11 <./figs/FFT_system-eps-converted-to.pdf>] [12]
+) [12 <./figs/FFT_system-eps-converted-to.pdf>] [13]
 \openout2 = `contents/Chap-3.aux'.
 
  (contents/Chap-3.tex
-[13
+[14
 
 
 
@@ -1999,7 +1986,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
-[14]) [15] [16]
+[15]) [16] [17]
 \openout2 = `contents/Chap-4.aux'.
 
  (contents/Chap-4.tex
@@ -2013,33 +2000,33 @@ Overfull \hbox (6.88863pt too wide) in paragraph at lines 32--33
 es the non-actuated
  []
 
-[17
+[18
 
 
 
-] [18]
+] [19]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 68.
 
-[19] (figs/potentiometer/potentiometer.tikz) (figs/unitygain/unitygain.tikz)
+[20] (figs/potentiometer/potentiometer.tikz) (figs/unitygain/unitygain.tikz)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[20] (figs/JK_XOR_gates/jk_xor_nor.tikz)
+[21] (figs/JK_XOR_gates/jk_xor_nor.tikz)
 Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 
-LaTeX Warning: Reference `sch:jk_xor' on page 21 undefined on input line 128.
+LaTeX Warning: Reference `sch:jk_xor' on page 22 undefined on input line 128.
 
-[21] (figs/feedback_current/feedback_current.tikz)
+[22] (figs/feedback_current/feedback_current.tikz)
 (figs/Logic_Level_Converter/LogicLevelConverterAndInverter.tikz)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] (figs/AND_gates/ANDgates.tikz) [23]
+[23] (figs/AND_gates/ANDgates.tikz) [24]
 Package epstopdf Info: Source file: <./figs/dutycycle_vs_current.eps>
 (epstopdf)                    date: 2018-09-21 16:50:54
 (epstopdf)                    size: 144299 bytes
@@ -2051,17 +2038,17 @@ to.pdf>
 -eps-converted-to.pdf ./figs/dutycycle_vs_current.eps>
 (epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/dutycycle_vs_current-eps-converted-to.pdf, id=197, 382.42876pt x 309.15
+<./figs/dutycycle_vs_current-eps-converted-to.pdf, id=200, 382.42876pt x 309.15
 5pt>
 File: ./figs/dutycycle_vs_current-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/dutycycle_vs_current-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/dutycycle_vs_current-eps-converted-to.pdf  used
  on input line 197.
 (pdftex.def)             Requested size: 382.42781pt x 309.15424pt.
-) [24 <./figs/dutycycle_vs_current-eps-converted-to.pdf>] [25]
+) [25 <./figs/dutycycle_vs_current-eps-converted-to.pdf>] [26]
 \openout2 = `contents/Chap-5.aux'.
 
- (contents/Chap-5.tex) [26
+ (contents/Chap-5.tex) [27
 
 
 
@@ -2069,17 +2056,17 @@ Package pdftex.def Info: ./figs/dutycycle_vs_current-eps-converted-to.pdf  used
 \openout2 = `contents/Chap-6.aux'.
 
  (contents/Chap-6.tex)
-[27
+[28
 
 
 
-] [28
+] [29
 
 
 ]
 \openout2 = `contents/App-1.aux'.
 
- (contents/App-1.tex [29
+ (contents/App-1.tex [30
 
 
 ]
@@ -2104,14 +2091,10 @@ L/cmm/m/it/12 m[]l[][] \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 m[]L[]l\OT1/cmr/m/n/
  []
 
 
-LaTeX Warning: Reference `fig:BallDef' on page 30 undefined on input line 69.
+LaTeX Warning: Reference `fig:BallDef' on page 31 undefined on input line 69.
 
-[30]) [31] (USthesis_Masters.bbl
-("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng"))
-
-Package natbib Warning: There were undefined citations.
-
-[32
+[31]) [32] (USthesis_Masters.bbl
+("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [33
 
 
 
@@ -2125,10 +2108,11 @@ Package natbib Warning: There were undefined citations.
 \tf@lot=\write8
 \openout8 = `USthesis_Masters.lot'.
 
- (USthesis_Masters.aux (frontmatter/Chap-Front.aux)
-(frontmatter/Nomencl.aux) (contents/Chap-1.aux) (contents/Chap-2.aux)
-(contents/Chap-3.aux) (contents/Chap-4.aux) (contents/Chap-5.aux)
-(contents/Chap-6.aux) (contents/App-1.aux))
+
+(USthesis_Masters.aux (frontmatter/Chap-Front.aux) (frontmatter/Nomencl.aux)
+(contents/Chap-1.aux) (contents/Chap-2.aux) (contents/Chap-3.aux)
+(contents/Chap-4.aux) (contents/Chap-5.aux) (contents/Chap-6.aux)
+(contents/App-1.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2139,7 +2123,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  50270 strings out of 492973
  1225026 string characters out of 3135932
- 1475939 words of memory out of 3000000
+ 1475895 words of memory out of 3000000
  53327 multiletter control sequences out of 15000+200000
  568859 words of font info for 113 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2177,9 +2161,9 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on USthesis_Masters.pdf (43 pages, 1098331 bytes).
+Output written on USthesis_Masters.pdf (44 pages, 1098483 bytes).
 PDF statistics:
- 933 PDF objects out of 1000 (max. 8388607)
+ 935 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  139 words of extra memory for PDF output out of 10000 (max. 10000000)
 
