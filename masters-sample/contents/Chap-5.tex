@@ -1,2 +1,44 @@
 \chapter{Software Design}
+\label{chp5:software}
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+
+The software required to allow data acquisition, retrieval of system state information and communication is presented here. The software design played a central role in continuing of the project pass the initial simulation phase.The software design allowed the determination of the system characteristic parameters and the verification of the simulation and controller.
+
 \section{Software Requirements}
+\label{sec:software_requirements}
+
+\subsection{Data Aquisition}
+Communication with the microcontroller was implemented using the serial communication from the external computer to the microcontroller. Communication with the microntroller occures differently depending on the state of the system. A \textit{Python} script was used for communication that runs on the external computer.\\
+
+If experiments are conducted the communication is uni-directional from the microcontroller towards the external computer. The microcontroller streams the state variables of the system to the external computer in specific structure shown in Figure \ref{fig:data_struct}. The star attached to the variables indicate that they are not sent in the correct units. The reason behind the decision is to reduce the processing time of the microcontroller. Sending data types such as floats are computational hungry and thus these conversions are handled on the external computer.
+
+\begin{figure}[h]
+	\centering
+	\input{"./figs/uart_struct/data_struct.tikz"}
+	\caption{Data Structure for Streaming Data during Experiments}
+	\label{fig:data_struct}
+\end{figure}
+
+The structure used in Figure \ref{fig:data_struct} is chosen as comma-seperated values csv) which makes it easy to write these data in a .csv file and read them later to analyse the data.\\
+
+The other state in which communication occured was bi-directional used for debugging purposes. In this state the \textit{Python} script allows the user to type commands adhering to the structure shown in Figure \ref{fig:uart_struct}. Based on the command used, the microcontroller would echo the same command back if it completed the command instructed.
+
+
+\begin{figure}[h]
+	\centering
+	\input{"./figs/uart_struct/uart_struct.tikz"}
+	\caption{Data Structure for Sending Commands}
+	\label{fig:uart_struct}
+\end{figure}
+
+
+\subsection{Embedded Program}
+\begin{figure}[h]
+	\centering
+	\input{"./figs/software_flow/software_flow.tikz"}
+	\caption{Data Structure for Sending Commands}
+	\label{fig:software_flow}
+\end{figure}
+

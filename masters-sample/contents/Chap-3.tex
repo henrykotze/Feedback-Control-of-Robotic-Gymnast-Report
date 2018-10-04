@@ -75,6 +75,8 @@ The requirements of the swing-up controller is to swing the robotic gymnast up u
 
 The first requirement is set to provide a feasible solution to the swing-up of the robotic gymnast and allow the swing-up sequence to be captivating. The second requirement is set to ensure the linear approximation holds when the balancing controller is active to bring the system to the unstable equilibrium position and balance.
 
+Constraints that is placed on the controller is the stall torque of the motor. 
+
 \subsection{Feedback Linearisation}
 It has been shown that it is not possible to linearise the dynamics of the gymnast by means of static state feedback and non-linear transformation \cite{murray}, but it is possible to achieve a linear response from one of the state variables by implementing a non-linear feedback. This non-linear feedback is the partial feedback linearisation.\\
 
