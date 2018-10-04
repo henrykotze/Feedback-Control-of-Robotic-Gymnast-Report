@@ -10,6 +10,7 @@ A level-1 auxiliary file: contents/Chap-5.aux
 A level-1 auxiliary file: contents/Chap-6.aux
 A level-1 auxiliary file: contents/Chap-7.aux
 A level-1 auxiliary file: contents/App-1.aux
+A level-1 auxiliary file: contents/App-2.aux
 Database file #1: backmatter/USbib-sample.bib
 I was expecting a `,' or a `}'---line 16 of file backmatter/USbib-sample.bib
  :  year         = 2011

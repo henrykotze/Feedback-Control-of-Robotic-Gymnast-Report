@@ -32,47 +32,49 @@
 \contentsline {subsection}{\numberline {3.1.4}Full State Feedback Design}{15}
 \contentsline {subsection}{\numberline {3.1.5}Simulation Response}{15}
 \contentsline {section}{\numberline {3.2}Swingup Controller}{15}
-\contentsline {subsection}{\numberline {3.2.1}Controller Architecture}{17}
-\contentsline {subsection}{\numberline {3.2.2}Requirements/Specifications and Constraints}{17}
+\contentsline {subsection}{\numberline {3.2.1}Controller Architecture}{16}
+\contentsline {subsection}{\numberline {3.2.2}Requirements/Specifications and Constraints}{16}
 \contentsline {subsection}{\numberline {3.2.3}Feedback Linearisation}{17}
 \contentsline {subsection}{\numberline {3.2.4}Nonlinear Control Law}{17}
-\contentsline {subsection}{\numberline {3.2.5}Simulation Response}{17}
-\contentsline {section}{\numberline {3.3}Simulation Results}{17}
-\contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{18}
-\contentsline {section}{\numberline {4.1}Mechanical Hardware}{18}
-\contentsline {subsection}{\numberline {4.1.1}Mechanical Components}{18}
-\contentsline {subsection}{\numberline {4.1.2}Motor}{18}
-\contentsline {subsection}{\numberline {4.1.3}Assembly}{18}
-\contentsline {section}{\numberline {4.2}Electronic Hardware}{18}
-\contentsline {subsection}{\numberline {4.2.1}System Description}{18}
-\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{19}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{20}
-\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{20}
-\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{20}
-\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{21}
-\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{21}
-\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{21}
-\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{22}
-\contentsline {subsubsection}{\numberline {4.2.5.1}Working Principle}{22}
-\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{22}
-\contentsline {subsection}{\numberline {4.2.6}Motor Driver}{23}
-\contentsline {subsubsection}{\numberline {4.2.6.1}Logic Level Converters}{23}
-\contentsline {subsubsection}{\numberline {4.2.6.2}AND Digitial Circuit}{24}
-\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{25}
-\contentsline {subsubsection}{\numberline {4.2.7.1}Angle Sensor Measurements}{25}
-\contentsline {subsubsection}{\numberline {4.2.7.2}Optical Encoder Measurements}{25}
-\contentsline {subsubsection}{\numberline {4.2.7.3} PWM Duty Cycle to Motor Current}{25}
-\contentsline {chapter}{\chapternumberline {5}Software Design}{27}
-\contentsline {section}{\numberline {5.1}Software Requirements}{27}
-\contentsline {chapter}{\chapternumberline {6}Practical Results}{28}
-\contentsline {section}{\numberline {6.1}Swingup Controller}{28}
-\contentsline {section}{\numberline {6.2}Balancing Controller}{28}
-\contentsline {section}{\numberline {6.3}Swingup and Balancing}{28}
-\contentsline {chapter}{\chapternumberline {7}Conclusion}{29}
-\contentsline {section}{\numberline {7.1}Summary}{29}
-\contentsline {section}{\numberline {7.2}Recommendation}{29}
-\contentsline {chapter}{Appendices}{30}
-\contentsline {appendix}{\chapternumberline {A}Derivation of the Double Pendulum}{31}
-\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{31}
-\contentsline {subsection}{\numberline {A.1.1}Ball mass and inertia parameters}{33}
-\contentsline {chapter}{List of References}{34}
+\contentsline {subsection}{\numberline {3.2.5}Simulation Response}{18}
+\contentsline {section}{\numberline {3.3}Simulation Results}{18}
+\contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{19}
+\contentsline {section}{\numberline {4.1}Mechanical Hardware}{19}
+\contentsline {subsection}{\numberline {4.1.1}Mechanical Components}{19}
+\contentsline {subsection}{\numberline {4.1.2}Motor}{19}
+\contentsline {subsection}{\numberline {4.1.3}Assembly}{19}
+\contentsline {section}{\numberline {4.2}Electronic Hardware}{19}
+\contentsline {subsection}{\numberline {4.2.1}System Description}{19}
+\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{20}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{21}
+\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{21}
+\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{21}
+\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{22}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{22}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{22}
+\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{23}
+\contentsline {subsubsection}{\numberline {4.2.5.1}Working Principle}{23}
+\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{23}
+\contentsline {subsection}{\numberline {4.2.6}Motor Driver}{24}
+\contentsline {subsubsection}{\numberline {4.2.6.1}Logic Level Converters}{25}
+\contentsline {subsubsection}{\numberline {4.2.6.2}AND Digitial Circuit}{25}
+\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{26}
+\contentsline {subsubsection}{\numberline {4.2.7.1}Angle Sensor Measurements}{26}
+\contentsline {subsubsection}{\numberline {4.2.7.2}Optical Encoder Measurements}{26}
+\contentsline {subsubsection}{\numberline {4.2.7.3} PWM Duty Cycle to Motor Current}{26}
+\contentsline {chapter}{\chapternumberline {5}Software Design}{28}
+\contentsline {section}{\numberline {5.1}Software Requirements}{28}
+\contentsline {chapter}{\chapternumberline {6}Practical Results}{29}
+\contentsline {section}{\numberline {6.1}Swingup Controller}{29}
+\contentsline {section}{\numberline {6.2}Balancing Controller}{29}
+\contentsline {section}{\numberline {6.3}Swingup and Balancing}{29}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{30}
+\contentsline {section}{\numberline {7.1}Summary}{30}
+\contentsline {section}{\numberline {7.2}Recommendation}{30}
+\contentsline {chapter}{Appendices}{31}
+\contentsline {appendix}{\chapternumberline {A}Derivation of the Double Pendulum}{32}
+\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{32}
+\contentsline {subsection}{\numberline {A.1.1}Ball mass and inertia parameters}{34}
+\contentsline {appendix}{\chapternumberline {B}Feedback Control Design}{35}
+\contentsline {subsection}{\numberline {B.0.1}Feedback Linearisation}{35}
+\contentsline {chapter}{List of References}{36}

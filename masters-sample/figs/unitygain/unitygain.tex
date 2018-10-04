@@ -15,7 +15,7 @@
 
 \draw (0,0) node[op amp] (opamp) {}
 %(opamp.+) node[left] {$v_+$}
-(opamp.-) node[left] {$v_-$}
+%(opamp.-) node[left] {$v_-$}
 (opamp.up) --++(0,0.1) node[vcc]{5\,\textnormal{V}}
 (opamp.down) --++(0,-0.5) node[ground]{};
 
@@ -26,7 +26,7 @@
 ([xshift=0.5cm]opamp.out) to[short,*-o ] ([xshift=0.8cm]opamp.out) node[anchor=west]{$V_{out}$}
 
 
-([xshift=0.5cm,yshift=1.25cm]opamp.out) to[R=$R_{input}$] ([yshift=1cm]opamp.-)
+([xshift=0.5cm,yshift=1.25cm]opamp.out) to[R,l_=$R_{\text{input}}$] ([yshift=1cm]opamp.-)
 
 ([yshift=1cm]opamp.-) to[short](opamp.-); 
 

@@ -2,7 +2,7 @@
 \label{chp:controller}
 
 \section{Balancing Controller}
-	% WHAT you are going to present in this chapter/section
+% WHAT you are going to present in this chapter/section
 % WHY you are presenting it, and
 % HOW you are going to present it
 
@@ -37,6 +37,7 @@ These poles will be moved to the desired position by using the method of dominan
 These specification was selected on increasing the null controllability region with a low settling time. Due the approximation of the linearised model the null controllability region may be larger than the derived sized \cite{simple_null_controllability}. 
 
 \subsection{Controller Architecture}
+
 \subsection{Requirements/Specifications and Constraints}
 \subsection{Plant Linearisation}
 \subsection{Full State Feedback Design}
@@ -46,14 +47,38 @@ These specification was selected on increasing the null controllability region w
 
 
 \section{Swingup Controller}
-	% WHAT you are going to present in this chapter/section
+% WHAT you are going to present in this chapter/section
 % WHY you are presenting it, and
-% HOW you are going to present it	
-The swing up of the robotic gymnast is done by the non-linear feedback control system. For the robotic gymnast to swing from the stable equilibrium position to the unstable equilibrium position the feedback control must incorporate the non-linearities of the system. How these non-linearities of the system is incorporated and the design paradigm of the approach will be explained in following text.
+% HOW you are going to present it
+	The swing up of the robotic gymnast is done by the non-linear feedback control system. For the robotic gymnast to swing from the stable equilibrium position to the unstable equilibrium position the feedback control must incorporate the non-linearities of the system. How these non-linearities of the system is incorporated and the design paradigm of the approach will be explained in following text.
 
-It has been shown that it is not possible to linearise the dynamics of the gymnast by means of static state feedback and non-linear transformation \cite{murray}, but it is possible to achieve a linear response from one of the state variables by implementing a non-linear feedback. This non-linear feedback is the partial feedback linearisation.
+\subsection{Controller Architecture}
+\begin{figure}[h]
+	\centering
+	\input{"./figs/colocated_linearisation/colocated_linearisation.tikz"}
+	\caption{Block Diagram of the Non-Linear Controller}
+	\label{fig:nonlinear_controller_arch}
+\end{figure}
 
-Collocated linearisation is a form of partial feedback linearisation where a non-linear control input $\tau$ is used to linearise the response of the actuated pendulum. By analysing equation (\ref{eq:collocated_lin2}), the input $\tau$ is chosen to cancel all the non-linearities of the system and add an additional outer loop control input $v_{2}$. This outer loop control input can be selected to force the actuated pendulum to follow a desired trajectory \cite{spong_swingup}. The derivation of the collocated linearisation is shown in appendix C.
+Figure \ref{fig:nonlinear_controller_arch} shows a high-level block diagram of the swing-up controller. The swing-up controller consist out of multiple parts that is required to work in unison to allow the robotic gymnast to swing.\\
+
+The collocated linearisation block is the foundation on which the entire controller is built. Therefore the other controller blocks are dependent on the successfull implementation of the collocated linearisation.\\	
+
+The swing-up controller is a combination of classical control theory and a more advance controller. The classical control theory is implemented by the proportional gain of the error and a derivative  gain seen in the non-linear control law. The more advance controllers are implemented by implementing a non-linear controller.
+
+Each of the blocks are explained in the following sections
+\subsection{Requirements/Specifications and Constraints}
+% WHAT you are going to present in this chapter/section
+% WHY you are presenting it, and
+% HOW you are going to present it
+The requirements of the swing-up controller is to swing the robotic gymnast up under 30 seconds to the unstable equilibrium positions. In the vicinity of the unstable equilibrium position the when the non-actuated pendulum is upright $\theta = \SI{2\pi}{\radian} \pm \frac{\pi}{30}$ the controller must position the actuated pendulum between $\phi \in [-5^{\circ},5^{\circ}]$.\\
+
+The first requirement is set to provide a feasible solution to the swing-up of the robotic gymnast and allow the swing-up sequence to be captivating. The second requirement is set to ensure the linear approximation holds when the balancing controller is active to bring the system to the unstable equilibrium position and balance.
+
+\subsection{Feedback Linearisation}
+It has been shown that it is not possible to linearise the dynamics of the gymnast by means of static state feedback and non-linear transformation \cite{murray}, but it is possible to achieve a linear response from one of the state variables by implementing a non-linear feedback. This non-linear feedback is the partial feedback linearisation.\\
+
+Collocated linearisation is a form of partial feedback linearisation where a non-linear control input $\tau$ is used to linearise the response of the actuated pendulum. By analysing equation (\ref{eq:condense2}), the input $\tau$ is chosen to cancel all the non-linearities of the system and add an additional outer loop control input $v_{2}$. This outer loop control input can be selected to force the actuated pendulum to follow a desired trajectory \citep{spong_swingup}. The derivation of the collocated linearisation is shown in Appendix \ref{sec:colocated_linearisation}.
 
 \begin{equation} \label{eq:collocated_lin1}
 d_{11}\ddot{\theta} + h_{1} + \psi_{1} = -d_{12}v_{2}
@@ -62,7 +87,11 @@ d_{11}\ddot{\theta} + h_{1} + \psi_{1} = -d_{12}v_{2}
 \ddot{\phi} = v_{2}
 \end{equation}
 
-The ability to control the actuated pendulum to follow a desired trajectory, provides the possibility to increase the energy of the system if the correct trajectory is chosen. The increase of energy in the system will cause the pendulums to rise from their stable equilibrium position and thus start swinging upwards. The desired trajectory for ${\phi}$ is chosen as equation (\ref{eq:desired_phi}) determined by W.Spong in \cite{spong_swingup}.
+The subtle practical implication of using collocated linearisation is that the system being controlled must be well defined. If this is not the case the non-linear input $\tau$ will introduce other unwanted dynamics not describe my the model.
+
+\subsection{Nonlinear Control Law}
+
+The ability to control the actuated pendulum to follow a desired trajectory, provides the possibility to increase the energy of the system if the correct trajectory is chosen. The increase of energy in the system will cause the pendulums to rise from their stable equilibrium position and thus start swinging upwards. The desired trajectory for ${\phi}$ is chosen as equation (\ref{eq:desired_phi}) determined by W.Spong in \citep{spong_swingup}.
 \begin{equation} \label{eq:desired_phi}
 \phi^{d} =  \alpha \arctan(\dot{\theta})
 \end{equation}
@@ -75,12 +104,14 @@ v_{2} = K_{p}(\phi^{d}-\phi)-K_{d}\dot{\phi}
 The desired trajectory is chosen to increase the energy in the system, approach is to allow the actuated pendulum swing in phase with the non-actuated pendulum. By this approach the energy of the actuated pendulum is transferred to the non-actuated pendulum \cite{spong_swingup}. Appendix E shows how this approach is expected to work.
 
 Returning to the desired trajectory of $\phi$, the coefficient $\alpha$ constrains the actuated pendulum to stay within a interval of $ \phi \in [-\alpha,\alpha] $ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable inverted position.
-\subsection{Controller Architecture}
-\subsection{Requirements/Specifications and Constraints}
-\subsection{Feedback Linearisation}
-\subsection{Nonlinear Control Law}
 \subsection{Simulation Response}
 
 
 
 \section{Simulation Results}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{./figs/swingup_balance}
+	\caption{The Swing-Up \& Balancing of the Robotic Gymnast}
+	\label{fig:swingup_balance}
+\end{figure}

@@ -11,6 +11,6 @@
 	(2,1) to[C=10 ,*-*] (2,0);
 	
 	
-	\draw (3,0.5) node[]{$V_{out}$};
+	\draw (3,0.5) node[]{$V_{\text{out}}$};
 	
 	\end{tikzpicture}

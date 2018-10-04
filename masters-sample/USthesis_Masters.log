@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  4 OCT 2018 13:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  4 OCT 2018 20:33
 entering extended mode
 **./USthesis_Masters.tex
 (USthesis_Masters.tex
@@ -1639,7 +1639,7 @@ LaTeX Warning: Label `chp2:concept_model' multiply defined.
 
 LaTeX Warning: Label `sec:math_model' multiply defined.
 
-))
+) (contents/App-2.aux))
 \openout1 = `USthesis_Masters.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 113.
@@ -1661,8 +1661,7 @@ LaTeX Font Info:    Try loading font information for TS1+cmr on input line 113.
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 113.
-
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+ ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count368
 \scratchdimen=\dimen339
@@ -1726,7 +1725,7 @@ Overfull \hbox (0.16243pt too wide) detected at line 12
 
 
 ]) [7] (USthesis_Masters.lof
-Overfull \hbox (14.86955pt too wide) in paragraph at lines 27--27
+Overfull \hbox (14.86955pt too wide) in paragraph at lines 28--28
  [][] []\T1/cmr/m/n/12 Relationship be-tween Duty-Cycle of PWM Sig-nal and Cur-
 rent through 
  []
@@ -2016,7 +2015,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
-[15]) [16] [17]
+(figs/colocated_linearisation/colocated_linearisation.tikz
+Overfull \hbox (79.42131pt too wide) in paragraph at lines 101--102
+ [][] 
+ []
+
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+[16] [17]
+Package epstopdf Info: Source file: <./figs/swingup_balance.eps>
+(epstopdf)                    date: 2018-10-02 09:35:23
+(epstopdf)                    size: 136845 bytes
+(epstopdf)             Output file: <./figs/swingup_balance-eps-converted-to.pd
+f>
+(epstopdf)             Command: <epstopdf --outfile=./figs/swingup_balance-eps-
+converted-to.pdf ./figs/swingup_balance.eps>
+(epstopdf)             \includegraphics on input line 114.
+runsystem(epstopdf --outfile=./figs/swingup_balance-eps-converted-to.pdf ./figs
+/swingup_balance.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <./figs/swingup_balance-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2018-10-04 20:33:35
+(epstopdf)                    size: 51475 bytes.
+<./figs/swingup_balance-eps-converted-to.pdf, id=176, 421.575pt x 316.18124pt>
+File: ./figs/swingup_balance-eps-converted-to.pdf Graphic file (type pdf)
+<use ./figs/swingup_balance-eps-converted-to.pdf>
+Package pdftex.def Info: ./figs/swingup_balance-eps-converted-to.pdf  used on i
+nput line 114.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+
+Overfull \hbox (23.57396pt too wide) in paragraph at lines 114--115
+ [][] 
+ []
+
+) [18 <./figs/swingup_balance-eps-converted-to.pdf>]
 \openout2 = `contents/Chap-4.aux'.
 
  (contents/Chap-4.tex
@@ -2030,33 +2085,33 @@ Overfull \hbox (6.88863pt too wide) in paragraph at lines 32--33
 es the non-actuated
  []
 
-[18
+[19
 
 
 
-] [19]
+] [20]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 68.
 
-[20] (figs/potentiometer/potentiometer.tikz) (figs/unitygain/unitygain.tikz)
+[21] (figs/potentiometer/potentiometer.tikz) (figs/unitygain/unitygain.tikz)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] (figs/JK_XOR_gates/jk_xor_nor.tikz)
+[22] (figs/JK_XOR_gates/jk_xor_nor.tikz)
 Underfull \hbox (badness 10000) in paragraph at lines 126--127
 
  []
 
 
-LaTeX Warning: Reference `sch:jk_xor' on page 22 undefined on input line 128.
+LaTeX Warning: Reference `sch:jk_xor' on page 23 undefined on input line 128.
 
-[22] (figs/feedback_current/feedback_current.tikz)
+[23] (figs/feedback_current/feedback_current.tikz)
 (figs/Logic_Level_Converter/LogicLevelConverterAndInverter.tikz)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23] (figs/AND_gates/ANDgates.tikz) [24]
+[24] (figs/AND_gates/ANDgates.tikz) [25]
 Package epstopdf Info: Source file: <./figs/dutycycle_vs_current.eps>
 (epstopdf)                    date: 2018-09-21 16:50:54
 (epstopdf)                    size: 144299 bytes
@@ -2068,17 +2123,17 @@ to.pdf>
 -eps-converted-to.pdf ./figs/dutycycle_vs_current.eps>
 (epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/dutycycle_vs_current-eps-converted-to.pdf, id=200, 382.42876pt x 309.15
+<./figs/dutycycle_vs_current-eps-converted-to.pdf, id=208, 382.42876pt x 309.15
 5pt>
 File: ./figs/dutycycle_vs_current-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/dutycycle_vs_current-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/dutycycle_vs_current-eps-converted-to.pdf  used
  on input line 197.
 (pdftex.def)             Requested size: 382.42781pt x 309.15424pt.
-) [25 <./figs/dutycycle_vs_current-eps-converted-to.pdf>] [26]
+ [26 <./figs/dutycycle_vs_current-eps-converted-to.pdf>]) [27]
 \openout2 = `contents/Chap-5.aux'.
 
- (contents/Chap-5.tex) [27
+ (contents/Chap-5.tex) [28
 
 
 
@@ -2086,24 +2141,24 @@ Package pdftex.def Info: ./figs/dutycycle_vs_current-eps-converted-to.pdf  used
 \openout2 = `contents/Chap-6.aux'.
 
  (contents/Chap-6.tex)
-[28
+[29
 
 
 
 ]
 \openout2 = `contents/Chap-7.aux'.
 
- (contents/Chap-7.tex) [29
+ (contents/Chap-7.tex) [30
 
 
 
-] [30
+] [31
 
 
 ]
 \openout2 = `contents/App-1.aux'.
 
- (contents/App-1.tex [31
+ (contents/App-1.tex [32
 
 
 ]
@@ -2128,10 +2183,17 @@ L/cmm/m/it/12 m[]l[][] \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 m[]L[]l\OT1/cmr/m/n/
  []
 
 
-LaTeX Warning: Reference `fig:BallDef' on page 32 undefined on input line 69.
+LaTeX Warning: Reference `fig:BallDef' on page 33 undefined on input line 69.
 
-[32]) [33] (USthesis_Masters.bbl
-("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [34
+[33]) [34]
+\openout2 = `contents/App-2.aux'.
+
+ (contents/App-2.tex) [35
+
+
+
+] (USthesis_Masters.bbl
+("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [36
 
 
 
@@ -2149,7 +2211,7 @@ LaTeX Warning: Reference `fig:BallDef' on page 32 undefined on input line 69.
 (USthesis_Masters.aux (frontmatter/Chap-Front.aux) (frontmatter/Nomencl.aux)
 (contents/Chap-1.aux) (contents/Chap-2.aux) (contents/Chap-3.aux)
 (contents/Chap-4.aux) (contents/Chap-5.aux) (contents/Chap-6.aux)
-(contents/Chap-7.aux) (contents/App-1.aux))
+(contents/Chap-7.aux) (contents/App-1.aux) (contents/App-2.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -2158,11 +2220,11 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 50281 strings out of 492973
- 1225500 string characters out of 3135932
- 1476840 words of memory out of 3000000
- 53331 multiletter control sequences out of 15000+200000
- 568859 words of font info for 113 fonts, out of 3000000 for 9000
+ 50375 strings out of 492973
+ 1227833 string characters out of 3135932
+ 1478741 words of memory out of 3000000
+ 53402 multiletter control sequences out of 15000+200000
+ 569552 words of font info for 115 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,18n,98p,1030b,1073s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Henry\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
@@ -2193,14 +2255,15 @@ am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files
 s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
 ublic/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on USthesis_Masters.pdf (45 pages, 1101111 bytes).
+m/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on USthesis_Masters.pdf (47 pages, 1164585 bytes).
 PDF statistics:
- 940 PDF objects out of 1000 (max. 8388607)
+ 960 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 
