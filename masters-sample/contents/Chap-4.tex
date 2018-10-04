@@ -20,6 +20,7 @@
 \end{figure}
 
 
+
 Figure \ref{fig:electronicSystemOverview} provides a system overview and how the different parts functions together. The micro-controller receives the different signals that has been correctly conditioned from supporting circuitry to interpret the dynamics of the system. From the observed condition it is able to output the correct signals to instruct the next command.
 
 The digital logic circuit that consist of logic level converters acquires the signal from the micro-controller and performs signal conditioning to interface with the motor driver and determines the correct direction to rotate the motor. 
@@ -89,12 +90,25 @@ The schematic for each voltage regulator is shown in Appendix XX, where each vol
 
 \subsection{Potentiometer Sensor}
 \subsubsection{Working Principle}
+\begin{figure}[h]
+	\centering
+	\input{"figs/potentiometer/potentiometer.tikz"}
+	\caption{Simplified Model of a Potentiometer}
+	\label{fig:potentiometer}
+\end{figure}
 The rotary position potentiometer consist out of a wiper that is attached to a rotating shaft. The wiper relative position to a internal resistor is proportionally changed with rotation. The position of the wiper will output a voltage signal that is proportional to the position of the wiper relative to the resistor. 
 
 \subsubsection{Interface}
 The signal produced by the rotary potentiometer varies from 4.95V and 50mV from 360\textdegree to 0\textdegree respectively. This is signal sent through a simple voltage divider circuit to reduce the signal to 3V to 15mV to be within the sampling limits of the micro-controller. The reduce signal is then sent through a rail-to-rail unity gain amplifier before being sampled by the ADC of the microcontroller.
 
-The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \citep{stm32_ADC:2017}. The SAR ADC's contains internal capacitors that suffers from the effect of being depleted if the sampling frequency is to high. The low impedance from the unity gain amplifier reduces the risk of depleting this internal capacitor because of the low output resistance.
+The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \citep{stm32_ADC:2017}. The SAR ADC's contains internal capacitors that suffers from the effect of being depleted if the sampling frequency is to high. Using an operational amplifier reduces the risk of depleting this internal capacitor because of the low output resistance.
+
+\begin{figure}[h]
+	\centering
+	\input{"./figs/unitygain/unitygain.tikz"}
+	\caption{Unity Gain Amplifier Circuit}
+	\label{fig:unitygain}
+\end{figure}
 
 
 \subsection{Magnetic Encoder}
@@ -129,12 +143,18 @@ These signals will be read by the $\mu$C using interrupts when a rising- \& fall
 The encoder provides 16 lines per revolution, equal to a combined 32 rising- \& falling edges per line. The encoder provides 2 lines increasing the resolution to 64. The motor is connected to a gearbox with a reduction stage of 14:1. The encoder will thus rotate 14 times per shaft revolution, increasing the resolution to 896 per revolution.
 
 \subsection{Motor Driver}
+\begin{figure}[h]
+	\centering
+	\input{"./figs/feedback_current/feedback_current.tikz"}
+	\caption{Simplified Circuit of Motor Feedback}
+	\label{fig:feedback_current}
+\end{figure}
 
-The motor driver IC is connected directly to the motor and responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that forms a full H-bridge which are Pulse-Width-Modulated (PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. As discussed previously, the signals' logic level is first converted and than sent through the AND digital filter before the motor driver receives it. Figure \ref{fig:motor_control_overview}.
+The motor driver IC is connected directly to the motor and responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that forms a full H-bridge which are Pulse-Width-Modulated (PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. As discussed previously, the signals' logic level is first converted and than sent through the AND digital filter before the motor driver receives it.
 
-The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge(reference). This current is sent through a resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current. This voltage is sent through a unity-gain amplifier before it is sampled by the $\mu$C as shown in Figure \ref{fig:torque_control_cir}. This closes the feedback loop to implement torque control by the control system.
+The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge \citep{motorIC}. This current is sent through a resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current. Due to the motor being controlled using PWM, the current through the motor is periodic impulse signals. The use of a parallel capacitor is used to create a ripple voltage to allow the ADC of the microcontoller enough time to sample. This ripple voltage is sent through a unity-gain amplifier as seen in Figure \ref{fig:unitygain} before it is sampled by the microcontroller. This closes the feedback loop to implement torque control by the control system.
 
-The MC33887 is capable of providing up to 6A of continuous current to the motor, while withstanding the high current transients due to the fast switching of a inductive load (ref). The motor driver IC provides the motor with 12V DC which is externally provided by a DC power supply. The schematic of the motor driver is shown in Appendix XXX.
+The MC33887 is capable of providing up to 6A of continuous current to the motor, while withstanding the high current transients due to /the fast switching of a inductive load \citep{motorIC}. The motor driver IC provides the motor with 12V DC which is externally provided by a DC power supply. The schematic of the motor driver is shown in Appendix XXX.
 
 \subsubsection{Logic Level Converters}
 \begin{figure}[h]
@@ -163,3 +183,22 @@ The AND digital gates in combination with a inverter shown in Figure \ref{fig:an
 The AND circuit receives 2 signals from the $\mu$C after it has been converted to the correct logic level: the PWM signal and a logic level signal indicating the desired direction. Based on the directional signal the AND circuit will switch the PWM signal between the 2 inputs of the motor IC's while holding the other low. % Show the waveform table to explain beter
 
 This switching of PWM signal between the 2 inputs of the motor IC and keeping the other signal low controls the direction of the motor. This hardware directional control was done in order to reduce the processing time of the $\mu$C is required to do.
+
+\subsection{Verification Tests}
+
+\subsubsection{Angle Sensor Measurements}
+
+\subsubsection{Optical Encoder Measurements}
+
+\subsubsection{ PWM Duty Cycle to Motor Current}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{./figs/dutycycle_vs_current.eps}
+	\caption{Relationship between Duty-Cycle of PWM Signal and Current through Motor}
+	\label{fig:dutycycle_vs_current}
+\end{figure}
+
+The input to the system is the torque delivered by the motor and the magnitude and direction is determined by the control laws. The model describing the system in equation \ref{eq:condense2} assumes the torque delivered to the system is instantaneously available. This is inaccurate due to the DC motor model describing the torque delivered by the model when applying a DC voltage. The input that the motor will be receiving is a Pulse-Width-Modulated (PWM) signal to represent a DC voltage.
+
+Experiments were done to determine the relationship between the duty-cycle of the PWM signal and the torque delivered by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hard-stop. The motor-driver that controls the motor has a feedback pin that provides a proportional current of $\frac{1}{375}$ of the current flowing through the motor. This proportional current is allowed to flow through a known resistor. The voltage across the resistor is measured and provides a indication of the current flowing through the motor. The mean value of the voltage measured on the oscilloscope is taken and mapped backwards to determine the current. Figure \ref{fig:dutycycle_vs_current} shows the measured data with a line of best fit. It is clear that there exist a linear relationship between the duty-cycle of the PWM signal and the torque the motor can provide.
