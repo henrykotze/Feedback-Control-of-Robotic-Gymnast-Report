@@ -1,0 +1,17 @@
+\def\degr{${}^\circ$}
+\begin{tikztimingtable}[]
+  PHASE A	       & H   12{2C} G\\
+  PHASE B  	       & [C] 12{2C} L \\
+  A $\oplus$ B	   & L H L H L H L H L H L H L H L H L H L H L H L H \\
+  A$\cdot$A        & C 12{2C}  \\
+  Q		       & L 12L 12H \\
+  %Final Pulse Set          & 3L 16H N(B5) 6L \\
+  %Final Pulse $\overline{\mbox{Reset}}$ & 6L N(B4) 16H 3L \\
+  %Final Pulse              & 3L N(B1) 19H N(B8) 3L \\
+\extracode
+  \tablerules
+  %\begin{pgfonlayer}{background}
+   % \foreach \n in {1,...,1}
+    %  \draw [help lines] (A\n) -- (B\n);
+  %\end{pgfonlayer}
+\end{tikztimingtable}

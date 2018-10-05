@@ -2,8 +2,25 @@
 
 
 \section{Mechanical Hardware}
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+The mechancial design that created the physical model is presented here. The physical model allowed the abstract mathematical model to be implemented and experiments to be conducted. It will be presented by discussing the various components required and design decision made to implement a physical model that represents the mathematical model.\\
+
+Figure \ref{fig:mech_model} shows the physical model designed and used for experiments. It emphasises some of the more critical components that were required.
+
 \subsection{Mechanical Components}
+The components emphasised in Figure \ref{fig:mech_model} is discussed in the following section and explains their significance of use.\\
+
+The electrical slipring converts the rotating wires that lead to the motor mounted on non-actuated pendulum to stationary wires allowing for free rotation and easy connection to the electrical design.\\
+
+The bearing housing holds the ball-bearings in place ensuring for no unwanted vibration and misalignment.
+
+
 \subsection{Motor}
+The chosen motor used during experiments was the \textit{Faulhaber DC 3257 012 CR} micromotor. It was used in combination with the \textit{Faulhaber Planetary Gearhead 32/3} Series. The gearbox is a 2 stage reduction gearbox with a overall rounded reduction ratio of 14:1. The motor is capable of providing a stall torque of \SI{539}{mNm} which is a converted output torque of \SI{7.646}{Nm}.\\
+
+The motor terminal connection is connected directly to the PCB of the electronic design being routed through the slipring. The motor assembly contains a encoder for position measurements and it's signal and power connection is also routed through the slipring and connected to the PCB.
 \subsection{Assembly}
 
 
@@ -21,31 +38,31 @@
 
 
 
-Figure \ref{fig:electronicSystemOverview} provides a system overview and how the different parts functions together. The micro-controller receives the different signals that has been correctly conditioned from supporting circuitry to interpret the dynamics of the system. From the observed condition it is able to output the correct signals to instruct the next command.
+Figure \ref{fig:electronicSystemOverview} provides a system overview and how the different parts functions together. The micro-controller receives the different signals that has been correctly conditioned from supporting circuitry to interpret the dynamics of the system. From the observed condition it is able to output the correct signals to instruct the next command.\\
 
-The digital logic circuit that consist of logic level converters acquires the signal from the micro-controller and performs signal conditioning to interface with the motor driver and determines the correct direction to rotate the motor. 
+The digital logic circuit that consist of logic level converters acquires the signal from the micro-controller and performs signal conditioning to interface with the motor driver and determines the correct direction to rotate the motor. \\
 
-The motor driver controls the DC brushed motor based of the digital signals and provides a proportional feedback current that is delivered to unity-gain amplifier.
+The motor driver controls the DC brushed motor based of the digital signals and provides a proportional feedback current that is delivered to unity-gain amplifier.\\
 
-The motor contains a encoder that indicates the direction and position of the rotor through digital signals that is sent through a digital logic filter to retrieve only critical information from the encoder signals. 
+The motor contains a encoder that indicates the direction and position of the rotor through digital signals that is sent through a digital logic filter to retrieve only critical information from the encoder signals. \\
 
-The physical model contains a potentiometer that measures the non-actuated pendulums angle and is sent to the buffer.
+The physical model contains a potentiometer that measures the non-actuated pendulums angle and is sent to the buffer.\\
 
-The microcontroller will use the UART interface as it's data acquisition protocol to send the necessary information to the computer. 
+The microcontroller will use the UART interface as it's data acquisition protocol to send the necessary information to the computer. \\
 
-The micro-controller is programmed using the Serial Wire Debug (SWD) protocol to transfer the binaries from the computer.
+The micro-controller is programmed using the Serial Wire Debug (SWD) protocol to transfer the binaries from the computer.\\
 
 Power is provided using a external 12V power-supply, which will power the motor, but also using a regulator to down convert/step to a 5V and 3.3V to power the microcontoller and the other peripherals.
 
 
 \subsection{Microcontroller}
-The microcontroller chosen is the STM32F030Mxx. The selection was done according the ease of setting up, memory size, physical dimensions and the peripherals it provided.
+The microcontroller chosen is the STM32F030Mxx. The selection was done according the ease of setting up, memory size, physical dimensions and the peripherals it provided.\\
 
-The STM32F030MXX is based of the ARM M0 architecture which is ARM's entry level micro-controller. It requires little support to have a up and running microcontroller requiring only the SWD protocol to program and a few by-pass capacitors.
+The STM32F030MXX is based of the ARM M0 architecture which is ARM's entry level micro-controller. It requires little support to have a up and running microcontroller requiring only the SWD protocol to program and a few by-pass capacitors.\\
 
-It was difficult to determine the memory size specification for the project. This uncertainty ensured that the largest memory size the ARM M0 architecture could provide was selected.
+It was difficult to determine the memory size specification for the project. This uncertainty ensured that the largest memory size the ARM M0 architecture could provide was selected.\\
 
-The Electrical and Electronic Department's Printed Circuit Board (PCB) manufacturing machine can only provide a  minimum track width \SI{0.3}{mm}. This resulted in choosing a microcontroller whose footprint would meet the requirement.
+The Electrical and Electronic Department's Printed Circuit Board (PCB) manufacturing machine can only provide a  minimum track width \SI{0.3}{mm}. This resulted in choosing a microcontroller whose footprint would meet the requirement.\\
 
 Based on the conceptual design, the chosen microcontroller required to contain 2 ADC's, minimum of 5 GPIO's and 1 serial communication peripheral.
 
@@ -99,17 +116,15 @@ The schematic for each voltage regulator is shown in Appendix XX, where each vol
 The rotary position potentiometer consist out of a wiper that is attached to a rotating shaft. The wiper relative position to a internal resistor is proportionally changed with rotation. The position of the wiper will output a voltage signal that is proportional to the position of the wiper relative to the resistor. 
 
 \subsubsection{Interface}
-The signal produced by the rotary potentiometer varies from 4.95V and 50mV from 360\textdegree to 0\textdegree respectively. This is signal sent through a simple voltage divider circuit to reduce the signal to 3V to 15mV to be within the sampling limits of the micro-controller. The reduce signal is then sent through a rail-to-rail unity gain amplifier before being sampled by the ADC of the microcontroller.
-
-The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \citep{stm32_ADC:2017}. The SAR ADC's contains internal capacitors that suffers from the effect of being depleted if the sampling frequency is to high. Using an operational amplifier reduces the risk of depleting this internal capacitor because of the low output resistance.
-
 \begin{figure}[h]
 	\centering
 	\input{"./figs/unitygain/unitygain.tikz"}
 	\caption{Unity Gain Amplifier Circuit}
 	\label{fig:unitygain}
 \end{figure}
+The signal produced by the rotary potentiometer varies from 4.95V and 50mV from 360\textdegree to 0\textdegree respectively. This is signal sent through a simple voltage divider circuit to reduce the signal to 3V to 15mV to be within the sampling limits of the micro-controller. The reduce signal is then sent through a rail-to-rail unity gain amplifier before being sampled by the ADC of the microcontroller.
 
+The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \citep{stm32_ADC:2017}. The SAR ADC's contains internal capacitors that suffers from the effect of being depleted if the sampling frequency is to high. Using an operational amplifier reduces the risk of depleting this internal capacitor because of the low output resistance.
 
 \subsection{Magnetic Encoder}
 \subsubsection{Working Principle}
@@ -123,24 +138,22 @@ A rotating gear containing ferrous metal teeth is attach to the rotating shaft. 
 	\label{fig:jk_xor}
 \end{figure}
 
-The encoder contains a sold state hallsensor which provides 2 channels with a 90 degree phase difference \citep{faulhaberencoder}. These 2 signals under go a hardware filter that produces 2 signals that indicate the direction of the motor and the incremental position.\\
+\begin{figure}[h]
+	\centering
+	\input{"./figs/xor_waveform/xor_waveform.tikz"}
+	\caption{Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}
+	\label{fig:jk_xor_waveform}
+\end{figure}
 
-The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figure \ref{fig:jk_xor} and the schematic in Figure \ref{sch:jk_xor}. The XOR gate produces the incremental position of the motor whereas the NOR and JK-Flipflop combination produces the direction of the motor by a logical 1 or 0.
+The encoder contains a sold state hallsensor which provides 2 channels with a 90 degree phase difference between the channels. \citep{faulhaberencoder}. These 2 signals under go a hardware filter that produces 2 signals that indicate the direction of the motor and the incremental position.\\
+
+The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figure \ref{fig:jk_xor} and the schematic in Figure \ref{sch:jk_xor}. The XOR gate produces the incremental change of position of the motor which is than read by the microcontroller using interrupts on rising and falling edge. The encoder provides 16 lines per revolution, equal to a combined 32 rising- \& falling edges per line. The encoder provides 2 lines increasing the resolution to 64. The motor is connected to a gearbox with a reduction stage of 14:1. The encoder will thus rotate 14 times per shaft revolution, increasing the resolution to 896 edges per revolution.\\
+
+ The NOR and JK-Flipflop combination produces the direction of the motor by determining whether phase A leads or lags phase B by 90\textdegree. This leading or lagging is indicate by a logical 1 or 0 which is read by the microntroller.\\
+ 
+ The hardware filter was implemented to reduce the processing time of the micro-controller on the original signals and the waveforms are seen in Figure \ref{fig:jk_xor_waveform}.
 
 
-
-The hardware filter was implemented to reduce the processing time of the micro-controller on the original signals.
-
-
-
-%% Explain the effect of the gates maybe produce a signal table
-
-
-
-
-These signals will be read by the $\mu$C using interrupts when a rising- \& falling edge are present.
-
-The encoder provides 16 lines per revolution, equal to a combined 32 rising- \& falling edges per line. The encoder provides 2 lines increasing the resolution to 64. The motor is connected to a gearbox with a reduction stage of 14:1. The encoder will thus rotate 14 times per shaft revolution, increasing the resolution to 896 per revolution.
 
 \subsection{Motor Driver}
 \begin{figure}[h]
@@ -165,9 +178,9 @@ The MC33887 is capable of providing up to 6A of continuous current to the motor,
 \end{figure}
 
 
-The $\mu$C is required to interface with the motor driver. The $\mu$C represent a logical high and low as a \SI{3.3}{V} and \SI{0}{V} respectively. The motor driver IC's logical high threshold is \SI{3.5}{V}. It is thus required to use a logic level converter to allow reliable communication between the two devices.
+The microcontroller is required to interface with the motor driver and represent a logical high and low as a \SI{3.3}{V} and \SI{0}{V} respectively. The motor driver IC's logical high threshold is \SI{3.5}{V}. It is thus required to use a logic level converter to allow reliable communication between the two devices.
 
-The logic level converter used is the circuit shown in Figure \ref{fig:interterCirc} using the BSS128 transistor. The circuit has the side effect of being a inverter. A logic low, \SI{0}{V} by the $\mu$C will be converted to a \SI{5}{V} and a logic high, \SI{3.3}{V} will be converted to \SI{0}{V}. This side effect is overcome by inverting the logic in software.
+The logic level converter used is shown in Figure \ref{fig:interterCirc} and uses the BSS128 transistor. The circuit shown also acts as a inverter where a logic low, \SI{0}{V} by the microcontroller will be converted to a \SI{5}{V} and a logic high, \SI{3.3}{V} will be converted to \SI{0}{V}. This side effect is overcome by inverting the desired responses in software.
 
 
 \subsubsection{AND Digitial Circuit}
@@ -178,11 +191,18 @@ The logic level converter used is the circuit shown in Figure \ref{fig:interterC
 	\label{fig:andCircuit}
 \end{figure}
 
-The AND digital gates in combination with a inverter shown in Figure \ref{fig:andCircuit} is responsible for providing the motor IC's with the desired direction signals alongside the PWM signal produced by the $\mu$C.
+\begin{figure}[h]
+	\centering
+	\input{"./figs/and_waveform/and_waveform.tikz"}
+	\caption{AND Digital Logic Circuit Waveforms}
+	\label{fig:andCircuit_waveform}
+\end{figure}
 
-The AND circuit receives 2 signals from the $\mu$C after it has been converted to the correct logic level: the PWM signal and a logic level signal indicating the desired direction. Based on the directional signal the AND circuit will switch the PWM signal between the 2 inputs of the motor IC's while holding the other low. % Show the waveform table to explain beter
+The AND digital gates in combination with a inverter shown in Figure \ref{fig:andCircuit} is responsible for providing the motor IC's with the PWM signal on the correct input of the motor IC.
 
-This switching of PWM signal between the 2 inputs of the motor IC and keeping the other signal low controls the direction of the motor. This hardware directional control was done in order to reduce the processing time of the $\mu$C is required to do.
+The AND circuit receives 2 signals from the microcontroller  after it has been converted to the correct logic level: the PWM signal and a logic level signal indicating the desired direction. Based on the directional signal the AND circuit will switch the PWM signal between the 2 inputs of the motor IC's while holding the other low seen in Figure \ref{fig:andCircuit_waveform}.
+
+This hardware directional control was done in order to reduce the processing time the microcontroller is required to do to switch the generated PWM signal between the 2 inputs of the motor IC.
 
 \subsection{Verification Tests}
 
