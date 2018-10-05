@@ -12,27 +12,28 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Free Body Diagram of the Double Pendulum}}{7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces MATLAB Simulink Model}}{9}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{10}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{11}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{11}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{13}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Block Diagram of the Non-Linear Controller}}{16}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces The Swing-Up \& Balancing of the Robotic Gymnast}}{18}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces State Space Representation of the Balancing Controller}}{14}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Block Diagram of the Non-Linear Controller}}{16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The Swing-Up \& Balancing of the Robotic Gymnast}}{19}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Electronic System Overview}}{20}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Model of a Potentiometer}}{23}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Unity Gain Amplifier Circuit}}{24}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{24}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{25}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Simplified Circuit of Motor Feedback}}{25}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{26}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces AND digital logic with inverter}}{27}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces AND Digital Logic Circuit Waveforms}}{27}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{28}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Electronic System Overview}}{22}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Model of a Potentiometer}}{24}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Unity Gain Amplifier Circuit}}{25}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{26}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{26}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Simplified Circuit of Motor Feedback}}{26}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{27}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces AND digital logic with inverter}}{28}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces AND Digital Logic Circuit Waveforms}}{28}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{29}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{30}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{31}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{32}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{37}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{38}

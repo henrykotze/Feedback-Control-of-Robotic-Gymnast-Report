@@ -6,9 +6,28 @@
 % WHY you are presenting it, and
 % HOW you are going to present it
 
-Provided the robotic gymnast is within the region of controllability, a balancing controller is required to bring the system to the unstable equilibrium position. The design approach is based on the premises that the swing-up controller will swing the robotic gymnast within the region of controllability where the balancing controller will steer the robotic gymnast to balancing.
+Provided the robotic gymnast is in the vicinity of the unstable equilibrium position, a balancing controller is required to balance the system. The design approach is based on the premise that the swing-up controller will swing the robotic gymnast to the vicinity of the unstable equilibrium position where the balancing controller will take over. This section will focus on aspects required to implement this balancing controller.\\
 
-%The balancing of the gymnast will be achieved by catching the gymnast when the swing-up control algorithm has brought the gymnast to the null controllability region. The null controllability region is the set of states that can be steered to inverted unstable equilibrium position in a fixed time with a constrained control input \cite{null_controllability}.
+
+\subsection{Controller Architecture}
+
+\begin{figure}
+	\centering
+	\input{"./figs/linear_control/linear_sys.tikz"}
+	\caption{State Space Representation of the Balancing Controller}
+	\label{fig:linearSys2}
+\end{figure}
+
+Figure \ref{fig:linearSys2} shows the block diagram that implements the balancing controller, and it is clear that the State Space representation for the system is used.The requirement of using the State Space representation is that the system must be a linear time invariant (LTI) system. The system describe in equation (\ref{eq:condense1}) and (\ref{eq:condense2}) are not linear and thus linearisation is required. How this requirement was satisfied is discussed in the following sections.\\
+
+Another aspect of the balancing controller is that there are no reference input to instruct the controller to guide the robotic gymnast to the unstable equilibrium position. This is due to the system being linearised at the unstable equilibrium position. The unstable poles of the system ca be move to become stable using feedback and results in the system to decay to the unstable equilibrium position from an initial condition around the unstable equilibrium position.
+
+
+\subsection{Requirements/Specifications and Constraints}
+\subsection{Plant Linearisation}
+
+As mentioned previously, to implement the State Space representation the system must be a LTI system. This is achieved by using the Taylor Series Expansion to linearise the system at the unstable equilibrium position.\\
+
 The independent parameters, $\phi$ and $\theta$, will be condensed from now on as a vector describes as $$ \vec{q} = 
 \begin{bmatrix}
 \theta \\
@@ -16,9 +35,16 @@ The independent parameters, $\phi$ and $\theta$, will be condensed from now on a
 \end{bmatrix}
 $$
 
-The system can be approximated as a linear system when in the vicinity of the unstable equilibrium position. The system is thus linearised at $$\vec{Q_{s}} = [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$ the unstable equilibrium position using the Taylor Series Expansion shown in detail in Appendix B. This linearised model can than be written in the state space form to implement a feedback gain. The state space variables are chosen as $\Delta{\vec{q}}$ and $\Delta{\dot{\vec{q}}}$ which results in the state space representation as:  $$ \dot{\vec{q}} = \boldsymbol{A}\Delta{\vec{q}} + \boldsymbol{B}u $$ and $$ \vec{y} = \boldsymbol{D}\Delta{\vec{q}} + \boldsymbol{0}u $$.
+The system is thus linearised at 
+$$ [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$
+with the mathematical details shown in Appendix XXX. This linearised model can than be written in the state space form to implement a feedback gain. The state space variables are chosen as $\Delta{\vec{q}}$ and $\Delta{\dot{\vec{q}}}$ which results in the state space representation as:  $$ \dot{\vec{q}} = \boldsymbol{A}\Delta{\vec{q}} + \boldsymbol{B}u $$ and $$ \vec{y} = \boldsymbol{D}\Delta{\vec{q}} + \boldsymbol{0}u $$
 
-The linearised system remains a coupled system which results that the quadratic eigenvalue problem is required to be solved to identified the poles of the system. The solved quadratic eigenvalue problem results in the following poles from the system parameters in Table \ref{table:system_param}.
+The poles of the system are identified by determine the eigenvalues of the $\boldsymbol{A}$ matrix. The linearised system remains a coupled system which results that the quadratic eigenvalue problem is required to be solved to identified the poles of the system. The solved quadratic eigenvalue problem results in the following poles from the system parameters in Table \ref{table:system_param}.
+
+\begin{equation} \label{eq:quadratic_eigen}
+Q(\lambda) =\lambda^{2}M + \lambda C + K
+\end{equation}
+
 $$
 \vec{s} = 
 \begin{bmatrix}
@@ -30,17 +56,15 @@ $$
 \end{bmatrix}
 $$
 
+
+\subsection{Full State Feedback Design}
 The poles of the system are pairs of positive and negative real poles that indicates an unstable system. This is expected due to the system being linearised in the unstable equilibrium position. When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. \\
 \\
 These poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts. This allows the higher-order system response to be characterised as a second-order response \cite{textbook}. The linearised model already has 2 negative real poles which is chosen to stay the same. The real positive poles were selected based on the following specifications.
 
 These specification was selected on increasing the null controllability region with a low settling time. Due the approximation of the linearised model the null controllability region may be larger than the derived sized \cite{simple_null_controllability}. 
 
-\subsection{Controller Architecture}
 
-\subsection{Requirements/Specifications and Constraints}
-\subsection{Plant Linearisation}
-\subsection{Full State Feedback Design}
 \subsection{Simulation Response}
 
 

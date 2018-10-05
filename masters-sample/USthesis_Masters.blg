@@ -15,6 +15,7 @@ I was expecting a `,' or a `}'---line 16 of file backmatter/USbib-sample.bib
  :  year         = 2011
  :                     -2012,
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in null_controllability
 Warning--to sort, need author or key in simple_null_controllability
 Warning--to sort, need author or key in murray
 Warning--to sort, need author or key in spong_swingup
@@ -22,5 +23,6 @@ Warning--to sort, need author or key in stm32_ADC:2017
 Warning--to sort, need author or key in motorIC
 Warning--empty author in murray
 Warning--empty author in spong_swingup
+Warning--empty author in null_controllability
 Warning--empty author in simple_null_controllability
 (There was 1 error message)
