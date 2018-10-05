@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  5 OCT 2018 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  5 OCT 2018 16:43
 entering extended mode
 **./USthesis_Masters.tex
 (USthesis_Masters.tex
@@ -2117,21 +2117,21 @@ LaTeX Warning: Reference `fig:mech_model' on page 19 undefined on input line 10
 .
 
 
-LaTeX Warning: Reference `fig:mech_model' on page 19 undefined on input line 13
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+LaTeX Warning: Reference `fig:mech_model' on page 19 undefined on input line 17
 .
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--14
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
@@ -2139,17 +2139,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
 
 
-] (figs/Electronic_System/ElectronicSystemOverview.tikz)
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+]
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-
+(figs/Electronic_System/ElectronicSystemOverview.tikz)
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
@@ -2157,12 +2152,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 [20]
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
- []
-
-
-Overfull \hbox (6.88863pt too wide) in paragraph at lines 49--50
-[]\T1/cmr/m/n/12 The phys-i-cal model con-tains a po-ten-tiome-ter that mea-sur
-es the non-actuated
  []
 
 
@@ -2176,17 +2165,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
  []
 
 
+Overfull \hbox (6.88863pt too wide) in paragraph at lines 53--54
+[]\T1/cmr/m/n/12 The phys-i-cal model con-tains a po-ten-tiome-ter that mea-sur
+es the non-actuated
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 61--62
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
@@ -2200,47 +2195,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
+
+ []
+
 [21]
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 85.
+               Default added (so using `tbp') on input line 89.
 
-(figs/potentiometer/potentiometer.tikz) [22] (figs/unitygain/unitygain.tikz)
+[22] (figs/potentiometer/potentiometer.tikz) (figs/unitygain/unitygain.tikz)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [23] (figs/JK_XOR_gates/jk_xor_nor.tikz) (figs/xor_waveform/xor_waveform.tikz
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 2.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
- []
-
-[24]
-
-LaTeX Warning: Reference `sch:jk_xor' on page 25 undefined on input line 150.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 152--153
 
  []
 
+[24]
+
+LaTeX Warning: Reference `sch:jk_xor' on page 25 undefined on input line 154.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
+
+ []
+
 (figs/feedback_current/feedback_current.tikz) [25]
-(figs/Logic_Level_Converter/LogicLevelConverterAndInverter.tikz)
-(figs/AND_gates/ANDgates.tikz)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(figs/and_waveform/and_waveform.tikz)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[26]
+(figs/Logic_Level_Converter/LogicLevelConverterAndInverter.tikz) [26]
+(figs/AND_gates/ANDgates.tikz) (figs/and_waveform/and_waveform.tikz)
 Package epstopdf Info: Source file: <./figs/dutycycle_vs_current.eps>
 (epstopdf)                    date: 2018-09-21 16:50:54
 (epstopdf)                    size: 144299 bytes
@@ -2250,20 +2253,17 @@ to.pdf>
 (epstopdf)                    size: 61113 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/dutycycle_vs_current
 -eps-converted-to.pdf ./figs/dutycycle_vs_current.eps>
-(epstopdf)             \includegraphics on input line 217.
+(epstopdf)             \includegraphics on input line 221.
 Package epstopdf Info: Output file is already uptodate.
 <./figs/dutycycle_vs_current-eps-converted-to.pdf, id=213, 382.42876pt x 309.15
 5pt>
 File: ./figs/dutycycle_vs_current-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/dutycycle_vs_current-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/dutycycle_vs_current-eps-converted-to.pdf  used
- on input line 217.
+ on input line 221.
 (pdftex.def)             Requested size: 382.42781pt x 309.15424pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[27]) [28 <./figs/dutycycle_vs_current-eps-converted-to.pdf>]
+ [27])
+[28 <./figs/dutycycle_vs_current-eps-converted-to.pdf>] [29]
 \openout2 = `contents/Chap-5.aux'.
 
 
@@ -2282,13 +2282,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[29
+[30
 
 
 
 ] (figs/uart_struct/uart_struct.tikz)
 
-LaTeX Warning: Reference `fig:software_flow' on page 30 undefined on input line
+LaTeX Warning: Reference `fig:software_flow' on page 31 undefined on input line
  46.
 
 
@@ -2301,28 +2301,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-) [30]
+) [31]
 \openout2 = `contents/Chap-6.aux'.
 
- (contents/Chap-6.tex) [31
+ (contents/Chap-6.tex) [32
 
 
 
 ]
 \openout2 = `contents/Chap-7.aux'.
 
- (contents/Chap-7.tex) [32
+ (contents/Chap-7.tex) [33
 
 
 
-] [33
+] [34
 
 
 ]
 \openout2 = `contents/App-1.aux'.
 
 
-(contents/App-1.tex [34
+(contents/App-1.tex [35
 
 
 ]
@@ -2354,8 +2354,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 71.
 
-) [35] [36] (USthesis_Masters.bbl
-("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [37
+) [36] [37] (USthesis_Masters.bbl
+("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [38
 
 
 
@@ -2384,7 +2384,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  51809 strings out of 492973
  1263312 string characters out of 3135932
- 1549782 words of memory out of 3000000
+ 1554330 words of memory out of 3000000
  54802 multiletter control sequences out of 15000+200000
  570635 words of font info for 117 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2425,9 +2425,9 @@ e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on USthesis_Masters.pdf (48 pages, 1189548 bytes).
+Output written on USthesis_Masters.pdf (49 pages, 1190852 bytes).
 PDF statistics:
- 1015 PDF objects out of 1200 (max. 8388607)
+ 1019 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

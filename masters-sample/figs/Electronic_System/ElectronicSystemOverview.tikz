@@ -125,7 +125,7 @@ minimum height=1.5em,drop shadow]
 	% JK FlipFlops
 	%\path [line] (uC1.west)+(0,-0.2) -| node [above]{}(encdig1); 
 		
-	\draw[->] (encdig1) |- (uC1.west)++(0,-0.2) ;
+	\draw[->] (encdig1) |- ([yshift=-0.2cm]uC1.west);
 		
 		
 	\path [line] (sigcond1.west) -- node[right]{}(uC1);
