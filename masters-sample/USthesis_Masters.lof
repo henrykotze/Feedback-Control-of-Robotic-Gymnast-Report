@@ -17,23 +17,24 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{13}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces State Space Representation of the Balancing Controller}}{14}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Block Diagram of the Non-Linear Controller}}{16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Block Diagram of the Non-Linear Controller}}{17}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces The Swing-Up \& Balancing of the Robotic Gymnast}}{19}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Electronic System Overview}}{22}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Model of a Potentiometer}}{24}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Unity Gain Amplifier Circuit}}{25}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{26}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{26}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Simplified Circuit of Motor Feedback}}{26}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{27}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces AND digital logic with inverter}}{28}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces AND Digital Logic Circuit Waveforms}}{28}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{29}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Simplified Drawing of Model}}{21}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Electronic System Overview}}{23}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Simplified Model of a Potentiometer}}{26}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Unity Gain Amplifier Circuit}}{26}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{27}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{27}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Simplified Circuit of Motor Feedback}}{28}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{29}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces AND digital logic with inverter}}{29}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces AND Digital Logic Circuit Waveforms}}{30}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{31}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{31}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{32}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{32}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{33}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{38}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{39}

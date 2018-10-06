@@ -20,6 +20,53 @@ The electrical slipring converts the rotating wires that lead to the motor mount
 
 The bearing housing holds the ball-bearings in place ensuring for no unwanted vibration and misalignment.
 
+\subsection{Inertia of system}
+\begin{figure}[h]
+	\centering
+	\input{"./figs/inertia_diagram/inertia_diagram.tikz"}
+	\caption{Simplified Drawing of Model}
+	\label{fig:model_drawing}
+\end{figure}
+
+Figure \ref{fig:model_drawing} shows a functional drawing of the physical model to visually aid the reader in understanding how the inertia of the system is determine. In equation (\ref{eq:condense1}) and (\ref{eq:condense2}) the $I_{a}$ and $I_{b}$ represents the inertia of the non-actuating and actuated pendulum about the axis coming out of the page passing through the center of mass respectively.\\
+
+The physical model contains varies parts that contribute to the inertia of the each pendulum due to representing a different physical form. How the inertia values shown in Table \ref{table:system_param} were determined will be shown below.
+
+The actuated pendulum consist out of a aluminium square rod connected to the shaft and the motor mounting. The inertia of a square rod through it's center of mass is: $$ I_{cyl} = \frac{1}{12}m_{cyl}[w^2+L^2_{1}]$$
+
+The motor,gearbox and the motor mount was viewed as a point mass with a inertia around the center of mass of the non-actuated pendulum as: $$I_{pointmass_1} = m_{pointmass_1}\cdot[L_{1}-l_{c1}]^2 $$
+
+The total inertia of the of the non-actuated pendulum is then: $$ I_{a} =I_{pointmass_1} +  I_{cyl} + m_{cyl}\cdot[l_{c2}-l_{cyl}]^2 $$
+
+The actuated pendulum contains similar parts as the non-actuated pendulum. A pointmass at the bottom and an iron rod connected to the motor shaft and the pointmass. Determining the inertia is thus exactly the same as the non-actuated pendulum.
+
+The physical system parameters used in the preceding text is shown in the Table \ref{table:model_param}
+
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Non-Actuated Pendulum& Value & Actuated Pendulum & Value \\
+		\hline
+		\hline
+		$m_{\text{cyl}}$ & \SI{5}{} & $m_{\text{iron}}$ &\\
+		\hline
+		$w_{\text{cyl}}$ & \SI{3.3}{}& $w_{\text{iron}}$& \\
+		\hline
+		$m_{\text{pointmass1}}$ & \SI{12}{}& $m_{\text{pointmass2}}$& \\
+		\hline
+		$l_{\text{cyl}}$ & \SI{12}{}& $l_{\text{iron}}$& \\
+		\hline
+		$L_{\text{c1}}$ & \SI{12}{} & $L_{\text{c2}}$&\\
+		\hline
+		$L_{1}$ & \SI{12}{}& $L_{2}$& \\
+		\hline
+	\end{tabular}
+	\caption{Physical Model Paramaters}
+	\label{table:model_param}
+\end{table}
+
 
 \subsection{Motor}
 The chosen motor used during experiments was the \textit{Faulhaber DC 3257 012 CR} micromotor. It was used in combination with the \textit{Faulhaber Planetary Gearhead 32/3} Series. The gearbox is a 2 stage reduction gearbox with a overall rounded reduction ratio of 14:1. The motor is capable of providing a stall torque of \SI{539}{mNm} which is a converted output torque from the gearbox of \SI{7.646}{Nm}.\\

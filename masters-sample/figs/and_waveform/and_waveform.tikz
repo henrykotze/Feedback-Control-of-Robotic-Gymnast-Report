@@ -2,9 +2,8 @@
 \begin{tikztimingtable}[timing/d/text/.append style={font=\rmfamily}]
   PWM Signal 10\,kHz	   & H 12{2C} G\\
   Direction Signal  	   & L  12L  12H \\
-  A						   & L 12L 12H \\
   IN1				   	   & H 6{2C} 12{L}  \\
-  IN2			   		   & L 7{2L} 5{2C}  \\
+  IN2			   		   & L 7{2L} 5{2C} 
   %Coarse Pulse             & 3L 16H 6L \\
   %Coarse Pulse - Delayed 1 & 4L N(B2) 16H N(B6) 5L \\
   %Coarse Pulse - Delayed 2 & 5L N(B3) 16H N(B7) 4L \\

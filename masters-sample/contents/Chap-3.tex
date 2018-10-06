@@ -39,7 +39,7 @@ The system is thus linearised at
 $$ [\vec{q_{s}},\dot{\vec{q_{s}}},\ddot{\vec{q_{s}}}]^{T}=[\pi,0,0,0,0,0]$$
 with the mathematical details shown in Appendix XXX. This linearised model can than be written in the state space form to implement a feedback gain. The state space variables are chosen as $\Delta{\vec{q}}$ and $\Delta{\dot{\vec{q}}}$ which results in the state space representation as:  $$ \dot{\vec{q}} = \boldsymbol{A}\Delta{\vec{q}} + \boldsymbol{B}u $$ and $$ \vec{y} = \boldsymbol{D}\Delta{\vec{q}} + \boldsymbol{0}u $$
 
-The poles of the system are identified by determine the eigenvalues of the $\boldsymbol{A}$ matrix. The linearised system remains a coupled system which results that the quadratic eigenvalue problem is required to be solved to identified the poles of the system. The solved quadratic eigenvalue problem results in the following poles from the system parameters in Table \ref{table:system_param}.
+The poles of the system are identified by determining the eigenvalues of the $\boldsymbol{A}$ matrix. The linearised system remains a coupled system which results that the quadratic eigenvalue problem shown in equation (\ref{eq:quadratic_eigen}) was required to be solved to identified the poles of the system. The solved quadratic eigenvalue problem results in the following poles using the system parameters in Table \ref{table:system_param}.
 
 \begin{equation} \label{eq:quadratic_eigen}
 Q(\lambda) =\lambda^{2}M + \lambda C + K
@@ -56,11 +56,13 @@ $$
 \end{bmatrix}
 $$
 
+The eigenvalues of the system are all real indicating the response of the system when disturbed is an exponential function. This can be explained by realising the linearised system is modelled as a single pendulum. Once the single pendulum is disturbed from the unstable equilibrium position it would continue to rotate downwards in the same direction and not with an oscillatory response. 
+
 
 \subsection{Full State Feedback Design}
-The poles of the system are pairs of positive and negative real poles that indicates an unstable system. This is expected due to the system being linearised in the unstable equilibrium position. When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. \\
-\\
-These poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts. This allows the higher-order system response to be characterised as a second-order response \cite{textbook}. The linearised model already has 2 negative real poles which is chosen to stay the same. The real positive poles were selected based on the following specifications.
+The poles of the system are pairs of positive and negative real poles that indicates a unstable system. This is expected due to the system being linearised at the unstable equilibrium position. When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. \\
+
+These poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts. This allows the higher-order system response to be characterised as a second-order response \cite{textbook}. The linearised model already has 2 negative real poles which is chosen to stay the same. The real positive poles were selected based on the following specifications.\\
 
 These specification was selected on increasing the null controllability region with a low settling time. Due the approximation of the linearised model the null controllability region may be larger than the derived sized \cite{simple_null_controllability}. 
 
@@ -88,7 +90,7 @@ Figure \ref{fig:nonlinear_controller_arch} shows a high-level block diagram of t
 
 The collocated linearisation block is the foundation on which the entire controller is built. Therefore the other controller blocks are dependent on the successfull implementation of the collocated linearisation.\\	
 
-The swing-up controller is a combination of classical control theory and a more advance controller. The classical control theory is implemented by the proportional gain of the error and a derivative  gain seen in the non-linear control law. The more advance controllers are implemented by implementing a non-linear controller.
+The swing-up controller is a combination of classical control theory and a more advance controller. The classical control theory is implemented by the proportional gain of the error and a derivative  gain seen in the non-linear control law. The more advance controllers are implemented by implementing a non-linear controller.\\
 
 Each of the blocks are explained in the following sections
 \subsection{Requirements/Specifications and Constraints}
@@ -127,7 +129,7 @@ The outer loop control input, $v_{2}$, is chosen as
 v_{2} = K_{p}(\phi^{d}-\phi)-K_{d}\dot{\phi}
 \end{equation}
 
-The desired trajectory is chosen to increase the energy in the system, approach is to allow the actuated pendulum swing in phase with the non-actuated pendulum. By this approach the energy of the actuated pendulum is transferred to the non-actuated pendulum \cite{spong_swingup}. Appendix E shows how this approach is expected to work.
+The desired trajectory is chosen to increase the energy in the system, approach is to allow the actuated pendulum swing in phase with the non-actuated pendulum. By this approach the energy of the actuated pendulum is transferred to the non-actuated pendulum \cite{spong_swingup}. Appendix E shows how this approach is expected to work.\\
 
 Returning to the desired trajectory of $\phi$, the coefficient $\alpha$ constrains the actuated pendulum to stay within a interval of $ \phi \in [-\alpha,\alpha] $ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable inverted position.
 \subsection{Simulation Response}
