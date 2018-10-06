@@ -5,8 +5,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Mechanical Hardware}{20}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Mechanical Components}{20}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}Inertia of system}{21}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Simplified Drawing of Model}}{21}}
-\newlabel{fig:model_drawing}{{\M@TitleReference {4.1}{Simplified Drawing of Model}}{21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Simplified Drawing of Physical Model}}{21}}
+\newlabel{fig:model_drawing}{{\M@TitleReference {4.1}{Simplified Drawing of Physical Model}}{21}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Physical Model Paramaters}}{22}}
 \newlabel{table:model_param}{{\M@TitleReference {4.1}{Physical Model Paramaters}}{22}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}Motor}{22}}
@@ -16,14 +16,14 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Electronic System Overview}}{23}}
 \newlabel{fig:electronicSystemOverview}{{\M@TitleReference {4.2}{Electronic System Overview}}{23}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{24}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{24}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Suppy Voltage's for the different components}}{25}}
 \newlabel{table:supplyVoltage}{{\M@TitleReference {4.2}{Suppy Voltage's for the different components}}{25}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{25}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{25}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{25}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{25}}
 \citation{stm32_ADC:2017}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{26}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{26}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Simplified Model of a Potentiometer}}{26}}
 \newlabel{fig:potentiometer}{{\M@TitleReference {4.3}{Simplified Model of a Potentiometer}}{26}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{26}}
@@ -43,12 +43,13 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.6}Motor Driver}{28}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Simplified Circuit of Motor Feedback}}{28}}
 \newlabel{fig:feedback_current}{{\M@TitleReference {4.7}{Simplified Circuit of Motor Feedback}}{28}}
+\citation{motorIC}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.6.1}Logic Level Converters}{29}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{29}}
 \newlabel{fig:interterCirc}{{\M@TitleReference {4.8}{Logic Level Converter \& Inverter Circuit}}{29}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.6.2}AND Digitial Circuit}{29}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces AND digital logic with inverter}}{29}}
-\newlabel{fig:andCircuit}{{\M@TitleReference {4.9}{AND digital logic with inverter}}{29}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.6.2}AND Digitial Circuit}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces AND digital logic with inverter}}{30}}
+\newlabel{fig:andCircuit}{{\M@TitleReference {4.9}{AND digital logic with inverter}}{30}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces AND Digital Logic Circuit Waveforms}}{30}}
 \newlabel{fig:andCircuit_waveform}{{\M@TitleReference {4.10}{AND Digital Logic Circuit Waveforms}}{30}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{30}}
@@ -57,9 +58,12 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.7.3} PWM Duty Cycle to Motor Current}{30}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{31}}
 \newlabel{fig:dutycycle_vs_current}{{\M@TitleReference {4.11}{Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{31}}
+\newlabel{eq:duty2current}{{\M@TitleReference {4.1}{ PWM Duty Cycle to Motor Current}}{31}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces Values of Constants used in Equation (\ref  {eq:duty2current})}}{32}}
+\newlabel{table:duty2current_constants}{{\M@TitleReference {4.3}{Values of Constants used in Equation (\ref  {eq:duty2current})}}{32}}
 \@setckpt{contents/Chap-4}{
-\setcounter{page}{32}
-\setcounter{equation}{0}
+\setcounter{page}{33}
+\setcounter{equation}{1}
 \setcounter{enumi}{0}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -105,18 +109,19 @@
 \setcounter{cmsm@mctr}{0}
 \setcounter{bsm@mctr}{0}
 \setcounter{workm@mctr}{0}
-\setcounter{sheetsequence}{43}
-\setcounter{lastsheet}{51}
-\setcounter{lastpage}{40}
+\setcounter{sheetsequence}{44}
+\setcounter{lastsheet}{55}
+\setcounter{lastpage}{44}
 \setcounter{figure}{11}
 \setcounter{lofdepth}{2}
-\setcounter{table}{2}
+\setcounter{table}{3}
 \setcounter{lotdepth}{1}
 \setcounter{parentequation}{0}
 \setcounter{tikztiming@nrows}{4}
 \setcounter{tikztimingrows}{0}
 \setcounter{tikztimingtrans}{1}
 \setcounter{tikztimingtranspos}{0}
+\setcounter{AM@survey}{0}
 \setcounter{US@tcnta}{0}
 \setcounter{US@tcntb}{0}
 \setcounter{NAT@ctr}{0}

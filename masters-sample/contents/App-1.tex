@@ -1,4 +1,4 @@
-\chapter{Derivation of the Double Pendulum}
+\chapter{}
 \label{chp2:concept_model}
 
 \section{Derivation of the Mathematical Model}
@@ -55,6 +55,34 @@ where  $ q =
 \phi
 \end{bmatrix}
 $
+\section{Collocated Linearisation}
+\begin{equation} \label{eq:condense1}
+d_{11}\ddot{\theta}+d_{12}\ddot{\phi} + h_{1} + \psi_{1} = 0
+\end{equation}
+\begin{equation} \label{eq:condense2}
+d_{21}\ddot{\theta} + d_{22}\ddot{\phi} + h_{2} + \psi_{2} = \tau
+\end{equation}
+
+Starting from the condense equation (\ref{eq:condense1}) and (\ref{eq:condense2}), $\ddot{q_{1}}$ is solved in equation (\ref{eq:condense1}) and substituted in (\ref{eq:condense2}) resulting in 
+
+\begin{equation} \label{eq:condense2}
+\bar{d_{2}}\ddot{\theta} + \bar{h_{2}} + \bar{\psi_{2}} = \tau
+\end{equation}
+where the newly defined terms are given as: 
+$$\bar{d_{2}} = d_{22} - \frac{d_{21}d_{12}}{d_{11}}$$
+$$\bar{h_{2}} = h_{2} - \frac{d_{21}h_{1}}{d_{11}} $$
+$$\bar{\psi_{2}} = \psi_{2} - \frac{d_{21}\psi_{1}}{d_{11}} $$
+
+
+$\tau$ can now chosen to linearise the terms in equation (\ref{eq:condense2}) as:
+
+$\tau = \bar{d_{2}}v_{2}+\bar{h_{2}} + \bar{\psi}$
+
+
+
+
+
+
 
 \section{Communication Structure}
 \label{sec:software_requirements}
@@ -68,7 +96,7 @@ $
 In Table \ref{table:uart_commands} the various commmands that are used in the command structure shown in Figure \ref{fig:uart_struct_app} used for debugging purposes is explained with the possible value ranges that can be used.
 
 
-\begin{table}[]
+\begin{table}[h]
 	\centering
 	\begin{tabular}{|c|c|c|}
 		\hline
@@ -85,6 +113,15 @@ In Table \ref{table:uart_commands} the various commmands that are used in the co
 	\caption{Summary of Communication Commands and their Effects}
 	\label{table:uart_commands}
 \end{table}
+
+
+\newpage
+%\section{Electronic Design Schematic}
+\includepdf[pages=1,pagecommand={\section{Electronic Design Schematic} \thispagestyle{empty}}, fitpaper=true]{./figs/Acrobat.pdf}
+\includepdf[pages=2-,pagecommand={\thispagestyle{empty}}, fitpaper=true]{./figs/Acrobat.pdf}
+%\includepdf[pages=-,scale-=0.8]{./figs/Acrobat.pdf}
+%\includegraphics{./figs/Acrobat.pdf}
+
 
 %----------------------------------------------------------------------------
 \endinput

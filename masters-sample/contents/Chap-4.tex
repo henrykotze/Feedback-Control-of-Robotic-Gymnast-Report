@@ -24,17 +24,17 @@ The bearing housing holds the ball-bearings in place ensuring for no unwanted vi
 \begin{figure}[h]
 	\centering
 	\input{"./figs/inertia_diagram/inertia_diagram.tikz"}
-	\caption{Simplified Drawing of Model}
+	\caption{Simplified Drawing of Physical Model}
 	\label{fig:model_drawing}
 \end{figure}
 
 Figure \ref{fig:model_drawing} shows a functional drawing of the physical model to visually aid the reader in understanding how the inertia of the system is determine. In equation (\ref{eq:condense1}) and (\ref{eq:condense2}) the $I_{a}$ and $I_{b}$ represents the inertia of the non-actuating and actuated pendulum about the axis coming out of the page passing through the center of mass respectively.\\
 
-The physical model contains varies parts that contribute to the inertia of the each pendulum due to representing a different physical form. How the inertia values shown in Table \ref{table:system_param} were determined will be shown below.
+The physical model contains many parts that contribute to the inertia of the each pendulum due to representing a different physical form. How the inertia values shown in Table \ref{table:system_param} were determined will be shown below.\\
 
 The actuated pendulum consist out of a aluminium square rod connected to the shaft and the motor mounting. The inertia of a square rod through it's center of mass is: $$ I_{cyl} = \frac{1}{12}m_{cyl}[w^2+L^2_{1}]$$
 
-The motor,gearbox and the motor mount was viewed as a point mass with a inertia around the center of mass of the non-actuated pendulum as: $$I_{pointmass_1} = m_{pointmass_1}\cdot[L_{1}-l_{c1}]^2 $$
+The motor, gearbox and the motor mount was viewed as a point mass. It's inertia around the center of mass of the non-actuated pendulum is: $$I_{pointmass_1} = m_{pointmass_1}\cdot[L_{1}-l_{c1}]^2 $$
 
 The total inertia of the of the non-actuated pendulum is then: $$ I_{a} =I_{pointmass_1} +  I_{cyl} + m_{cyl}\cdot[l_{c2}-l_{cyl}]^2 $$
 
@@ -77,6 +77,11 @@ The motor terminal connection is connected directly to the PCB of the electronic
 
 
 \section{Electronic Hardware}
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+The electronic hardware was a crucial component for the successful implementation of the robotic gymnast. The electronic design provided the means to determine the system characteristic and verification of the simulated model. It will be presented by discussing the various components implemented to achieve the results in this report.
+
 \subsection{System Description}
 
 % Show block diagram of the system and explain the functioning og the system
@@ -164,7 +169,7 @@ The schematic for each voltage regulator is shown in Appendix XX, where each vol
 	\caption{Simplified Model of a Potentiometer}
 	\label{fig:potentiometer}
 \end{figure}
-The rotary position potentiometer consist out of a wiper that is attached to a rotating shaft. The wiper relative position to a internal resistor is proportionally changed with rotation. The position of the wiper will output a voltage signal that is proportional to the position of the wiper relative to the resistor. 
+The rotary position potentiometer consist out of a wiper that is attached to a rotating shaft. This wiper moves across a internal resistor as the shaft rotates and changes the effective resistance across the output terminal. It provides thus a proportional voltage to it's position as seen in Figure \ref{fig:potentiometer} that indicates the position.
 
 \subsubsection{Interface}
 \begin{figure}[h]
@@ -173,9 +178,7 @@ The rotary position potentiometer consist out of a wiper that is attached to a r
 	\caption{Unity Gain Amplifier Circuit}
 	\label{fig:unitygain}
 \end{figure}
-The signal produced by the rotary potentiometer varies from 4.95V and 50mV from 360\textdegree to 0\textdegree respectively. This is signal sent through a simple voltage divider circuit to reduce the signal to 3V to 15mV to be within the sampling limits of the micro-controller. The reduce signal is then sent through a rail-to-rail unity gain amplifier before being sampled by the ADC of the microcontroller.
-
-The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The type of ADC used in the STM32F030XX is a successive approximation register (SAR), \citep{stm32_ADC:2017}. The SAR ADC's contains internal capacitors that suffers from the effect of being depleted if the sampling frequency is to high. Using an operational amplifier reduces the risk of depleting this internal capacitor because of the low output resistance.
+The signal produced by the rotary potentiometer varies from 4.95V and 50mV from 360\textdegree \space to 0\textdegree \space respectively. This signal is sent through a simple voltage divider circuit to reduce the signal to 3V and 15mV to be within the sampling limits of the micro-controller. The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The type of ADC used in the STM32F030XX is a successive approximation register (SAR) and contains an internal capacitors that suffers from the effect of being depleted if the sampling frequency is to high \citep{stm32_ADC:2017}. Using an operational amplifier reduces the risk of depleting this internal capacitor because of the low output resistance. The schematic of the circuit is shown in Appendix XXX.\\
 
 \subsection{Magnetic Encoder}
 \subsubsection{Working Principle}
@@ -196,9 +199,9 @@ A rotating gear containing ferrous metal teeth is attach to the rotating shaft. 
 	\label{fig:jk_xor_waveform}
 \end{figure}
 
-The encoder contains a sold state hallsensor which provides 2 channels with a 90 degree phase difference between the channels. \citep{faulhaberencoder}. These 2 signals under go a hardware filter that produces 2 signals that indicate the direction of the motor and the incremental position.\\
+The encoder contains a sold state hallsensor which provides 2 channels with a 90\textdegree \space phase difference between the channels. \citep{faulhaberencoder}. These 2 signals under go a hardware filter that produces 2 signals that indicate the direction of the motor and the incremental position.\\
 
-The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figure \ref{fig:jk_xor} and the schematic in Figure \ref{sch:jk_xor}. The XOR gate produces the incremental change of position of the motor which is than read by the microcontroller using interrupts on rising and falling edge. The encoder provides 16 lines per revolution, equal to a combined 32 rising- \& falling edges per line. The encoder provides 2 lines increasing the resolution to 64. The motor is connected to a gearbox with a reduction stage of 14:1. The encoder will thus rotate 14 times per shaft revolution, increasing the resolution to 896 edges per revolution.\\
+The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figure \ref{fig:jk_xor} and the schematic in Appendix XXX. The XOR gate produces the incremental change of position of the motor which is than read by the microcontroller using interrupts on rising and falling edges. The encoder provides 16 lines per revolution, equal to a combined 32 rising- \& falling edges per line. The encoder provides 2 lines increasing the resolution to 64. The motor is connected to a gearbox with a reduction stage of 14:1. The encoder will thus rotate 14 times per shaft revolution, increasing the resolution to 896 edges per revolution.\\
 
  The NOR and JK-Flipflop combination produces the direction of the motor by determining whether phase A leads or lags phase B by 90\textdegree. This leading or lagging is indicate by a logical 1 or 0 which is read by the microntroller.\\
  
@@ -214,11 +217,13 @@ The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figur
 	\label{fig:feedback_current}
 \end{figure}
 
-The motor driver IC is connected directly to the motor and responsible for directional and rotational control of the brushed DC motor. The motor driver is the MC33887 and contains 2 half H-bridges that forms a full H-bridge which are Pulse-Width-Modulated (PWM) to control the speed of the motor. The PWM- and direction signal originates from the micro-controller. As discussed previously, the signals' logic level is first converted and than sent through the AND digital filter before the motor driver receives it.
 
-The MC33887 provides a proportional current of 1/375 of the current flowing through the high-side of the full H-bridge \citep{motorIC}. This current is sent through a resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current. Due to the motor being controlled using PWM, the current through the motor is periodic impulse signals. The use of a parallel capacitor is used to create a ripple voltage to allow the ADC of the microcontoller enough time to sample. This ripple voltage is sent through a unity-gain amplifier as seen in Figure \ref{fig:unitygain} before it is sampled by the microcontroller. This closes the feedback loop to implement torque control by the control system.
+The motor IC chosen is the MC33887. It was selected to based on providing the motor up to 6A of current, while withstanding the high current transients due to the fast switching of a inductive load \citep{motorIC}. The motor driver IC provides the motor with 12V DC which is externally provided by a DC power supply. The schematic of the motor driver is shown in Appendix XXX.
 
-The MC33887 is capable of providing up to 6A of continuous current to the motor, while withstanding the high current transients due to /the fast switching of a inductive load \citep{motorIC}. The motor driver IC provides the motor with 12V DC which is externally provided by a DC power supply. The schematic of the motor driver is shown in Appendix XXX.
+The motor driver IC is connected directly to the motor and responsible for directional and rotational control of the brushed DC motor. The motor driver contains 2 half H-bridges that forms a full H-bridge which are Pulse-Width-Modulated (PWM) to control the speed of the motor and originates from the micro-controller. The selected frequency is 10kHz and is recommended by the manufacturers \cite{motorIC}. As discussed previously, the signals' logic level is first converted and than sent through the AND digital filter before the motor driver receives it.\\
+
+The MC33887 provides a proportional current of $\frac{1}{375}$ of the current flowing through the high-side of the full H-bridge \citep{motorIC}. This current is sent through a resistor of \SI{150}{\Omega} to provide a voltage signal to represent the current. Due to the motor being controlled using PWM, the current is a periodic impulse signal. This problem is overcome by adding a parallel capacitor to the resistor to create a ripple voltage. This ripple voltage is sent through a unity-gain amplifier as seen in Figure \ref{fig:unitygain} before it is sampled by the microcontroller. The $R_{\text{input}}$ resistance is the input resistance that the operational amplifier sees and will be the voltage divider circuit resistance in parallel. This closes the feedback loop to implement torque control by the control system.\\
+
 
 \subsubsection{Logic Level Converters}
 \begin{figure}[h]
@@ -229,7 +234,7 @@ The MC33887 is capable of providing up to 6A of continuous current to the motor,
 \end{figure}
 
 
-The microcontroller is required to interface with the motor driver and represent a logical high and low as a \SI{3.3}{V} and \SI{0}{V} respectively. The motor driver IC's logical high threshold is \SI{3.5}{V}. It is thus required to use a logic level converter to allow reliable communication between the two devices.
+The microcontroller is required to interface with the motor driver and represent a logical high and low as a \SI{3.3}{V} and \SI{0}{V} respectively. The motor driver IC's logical high threshold is \SI{3.5}{V}. It is thus required to use a logic level converter to allow reliable communication between the two devices.\\
 
 The logic level converter used is shown in Figure \ref{fig:interterCirc} and uses the BSS128 transistor. The circuit shown also acts as a inverter where a logic low, \SI{0}{V} by the microcontroller will be converted to a \SI{5}{V} and a logic high, \SI{3.3}{V} will be converted to \SI{0}{V}. This side effect is overcome by inverting the desired responses in software.
 
@@ -249,9 +254,9 @@ The logic level converter used is shown in Figure \ref{fig:interterCirc} and use
 	\label{fig:andCircuit_waveform}
 \end{figure}
 
-The AND digital gates in combination with a inverter shown in Figure \ref{fig:andCircuit} is responsible for providing the motor IC's with the PWM signal on the correct input of the motor IC.
+The AND digital gates in combination with a inverter shown in Figure \ref{fig:andCircuit} is responsible for providing the motor IC's with the PWM signal on the correct input of the motor IC.\\ 
 
-The AND circuit receives 2 signals from the microcontroller  after it has been converted to the correct logic level: the PWM signal and a logic level signal indicating the desired direction. Based on the directional signal the AND circuit will switch the PWM signal between the 2 inputs of the motor IC's while holding the other low seen in Figure \ref{fig:andCircuit_waveform}.
+The AND circuit receives 2 signals from the microcontroller  after it has been converted to the correct logic level: the PWM signal and a logic level signal indicating the desired direction. Based on the directional signal the AND circuit will switch the PWM signal between the 2 inputs of the motor IC's while holding the other low as seen in Figure \ref{fig:andCircuit_waveform}.\\
 
 This hardware directional control was done in order to reduce the processing time the microcontroller is required to do to switch the generated PWM signal between the 2 inputs of the motor IC.
 
@@ -270,6 +275,32 @@ This hardware directional control was done in order to reduce the processing tim
 	\label{fig:dutycycle_vs_current}
 \end{figure}
 
-The input to the system is the torque delivered by the motor and the magnitude and direction is determined by the control laws. The model describing the system in equation \ref{eq:condense2} assumes the torque delivered to the system is instantaneously available. This is inaccurate due to the DC motor model describing the torque delivered by the model when applying a DC voltage. The input that the motor will be receiving is a Pulse-Width-Modulated (PWM) signal to represent a DC voltage.
+The input to the system is the torque delivered by the motor and the magnitude and direction is determined by the control laws. The model describing the system in equation (\ref{eq:condense2}) assumes the torque delivered to the system is instantaneously available. This is inaccurate due to the model describing the DC motor is a second-order differential equation containing it's own time-constant. This model was not incorporated due adding another control loop would add more delays to the control systems. To overcome this, the torque provided by the motor would be mapped to the duty-cycle the motor receives.\\
 
-Experiments were done to determine the relationship between the duty-cycle of the PWM signal and the torque delivered by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hard-stop. The motor-driver that controls the motor has a feedback pin that provides a proportional current of $\frac{1}{375}$ of the current flowing through the motor. This proportional current is allowed to flow through a known resistor. The voltage across the resistor is measured and provides a indication of the current flowing through the motor. The mean value of the voltage measured on the oscilloscope is taken and mapped backwards to determine the current. Figure \ref{fig:dutycycle_vs_current} shows the measured data with a line of best fit. It is clear that there exist a linear relationship between the duty-cycle of the PWM signal and the torque the motor can provide.
+Experiments were done to determine the relationship between the duty-cycle of the PWM signal and the torque delivered by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hard-stop. The mean value of the output voltage from the circuit shown in \ref{fig:feedback_current} was measured on the oscilloscope and mapped backwards to determine the torque using equation (\ref{eq:duty2current}) with the constant shown in Table \ref{table:duty2current_constants0.}
+\begin{equation} \label{eq:duty2current}
+\tau = \frac{V}{R}\cdot GR \cdot FR \cdot \alpha_{t}
+\end{equation}
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Constant & Description & Value \\
+		\hline
+		\hline
+		GR &  Gear Ratio & 14 \\
+		\hline
+		FR & Feedback Current Ratio & 375 \\
+		\hline
+		$\alpha_{t}$ & Torque Constant & $19.1\times 10^{-3}$ \\
+		\hline
+		R & Resistance & 150 \\
+		\hline
+	\end{tabular}
+	\caption{Values of Constants used in Equation (\ref{eq:duty2current})}
+	\label{table:duty2current_constants}
+\end{table}
+
+ Figure \ref{fig:dutycycle_vs_current} shows the measured data with a line of best fit. It is clear that there exist a linear relationship between the duty-cycle of the PWM signal and the torque provided. This equation of best fit will thus be used to output the correct torque determined by the control system.
+

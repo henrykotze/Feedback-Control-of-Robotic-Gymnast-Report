@@ -9,14 +9,15 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {table}{\numberline {2.1}{\ignorespaces System Parameters}}{10}
-\contentsline {table}{\numberline {2.2}{\ignorespaces System Characteristic \& their Statistical Properties from 10 Experiments}}{11}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison between Experimental- and Simulated System Characteristic}}{12}
+\contentsline {table}{\numberline {2.2}{\ignorespaces System Characteristic \& their Statistical Properties from 10 Experiments}}{12}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison between Experimental- and Simulated System Characteristic}}{13}
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {table}{\numberline {4.1}{\ignorespaces Physical Model Paramaters}}{22}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Suppy Voltage's for the different components}}{25}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Values of Constants used in Equation (\ref {eq:duty2current})}}{32}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of Communication Commands and their Effects}}{39}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of Communication Commands and their Effects}}{40}
