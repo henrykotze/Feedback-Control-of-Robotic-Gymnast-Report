@@ -18,9 +18,21 @@ The components emphasised in Figure \ref{fig:mech_model} is discussed in the fol
 
 The electrical slipring converts the rotating wires that lead to the motor mounted on non-actuated pendulum to stationary wires allowing for free rotation and easy connection to the electrical design.\\
 
-The bearing housing holds the ball-bearings in place ensuring for no unwanted vibration and misalignment.
+The bearing housing holds the ball-bearings in place ensuring for no unwanted vibration and misalignment. These ballbearings were press-fitted into the housing, ensuring a secure connection.\\
 
-\subsection{Inertia of system}
+The potentiometer's shaft is connected to the shaft by means of a rubber tube. The rubber tube was chosen due to easy connection, allows for misalignment and the delay of measurement due to elasticity of the rubber is negligible. \\
+
+The non-actuated pendulum is connected to shaft by means of using 3 screws. By keeping the shaft diameter as small as possible to reduce the inertia effect this method of connection was deemed the best.
+
+\subsection{Structural Analysis}
+Little calculation were done to determine whether sizes chosen for the diameters of the shaft were capable of withstanding the loads. Reason being based on experience that the chosen diameters are more than enough capable of withstanding the loads. The following section will provide the proof that the selected diameters are able to carry the loads.\\
+
+The shaft was modelled as a simple supported beam with the diameter being the smallest used in the actual design. This model is conservative due to the design being a supported in by 3 points and varies in shaft diameter. Figure \ref{label} shows the conservative model.
+
+
+
+
+\subsection{Inertia of Pendulums}
 \begin{figure}[h]
 	\centering
 	\input{"./figs/inertia_diagram/inertia_diagram.tikz"}
@@ -28,11 +40,11 @@ The bearing housing holds the ball-bearings in place ensuring for no unwanted vi
 	\label{fig:model_drawing}
 \end{figure}
 
-Figure \ref{fig:model_drawing} shows a functional drawing of the physical model to visually aid the reader in understanding how the inertia of the system is determine. In equation (\ref{eq:condense1}) and (\ref{eq:condense2}) the $I_{a}$ and $I_{b}$ represents the inertia of the non-actuating and actuated pendulum about the axis coming out of the page passing through the center of mass respectively.\\
+Figure \ref{fig:model_drawing} shows a functional drawing of the physical model to visually aid the reader in understanding how the inertia of the system was determined. In equation (\ref{eq:condense1}) and (\ref{eq:condense2}) the $I_{a}$ and $I_{b}$ represents the inertia of the non-actuating and actuated pendulum about the axis coming out of the page passing through the center of mass respectively.\\
 
 The physical model contains many parts that contribute to the inertia of the each pendulum due to representing a different physical form. How the inertia values shown in Table \ref{table:system_param} were determined will be shown below.\\
 
-The actuated pendulum consist out of a aluminium square rod connected to the shaft and the motor mounting. The inertia of a square rod through it's center of mass is: $$ I_{cyl} = \frac{1}{12}m_{cyl}[w^2+L^2_{1}]$$
+The actuated pendulum consist out of an aluminium square rod connected to the shaft and the motor mounting. The inertia of a square rod through it's center of mass is: $$ I_{cyl} = \frac{1}{12}m_{cyl}[w^2+L^2_{1}]$$
 
 The motor, gearbox and the motor mount was viewed as a point mass. It's inertia around the center of mass of the non-actuated pendulum is: $$I_{pointmass_1} = m_{pointmass_1}\cdot[L_{1}-l_{c1}]^2 $$
 
@@ -65,6 +77,33 @@ The physical system parameters used in the preceding text is shown in the Table 
 	\end{tabular}
 	\caption{Physical Model Paramaters}
 	\label{table:model_param}
+\end{table}
+
+\subsection{Center of Mass}
+Each pendulum can be seen as a system containing discrete components, where each components center of mass is easily identified. Both iron rod and aluminium rod center of mass is in the middle of their rod lenght and the rest are seen as point masses. However each of these components center of mass position contribute to the center of mass position of each pendulum.\\
+
+The center of mass for each pendulum is calculated using equation (\ref{eq:centerOfMass}).
+
+\begin{equation} \label{eq:centerOfMass}
+\vec{\boldmath{r}} = \frac{\sum_{i}^{j}r_{i}m_{i}}{\sum_{i}^{j}m_{i}}
+\end{equation}
+
+Using the equation (\ref{eq:centerOfMass}) the center of mass for each pendulum from their hinge of rotation is shown in Table \ref{table:centerOfMass}.
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		Pendulum & Center of Mass [\SI{}{m}] \\
+		\hline
+		\hline
+		Non-Actuated  & \SI{0.235}{} \\
+		\hline
+		Actuated  & \SI{0.245}{} \\
+		\hline
+	\end{tabular}
+	\caption{Center of Mass for Each Pendulum from their Rotating Hinge}
+	\label{table:centerOfMass}
 \end{table}
 
 
@@ -123,14 +162,13 @@ The Electrical and Electronic Department's Printed Circuit Board (PCB) manufactu
 Based on the conceptual design, the chosen microcontroller required to contain 2 ADC's, minimum of 5 GPIO's and 1 serial communication peripheral.
 
 \subsubsection{Programming / Debug Interface}
-The \textit{Atollic TrueSTUDIO for ARM 8.0.0} Integrated Development Environment (IDE) is used for writing the source code which converts the source code to the Executable and Linkable Format (.elf) file. These .elf files is then written using the Serial Wire Debug (SWD) protocol to the $\mu$C. Debugging of the source code occur using the same IDE which allows the programmer to inspect variables, timers and logic.
+The \textit{Atollic TrueSTUDIO for ARM 8.0.0} Integrated Development Environment (IDE) is used for writing the source code which converts the source code to the Executable and Linkable Format (.elf) file. These .elf files is then written using the Serial Wire Debug (SWD) protocol to the microcontroller. Debugging of the source code occur using the same IDE which allows the programmer to inspect variables, timers and logic.
 
 \subsubsection{PC UART Interface }
 
-The purpose of the UART to serial communication is for data acquisition of the system response and for debugging purposes. The data being sent follows a structure to ensure the reliability of the data. Figure (ref) shows the format of the data being sent.
+The purpose of the UART to serial communication is for data acquisition of the system response and for debugging purposes. The data being sent follows a structure to ensure the reliability of the data. Figure (ref) shows the format of the data being sent.\\
 
-The data being sent across the UART to serial circuit is retrieved by a computer executing a Python script, listening for any activity on the computer's driver ports and writing the data into a comma-separated value (csv) file that can later be use to analyse the data.
-
+The data being sent across the UART to serial circuit is retrieved by a computer executing a Python script, listening for any activity on the computer's driver ports and writing the data into a comma-separated value (csv) file that can later be use to analyse the data.\\
 
 The UART to serial circuit has been tested by doing a loopback test and using a digital logic analyser to verify the data being sent. The loopback test consist of connecting the Tx and Rx lines together and forcefully echo what has been sent to the circuit to be sent back. Figure (ref) in Appendix XXX shows the digital signals sent and received and confirms the working of the UART to Serial circuit. 
 
@@ -147,7 +185,7 @@ The various components required different supply voltages in the electronic desi
 		\hline
 		Digital Logic Components & \SI{5}{} \\
 		\hline
-		$\mu$Controller & \SI{3.3}{} \\
+		Microcontroller & \SI{3.3}{} \\
 		\hline
 		Motor Driver & \SI{12}{} \\
 		\hline
@@ -157,9 +195,9 @@ The various components required different supply voltages in the electronic desi
 \end{table}
 
 
-The table indicates 3 different supply voltages that will be required: \SI{3.3}{V}, \SI{5}{V} and \SI{12}{V}. This was achieved by using a \SI{5}{V} and \SI{3.3}{V} linear voltage regulators and the \SI{12}{V} is supply by a external source.
+The table indicates 3 different supply voltages that will be required: \SI{3.3}{V}, \SI{5}{V} and \SI{12}{V}. This was achieved by using a \SI{5}{V} and \SI{3.3}{V} linear voltage regulators and the \SI{12}{V} is supply by a external source.\\
 
-The schematic for each voltage regulator is shown in Appendix XX, where each voltage regulator circuit includes a Light Emitting Diode (LED) to ensure the minimum load is met for each regulator. The LED also acts as a visual debugging method.
+The schematic for each voltage regulator is shown in Appendix \ref{sec:schematics}, where each voltage regulator circuit includes a Light Emitting Diode (LED) to ensure the minimum load is met for each regulator. The LED also acts as a visual debugging method.
 
 \subsection{Potentiometer Sensor}
 \subsubsection{Working Principle}
@@ -178,7 +216,7 @@ The rotary position potentiometer consist out of a wiper that is attached to a r
 	\caption{Unity Gain Amplifier Circuit}
 	\label{fig:unitygain}
 \end{figure}
-The signal produced by the rotary potentiometer varies from 4.95V and 50mV from 360\textdegree \space to 0\textdegree \space respectively. This signal is sent through a simple voltage divider circuit to reduce the signal to 3V and 15mV to be within the sampling limits of the micro-controller. The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The type of ADC used in the STM32F030XX is a successive approximation register (SAR) and contains an internal capacitors that suffers from the effect of being depleted if the sampling frequency is to high \citep{stm32_ADC:2017}. Using an operational amplifier reduces the risk of depleting this internal capacitor because of the low output resistance. The schematic of the circuit is shown in Appendix XXX.\\
+The signal produced by the rotary potentiometer varies from 4.95V and 50mV from 360\textdegree \space to 0\textdegree \space respectively. This signal is sent through a simple voltage divider circuit to reduce the signal to 3V and 15mV to be within the sampling limits of the micro-controller. The scaled voltage is sent through a unity gain rail-to-rail amplifier, where the mirrored output signal is fed into the ADC. The type of ADC used in the STM32F030XX is a successive approximation register (SAR) and contains an internal capacitors that suffers from the effect of being depleted if the sampling frequency is to high \citep{stm32_ADC:2017}. Using an operational amplifier reduces the risk of depleting this internal capacitor because of the low output resistance. The schematic of the circuit is shown in Appendix \ref{sec:schematics}.\\
 
 \subsection{Magnetic Encoder}
 \subsubsection{Working Principle}
@@ -201,7 +239,7 @@ A rotating gear containing ferrous metal teeth is attach to the rotating shaft. 
 
 The encoder contains a sold state hallsensor which provides 2 channels with a 90\textdegree \space phase difference between the channels. \citep{faulhaberencoder}. These 2 signals under go a hardware filter that produces 2 signals that indicate the direction of the motor and the incremental position.\\
 
-The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figure \ref{fig:jk_xor} and the schematic in Appendix XXX. The XOR gate produces the incremental change of position of the motor which is than read by the microcontroller using interrupts on rising and falling edges. The encoder provides 16 lines per revolution, equal to a combined 32 rising- \& falling edges per line. The encoder provides 2 lines increasing the resolution to 64. The motor is connected to a gearbox with a reduction stage of 14:1. The encoder will thus rotate 14 times per shaft revolution, increasing the resolution to 896 edges per revolution.\\
+The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figure \ref{fig:jk_xor} and the schematic in Appendix \ref{sec:schematics}. The XOR gate produces the incremental change of position of the motor which is than read by the microcontroller using interrupts on rising and falling edges. The encoder provides 16 lines per revolution, equal to a combined 32 rising- \& falling edges per line. The encoder provides 2 lines increasing the resolution to 64. The motor is connected to a gearbox with a reduction stage of 14:1. The encoder will thus rotate 14 times per shaft revolution, increasing the resolution to 896 edges per revolution.\\
 
  The NOR and JK-Flipflop combination produces the direction of the motor by determining whether phase A leads or lags phase B by 90\textdegree. This leading or lagging is indicate by a logical 1 or 0 which is read by the microntroller.\\
  
@@ -218,7 +256,7 @@ The hardware filter consist out of XOR, NOR and JK-Flipflop gates shown in Figur
 \end{figure}
 
 
-The motor IC chosen is the MC33887. It was selected to based on providing the motor up to 6A of current, while withstanding the high current transients due to the fast switching of a inductive load \citep{motorIC}. The motor driver IC provides the motor with 12V DC which is externally provided by a DC power supply. The schematic of the motor driver is shown in Appendix XXX.
+The motor IC chosen is the MC33887. It was selected to based on providing the motor up to 6A of current, while withstanding the high current transients due to the fast switching of a inductive load \citep{motorIC}. The motor driver IC provides the motor with 12V DC which is externally provided by a DC power supply. The schematic of the motor driver is shown in Appendix \ref{sec:schematics}.
 
 The motor driver IC is connected directly to the motor and responsible for directional and rotational control of the brushed DC motor. The motor driver contains 2 half H-bridges that forms a full H-bridge which are Pulse-Width-Modulated (PWM) to control the speed of the motor and originates from the micro-controller. The selected frequency is 10kHz and is recommended by the manufacturers \cite{motorIC}. As discussed previously, the signals' logic level is first converted and than sent through the AND digital filter before the motor driver receives it.\\
 
@@ -239,7 +277,7 @@ The microcontroller is required to interface with the motor driver and represent
 The logic level converter used is shown in Figure \ref{fig:interterCirc} and uses the BSS128 transistor. The circuit shown also acts as a inverter where a logic low, \SI{0}{V} by the microcontroller will be converted to a \SI{5}{V} and a logic high, \SI{3.3}{V} will be converted to \SI{0}{V}. This side effect is overcome by inverting the desired responses in software.
 
 
-\subsubsection{AND Digitial Circuit}
+\subsubsection{AND Digital Circuit}
 \begin{figure}[h]
 	\centering
 	\input{"./figs/AND_gates/ANDgates.tikz"}
@@ -277,7 +315,7 @@ This hardware directional control was done in order to reduce the processing tim
 
 The input to the system is the torque delivered by the motor and the magnitude and direction is determined by the control laws. The model describing the system in equation (\ref{eq:condense2}) assumes the torque delivered to the system is instantaneously available. This is inaccurate due to the model describing the DC motor is a second-order differential equation containing it's own time-constant. This model was not incorporated due adding another control loop would add more delays to the control systems. To overcome this, the torque provided by the motor would be mapped to the duty-cycle the motor receives.\\
 
-Experiments were done to determine the relationship between the duty-cycle of the PWM signal and the torque delivered by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hard-stop. The mean value of the output voltage from the circuit shown in \ref{fig:feedback_current} was measured on the oscilloscope and mapped backwards to determine the torque using equation (\ref{eq:duty2current}) with the constant shown in Table \ref{table:duty2current_constants0.}
+Experiments were done to determine the relationship between the duty-cycle of the PWM signal and the torque delivered by the motor. These experiments are done by incrementing the duty-cycle of the PWM signal that the motor receives when the shaft is kept fix against a hard-stop. The mean value of the output voltage from the circuit shown in \ref{fig:feedback_current} was measured on the oscilloscope and mapped backwards to determine the torque using equation (\ref{eq:duty2current}) with the constant shown in Table \ref{table:duty2current_constants}
 \begin{equation} \label{eq:duty2current}
 \tau = \frac{V}{R}\cdot GR \cdot FR \cdot \alpha_{t}
 \end{equation}

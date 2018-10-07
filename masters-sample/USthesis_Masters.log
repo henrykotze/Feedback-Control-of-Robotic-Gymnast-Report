@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  7 OCT 2018 00:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  7 OCT 2018 15:51
 entering extended mode
 **./USthesis_Masters.tex
 (USthesis_Masters.tex
@@ -1914,36 +1914,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-(figs/freebodydiagram/doublePendulumImage.tikz
+[6
+
+
+
+] (figs/freebodydiagram/doublePendulumImage.tikz
 Missing character: There is no ` in font nullfont!
-) [6
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+)
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
+[8]
 Package epstopdf Info: Source file: <./figs/simulink/simulink_model.eps>
 (epstopdf)                    date: 2018-10-03 19:17:23
 (epstopdf)                    size: 172147 bytes
@@ -1953,30 +1959,26 @@ ed-to.pdf>
 (epstopdf)                    size: 55186 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/simulink/simulink_mo
 del-eps-converted-to.pdf ./figs/simulink/simulink_model.eps>
-(epstopdf)             \includegraphics on input line 90.
+(epstopdf)             \includegraphics on input line 93.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/simulink/simulink_model-eps-converted-to.pdf, id=111, 1282.7925pt x 863
+<./figs/simulink/simulink_model-eps-converted-to.pdf, id=115, 1282.7925pt x 863
 .225pt>
 File: ./figs/simulink/simulink_model-eps-converted-to.pdf Graphic file (type pd
 f)
 <use ./figs/simulink/simulink_model-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/simulink/simulink_model-eps-converted-to.pdf  u
-sed on input line 90.
+sed on input line 93.
 (pdftex.def)             Requested size: 384.84071pt x 258.9695pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[8]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 104.
+               Default added (so using `tbp') on input line 107.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
+[9 <./figs/simulink/simulink_model-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-[9 <./figs/simulink/simulink_model-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./figs/q1_initial_response.eps>
 (epstopdf)                    date: 2018-09-20 14:31:28
 (epstopdf)                    size: 423479 bytes
@@ -1986,16 +1988,18 @@ o.pdf>
 (epstopdf)                    size: 287802 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/q1_initial_response-
 eps-converted-to.pdf ./figs/q1_initial_response.eps>
-(epstopdf)             \includegraphics on input line 139.
+(epstopdf)             \includegraphics on input line 142.
 Package epstopdf Info: Output file is already uptodate.
 <./figs/q1_initial_response-eps-converted-to.pdf, id=134, 392.46625pt x 309.155
 pt>
 File: ./figs/q1_initial_response-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/q1_initial_response-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/q1_initial_response-eps-converted-to.pdf  used 
-on input line 139.
+on input line 142.
 (pdftex.def)             Requested size: 392.46527pt x 309.15424pt.
- [10 <./figs/q1_initial_response-eps-converted-to.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Package epstopdf Info: Source file: <./figs/q2_initial_response.eps>
 (epstopdf)                    date: 2018-10-01 22:38:59
 (epstopdf)                    size: 209981 bytes
@@ -2005,22 +2009,25 @@ o.pdf>
 (epstopdf)                    size: 133447 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/q2_initial_response-
 eps-converted-to.pdf ./figs/q2_initial_response.eps>
-(epstopdf)             \includegraphics on input line 149.
+(epstopdf)             \includegraphics on input line 152.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/q2_initial_response-eps-converted-to.pdf, id=143, 421.575pt x 316.18124
+<./figs/q2_initial_response-eps-converted-to.pdf, id=135, 421.575pt x 316.18124
 pt>
 File: ./figs/q2_initial_response-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/q2_initial_response-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/q2_initial_response-eps-converted-to.pdf  used 
-on input line 149.
+on input line 152.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-Overfull \hbox (23.57396pt too wide) in paragraph at lines 149--150
+Overfull \hbox (23.57396pt too wide) in paragraph at lines 152--153
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
@@ -2032,37 +2039,38 @@ Package epstopdf Info: Source file: <./figs/FFT_system.eps>
 (epstopdf)                    size: 62954 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/FFT_system-eps-conve
 rted-to.pdf ./figs/FFT_system.eps>
-(epstopdf)             \includegraphics on input line 158.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/FFT_system-eps-converted-to.pdf, id=144, 421.575pt x 316.18124pt>
+<./figs/FFT_system-eps-converted-to.pdf, id=136, 421.575pt x 316.18124pt>
 File: ./figs/FFT_system-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/FFT_system-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/FFT_system-eps-converted-to.pdf  used on input 
-line 158.
+line 161.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-Overfull \hbox (23.57396pt too wide) in paragraph at lines 158--159
+Overfull \hbox (23.57396pt too wide) in paragraph at lines 161--162
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11 <./figs/q2_initial_response-eps-converted-to.pdf>]
+[10]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 165.
+               Default added (so using `tbp') on input line 168.
 
 
-LaTeX Warning: Reference `table:system_response_prop' on page 12 undefined on i
-nput line 186.
+LaTeX Warning: Reference `table:system_response_prop' on page 11 undefined on i
+nput line 189.
 
-[12 <./figs/FFT_system-eps-converted-to.pdf>]
+[11 <./figs/q1_initial_response-eps-converted-to.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 194.
+               Default added (so using `tbp') on input line 197.
 
-) [13]
+) [12 <./figs/q2_initial_response-eps-converted-to.pdf>] [13 <./figs/FFT_system
+-eps-converted-to.pdf>]
 \openout2 = `contents/Chap-3.aux'.
 
  (contents/Chap-3.tex
@@ -2114,11 +2122,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
@@ -2138,6 +2141,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+[18]
 Package epstopdf Info: Source file: <./figs/swingup_balance.eps>
 (epstopdf)                    date: 2018-10-02 09:35:23
 (epstopdf)                    size: 136845 bytes
@@ -2147,20 +2156,20 @@ f>
 (epstopdf)                    size: 51475 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/swingup_balance-eps-
 converted-to.pdf ./figs/swingup_balance.eps>
-(epstopdf)             \includegraphics on input line 142.
+(epstopdf)             \includegraphics on input line 146.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/swingup_balance-eps-converted-to.pdf, id=176, 421.575pt x 316.18124pt>
+<./figs/swingup_balance-eps-converted-to.pdf, id=179, 421.575pt x 316.18124pt>
 File: ./figs/swingup_balance-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/swingup_balance-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/swingup_balance-eps-converted-to.pdf  used on i
-nput line 142.
+nput line 146.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 
-Overfull \hbox (23.57396pt too wide) in paragraph at lines 142--143
+Overfull \hbox (23.57396pt too wide) in paragraph at lines 146--147
  [][] 
  []
 
-[18]) [19 <./figs/swingup_balance-eps-converted-to.pdf>]
+) [19 <./figs/swingup_balance-eps-converted-to.pdf>]
 \openout2 = `contents/Chap-4.aux'.
 
  (contents/Chap-4.tex
@@ -2195,141 +2204,204 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
 
 
-] (figs/inertia_diagram/inertia_diagram.tikz
-Missing character: There is no ` in font nullfont!
-)
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+]
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+LaTeX Warning: Reference `label' on page 21 undefined on input line 30.
+
+(figs/inertia_diagram/inertia_diagram.tikz
+Missing character: There is no ` in font nullfont!
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
 [21]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 46.
+               Default added (so using `tbp') on input line 58.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-
- []
-
-[22] (figs/Electronic_System/ElectronicSystemOverview.tikz)
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
+[22]
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 88.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 88.
+
+
+
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 88.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 88.
+
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 93.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+[23] (figs/Electronic_System/ElectronicSystemOverview.tikz)
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
 
-Overfull \hbox (6.88863pt too wide) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+
+Overfull \hbox (6.88863pt too wide) in paragraph at lines 144--145
 []\T1/cmr/m/n/12 The phys-i-cal model con-tains a po-ten-tiome-ter that mea-sur
 es the non-actuated
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--106
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--110
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--118
+Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
-[24]
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
+
+ []
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 141.
+               Default added (so using `tbp') on input line 179.
 
-(figs/potentiometer/potentiometer.tikz) [25] (figs/unitygain/unitygain.tikz)
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
-[26] (figs/JK_XOR_gates/jk_xor_nor.tikz) (figs/xor_waveform/xor_waveform.tikz
+[26] (figs/potentiometer/potentiometer.tikz) (figs/unitygain/unitygain.tikz)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+[27] (figs/JK_XOR_gates/jk_xor_nor.tikz) (figs/xor_waveform/xor_waveform.tikz
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 2.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ))
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
-[27]
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-(figs/feedback_current/feedback_current.tikz)
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
 
  []
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
+
+ []
+
+(figs/feedback_current/feedback_current.tikz)
+Underfull \hbox (badness 10000) in paragraph at lines 261--262
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
 (figs/Logic_Level_Converter/LogicLevelConverterAndInverter.tikz)
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
-(figs/AND_gates/ANDgates.tikz) [29] (figs/and_waveform/and_waveform.tikz)
-Underfull \hbox (badness 10000) in paragraph at lines 257--258
+(figs/AND_gates/ANDgates.tikz) [30] (figs/and_waveform/and_waveform.tikz)
+Underfull \hbox (badness 10000) in paragraph at lines 295--296
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--260
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 
  []
 
@@ -2342,33 +2414,29 @@ to.pdf>
 (epstopdf)                    size: 61113 bytes
 (epstopdf)             Command: <epstopdf --outfile=./figs/dutycycle_vs_current
 -eps-converted-to.pdf ./figs/dutycycle_vs_current.eps>
-(epstopdf)             \includegraphics on input line 273.
+(epstopdf)             \includegraphics on input line 311.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/dutycycle_vs_current-eps-converted-to.pdf, id=222, 382.42876pt x 309.15
+<./figs/dutycycle_vs_current-eps-converted-to.pdf, id=225, 382.42876pt x 309.15
 5pt>
 File: ./figs/dutycycle_vs_current-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/dutycycle_vs_current-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/dutycycle_vs_current-eps-converted-to.pdf  used
- on input line 273.
+ on input line 311.
 (pdftex.def)             Requested size: 382.42781pt x 309.15424pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
-[30]
-
-LaTeX Warning: Reference `table:duty2current_constants0.' on page 31 undefined 
-on input line 280.
-
+[31]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 285.
+               Default added (so using `tbp') on input line 323.
 
-[31 <./figs/dutycycle_vs_current-eps-converted-to.pdf>]) [32]
+[32 <./figs/dutycycle_vs_current-eps-converted-to.pdf>]) [33]
 \openout2 = `contents/Chap-5.aux'.
 
 
@@ -2387,13 +2455,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-[33
+[34
 
 
 
 ] (figs/uart_struct/uart_struct.tikz)
 
-LaTeX Warning: Reference `fig:software_flow' on page 34 undefined on input line
+LaTeX Warning: Reference `fig:software_flow' on page 35 undefined on input line
  46.
 
 
@@ -2406,28 +2474,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
-) [34]
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+) [35] [36]
 \openout2 = `contents/Chap-6.aux'.
 
- (contents/Chap-6.tex) [35
+ (contents/Chap-6.tex) [37
 
 
 
 ]
 \openout2 = `contents/Chap-7.aux'.
 
- (contents/Chap-7.tex) [36
+ (contents/Chap-7.tex) [38
 
 
 
-] [37
+] [39
 
 
 ]
 \openout2 = `contents/App-1.aux'.
 
 
-(contents/App-1.tex [38
+(contents/App-1.tex [40
 
 
 ]
@@ -2451,70 +2534,73 @@ L/cmm/m/it/12 m[]l[][] \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 m[]L[]l\OT1/cmr/m/n/
 /m/n/12 )+
  []
 
-[39] (figs/uart_struct/uart_struct.tikz) [40]
-<./figs/Acrobat.pdf, id=262, 845.1575pt x 598.235pt>
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf>
-Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 120.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf>
-Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 120.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<./figs/Acrobat.pdf, id=265, page=1, 845.1575pt x 598.235pt>
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 1>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 1>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 1>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 1>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 1>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
- [41 <./figs/Acrobat.pdf>]
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf>
-Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 121.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf>
-Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 121.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<./figs/Acrobat.pdf, id=276, page=2, 845.1575pt x 598.235pt>
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+[41] (figs/uart_struct/uart_struct.tikz)
 
-[42 <./figs/Acrobat.pdf>]
-<./figs/Acrobat.pdf, id=280, page=3, 845.1575pt x 598.235pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42]
+<./figs/Acrobat.pdf, id=268, 845.1575pt x 598.235pt>
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf>
+Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 120.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf>
+Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 120.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+<./figs/Acrobat.pdf, id=271, page=1, 845.1575pt x 598.235pt>
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 1>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 1>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 1>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 1>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 1>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 120.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+ [43 <./figs/Acrobat.pdf>]
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf>
+Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 121.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf>
+Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 121.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+<./figs/Acrobat.pdf, id=282, page=2, 845.1575pt x 598.235pt>
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 121.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+ [44 <./figs/Acrobat.pdf>]
+<./figs/Acrobat.pdf, id=287, page=3, 845.1575pt x 598.235pt>
 File: ./figs/Acrobat.pdf Graphic file (type pdf)
 <use ./figs/Acrobat.pdf, page 3>
 Package pdftex.def Info: ./figs/Acrobat.pdf , page3 used on input line 121.
@@ -2527,8 +2613,8 @@ File: ./figs/Acrobat.pdf Graphic file (type pdf)
 <use ./figs/Acrobat.pdf, page 3>
 Package pdftex.def Info: ./figs/Acrobat.pdf , page3 used on input line 121.
 (pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
- [43 <./figs/Acrobat.pdf>]) (USthesis_Masters.bbl
-("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [44
+ [45 <./figs/Acrobat.pdf>]) [46] (USthesis_Masters.bbl
+("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [47
 
 
 
@@ -2555,10 +2641,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 52430 strings out of 492973
- 1274060 string characters out of 3135932
- 1558082 words of memory out of 3000000
- 55400 multiletter control sequences out of 15000+200000
+ 52433 strings out of 492973
+ 1274087 string characters out of 3135932
+ 1566153 words of memory out of 3000000
+ 55403 multiletter control sequences out of 15000+200000
  570635 words of font info for 117 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,18n,98p,950b,1075s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2598,9 +2684,9 @@ e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on USthesis_Masters.pdf (55 pages, 1341780 bytes).
+Output written on USthesis_Masters.pdf (58 pages, 1347771 bytes).
 PDF statistics:
- 1053 PDF objects out of 1200 (max. 8388607)
+ 1064 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

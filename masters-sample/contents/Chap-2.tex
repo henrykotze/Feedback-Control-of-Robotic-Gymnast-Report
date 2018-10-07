@@ -10,11 +10,14 @@ The report contains many variable names and use of terminology for concepts that
 
 The double pendulum is a under-actuated system which is defined as a system where the input to the system cannot command any of the state variables an instantaneous acceleration. This is due to the torque input only actuating the lower pendulum and the energy in the lower pendulum must be transferred to the upper pendulum to initiate an acceleration. \\
 
-The robotic gymnast is describe as a double pendulum consisting out of an actuated- and non-actuated pendulum as seen in Figure \ref{fig:doublePen}. The position of the non-actuated pendulum is described by the angle $\theta$ whereas the actuated pendulum is described by $\phi$ relative to $\theta$. The angle's $\theta$ and $\phi$ are the independent parameters that describe the entire system.
+The robotic gymnast is describe as a double pendulum consisting out of an actuated- and non-actuated pendulum as seen in Figure \ref{fig:doublePen}. The position of the non-actuated pendulum is described by the angle $\theta$ whereas the actuated pendulum is described by $\phi$ relative to $\theta$. The angle's $\theta$ and $\phi$ are the independent parameters that describe the entire system.\\
 
 There are 2 position of interest where the system contain special characteristics. These 2 positions are the stable- and unstable equilibrium position. In the stable position the system is at rest hanging downward when $\theta = \SI{0}{\radian}$ and $\phi = \SI{0}{\radian}$. It is stable due to the having negative real poles resulting in the system returning to this position when disturbed. The unstable equilibrium position is where $\theta=\SI{2\pi}{\radian}$ and $\phi = \SI{0}{rad}$ resulting in the robotic gymnast balancing upside down. In this position the system contain positive real poles and any disturbance will cause the system to exponentially grow away from this position.\\
 
 region of controllability:he null controllability region is the set of states that can be steered to inverted unstable equilibrium position in a fixed time with a constrained control input \cite{null_controllability}.
+
+LTI system
+
 
 \section{Mathematical Model}
 \label{sec:math_model}
@@ -35,7 +38,7 @@ The robotic gymnast is modelled as two pendulums connected together with a hinge
 Deriving the equation of motion of the robotic gymnast can be approached using different methods. The method chosen in the report is by using the Euler-Lagrange equation. The Euler-Lagrange equation shown in (\ref{eq:euler_lagrange_expanded}) derives the dynamics of the system by analysing the energy of the system.  This approach was chosen due to the energy of the system being easily defined as the potential energy $T$ of the 2 pendulums, and the kinetic energy $V$ of the pendulums.
  
 \begin{equation} \label{eq:euler_lagrange_expanded}
-\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\vec{\dot{q}}}-\frac{\partial\mathcal{L}}{\partial q} = 0
+\frac{d}{dt}\frac{\partial\mathcal{L}}{\partial\vec{\dot{q}}}-\frac{\partial\mathcal{L}}{ \vec{\partial q}} = 0
 \end{equation}
 
 \begin{equation} \label{eq:euler_lagrane}
