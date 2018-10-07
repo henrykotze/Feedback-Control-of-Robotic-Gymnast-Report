@@ -24,13 +24,23 @@ The potentiometer's shaft is connected to the shaft by means of a rubber tube. T
 
 The non-actuated pendulum is connected to shaft by means of using 3 screws. By keeping the shaft diameter as small as possible to reduce the inertia effect this method of connection was deemed the best.
 
-\subsection{Structural Analysis}
+\subsection{Structural Force Analysis}
 Little calculation were done to determine whether sizes chosen for the diameters of the shaft were capable of withstanding the loads. Reason being based on experience that the chosen diameters are more than enough capable of withstanding the loads. The following section will provide the proof that the selected diameters are able to carry the loads.\\
 
-The shaft was modelled as a simple supported beam with the diameter being the smallest used in the actual design. This model is conservative due to the design being a supported in by 3 points and varies in shaft diameter. Figure \ref{label} shows the conservative model.
+The shaft was modelled as a simple supported beam with the diameter being the smallest used in the actual design. This model is conservative due to the design being a supported in by 3 points and varies in shaft diameter. Figure \ref{fig:supp_beam} shows the conservative model.
+\begin{figure}[h]
+	\centering
+	\input{"./figs/supported_beam/supported_beam.tikz"}
+	\caption{Model of Rotating Shaft as a Simplified Beam}
+	\label{fig:supp_beam}
+\end{figure}
 
+Using the force equation shown in () and () which is the maximum loads the shaft will experience (cite). 
+The greatest moment will develop at the $R_{1}$ support and is equal to $M = F\cdot l_{R1}$. The entire shaft experience the same torque throughout and is equal to $T = $. The greatest torsion force the shaft will experience is thus $\tau_{f} = \frac{Ty}{I}$\\
 
+From the Mohr circle the maximum combined loading the shaft will experience is::
 
+Using the static failure stress of () the safety factor of this design is: 
 
 \subsection{Inertia of Pendulums}
 \begin{figure}[h]
