@@ -48,10 +48,10 @@ Q(\lambda) =\lambda^{2}M + \lambda C + K
 $$
 \vec{s} = 
 \begin{bmatrix}
--8.2 \\
--4.2	\\
-8.2 \\
-4.2 \\
+10.5742 \\
+4.9498	\\
+-11.4905 \\
+-5.0215 \\
 
 \end{bmatrix}
 $$
@@ -68,6 +68,22 @@ These specification was selected on increasing the null controllability region w
 
 
 \subsection{Simulation Response}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{./figs/balancing}
+	\caption{Balancing of the Robotic Gymnast}
+	\label{fig:balance}
+\end{figure}
+
+Figure \ref{fig:balance} shows the robotic gymnast balancing around the unstable equilibrium position with initial condition of $$ \vec{q} = 
+\begin{bmatrix}
+\frac{\pi}{0.1}\\
+\frac{\pi}{10}
+\end{bmatrix}
+$$ The oscillatory response around the inverted position is due to the non-linear coulomb damping. This oscillatory response was decided to be acceptable due to assumption that the effect of coulomb damping is negligible at low velocities. This is visible in Figure \ref{fig:q1_response} where the response depart from the linear decay function near the stable equilibrium position.
+
+The response shows that the controller meets the requirement of balancing the robotic gymnast from initial condition of $q \in []$ and reaches steady state within 1 second.
+
 
 
 
@@ -137,6 +153,16 @@ Another side-effect of using the non-linear controller is that at rest the syste
 
 
 \subsection{Simulation Response}
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=1]{./figs/swingup}
+	\caption{Swing-up of the Robotic Gymnast}
+	\label{fig:swingup}
+\end{figure}
+
+Figure \ref{fig:swingup} shows the swing-up controller swinging the robotic gymnast from it's stable equilibrium position to the vicinity of the unstable equilibrium position. There are a few interesting occurrences in the responses that were mentioned in the previous section to bring the reader's attention. Firstly the robotic gymnast is required to start at an initial condition for the swing-up control law to be active and this is seen with $\theta$ starting 11\textdegree. Secondly the amplitude of $\phi$ is seen to suddenly decrease when the system nears the inverted position. This is due to the $\alpha$ being reduced for reasons discussed.\\
+
+The response shows the swing-up controller meets the designed requirements by swinging the robotic gymnast to the vicinity of the unstable equilibrium within 30 seconds and $\theta$ and $\phi$ is in the designed region for the balancing controller to bring the system to the inverted position.
 
 
 

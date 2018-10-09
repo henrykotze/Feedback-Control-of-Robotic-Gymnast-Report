@@ -18,25 +18,27 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison between Simulated and Measured Response}}{14}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces State Space Representation of the Balancing Controller}}{15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Block Diagram of the Non-Linear Controller}}{18}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces The Swing-Up \& Balancing of the Robotic Gymnast}}{20}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Balancing of the Robotic Gymnast}}{18}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Block Diagram of the Non-Linear Controller}}{19}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Swing-up of the Robotic Gymnast}}{21}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The Swing-Up \& Balancing of the Robotic Gymnast}}{22}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Model of Rotating Shaft as a Simplified Beam}}{22}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Drawing of Physical Model}}{23}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Electronic System Overview}}{26}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Simplified Model of a Potentiometer}}{29}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Unity Gain Amplifier Circuit}}{29}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{30}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{30}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Simplified Circuit of Motor Feedback}}{31}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{32}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces AND digital logic with inverter}}{33}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces AND Digital Logic Circuit Waveforms}}{33}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{34}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Model of Rotating Shaft as a Simplified Beam}}{24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Drawing of Physical Model}}{25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Electronic System Overview}}{28}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Simplified Model of a Potentiometer}}{31}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Unity Gain Amplifier Circuit}}{31}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{32}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{32}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Simplified Circuit of Motor Feedback}}{33}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{34}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces AND digital logic with inverter}}{35}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces AND Digital Logic Circuit Waveforms}}{35}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{36}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{35}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{36}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{37}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{38}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{43}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{45}
