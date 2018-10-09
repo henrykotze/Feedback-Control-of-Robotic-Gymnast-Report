@@ -18,7 +18,7 @@ Provided the robotic gymnast is in the vicinity of the unstable equilibrium posi
 	\label{fig:linearSys2}
 \end{figure}
 
-Figure \ref{fig:linearSys2} shows the block diagram that implements the balancing controller, and it is clear that the State Space representation for the system is used.The requirement of using the State Space representation is that the system must be a linear time invariant (LTI) system. The system describe in equation (\ref{eq:condense1}) and (\ref{eq:condense2}) are not linear and thus linearisation is required. How this requirement was satisfied is discussed in the following sections.\\
+Figure \ref{fig:linearSys2} shows the block diagram that implements the balancing controller, and it is clear that the state space representation for the system is used. The requirement of using the state space representation is that the system must be a linear time invariant (LTI) system. The system describe in equation (\ref{eq:condense1}) and (\ref{eq:condense2}) are not linear and thus linearisation is required. How this requirement was satisfied is discussed in the following sections.\\
 
 Another aspect of the balancing controller is that there are no reference input to instruct the controller to guide the robotic gymnast to the unstable equilibrium position. Due to the system being linearised at the unstable equilibrium position and that the swing-up controller brings the system to this linearised region the problem is effectively a initial condition problem. The unstable poles of the system can be move to become stable using feedback and results in the system to decay to the unstable equilibrium position from an initial condition around the unstable equilibrium position.
 
@@ -26,7 +26,7 @@ Another aspect of the balancing controller is that there are no reference input 
 \subsection{Requirements/Specifications and Constraints}
 \subsection{Plant Linearisation}
 
-As mentioned previously, to implement the State Space representation the system must be a LTI system. This is achieved by using the Taylor Series Expansion to linearise the system at the unstable equilibrium position.\\
+As mentioned previously, to implement the state space representation the system must be a LTI system. This is achieved by using the Taylor Series Expansion to linearise the system at the unstable equilibrium position.\\
 
 The independent parameters, $\phi$ and $\theta$, will be condensed from now on as a vector describes as $$ \vec{q} = 
 \begin{bmatrix}

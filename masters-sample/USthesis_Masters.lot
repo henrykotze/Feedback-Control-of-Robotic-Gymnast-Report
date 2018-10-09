@@ -9,16 +9,16 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {table}{\numberline {2.1}{\ignorespaces System Parameters}}{10}
-\contentsline {table}{\numberline {2.2}{\ignorespaces System Characteristic \& their Statistical Properties from 10 Experiments}}{11}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison between Experimental- and Simulated System Characteristic}}{12}
+\contentsline {table}{\numberline {2.2}{\ignorespaces System Characteristic \& their Statistical Properties from 5 Experiments}}{12}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Experimental Characteristics vs Simulation Model Characteristic}}{14}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Physical Model Paramaters}}{23}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Center of Mass for Each Pendulum from their Rotating Hinge}}{24}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Suppy Voltage's for the different components}}{27}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Values of Constants used in Equation (\ref {eq:duty2current})}}{33}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Physical Model Paramaters}}{24}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Center of Mass for Each Pendulum from their Rotating Hinge}}{25}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Suppy Voltage's for the different components}}{28}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Values of Constants used in Equation (\ref {eq:duty2current})}}{34}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of Communication Commands and their Effects}}{46}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of Communication Commands and their Effects}}{47}

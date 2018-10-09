@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  7 OCT 2018 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  7 OCT 2018 23:48
 entering extended mode
 **./supported_beam.tex
 (supported_beam.tex
@@ -711,10 +711,10 @@ your preamble.
 {C:/Users/Henry/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (supported_beam.aux) ) 
 Here is how much of TeX's memory you used:
- 24643 strings out of 492973
- 651588 string characters out of 3135932
- 804530 words of memory out of 3000000
- 28079 multiletter control sequences out of 15000+200000
+ 24647 strings out of 492973
+ 651655 string characters out of 3135932
+ 805530 words of memory out of 3000000
+ 28083 multiletter control sequences out of 15000+200000
  10528 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,8n,98p,775b,750s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -722,7 +722,7 @@ Here is how much of TeX's memory you used:
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
 ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on supported_beam.pdf (1 page, 30393 bytes).
+Output written on supported_beam.pdf (1 page, 34246 bytes).
 PDF statistics:
  46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

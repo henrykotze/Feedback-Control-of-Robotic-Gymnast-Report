@@ -56,16 +56,16 @@ where  $ q =
 \end{bmatrix}
 $
 \section{Collocated Linearisation}
-\begin{equation} \label{eq:condense1}
+\begin{equation} \label{app:eq:condense1}
 d_{11}\ddot{\theta}+d_{12}\ddot{\phi} + h_{1} + \psi_{1} = 0
 \end{equation}
-\begin{equation} \label{eq:condense2}
+\begin{equation} \label{app:eq:condense2}
 d_{21}\ddot{\theta} + d_{22}\ddot{\phi} + h_{2} + \psi_{2} = \tau
 \end{equation}
 
-Starting from the condense equation (\ref{eq:condense1}) and (\ref{eq:condense2}), $\ddot{q_{1}}$ is solved in equation (\ref{eq:condense1}) and substituted in (\ref{eq:condense2}) resulting in 
+Starting from the condense equation (\ref{app:eq:condense1}) and (\ref{app:eq:condense2}), $\ddot{q_{1}}$ is solved in equation (\ref{app:eq:condense1}) and substituted in (\ref{app:eq:condense1}) resulting in 
 
-\begin{equation} \label{eq:condense2}
+\begin{equation} \label{app:eq:condense2}
 \bar{d_{2}}\ddot{\theta} + \bar{h_{2}} + \bar{\psi_{2}} = \tau
 \end{equation}
 where the newly defined terms are given as: 
@@ -74,7 +74,7 @@ $$\bar{h_{2}} = h_{2} - \frac{d_{21}h_{1}}{d_{11}} $$
 $$\bar{\psi_{2}} = \psi_{2} - \frac{d_{21}\psi_{1}}{d_{11}} $$
 
 
-$\tau$ can now chosen to linearise the terms in equation (\ref{eq:condense2}) as:
+$\tau$ can now chosen to linearise the terms in equation (\ref{app:eq:condense2}) as:
 
 $\tau = \bar{d_{2}}v_{2}+\bar{h_{2}} + \bar{\psi}$
 
