@@ -24,6 +24,23 @@ Another aspect of the balancing controller is that there are no reference input 
 
 
 \subsection{Requirements/Specifications and Constraints}
+The requirements set out for the balancing controller are to bring the robotic gymnast to the unstable equilibrium position from an initial condition range of:
+$$ \vec{q_{i}} = 
+\left \{
+\begin{tabular}{c}
+$ \theta > \frac{\pi}{1.1}  \; \Lambda \; \theta < \frac{-\pi}{1.1} $\\
+$ \phi > \frac{\pi}{12} \: \Lambda \: \phi < \frac{-\pi}{12} $\\
+
+\end{tabular}
+\right \}
+$$
+
+
+The response must have a settling time of 1 second and a percentage overshoot of XXX.\\
+
+These requirements was selected to allow the swing-up controller with enough margin to bring the system to the inverted position. There exist a possibility for the balancing controller to bring the system to balance from further initial conditions due to the small velocities that could help the system to balance.
+
+
 \subsection{Plant Linearisation}
 
 As mentioned previously, to implement the state space representation the system must be a LTI system. This is achieved by using the Taylor Series Expansion to linearise the system at the unstable equilibrium position.\\
@@ -173,3 +190,19 @@ The response shows the swing-up controller meets the designed requirements by sw
 	\caption{The Swing-Up \& Balancing of the Robotic Gymnast}
 	\label{fig:swingup_balance}
 \end{figure}
+
+Once both controllers were capable of meeting the requirements set out, they needed to be combined to achieve the swing-up and balancing of the robotic gymnast. Figure \ref{fig:swingup_balance} shows the response of both controllers combined that achieved the swing-up and balancing.\\
+
+During the swing-up the $\alpha$ value was reduced as the robotic gymnast started nearer the unstable equilibrium position as seen below.
+
+
+$$ \alpha = 
+\left \{
+\begin{tabular}{cc}
+$ \frac{\pi}{2} $ & $  \frac{-\pi}{2} < \theta < \frac{\pi}{2} $\\
+$ \frac{\pi}{12} $ & $ $\\
+$ \frac{pi}{24}  $ &   $  \frac{-\pi}{1.1} >\theta \theta > \frac{\pi}{1.1}$ \\
+\end{tabular}
+\right \}
+$$
+
