@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  3 OCT 2018 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  11 OCT 2018 20:40
 entering extended mode
 **./system_overview.tex
 (system_overview.tex
@@ -573,7 +573,7 @@ G,.JBIG2,.JB2,.eps]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
 
-Overfull \hbox (50.13336pt too wide) in paragraph at lines 57--58
+Overfull \hbox (50.13336pt too wide) in paragraph at lines 66--67
 [][] 
  []
 
@@ -582,17 +582,17 @@ Overfull \hbox (50.13336pt too wide) in paragraph at lines 57--58
 {C:/Users/Henry/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (system_overview.aux) ) 
 Here is how much of TeX's memory you used:
- 14540 strings out of 492973
- 312685 string characters out of 3135932
- 375701 words of memory out of 3000000
- 18141 multiletter control sequences out of 15000+200000
+ 14563 strings out of 492973
+ 313106 string characters out of 3135932
+ 379833 words of memory out of 3000000
+ 18164 multiletter control sequences out of 15000+200000
  6851 words of font info for 18 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,82p,437b,713s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,7n,82p,437b,723s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
 }<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on system_overview.pdf (1 page, 29976 bytes).
+Output written on system_overview.pdf (1 page, 31096 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

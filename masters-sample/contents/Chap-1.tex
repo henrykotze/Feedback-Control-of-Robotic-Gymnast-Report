@@ -12,7 +12,12 @@ A feedback control system for a robotic gymnast that is able to swing from the "
 % WHAT you are going to present in this chapter/section
 % WHY you are presenting it, and
 % HOW you are going to present it	
-The fundamental concepts that provides the foundation for the concepts discussed in the report will be summarise here. It acts as a refresher for those familiar to control theory. 
+
+
+There are a few design approaches to the swing-up and balancing of the robotic gymnast. This problem is also known as the swinging acrobat. 
+
+
+
 
 \begin{comment}
 
@@ -85,11 +90,11 @@ From equation (7) it is visible that by tuning the PID constants the response of
 
 Figure \ref{fig:system_overview} provides an overview of the various subsystems the project will contain. The project is subdivided into these subsystems being developed separately with little interaction between the each other. An brief overview on each subsystem will be presented here.\\
 
-The external computer communicates with the electronic design sending instruction to start the system and for debugging purposes. The external computer will receive data from the electronic design and allows the verification of system parameters.
+The external computer communicates with the electronic design sending instruction to start the system and for debugging purposes. The external computer will receive data from the electronic design and allows the verification of system parameters.\\
 
 The electronic design acts as the middle-man between the mechanical design and the external computer. It provides instructions to the mechanical design components based on the controller while sending data to the external computer. The electronic design contains the Printed Circuit Board (PCB) that conditions all the signals for processing.\\
 
-The mechanical design is responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors must be selected to measure the state variables and providing interfaces for the electronic design.
+The mechanical design was responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors must be selected to measure the state variables and providing interfaces for the electronic design.
 
 \section{Project Execution}
 %WHAT you are going to present in this chapter/section
@@ -99,17 +104,17 @@ The mechanical design is responsible for creating a physical model that represen
 
 The execution of the project occurs in a sequence of steps. First the mathematical model of the system is derived by using the appropriate approaches. The derived mathematical model is then implemented on a simulation program where the dynamics of the system can be verified and inspected.\\
 
-Following the successful implementation of the mathematical mode the various controllers will be designed and implemented on the simulation program. The behaviour of the simulated system will be inspected.\\
+Following the successful implementation of the mathematical model the various controllers will be designed and implemented on the simulation program. The behaviour of the simulated system will be inspected.\\
 
 From the simulation results the mechanical design specification will be determined. The mechanical design will then commence to create a physical model that provides an acceptable representation of the mathematical model.\\
 
 During manufacturing of the mechanical design the electronic design will start. Conceptual designs will be done to determine the various designs capable of meeting the requirements. The electronic design will be tested to ensure it performs as designed with the opportunity to create revisions of the design.\\
 
-The programming of the microcontroller, from now on as $\mu$C, will start. This includes the programming of the controller, data acquisition and the conversions of the sampled data.\\
+The programming of the micro-controller will start. This includes the programming of the controller, data acquisition and the conversions of the sampled data.\\
 
-System identification will then occur to determine the various parameters required by the controllers. These newly determined parameters will then be implemented on the simulation program. New controllers will be designed and verified in simulation.
+System identification will then occur to determine the various parameters required by the controllers. These newly determined parameters will then be implemented on the simulation program. Existing controllers will be updated and verified in simulation.\\
 
-The new controllers are then implemented onto the $\mu$C for the system experiments to start. From these system experiments the responses of the experiment will be compared by those of the simulation.\\
+The updated controllers are then implemented onto the microcontroller for the system experiments to start. From these system experiments the responses of the experiment will be compared by those of the simulation.\\
 
 The report was written throughout the sequence of steps mentioned above and will be completed and reviewed at the end.
 

@@ -11,9 +11,9 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Free Body Diagram of the Double Pendulum}}{6}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces MATLAB Simulink Model}}{8}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{10}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{11}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{12}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{9}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{10}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Frequency Content of Time-Domain Initial Condition Responses}}{11}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison between Simulated and Measured Response}}{13}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {3.1}{\ignorespaces State Space Representation of the Balancing Controller}}{14}
@@ -26,18 +26,18 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Drawing of Physical Model}}{25}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Electronic System Overview}}{28}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Simplified Model of a Potentiometer}}{31}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Unity Gain Amplifier Circuit}}{31}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Unity Gain Amplifier Circuit}}{32}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{32}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{32}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{33}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Simplified Circuit of Motor Feedback}}{33}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{34}
 \contentsline {figure}{\numberline {4.10}{\ignorespaces AND digital logic with inverter}}{35}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces AND Digital Logic Circuit Waveforms}}{35}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{36}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{37}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{38}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{38}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{39}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{45}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{46}

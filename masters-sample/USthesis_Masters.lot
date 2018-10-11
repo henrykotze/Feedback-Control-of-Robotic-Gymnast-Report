@@ -9,16 +9,15 @@
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {table}{\numberline {2.1}{\ignorespaces System Parameters}}{9}
-\contentsline {table}{\numberline {2.2}{\ignorespaces System Characteristic \& their Statistical Properties from 5 Experiments}}{11}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Experimental Characteristics vs Simulation Model Characteristic}}{13}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Experimental Characteristics vs Simulation Model Characteristic}}{12}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Physical Model Paramaters}}{26}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Physical Model Paramaters}}{27}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Center of Mass for Each Pendulum from their Rotating Hinge}}{27}
 \contentsline {table}{\numberline {4.3}{\ignorespaces Suppy Voltage's for the different components}}{30}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Values of Constants used in Equation (\ref {eq:duty2current})}}{36}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Values of Constants used in Equation (\ref {eq:duty2current})}}{37}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of Communication Commands and their Effects}}{49}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of Communication Commands and their Effects}}{50}

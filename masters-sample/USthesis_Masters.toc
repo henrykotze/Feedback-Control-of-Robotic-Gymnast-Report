@@ -33,11 +33,11 @@
 \contentsline {subsection}{\numberline {3.1.5}Simulation Response}{17}
 \contentsline {section}{\numberline {3.2}Swingup Controller}{18}
 \contentsline {subsection}{\numberline {3.2.1}Controller Architecture}{18}
-\contentsline {subsection}{\numberline {3.2.2}Requirements/Specifications and Constraints}{18}
+\contentsline {subsection}{\numberline {3.2.2}Requirements/Specifications and Constraints}{19}
 \contentsline {subsection}{\numberline {3.2.3}Feedback Linearisation}{19}
-\contentsline {subsection}{\numberline {3.2.4}Nonlinear Control Law}{19}
+\contentsline {subsection}{\numberline {3.2.4}Nonlinear Control Law}{20}
 \contentsline {subsection}{\numberline {3.2.5}Simulation Response}{20}
-\contentsline {section}{\numberline {3.3}Simulation Results}{20}
+\contentsline {section}{\numberline {3.3}Simulation Results}{21}
 \contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{23}
 \contentsline {section}{\numberline {4.1}Mechanical Hardware}{23}
 \contentsline {subsection}{\numberline {4.1.1}Mechanical Components}{23}
@@ -47,40 +47,40 @@
 \contentsline {subsection}{\numberline {4.1.5}Motor}{27}
 \contentsline {subsection}{\numberline {4.1.6}Assembly}{27}
 \contentsline {section}{\numberline {4.2}Electronic Hardware}{27}
-\contentsline {subsection}{\numberline {4.2.1}System Description}{27}
+\contentsline {subsection}{\numberline {4.2.1}System Description}{28}
 \contentsline {subsection}{\numberline {4.2.2}Microcontroller}{29}
 \contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{29}
-\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{29}
+\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{30}
 \contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{30}
-\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{30}
-\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{30}
+\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{31}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{31}
 \contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{31}
 \contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{32}
 \contentsline {subsubsection}{\numberline {4.2.5.1}Working Principle}{32}
 \contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{32}
 \contentsline {subsection}{\numberline {4.2.6}Motor Driver}{33}
 \contentsline {subsubsection}{\numberline {4.2.6.1}Logic Level Converters}{34}
-\contentsline {subsubsection}{\numberline {4.2.6.2}AND Digital Circuit}{34}
-\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{35}
-\contentsline {subsubsection}{\numberline {4.2.7.1}Angle Sensor Measurements}{35}
-\contentsline {subsubsection}{\numberline {4.2.7.2}Optical Encoder Measurements}{35}
-\contentsline {subsubsection}{\numberline {4.2.7.3} PWM Duty Cycle to Motor Current}{35}
-\contentsline {chapter}{\chapternumberline {5}Software Design}{37}
-\contentsline {section}{\numberline {5.1}Software Requirements}{37}
-\contentsline {subsection}{\numberline {5.1.1}Data Aquisition}{37}
-\contentsline {subsection}{\numberline {5.1.2}Embedded Program}{38}
-\contentsline {chapter}{\chapternumberline {6}Practical Results}{40}
-\contentsline {section}{\numberline {6.1}Swingup Controller}{40}
-\contentsline {section}{\numberline {6.2}Balancing Controller}{40}
-\contentsline {section}{\numberline {6.3}Swingup and Balancing}{40}
-\contentsline {chapter}{\chapternumberline {7}Conclusion}{41}
-\contentsline {section}{\numberline {7.1}Summary}{41}
-\contentsline {section}{\numberline {7.2}Recommendation}{41}
-\contentsline {chapter}{Appendices}{42}
-\contentsline {appendix}{\chapternumberline {A}}{43}
-\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{43}
-\contentsline {section}{\numberline {A.2}Collocated Linearisation}{45}
-\contentsline {section}{\numberline {A.3}Taylor Series Expansion Around Unstable Equilibrium Position}{45}
-\contentsline {section}{\numberline {A.4}Communication Structure}{45}
-\contentsline {section}{\numberline {A.5}Electronic Design Schematic}{46}
-\contentsline {chapter}{List of References}{50}
+\contentsline {subsubsection}{\numberline {4.2.6.2}AND Digital Circuit}{35}
+\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{36}
+\contentsline {subsubsection}{\numberline {4.2.7.1}Angle Sensor Measurements}{36}
+\contentsline {subsubsection}{\numberline {4.2.7.2}Optical Encoder Measurements}{36}
+\contentsline {subsubsection}{\numberline {4.2.7.3} PWM Duty Cycle to Motor Current}{36}
+\contentsline {chapter}{\chapternumberline {5}Software Design}{38}
+\contentsline {section}{\numberline {5.1}Software Requirements}{38}
+\contentsline {subsection}{\numberline {5.1.1}Data Aquisition}{38}
+\contentsline {subsection}{\numberline {5.1.2}Embedded Program}{39}
+\contentsline {chapter}{\chapternumberline {6}Practical Results}{41}
+\contentsline {section}{\numberline {6.1}Swingup Controller}{41}
+\contentsline {section}{\numberline {6.2}Balancing Controller}{41}
+\contentsline {section}{\numberline {6.3}Swingup and Balancing}{41}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{42}
+\contentsline {section}{\numberline {7.1}Summary}{42}
+\contentsline {section}{\numberline {7.2}Recommendation}{42}
+\contentsline {chapter}{Appendices}{43}
+\contentsline {appendix}{\chapternumberline {A}}{44}
+\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{44}
+\contentsline {section}{\numberline {A.2}Collocated Linearisation}{46}
+\contentsline {section}{\numberline {A.3}Taylor Series Expansion Around Unstable Equilibrium Position}{46}
+\contentsline {section}{\numberline {A.4}Communication Structure}{46}
+\contentsline {section}{\numberline {A.5}Electronic Design Schematic}{47}
+\contentsline {chapter}{List of References}{51}

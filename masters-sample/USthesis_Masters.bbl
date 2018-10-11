@@ -37,13 +37,6 @@
 \newblock \emph{Systems \& Control Letters}, \bblvol{}~47, \bblno{}~10,
   \bblpp{} 65--78.
 
-\bibitem[{sim(2006)}]{simple_null_controllability}
- (2006).
-\newblock On stabilization of an inverted double pendulum with one control
-  torque.
-\newblock \emph{Journal of Compute and Systems Science International},
-  \bblvol{}~45, \bblno{}~3, \bblpp{} 337--334.
-
 \bibitem[{mot(2007)}]{motorIC}
  (2007 2).
 \newblock \emph{5.0 A H-Bridge woth Load Current Feeback}.
@@ -77,5 +70,11 @@
 \bibnamefont{Instruments}, \bibfnamefont{N.} (2006 9).
 \newblock \emph{Magnetic Encoder Fundamentals}.
 \newblock 10. National Instruments, The address.
+
+\bibitem[{\citenamefont{Tedrake}()}]{tedrake}
+\bibnamefont{Tedrake}, \bibfnamefont{R.} ().
+\newblock Underactuated robotics: Algorithms for walking, running, swimming,
+  flying, and manipulation (course notes for mit 6.832).
+\newline\bblurlpre\url{http://underactuated.mit.edu/}
 
 \end{thebibliography}
