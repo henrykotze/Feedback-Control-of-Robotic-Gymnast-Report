@@ -101,20 +101,24 @@ In Table \ref{table:uart_commands} the various commmands that are used in the co
 
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|c|c|c|}
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		Command & Range & Effect \\
+		Command & Range &  Reason for Implementation & Effect \\
 		\hline
 		\hline
-		A & & \\
+		A & None & Testing of the UART circuit & Send the following text: Feedback Control Of Robotic Gymnast\\
 		\hline
-		B & &\SI{3.3}{} \\
+		B & 0-100 &  & Changes PWM Duty-Cycle \\
 		\hline
-		C & &\SI{12}{} \\
+		C & 0-1 & Testing of AND digital Circuit Directional Control of Motor & Change the rotational direction \\
 		\hline
+		D & & & \\
+		\hline
+	
 	\end{tabular}
 	\caption{Summary of Communication Commands and their Effects}
 	\label{table:uart_commands}
+
 \end{table}
 
 

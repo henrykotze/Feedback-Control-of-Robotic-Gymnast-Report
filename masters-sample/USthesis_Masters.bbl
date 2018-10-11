@@ -71,8 +71,8 @@
 \newblock \emph{Magnetic Encoder Fundamentals}.
 \newblock 10. National Instruments, The address.
 
-\bibitem[{\citenamefont{Tedrake}()}]{tedrake}
-\bibnamefont{Tedrake}, \bibfnamefont{R.} ().
+\bibitem[{\citenamefont{Tedrake}(2009)}]{tedrake}
+\bibnamefont{Tedrake}, \bibfnamefont{R.} (2009).
 \newblock Underactuated robotics: Algorithms for walking, running, swimming,
   flying, and manipulation (course notes for mit 6.832).
 \newline\bblurlpre\url{http://underactuated.mit.edu/}

@@ -3,14 +3,12 @@
 %WHAT you are going to present in this chapter/section
 %WHY you are presenting it, and
 %HOW you are going to present it
-
-The software required to allow data acquisition, retrieval of system state information and communication is presented here. The software design played a central role in continuing of the project pass the initial simulation phase.The software design allowed the determination of the system characteristic parameters and the verification of the simulation and controller.
-
 \section{Software Requirements}
 \label{sec:software_requirements}
+The software required to allow data acquisition, retrieval of system state information and communication is presented here. The software design played a central role in the continuing of the project pass the initial simulation phase. The software design allowed the determination of the system characteristic parameters and the verification of the simulation and controller.
 
 \subsection{Data Aquisition}
-Communication with the microcontroller was implemented using the serial communication from the external computer to the microcontroller. Communication with the microntroller occures differently depending on the state of the system. A \textit{Python} script was used for communication that runs on the external computer.\\
+Communication with the microcontroller was implemented using the serial communication from the external computer to the microcontroller. Communication with the microntroller occures differently depending on the state of the system. These states are explained below.
 
 If experiments are conducted the communication is uni-directional from the microcontroller towards the external computer. The microcontroller streams the state variables of the system to the external computer in specific structure shown in Figure \ref{fig:data_struct}. The star attached to the variables indicate that they are not sent in the correct units. The reason behind the decision is to reduce the processing time of the microcontroller. Sending data types such as floats are computational hungry and thus these conversions are handled on the external computer.
 
@@ -23,7 +21,7 @@ If experiments are conducted the communication is uni-directional from the micro
 
 The structure used in Figure \ref{fig:data_struct} is chosen as comma-seperated values (.csv) which makes it easy to write these data in a .csv file and read them later to analyse the data.\\
 
-The other state in which communication occured was bi-directional used for debugging purposes. In this state the \textit{Python} script allows the user to type commands adhering to the structure shown in Figure \ref{fig:uart_struct}. Based on the command used, the microcontroller would echo the same command back if it completed the command instructed.
+The other state in which communication occured was bi-directional used for debugging purposes. In this state the \textit{Python} script allows the user to type commands adhering to the structure shown in Figure \ref{fig:uart_struct}. Based on the command used, the microcontroller would echo the same command back if it completed the command instructed. A summary of the possible command are given in Appendix \ref{sec:software_requirements}.
 
 
 \begin{figure}[h]
@@ -47,7 +45,7 @@ Figure \ref{fig:software_flow} shows the main execution flow of the microcontrol
 
 On startup of the microcontroller, it will initialise the various peripherals required for operation. They include timers for PWM generation, ADC and interrupts for encoder signals. The microcontroller will than initialise the various variables required for operation.\\
 
-Once initialisation is completed the microcontroller will check via an interrupt if a byte over the serial communication has been received. If a byte has been received it, the microncontroller will verify the command structure and execute based on this command.\\
+Once initialisation is completed the microcontroller will check via an interrupt if a byte over the serial communication has been received. If a byte has been received, the microncontroller will verify the command structure and execute based on this command.\\
 
 Every 0.1ms the microcontroller will inspect the data arrays of the sampled signals. Direct Memory Access (DMA) is used for sampling and results in these sampling data being automatically refreshed by hardware.\\
 
