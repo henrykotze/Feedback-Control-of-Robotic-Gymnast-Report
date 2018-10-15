@@ -15,14 +15,14 @@
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}
 \contentsline {section}{\numberline {1.2}Literature Study}{1}
-\contentsline {section}{\numberline {1.3}System Overview}{2}
-\contentsline {section}{\numberline {1.4}Project Execution}{3}
+\contentsline {section}{\numberline {1.3}System Overview}{3}
+\contentsline {section}{\numberline {1.4}Project Execution}{4}
 \contentsline {section}{\numberline {1.5}Report Outline}{4}
-\contentsline {chapter}{\chapternumberline {2}Conceptualisation and Modelling}{5}
-\contentsline {section}{\numberline {2.1}System Concepts}{5}
-\contentsline {section}{\numberline {2.2}Mathematical Model}{6}
-\contentsline {section}{\numberline {2.3}Simulation Model}{7}
-\contentsline {section}{\numberline {2.4}System Identification}{8}
+\contentsline {chapter}{\chapternumberline {2}Conceptualisation and Modelling}{6}
+\contentsline {section}{\numberline {2.1}System Concepts}{6}
+\contentsline {section}{\numberline {2.2}Mathematical Model}{7}
+\contentsline {section}{\numberline {2.3}Simulation Model}{8}
+\contentsline {section}{\numberline {2.4}System Identification}{9}
 \contentsline {section}{\numberline {2.5}Model Validation}{12}
 \contentsline {chapter}{\chapternumberline {3}Feedback Control Design}{14}
 \contentsline {section}{\numberline {3.1}Balancing Controller}{14}
@@ -83,4 +83,6 @@
 \contentsline {section}{\numberline {A.3}Taylor Series Expansion Around Unstable Equilibrium Position}{46}
 \contentsline {section}{\numberline {A.4}Communication Structure}{46}
 \contentsline {section}{\numberline {A.5}Electronic Design Schematic}{47}
+\contentsline {section}{\numberline {A.6}Techno-economy Assessment}{50}
+\contentsline {section}{\numberline {A.7}Risk Analysis \& Safety Procedures}{50}
 \contentsline {chapter}{List of References}{51}

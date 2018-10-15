@@ -92,7 +92,7 @@ Non-linear behaviour introduced by sensors and components were added such as sat
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.3]{./figs/simulink/simulink_model.eps}
+	\includegraphics[scale=0.3]{./figs/simulink/latex_simulink.eps}
 	\caption{MATLAB Simulink Model}
 	\label{fig:sim_nonlinearfeedback}
 \end{figure}
@@ -155,14 +155,21 @@ The second natural frequency was determined by analysing the response of the sys
 	\label{fig:q2_response}
 \end{figure}
 
+The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} can be characterise as equation (X) where the frequency of oscillation is due to the damped natural frequency. This damped natural frequency is determined by measuring the time difference between peaks. The practical results contains a variation on the time difference between peaks and thus the mean of the time differences were calculated and shown in Table \ref{table:system_characteristic}.\\
+
+\begin{comment}
 The damped natural frequencies of the system were identified by inspecting the frequency content of the time-domain responses. The frequency content of the initial condition responses of both experiments are shown in Figure \ref{fig:fft_system_response}, by applying the Fast Fourier Transform (FFT) algorithm to the time-domain signals. The FFT indicates the damped natural frequencies by the predominant peaks across the frequency spectrum which are tabulated in Table \ref{table:system_characteristic}.\\
 
+
 \begin{figure}[h]
-	\centering
-	\includegraphics[scale=1]{./figs/FFT_system.eps}
-	\caption{Frequency Content of Time-Domain Initial Condition Responses}
-	\label{fig:fft_system_response}
+\centering
+\includegraphics[scale=1]{./figs/FFT_system.eps}
+\caption{Frequency Content of Time-Domain Initial Condition Responses}
+\label{fig:fft_system_response}
 \end{figure}
+\end{comment}
+
+The friction forces, $f_{c_{1}}$ and $f_{c_{2}}$ that were set as unknowns in the derivation of the robotic gymnast will be expanded on in the following text by analysing how the decaying of the responses can be characterised.\\
 
 The response shown in Figure \ref{fig:q1_response} is under the influence of coulomb damping due to the response being characterised by the amplitude decaying linearly with a constant slope. Coulomb damping is caused by sliding friction and it's force is opposite to the direction of velocity \citep{coulomb_friction}. It is thus characterised as  $$ f_{c_{1}} = 
 \left \{
@@ -181,7 +188,7 @@ It is shown in \citet{coulomb_friction} that the slope is defined as
 
 where $N$  is the normal force. The slope seen in the decay function in Figure \ref{fig:q1_response} was calculated using linear regression and by knowing the terms in equation \ref{eq:coulomb_slope} the combined $\mu N$ term can be calculated and is shown in Table \ref{table:system_characteristic}.\\
 
-The responses shown in Figure \ref{fig:q2_response} can be modelled as a second order differential equation of the form: $$\ddot{\phi} + 2\zeta\omega_{n}\dot{\phi}+\omega_{n}^2\phi =0 $$. The amplitude is seen decaying exponentially with time and this behaviour is be modelled by the following equation: $$\tau(t) = Ae^{-\zeta \omega_{n}t}$$ where $\omega_{n}$ is the natural frequency, $\zeta$ the damping ratio of the system and $A$ represent the initial condition. The damped natural frequencies of the system has already been determined and linear regression was used to determined the best $\zeta$ that will fit the measured data. The decaying function is shown in Figure \ref{fig:q2_response} with the $\zeta$ value shown in Table \ref{table:system_characteristic}. It is visible from the response that the damping ratio fits the data well and only starts to deviate near steady state.\\
+The responses shown in Figure \ref{fig:q2_response} is under the influence of viscous damping due to the amplitude decaying exponentially with time and this behaviour is be modelled by the following equation: $$\tau(t) = Ae^{-\zeta \omega_{n}t}$$ where $\omega_{n}$ is the natural frequency, $\zeta$ the damping ratio of the system and $A$ represent the initial condition. The damped natural frequencies of the system has already been determined and linear regression was used to determined the best $\zeta$ that will fit the measured data. The decaying function is shown in Figure \ref{fig:q2_response} with the $\zeta$ value shown in Table \ref{table:system_characteristic}. It is visible from the response that the damping ratio fits the data well and only starts to deviate near steady state.\\
 
 The damping force, $f_{c_{2}}$ that develops between the stator and rotor of the hinge can then be characterised as $2\zeta\omega_{n}(\dot{\phi}-\dot{\theta})$. The subtraction of $\dot{\theta}$ is due to the rotor of the hinge rotating relative to the stator.
 

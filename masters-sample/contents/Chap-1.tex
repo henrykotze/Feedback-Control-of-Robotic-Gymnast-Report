@@ -16,13 +16,31 @@ A feedback control system for a robotic gymnast that is able to swing from the "
 
 There are a few design approaches to the swing-up and balancing of the robotic gymnast. This problem is also known as the swinging acrobat. \\
 
-Historic approaches to underactuated systems are to use high-gain feedback system to remove the natural dynamics of the system and force the system to move as desired. This approach to underactuated system are inefficient using high power to actuate the system to move as desired and looks unnatural \citep{tedrake}. This leads to a new approach where the intrinsic dynamics of the system are exploited to use to meet the desired intentions.\\
+Historical approaches to underactuated systems are to use high-gain feedback system to remove the natural dynamics of the system and force the system to move as desired. This approach are inefficient using high power to actuate the system to move as desired \citep{tedrake}. This leads to a new approach where the intrinsic dynamics of the system are exploited to attain the desired behaviour.\\
 
-The primary challenge to the control of the robotic gymnast is the swing-up sequence. Here the approach is exploit the dynamics of the system by using the 'legs' of gymnast to swing. The controller implemented must somehow reason how to use this coupling force between the actuated and non-actuated pendulum to rise the system to the inverted positon.\\
+The primary challenge to the control of the robotic gymnast is the swinging. The approach is to exploit the dynamics of the system by using the 'legs' of gymnast to swing. The controller implemented must somehow reason how to use this coupling force between the actuated and non-actuated pendulum to rise the system to the inverted positon.\\
 
 The design approach to the swinging and balancing of the robotic gymnast is to use two controllers. The first controller is responsible for swinging the robotic gymnast from the hanging position up towards the inverted position. When the swing-up controller has brought the gymnast near the inverted position, a linear controller is used to bring the gymnast to balancing. This is acceptable due to the system being approximated as  linear system when near the inverted position.
 
-The various swingup controllers used are the following
+There are various design approaches to the swinging of the robotic gymnast that will be explained in the following text.\\
+
+(Picture)
+Most approaches implements a feedback linearisation where the input to the system linearises one of the responses of the outputs of te plant. This allows another outer feedback loop to be implement to use this linear response of the output of the plant to move in a desired trajectory.\\
+
+It is the implementation of the outer feedback loop that has various design approaches that will be explained in the following text.
+
+The ability to use have a linear response from the output of the plant allows the designer to force the output to follow a desired trajectory. In (Optimising Dynamic Motion of 2-link pendulums) the desired trajectory are described by using cubic B-spline shown in equation (\ref{eq:b_splines}).
+
+\begin{equation}
+\label{eq:b_splines}
+	q(t,P)  = \sum_{j=0}^{m}p_{j}B_{j,k}(t)
+\end{equation}
+
+The P vector describes the control points, and $B_{j,k}$ is the B-Spline basis function. Cubic B-splines are used to due to being continuous up to acceleration and improves the task for the joint motors and the input to the system.\\
+
+The second outer feedback loop uses energy principle methods that  tries to increase the energy of the system by analysing the difference between the desired energy and the actual energy in the system. Increasing the energy in the system will results in the robotic gymnast to rise from the downward hanging position towards the inverted balancing position \citep{Spong1996}.\\
+
+Lastly the third outer feedback loop uses a desired trajectory that will allow the nonactuated pendulum to move through it unstable position using some weird graph \citep{tedrake}.
 
 
 
@@ -96,13 +114,13 @@ From equation (7) it is visible that by tuning the PID constants the response of
 \end{figure}
 
 
-Figure \ref{fig:system_overview} provides an overview of the various subsystems the project will contain. The project is subdivided into these subsystems being developed separately with little interaction between the each other. An brief overview on each subsystem will be presented here.\\
+Figure \ref{fig:system_overview} provides an overview of the various subsystems that the project will contain. The project was subdivided into these subsystems because they can be developed separately with little interaction between each other. An brief overview on each subsystem will be presented here.\\
 
 The external computer communicates with the electronic design sending instruction to start the system and for debugging purposes. The external computer will receive data from the electronic design and allows the verification of system parameters.\\
 
 The electronic design acts as the middle-man between the mechanical design and the external computer. It provides instructions to the mechanical design components based on the controller while sending data to the external computer. The electronic design contains the Printed Circuit Board (PCB) that conditions all the signals for processing.\\
 
-The mechanical design was responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors must be selected to measure the state variables and providing interfaces for the electronic design.
+The mechanical design was responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors must be selected to measure the state variables while providing interfaces for the electronic design.
 
 \section{Project Execution}
 %WHAT you are going to present in this chapter/section
