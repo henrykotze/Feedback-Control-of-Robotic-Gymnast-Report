@@ -23,9 +23,9 @@ minimum height=10em, rounded corners, drop shadow]
 
 \begin{tikzpicture}[scale=1.2]
 \centering
-\node (wa) [wa]  {\textbf{Electronic Design} \\ PCB \\ Controller};
-\path (wa.west)+(-\blockdist,0) node (asr1) [wa] {\textbf{External Computer} \\ };
-\path (wa.east)+(\blockdist,0) node (vote) [wa] {\textbf{Mechancical System} \\ State variables \\ };
+\node (wa) [wa]  {\textbf{Electronic Design} \\ PCB \\ Signal Conditioning};
+\path (wa.west)+(-\blockdist,0) node (asr1) [wa] {\textbf{External Computer} \\ Controller \\ Data Aquisition };
+\path (wa.east)+(\blockdist,0) node (vote) [wa] {\textbf{Mechancical Design} \\ State variables \\ };
 \path (wa.north)+(0,\blockdist/2) node (pow) [sensor] {\textbf{External Power}};
 \path (asr1.north)+(0,\blockdist/2) node (human) [sensor] {\textbf{Human Input} \\ };
 

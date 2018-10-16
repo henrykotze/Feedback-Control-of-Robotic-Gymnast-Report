@@ -12,8 +12,6 @@ A feedback control system for a robotic gymnast that is able to swing from the "
 % WHAT you are going to present in this chapter/section
 % WHY you are presenting it, and
 % HOW you are going to present it	
-
-
 There are a few design approaches to the swing-up and balancing of the robotic gymnast. This problem is also known as the swinging acrobat. \\
 
 Historical approaches to underactuated systems are to use high-gain feedback system to remove the natural dynamics of the system and force the system to move as desired. This approach are inefficient using high power to actuate the system to move as desired \citep{tedrake}. This leads to a new approach where the intrinsic dynamics of the system are exploited to attain the desired behaviour.\\
@@ -24,11 +22,6 @@ The design approach to the swinging and balancing of the robotic gymnast is to u
 
 There are various design approaches to the swinging of the robotic gymnast that will be explained in the following text.\\
 
-(Picture)
-Most approaches implements a feedback linearisation where the input to the system linearises one of the responses of the outputs of te plant. This allows another outer feedback loop to be implement to use this linear response of the output of the plant to move in a desired trajectory.\\
-
-It is the implementation of the outer feedback loop that has various design approaches that will be explained in the following text.
-
 The ability to use have a linear response from the output of the plant allows the designer to force the output to follow a desired trajectory. In (Optimising Dynamic Motion of 2-link pendulums) the desired trajectory are described by using cubic B-spline shown in equation (\ref{eq:b_splines}).
 
 \begin{equation}
@@ -38,11 +31,18 @@ The ability to use have a linear response from the output of the plant allows th
 
 The P vector describes the control points, and $B_{j,k}$ is the B-Spline basis function. Cubic B-splines are used to due to being continuous up to acceleration and improves the task for the joint motors and the input to the system.\\
 
-The second outer feedback loop uses energy principle methods that  tries to increase the energy of the system by analysing the difference between the desired energy and the actual energy in the system. Increasing the energy in the system will results in the robotic gymnast to rise from the downward hanging position towards the inverted balancing position \citep{Spong1996}.\\
 
-Lastly the third outer feedback loop uses a desired trajectory that will allow the nonactuated pendulum to move through it unstable position using some weird graph \citep{tedrake}.
+\citet{spong_swingup} implements the swing-up controller by using partial feedback linearisation which results in a linear response from either the actuated or unactuated pendulum. Using non-collocated linearisation he is able to allow the unactuated pendulum to follow a desired trajectory and shows this using the phase portrait of the zero dynamics of the system the system will converge to the unstable equilibrium position. When the swing-up controller brings the system to the inverted balancing position the controllers will switch using a linear quadratic regulator (LQR) to balance the system.\\
 
+\citet{spong_swingup} continues further how the swing-up can be achieved using collocated linearisation which linearises the response of the actuated pendulum. This allows the actuated pendulum to follow a desired trajectory and \citet{spong_swingup} provides a energy based trajectory that increases the energy in the system. The increase of energy in the system results in the pendulums to rise to the balancing position where a LQR controller is used to balance the system.\\
 
+\citet{Brown1997} provided two manually tuned nonlinear controller for the balancing of the robotic gymnast that was tested against a designed LQR controller. These two are the direct fuzzy controller (DFC) and a fuzzy model reference learning controller (FMRLC). The gains selected for the DFC controller were based of the LQR controller implemented and successfully balanced the gymnast. However the LQR controller provided smoother state trajectories and lower control input. The FMRLC uses no explicit dynamical reference model and instead the outputs of the plant using normalising gains are directly fed into the second fuzzy system. The FMRLC controller was a significant improvement over the DFC, but yet again did not perform as well as the LQR controller.\\
+
+\citet{Brown1997} attempts to swing the acrobat to the inverted balancing position using the energy based trajectory proposed by \citet{spong_swingup} without the partial linearisation feedback. \citet{Brown1997} was able to swing and balance the acrobat using this approach, but required greater input and were not as smooth as using with partial feedback linearisation.\\
+
+The mathematical derivation of the robotic gymnast was mostly done using the Euler-Lagrangian equation. This approach was used due to the  mechanical energy in the system are easily identified. Derivation of the robotic gymnast are done using simple approximation as point masses shown in \citep{derivation_controlPlaner} and \citep{tedrake}. \\
+
+Most approaches implements a feedback linearisation where the input to the system linearises one of the responses of the outputs of te plant. This allows another outer feedback loop to be implement to use this linear response of the output of the plant to move in a desired trajectory.\\
 
 
 \begin{comment}
@@ -114,13 +114,15 @@ From equation (7) it is visible that by tuning the PID constants the response of
 \end{figure}
 
 
-Figure \ref{fig:system_overview} provides an overview of the various subsystems that the project will contain. The project was subdivided into these subsystems because they can be developed separately with little interaction between each other. An brief overview on each subsystem will be presented here.\\
+Figure \ref{fig:system_overview} provides an overview of the various subsystems that the project contains with the external factors that influence it. The project was subdivided into these subsystems because they can be developed separately with little interaction between each other. An brief overview on each subsystem is presented here.\\
 
-The external computer communicates with the electronic design sending instruction to start the system and for debugging purposes. The external computer will receive data from the electronic design and allows the verification of system parameters.\\
+The external computer will contain the theoretical controller that determines the input to the mechanical components and receives information from the electronic design about the state of the system. This allows for the verification of system parameters, debugging and experimental tests.\\
 
-The electronic design acts as the middle-man between the mechanical design and the external computer. It provides instructions to the mechanical design components based on the controller while sending data to the external computer. The electronic design contains the Printed Circuit Board (PCB) that conditions all the signals for processing.\\
+The electronic design acts as the middle-man between the mechanical design and external computer. It provides instructions to the mechanical design based of commands received from the external computer while sending data to the external computer. The electronic design contains the Printed Circuit Board (PCB) that conditions all the signals for processing.\\
 
-The mechanical design was responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors must be selected to measure the state variables while providing interfaces for the electronic design.
+The mechanical design was responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors was selected to measure the state variables while providing interfaces for the electronic design.\\
+
+External inputs to the system were the power that was supplied to the system and inputs by the user to test the various system.
 
 \section{Project Execution}
 %WHAT you are going to present in this chapter/section
@@ -128,21 +130,23 @@ The mechanical design was responsible for creating a physical model that represe
 %HOW you are going to present it
 % write as if i already happened
 
-The execution of the project occurs in a sequence of steps. First the mathematical model of the system is derived by using the appropriate approaches. The derived mathematical model is then implemented on a simulation program where the dynamics of the system can be verified and inspected.\\
+The execution of the project occurred in a sequence of steps to achieve the results presented in the report. It is presented to provide the reader an understanding of how the project was developed in separate subsystems and combined in the end.\\
+ 
+First the mathematical model of the system was derived by using the appropriate approaches. The derived mathematical model was then implemented on a simulation program where the dynamics of the system was verified and inspected.\\
 
-Following the successful implementation of the mathematical model the various controllers will be designed and implemented on the simulation program. The behaviour of the simulated system will be inspected.\\
+Following the successful implementation of the mathematical model the various controllers were designed and implemented on the simulation program. The behaviour of the simulated responses were inspected and analysed.\\
 
-From the simulation results the mechanical design specification will be determined. The mechanical design will then commence to create a physical model that provides an acceptable representation of the mathematical model.\\
+The simulation provided the specification for the mechanical design to commence and created the physical model that provided an acceptable representation of the mathematical model.\\
 
-During manufacturing of the mechanical design the electronic design will start. Conceptual designs will be done to determine the various designs capable of meeting the requirements. The electronic design will be tested to ensure it performs as designed with the opportunity to create revisions of the design.\\
+During manufacturing of the mechanical design the electronic design started. Conceptual designs were created capable of meeting the requirements and the selected design was manufactured. The electronic design was then tested to ensure it performs as designed with the opportunity to create revisions.\\
 
-The programming of the micro-controller will start. This includes the programming of the controller, data acquisition and the conversions of the sampled data.\\
+Following the successful testing of the electronic design, the programming of the microcontroller and external computer started. This included the programming of the controller, data acquisition system and the conversions of the sampled data.\\
 
-System identification will then occur to determine the various parameters required by the controllers. These newly determined parameters will then be implemented on the simulation program. Existing controllers will be updated and verified in simulation.\\
+Once the microcontroller could provide the external computer with system state information the system identification tests occurred to determine the various system parameters. These new system parameters were used in the simulation program to update the existing controllers and verify the responses in simulation.\\
 
-The updated controllers are then implemented onto the microcontroller for the system experiments to start. From these system experiments the responses of the experiment will be compared by those of the simulation.\\
+The updated controllers were then implemented onto the external computer for the system experiments to start. From these system experiments the response of the experiments were compared to those of the simulation.\\
 
-The report was written throughout the sequence of steps mentioned above and will be completed and reviewed at the end.
+The report was written throughout the sequence of steps mentioned above and was completed and reviewed at the end.
 
 
 \section{Report Outline}
@@ -150,17 +154,17 @@ The report was written throughout the sequence of steps mentioned above and will
 %WHY you are presenting it, and
 %HOW you are going to present it
 
-A brief overview of each chapter in the report will provided here. It acts as primer for the reader and the easy identification of section that may interest the reader more.\\
+A brief overview of each chapter in the report is provided here. It acts as a primer for the reader and the identification of sections that may interest the reader more.\\
 
-Chapter 2 explain the system concepts that is reference throughout the report. It contains the mathematical derivation of the robotic gymnast and the simulated model. The system parameters with system identification test are shown and whether the simulated models is a acceptable representation of the physical model.\\
+Chapter 2 explains the system concepts that is reference throughout the report. It contains the mathematical derivation of the robotic gymnast and the simulated model. The system parameters with system identification tests are shown and shows the simulated model is a acceptable representation of the physical model.\\
 
-Chapter 3 describes the design paradigm to swinging and balancing of the robotic gymnast. The specification for the controllers and the simulated responses of the controller are provided.\\
+Chapter 3 describes the controller architecture to swinging and balancing of the robotic gymnast. The specification for the controllers and the simulated responses of the controller are provided.\\
 
-Chapter 4 contains the designs of the mechanical and electronic system of the project. The various components used in the designs and it explains how the physical model state information is provided to the designed controllers.\\
+Chapter 4 contains the designs of the mechanical and electronic systems of the project. The various components used in the designs are discussed and explained.\\
 
-Chapter 5 describe the software implemented to reduplicate what has been done in the project.  It explains the architecture of the software and the various functions implemented.\\
+Chapter 5 describes the software implemented to provide the report with these results. It explains the architecture of the software and the various functions implemented.\\
 
-Chapter 6 provides the practical results of the controllers implemented in chapter 3 and hypothise unexpected behaviour in the experiments.\\
+Chapter 6 provides the practical results of the controllers explained in chapter 3 and hypothesise unexpected behaviour in the experiments.\\
 
 Chapter 7 concludes the report with a summary of the report and recommendation for future endeavours on the Feedback Control of a Robotic Gymnast. 
 

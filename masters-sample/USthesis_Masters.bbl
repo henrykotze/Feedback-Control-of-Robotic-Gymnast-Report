@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{12}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -43,6 +43,16 @@
   microcontrollers}.
 \newblock ST Electronics.
 
+\bibitem[{\citenamefont{Brown} \protect\BIBand{}
+  \citenamefont{Passino}(1997)}]{Brown1997}
+\bibnamefont{Brown}, \bibfnamefont{S.C.} \protect\BIBand{}
+  \bibnamefont{Passino}, \bibfnamefont{K.M.} (1997).
+\newblock {Intelligent Control for an Acrobot}.
+\newblock \emph{Journal of Intelligent and Robotic Systems}, \bblvol{}~18,
+  \bblno{}~3, \bblpp{} 209--248.
+\newblock ISSN 09210296.
+\newline\bblurlpre\url{http://link.springer.com/10.1023/A:1007953809856}
+
 \bibitem[{\citenamefont{Faulhaber}(2011)}]{faulhaberencoder}
 \bibnamefont{Faulhaber} (2011).
 \newblock \emph{Encoders, Magnetic Encoder, Series IE2-16}.
@@ -65,21 +75,16 @@
 \newblock \emph{Magnetic Encoder Fundamentals}.
 \newblock 10. National Instruments, The address.
 
+\bibitem[{\citenamefont{Lehl}(2012)}]{derivation_controlPlaner}
+\bibnamefont{Lehl}, \bibfnamefont{M.} (2012 10).
+\newblock \emph{Control Of Planar Pendulum Systems}.
+\newblock \bblphdthesis{}, Technische Universit\"{a}t M\"{u}nchen.
+
 \bibitem[{\citenamefont{Spong}(1995)}]{spong_swingup}
 \bibnamefont{Spong}, \bibfnamefont{M.W.} (1995).
 \newblock {The Swing Up Control Problem For The Acrobot}.
-\newblock \emph{IEEE Control Systems 15}.
+\newblock \emph{IEEE Control Systems}.
 \newblock ISSN 1066033X.
-
-\bibitem[{\citenamefont{Spong}(1996)}]{Spong1996}
-\bibnamefont{Spong}, \bibfnamefont{M.W.} (1996).
-\newblock {Energy Based Control of a Class of Underactuated Mechanical
-  Systems}.
-\newblock \emph{IFAC Proceedings Volumes}, \bblvol{}~29, \bblno{}~1, \bblpp{}
-  2828--2832.
-\newblock ISSN 14746670.
-\newline\bblurlpre\url{https://ac.els-cdn.com/S1474667017581057/1-s2.0-S1474667017581057-main.pdf?{\_}tid=5a61118e-ffa7-4c94-875b-c5ee96585723{\&}acdnat=1539607219{\_}bafe874962d826ce5b6ea42ea8cbe28a
-  http://linkinghub.elsevier.com/retrieve/pii/S1474667017581057}
 
 \bibitem[{\citenamefont{Tedrake}(2009)}]{tedrake}
 \bibnamefont{Tedrake}, \bibfnamefont{R.} (2009).

@@ -17,13 +17,13 @@ I was expecting a `,' or a `}'---line 16 of file backmatter/USbib-sample.bib
  :                     -2012,
 I'm skipping whatever remains of this entry
 Warning--entry type for "tedrake" isn't style-file defined
---line 47 of file backmatter/USbib-sample.bib
-I was expecting a `,' or a `}'---line 119 of file backmatter/USbib-sample.bib
+--line 48 of file backmatter/USbib-sample.bib
+I was expecting a `,' or a `}'---line 120 of file backmatter/USbib-sample.bib
  :  
  :  address   = {Edingburgh Gate, Harlow, Essex CM20 2JE, England},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 148 of file backmatter/USbib-sample.bib
+I was expecting a `,' or a `}'---line 149 of file backmatter/USbib-sample.bib
  :  
  :  pages = {49-55}
 (Error may have been on previous line)
