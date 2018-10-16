@@ -5,15 +5,13 @@
 %HOW you are going to present it
 \section{Software Requirements}
 \label{sec:software_requirements}
-The software required to implement the retrieval of system state information, debugging and control laws are presented here. The software design played a central role in the continuing of the project pass the initial simulation phase. The software design allowed the determination of the system characteristic parameters and the verification of the simulation and controller.
+The software required to implement the retrieval of system state information, debugging and control laws are presented here. The software design played a central role in continuing the project pass the simulation phase. The software design allowed the determination of the system characteristic parameters and the verification of the simulation and controller.
 
 \subsection{Data Aquisition and Controller}
 
-Communication with the microcontroller was implemented using the serial communication from the external computer. Communication with the microntroller occures differently depending on the state of the system. These states are explained below.\\
+Communication between the external computer and the microcontroller occurred differently based on whether an experiment was done or testing different parts of the electronic system. These difference are explained in this section.\\
 
-If experiments are conducted the communication are bi-directional between the microcontroller and the external computer. The microcontroller streams the state variables of the system to the external computer in a specific structure shown in Figure \ref{fig:data_struct}. The star attached to the variables indicate that they are not sent in the correct units. The reason behind the decision is to reduce the processing time of the microcontroller. Sending data types such as floats are computational hungry and thus these conversions are handled on the external computer.\\
-
-The external computer will than receive this information and compute the control input based on the control law. The external computer will than send this control input back to the microcontroller to output the correct signals. During this state the microcontroller will not send new state information before it has receive the new control input.
+If experiments are conducted the communication are bi-directional between the microcontroller and the external computer. The microcontroller streams the state variables of the system to the external computer in the structure shown in Figure \ref{fig:data_struct}. The star attached to the variables indicate that they are not sent in the correct units due to sending data types such as floats are computation hungry and are rather handled on the external computer. The external computer will then translate the variables into their correct units and compute the control input based on the control law. The external computer sends the control input back to the microcontroller to output the correct signals.\\
 
 \begin{figure}[h]
 	\centering
@@ -22,9 +20,9 @@ The external computer will than receive this information and compute the control
 	\label{fig:data_struct}
 \end{figure}
 
-The structure used in Figure \ref{fig:data_struct} is chosen as comma-seperated values (.csv) which makes it easy to write these data in a .csv file and read them later to analyse the data.\\
+The structure used in Figure \ref{fig:data_struct} was chosen as comma-seperated values (.csv) which makes it easy to write the data in a .csv file to analyse the data later.\\
 
-The other state in which communication occurred was bi-directional used for debugging purposes. In this state the \textit{Python} script allows the user to type commands adhering to the structure shown in Figure \ref{fig:uart_struct}. Based on the command used, the microcontroller would echo the same command back if it completed the command instructed. These commands included to receive the sampled values of signals, manual control over the duty-cycle of the PWM signal and directional control of the motor. It also acted as a soft layer for safety by sending commands to arm the system before experiments. A summary of the possible commands are given in Appendix \ref{sec:software_requirements}.
+The other state in which communication occurred was used for debugging purposes. In this state the \textit{Python} script allows the user to type commands adhering to the structure shown in Figure \ref{fig:uart_struct}. Based on the command used, the microcontroller would echo the same command back if it completed the command instructed. These commands included to receive the sampled values of signals, manual control over the duty-cycle of the PWM signal and directional control of the motor. It also acted as a soft layer for safety by sending commands to arm the system before experiments. A summary of the possible commands are given in Appendix \ref{sec:software_requirements}.
 
 
 \begin{figure}[h]
@@ -37,22 +35,26 @@ The other state in which communication occurred was bi-directional used for debu
 
 \subsection{Embedded Program}
 
-%\begin{figure}[h]
-	%\centering
-	%\input{"./figs/software_flow/software_flow.tikz"}
-	%\caption{Data Structure for Sending Commands}
-	%\label{fig:software_flow}
-%\end{figure}
+%\begin{comment}
+\begin{figure}[h]
+\centering
+\input{"./figs/software_flow/software_flow.tikz"}
+\caption{Embedded Software Flow}
+\label{fig:software_flow}
+\end{figure}
+%\end{comment}
 
-Figure \ref{fig:software_flow} shows the main execution flow of the microcontroller based on factors that influence their states. A brief overview of the execution flow is describe below.\\
 
-On startup of the microcontroller, it will initialise the various peripherals required for operation. They include timers for PWM generation, ADC and interrupts for encoder signals. The microcontroller will than initialise the various variables required for operation.\\
+Figure \ref{fig:software_flow} shows the main execution flow of the microcontroller based on factors that influence their states. A brief overview of the execution flow is described below.\\
+
+On startup of the microcontroller, it will initialise the various peripherals required for operation. They include timers for PWM generation, ADC for sampling and interrupts for encoder signals. The microcontroller will then initialise the various variables required for operation.\\
 
 Once initialisation was completed the microcontroller will check via an interrupt if a byte over the serial communication has been received. If a byte has been received, the microncontroller will verify the command structure and execute based on this command.\\
 
 Every 0.1ms the microcontroller will inspect the data arrays of the sampled signals. Direct Memory Access (DMA) was used for sampling and results in these sampling data being automatically refreshed by hardware.\\
 
-The micrcontroller will than react whether a interrupt has occur to indicate a rising or falling edge of the encoder signal. This falling and rising edge indicates a incremental change of the position of the actuated pendulum the microcontroller will behave accordingly.\\
+The micrcontroller will then react whether a interrupt has occur to indicate a rising or falling edge of the encoder signal. This falling and rising edge indicates a incremental change of the position of the actuated pendulum and the microcontroller will behave accordingly.\\
 
-The microcontroller will than verify whether it is required to stream the data every 1ms to the external computer. 
+The microcontroller will than verify whether it is required to stream the data every 4ms to the external computer for system identification tests.\\
+
 

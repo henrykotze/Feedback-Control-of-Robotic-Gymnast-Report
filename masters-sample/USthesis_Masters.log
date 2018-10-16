@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  16 OCT 2018 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  16 OCT 2018 23:44
 entering extended mode
 **./USthesis_Masters.tex
 (USthesis_Masters.tex
@@ -1403,6 +1403,14 @@ File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count368
 \AM@templatesizebox=\box88
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2018/04/06 v1.3b Input encoding file
+))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usthesis.sty"
 Package: usthesis 2014/11/28 v5.0 Stellenbosh Thesis class for use with Memoir 
 (DNJ ELS)
@@ -1447,15 +1455,7 @@ Sidefootvsep and sidefootheight: 14.5pt and 590.14995pt
 
 \US@month=\count371
 \US@year=\count372
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2018/04/06 v1.3b Input encoding file
-\inpenc@prehook=\toks46
-\inpenc@posthook=\toks47
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
-File: latin1.def 2018/04/06 v1.3b Input encoding file
-))
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2018/06/05 3.22 The Babel package
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
@@ -1806,6 +1806,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
 [4
 
 ] [5
@@ -1826,7 +1831,7 @@ rent through
 
 ) [8
 
-] (USthesis_Masters.lot) [9
+] [9] (USthesis_Masters.lot) [10
 
 ]
 \openout2 = `frontmatter/Nomencl.aux'.
@@ -1836,7 +1841,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-) [10
+) [11
 
 
 
@@ -2075,7 +2080,7 @@ ed-to.pdf>
 ink-eps-converted-to.pdf ./figs/simulink/latex_simulink.eps>
 (epstopdf)             \includegraphics on input line 95.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/simulink/latex_simulink-eps-converted-to.pdf, id=116, 1066.98625pt x 86
+<./figs/simulink/latex_simulink-eps-converted-to.pdf, id=119, 1066.98625pt x 86
 4.22874pt>
 File: ./figs/simulink/latex_simulink-eps-converted-to.pdf Graphic file (type pd
 f)
@@ -2114,7 +2119,7 @@ o.pdf>
 eps-converted-to.pdf ./figs/q1_initial_response.eps>
 (epstopdf)             \includegraphics on input line 143.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/q1_initial_response-eps-converted-to.pdf, id=139, 421.575pt x 316.18124
+<./figs/q1_initial_response-eps-converted-to.pdf, id=142, 421.575pt x 316.18124
 pt>
 File: ./figs/q1_initial_response-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/q1_initial_response-eps-converted-to.pdf>
@@ -2145,7 +2150,7 @@ o.pdf>
 eps-converted-to.pdf ./figs/q2_initial_response.eps>
 (epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/q2_initial_response-eps-converted-to.pdf, id=140, 421.575pt x 316.18124
+<./figs/q2_initial_response-eps-converted-to.pdf, id=143, 421.575pt x 316.18124
 pt>
 File: ./figs/q2_initial_response-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/q2_initial_response-eps-converted-to.pdf>
@@ -2223,7 +2228,7 @@ Package epstopdf Info: Source file: <./figs/sim_vs_measured_q1.eps>
 ps-converted-to.pdf ./figs/sim_vs_measured_q1.eps>
 (epstopdf)             \includegraphics on input line 244.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/sim_vs_measured_q1-eps-converted-to.pdf, id=160, 455.7025pt x 316.18124
+<./figs/sim_vs_measured_q1-eps-converted-to.pdf, id=164, 455.7025pt x 316.18124
 pt>
 File: ./figs/sim_vs_measured_q1-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/sim_vs_measured_q1-eps-converted-to.pdf>
@@ -2246,7 +2251,7 @@ Package epstopdf Info: Source file: <./figs/sim_vs_measured_q2.eps>
 ps-converted-to.pdf ./figs/sim_vs_measured_q2.eps>
 (epstopdf)             \includegraphics on input line 251.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/sim_vs_measured_q2-eps-converted-to.pdf, id=161, 421.575pt x 316.18124p
+<./figs/sim_vs_measured_q2-eps-converted-to.pdf, id=165, 421.575pt x 316.18124p
 t>
 File: ./figs/sim_vs_measured_q2-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/sim_vs_measured_q2-eps-converted-to.pdf>
@@ -2315,7 +2320,7 @@ Package epstopdf Info: Source file: <./figs/balancing.eps>
 ted-to.pdf ./figs/balancing.eps>
 (epstopdf)             \includegraphics on input line 113.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/balancing-eps-converted-to.pdf, id=185, 421.575pt x 316.18124pt>
+<./figs/balancing-eps-converted-to.pdf, id=188, 421.575pt x 316.18124pt>
 File: ./figs/balancing-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/balancing-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/balancing-eps-converted-to.pdf  used on input l
@@ -2396,7 +2401,7 @@ Package epstopdf Info: Source file: <./figs/swingup.eps>
 d-to.pdf ./figs/swingup.eps>
 (epstopdf)             \includegraphics on input line 204.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/swingup-eps-converted-to.pdf, id=200, 421.575pt x 316.18124pt>
+<./figs/swingup-eps-converted-to.pdf, id=203, 421.575pt x 316.18124pt>
 File: ./figs/swingup-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/swingup-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/swingup-eps-converted-to.pdf  used on input lin
@@ -2432,7 +2437,7 @@ f>
 converted-to.pdf ./figs/swingup_balance.eps>
 (epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/swingup_balance-eps-converted-to.pdf, id=204, 421.575pt x 316.18124pt>
+<./figs/swingup_balance-eps-converted-to.pdf, id=207, 421.575pt x 316.18124pt>
 File: ./figs/swingup_balance-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/swingup_balance-eps-converted-to.pdf>
 Package pdftex.def Info: ./figs/swingup_balance-eps-converted-to.pdf  used on i
@@ -2749,7 +2754,7 @@ to.pdf>
 -eps-converted-to.pdf ./figs/dutycycle_vs_current.eps>
 (epstopdf)             \includegraphics on input line 335.
 Package epstopdf Info: Output file is already uptodate.
-<./figs/dutycycle_vs_current-eps-converted-to.pdf, id=259, 382.42876pt x 309.15
+<./figs/dutycycle_vs_current-eps-converted-to.pdf, id=262, 382.42876pt x 309.15
 5pt>
 File: ./figs/dutycycle_vs_current-eps-converted-to.pdf Graphic file (type pdf)
 <use ./figs/dutycycle_vs_current-eps-converted-to.pdf>
@@ -2789,7 +2794,7 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
@@ -2797,58 +2802,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
 
 
-] (figs/uart_struct/uart_struct.tikz)
+] (figs/uart_struct/uart_struct.tikz) (figs/software_flow/software_flow.tikz
+Overfull \hbox (10.27663pt too wide) in paragraph at lines 25--25
+ [][][][]\T1/cmr/m/n/12 Experimental 
+ []
 
-LaTeX Warning: Reference `fig:software_flow' on page 41 undefined on input line
- 47.
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 47--48
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-) [42]
+) [42] [43]
 \openout2 = `contents/Chap-6.aux'.
 
- (contents/Chap-6.tex) [43
+ (contents/Chap-6.tex) [44
 
 
 
 ]
 \openout2 = `contents/Chap-7.aux'.
 
- (contents/Chap-7.tex) [44
+ (contents/Chap-7.tex) [45
 
 
 
-] [45
+] [46
 
 
 ]
 \openout2 = `contents/App-1.aux'.
 
 
-(contents/App-1.tex [46
+(contents/App-1.tex [47
 
 
 ]
@@ -2872,7 +2886,7 @@ L/cmm/m/it/12 m[]l[][] \OT1/cmr/m/n/12 + 2\OML/cmm/m/it/12 m[]L[]l\OT1/cmr/m/n/
 /m/n/12 )+
  []
 
-[47] (figs/uart_struct/uart_struct.tikz)
+[48] (figs/uart_struct/uart_struct.tikz)
 Overfull \hbox (376.10474pt too wide) in paragraph at lines 104--119
  [][] 
  []
@@ -2880,8 +2894,8 @@ Overfull \hbox (376.10474pt too wide) in paragraph at lines 104--119
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[48]
-<./figs/Acrobat.pdf, id=302, 845.1575pt x 598.235pt>
+[49]
+<./figs/Acrobat.pdf, id=309, 845.1575pt x 598.235pt>
 File: ./figs/Acrobat.pdf Graphic file (type pdf)
 <use ./figs/Acrobat.pdf>
 Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 127.
@@ -2890,7 +2904,7 @@ File: ./figs/Acrobat.pdf Graphic file (type pdf)
 <use ./figs/Acrobat.pdf>
 Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 127.
 (pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<./figs/Acrobat.pdf, id=305, page=1, 845.1575pt x 598.235pt>
+<./figs/Acrobat.pdf, id=312, page=1, 845.1575pt x 598.235pt>
 File: ./figs/Acrobat.pdf Graphic file (type pdf)
 <use ./figs/Acrobat.pdf, page 1>
 Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 127.
@@ -2910,52 +2924,52 @@ Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 127.
 File: ./figs/Acrobat.pdf Graphic file (type pdf)
 <use ./figs/Acrobat.pdf, page 1>
 Package pdftex.def Info: ./figs/Acrobat.pdf , page1 used on input line 127.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
- [49 <./figs/Acrobat.pdf>]
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf>
-Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 128.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf>
-Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 128.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-<./figs/Acrobat.pdf, id=316, page=2, 845.1575pt x 598.235pt>
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
-(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
-(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
-File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 2>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
 (pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
  [50 <./figs/Acrobat.pdf>]
-<./figs/Acrobat.pdf, id=321, page=3, 845.1575pt x 598.235pt>
 File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 3>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page3 used on input line 128.
+<use ./figs/Acrobat.pdf>
+Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 128.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf>
+Package pdftex.def Info: ./figs/Acrobat.pdf  used on input line 128.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+<./figs/Acrobat.pdf, id=323, page=2, 845.1575pt x 598.235pt>
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
+(pdftex.def)             Requested size: 845.15544pt x 598.23354pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
 (pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
 File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 3>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page3 used on input line 128.
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
 (pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
 File: ./figs/Acrobat.pdf Graphic file (type pdf)
-<use ./figs/Acrobat.pdf, page 3>
-Package pdftex.def Info: ./figs/Acrobat.pdf , page3 used on input line 128.
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 2>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page2 used on input line 128.
 (pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
  [51 <./figs/Acrobat.pdf>]
+<./figs/Acrobat.pdf, id=327, page=3, 845.1575pt x 598.235pt>
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 3>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page3 used on input line 128.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 3>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page3 used on input line 128.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+File: ./figs/Acrobat.pdf Graphic file (type pdf)
+<use ./figs/Acrobat.pdf, page 3>
+Package pdftex.def Info: ./figs/Acrobat.pdf , page3 used on input line 128.
+(pdftex.def)             Requested size: 845.31018pt x 598.34306pt.
+ [52 <./figs/Acrobat.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
@@ -2965,8 +2979,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
 
-) [52] (USthesis_Masters.bbl
-("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [53
+) [53] (USthesis_Masters.bbl
+("C:\Program Files\MiKTeX 2.9\tex\latex\stellenbosch\usbib.eng")) [54
 
 
 
@@ -2993,10 +3007,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 52500 strings out of 492973
- 1276119 string characters out of 3135932
- 1573722 words of memory out of 3000000
- 55458 multiletter control sequences out of 15000+200000
+ 52627 strings out of 492973
+ 1278856 string characters out of 3135932
+ 1577365 words of memory out of 3000000
+ 55580 multiletter control sequences out of 15000+200000
  568574 words of font info for 115 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,18n,98p,1017b,1075s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -3036,9 +3050,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on USthesis_Masters.pdf (64 pages, 1802323 bytes).
+Output written on USthesis_Masters.pdf (66 pages, 1807263 bytes).
 PDF statistics:
- 1125 PDF objects out of 1200 (max. 8388607)
+ 1132 PDF objects out of 1200 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  204 words of extra memory for PDF output out of 10000 (max. 10000000)
 

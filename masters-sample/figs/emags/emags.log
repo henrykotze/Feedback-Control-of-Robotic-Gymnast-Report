@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  16 OCT 2018 22:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  16 OCT 2018 20:25
 entering extended mode
-**./system_overview.tex
-(system_overview.tex
+**./emags.tex
+(emags.tex
 LaTeX2e <2018-04-01> patch level 5
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -320,200 +320,67 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 ("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
 librarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
-)))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshapes.code.tex"
-File: tikzlibraryshapes.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshapes.geometric.code.tex"
-File: tikzlibraryshapes.geometric.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
-)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
-.geometric.code.tex"
-File: pgflibraryshapes.geometric.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
-
-))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshapes.misc.code.tex"
-File: tikzlibraryshapes.misc.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
-.misc.code.tex"
-File: pgflibraryshapes.misc.code.tex 2013/07/18 v3.0.1a (rcs-revision 1.5)
-))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshapes.symbols.code.tex"
-File: tikzlibraryshapes.symbols.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
-.symbols.code.tex"
-File: pgflibraryshapes.symbols.code.tex 2013/09/11 v3.0.1a (rcs-revision 1.6)
-))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshapes.arrows.code.tex"
-File: tikzlibraryshapes.arrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
-.arrows.code.tex"
-File: pgflibraryshapes.arrows.code.tex 2008/06/26 v3.0.1a (rcs-revision 1.1)
-))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshapes.callouts.code.tex"
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
-.callouts.code.tex"))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshapes.multipart.code.tex"
-File: tikzlibraryshapes.multipart.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1
-)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\shapes\pgflibraryshapes
-.multipart.code.tex"
-File: pgflibraryshapes.multipart.code.tex 2010/01/07 v3.0.1a (rcs-revision 1.2)
-
-\pgfnodepartlowerbox=\box37
-\pgfnodeparttwobox=\box38
-\pgfnodepartthreebox=\box39
-\pgfnodepartfourbox=\box40
-\pgfnodeparttwentybox=\box41
-\pgfnodepartnineteenbox=\box42
-\pgfnodeparteighteenbox=\box43
-\pgfnodepartseventeenbox=\box44
-\pgfnodepartsixteenbox=\box45
-\pgfnodepartfifteenbox=\box46
-\pgfnodepartfourteenbox=\box47
-\pgfnodepartthirteenbox=\box48
-\pgfnodeparttwelvebox=\box49
-\pgfnodepartelevenbox=\box50
-\pgfnodeparttenbox=\box51
-\pgfnodepartninebox=\box52
-\pgfnodeparteightbox=\box53
-\pgfnodepartsevenbox=\box54
-\pgfnodepartsixbox=\box55
-\pgfnodepartfivebox=\box56
-)))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryarrows.code.tex"
-File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryarrows.code.t
-ex"
-File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen151
-))
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryshadows.code.tex"
-File: tikzlibraryshadows.code.tex 2008/01/13 v3.0.1a (rcs-revision 1.3)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\libraries\tikz
-libraryfadings.code.tex"
-File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryfadings.code.
-tex"
-File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
-))) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip43
-
-For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
-Package: amstext 2000/06/29 v2.01 AMS text
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks27
-\ex@=\dimen152
-))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen153
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
-Package: amsopn 2016/03/08 v2.02 operator names
-)
-\inf@bad=\count107
-LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count108
-\leftroot@=\count109
-LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count110
-\DOTSCASE@=\count111
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box57
-\strutbox@=\box58
-\big@size=\dimen154
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count112
-\c@MaxMatrixCols=\count113
-\dotsspace@=\muskip10
-\c@parentequation=\count114
-\dspbrk@lvl=\count115
-\tag@help=\toks28
-\row@=\count116
-\column@=\count117
-\maxfields@=\count118
-\andhelp@=\toks29
-\eqnshift@=\dimen155
-\alignsep@=\dimen156
-\tagshift@=\dimen157
-\tagwidth@=\dimen158
-\totwidth@=\dimen159
-\lineht@=\dimen160
-\@envbody=\toks30
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks31
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
+))) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
 Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
 \symboldletters=\mathgroup5
 \symboldsymbols=\mathgroup6
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
-Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) (system_overview.aux)
-\openout1 = `system_overview.aux'.
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
+Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 11.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+
+LaTeX Warning: Command \@arrayparboxrestore  has changed.
+               Check if current package is valid.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
+\CenteringLeftskip=\skip43
+\RaggedLeftLeftskip=\skip44
+\RaggedRightLeftskip=\skip45
+\CenteringRightskip=\skip46
+\RaggedLeftRightskip=\skip47
+\RaggedRightRightskip=\skip48
+\CenteringParfillskip=\skip49
+\RaggedLeftParfillskip=\skip50
+\RaggedRightParfillskip=\skip51
+\JustifyingParfillskip=\skip52
+\CenteringParindent=\skip53
+\RaggedLeftParindent=\skip54
+\RaggedRightParindent=\skip55
+\JustifyingParindent=\skip56
+) (emags.aux)
+\openout1 = `emags.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+
 ABD: EveryShipout initializing macros
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count119
-\scratchdimen=\dimen161
-\scratchbox=\box59
-\nofMPsegments=\count120
-\nofMParguments=\count121
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count122
-\MPscratchDim=\dimen162
-\MPnumerator=\count123
-\makeMPintoPDFobject=\count124
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count107
+\scratchdimen=\dimen151
+\scratchbox=\box37
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen152
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks28
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -566,35 +433,38 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-\pgf@layerbox@background=\box60
-\pgf@layerboxsaved@background=\box61
-\pgf@layerbox@foreground=\box62
-\pgf@layerboxsaved@foreground=\box63
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 32.
+ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 8.
 
-Overfull \hbox (50.13336pt too wide) in paragraph at lines 66--67
-[][] 
+Overfull \hbox (1.34537pt too wide) in paragraph at lines 39--44
+[]  
  []
 
 [1
 
 {C:/Users/Henry/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(system_overview.aux) ) 
+(emags.aux) ) 
 Here is how much of TeX's memory you used:
- 14563 strings out of 492973
- 313106 string characters out of 3135932
- 379833 words of memory out of 3000000
- 18164 multiletter control sequences out of 15000+200000
- 6851 words of font info for 18 fonts, out of 3000000 for 9000
+ 11790 strings out of 492973
+ 240689 string characters out of 3135932
+ 286225 words of memory out of 3000000
+ 15457 multiletter control sequences out of 15000+200000
+ 6397 words of font info for 23 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,7n,82p,437b,723s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc
-}<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on system_overview.pdf (1 page, 31096 bytes).
+ 55i,12n,54p,428b,698s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on emags.pdf (1 page, 65713 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 33 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

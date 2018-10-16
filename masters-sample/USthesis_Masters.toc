@@ -10,8 +10,8 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Contents}{vi}
 \contentsline {chapter}{List of Figures}{viii}
-\contentsline {chapter}{List of Tables}{ix}
-\contentsline {chapter}{Nomenclature}{x}
+\contentsline {chapter}{List of Tables}{x}
+\contentsline {chapter}{Nomenclature}{xi}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}
 \contentsline {section}{\numberline {1.2}Literature Study}{1}
@@ -69,26 +69,26 @@
 \contentsline {section}{\numberline {5.1}Software Requirements}{40}
 \contentsline {subsection}{\numberline {5.1.1}Data Aquisition and Controller}{40}
 \contentsline {subsection}{\numberline {5.1.2}Embedded Program}{41}
-\contentsline {chapter}{\chapternumberline {6}Practical Results}{43}
-\contentsline {section}{\numberline {6.1}Swingup Controller}{43}
-\contentsline {section}{\numberline {6.2}Balancing Controller}{43}
-\contentsline {section}{\numberline {6.3}Swingup and Balancing}{43}
-\contentsline {chapter}{\chapternumberline {7}Conclusion}{44}
-\contentsline {section}{\numberline {7.1}Summary}{44}
-\contentsline {section}{\numberline {7.2}Recommendation}{44}
-\contentsline {chapter}{Appendices}{45}
-\contentsline {appendix}{\chapternumberline {A}}{46}
-\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{46}
-\contentsline {section}{\numberline {A.2}Collocated Linearisation}{48}
-\contentsline {section}{\numberline {A.3}Taylor Series Expansion Around Unstable Equilibrium Position}{48}
-\contentsline {section}{\numberline {A.4}Communication Structure}{48}
-\contentsline {section}{\numberline {A.5}Electronic Design Schematic}{49}
-\contentsline {section}{\numberline {A.6}Techno-Economy Assessment}{52}
-\contentsline {subsection}{\numberline {A.6.1}Budget}{52}
-\contentsline {subsection}{\numberline {A.6.2}Planning}{52}
-\contentsline {subsection}{\numberline {A.6.3}Technical Impact}{52}
-\contentsline {subsection}{\numberline {A.6.4}Return on Investment}{52}
-\contentsline {subsection}{\numberline {A.6.5}Potential for Commercialization}{52}
-\contentsline {section}{\numberline {A.7}Risk Analysis \& Safety Procedures}{52}
-\contentsline {section}{\numberline {A.8}Mechanical Drawings}{52}
-\contentsline {chapter}{List of References}{53}
+\contentsline {chapter}{\chapternumberline {6}Practical Results}{44}
+\contentsline {section}{\numberline {6.1}Swingup Controller}{44}
+\contentsline {section}{\numberline {6.2}Balancing Controller}{44}
+\contentsline {section}{\numberline {6.3}Swingup and Balancing}{44}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{45}
+\contentsline {section}{\numberline {7.1}Summary}{45}
+\contentsline {section}{\numberline {7.2}Recommendation}{45}
+\contentsline {chapter}{Appendices}{46}
+\contentsline {appendix}{\chapternumberline {A}}{47}
+\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{47}
+\contentsline {section}{\numberline {A.2}Collocated Linearisation}{49}
+\contentsline {section}{\numberline {A.3}Taylor Series Expansion Around Unstable Equilibrium Position}{49}
+\contentsline {section}{\numberline {A.4}Communication Structure}{49}
+\contentsline {section}{\numberline {A.5}Electronic Design Schematic}{50}
+\contentsline {section}{\numberline {A.6}Techno-Economy Assessment}{53}
+\contentsline {subsection}{\numberline {A.6.1}Budget}{53}
+\contentsline {subsection}{\numberline {A.6.2}Planning}{53}
+\contentsline {subsection}{\numberline {A.6.3}Technical Impact}{53}
+\contentsline {subsection}{\numberline {A.6.4}Return on Investment}{53}
+\contentsline {subsection}{\numberline {A.6.5}Potential for Commercialization}{53}
+\contentsline {section}{\numberline {A.7}Risk Analysis \& Safety Procedures}{53}
+\contentsline {section}{\numberline {A.8}Mechanical Drawings}{53}
+\contentsline {chapter}{List of References}{54}
