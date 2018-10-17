@@ -11,16 +11,19 @@ A feedback control system for a robotic gymnast that is able to swing from the "
 \section{Literature Study}
 % WHAT you are going to present in this chapter/section
 % WHY you are presenting it, and
-% HOW you are going to present it	
-There are a few design approaches to the swing-up and balancing of the robotic gymnast. This problem is also known as the swinging acrobat. \\
+% HOW you are going to present it
+\begin{comment}
+	Previous approaches used to control an underactuated system is to use the intrinsic dynamics of the system to attain the desired behaviour \citep{tedrake}. This leads to the approach to exploit the dynamics of the system by using the 'legs' of gymnast to swing.\\
+\end{comment}	
+Previous research attempts to the swinging and balancing of the robotic gymnast was to use 2 controllers. The first controller was responsible for swinging the robotic gymnast from the hanging position up towards the inverted position. When the swing-up controller has brought the gymnast near the inverted position, a new controller was used to bring the gymnast to balancing. The different approaches used in these 2 controllers by the various researchers are summarised below and concludes on the approach used in the report.\\
 
-Historical approaches to underactuated systems are to use high-gain feedback system to remove the natural dynamics of the system and force the system to move as desired. This approach are inefficient using high power to actuate the system to move as desired \citep{tedrake}. This leads to a new approach where the intrinsic dynamics of the system are exploited to attain the desired behaviour.\\
+\citet{spong_swingup} implements the swing-up controller by using partial feedback linearisation which results in a linear response from either the actuated or unactuated pendulum. Using non-collocated linearisation he is able to allow the unactuated pendulum to follow a desired trajectory and shows this using the phase portrait of the zero dynamics of the system the system will converge to the unstable equilibrium position. When the swing-up controller brings the system to the inverted balancing position the controllers will switch using a linear quadratic regulator (LQR) to balance the system.
 
-The primary challenge to the control of the robotic gymnast is the swinging. The approach is to exploit the dynamics of the system by using the 'legs' of gymnast to swing. The controller implemented must somehow reason how to use this coupling force between the actuated and non-actuated pendulum to rise the system to the inverted positon.\\
+\citet{spong_swingup} continues further how the swing-up can be achieved using collocated linearisation which linearises the response of the actuated pendulum. This allows the actuated pendulum to follow a desired trajectory and \citet{spong_swingup} provides a energy based trajectory that increases the energy in the system. The increase of energy in the system results in the pendulums to rise to the balancing position where a LQR controller is used to balance the system. Both of these 2 implementation were succesfull in swinging and balancing the robotic gymnast in simulation.\\
 
-The design approach to the swinging and balancing of the robotic gymnast is to use two controllers. The first controller is responsible for swinging the robotic gymnast from the hanging position up towards the inverted position. When the swing-up controller has brought the gymnast near the inverted position, a linear controller is used to bring the gymnast to balancing. This is acceptable due to the system being approximated as  linear system when near the inverted position.
+\citet{Brown1997} provided two manually tuned nonlinear controllers for the balancing of the robotic gymnast that was tested against a designed LQR controller. These two are the direct fuzzy controller (DFC) and a fuzzy model reference learning controller (FMRLC). The gains selected for the DFC controller were based of the LQR controller implemented and successfully balanced the gymnast. However the LQR controller provided smoother state trajectories and lower control input. The FMRLC uses no explicit dynamical reference model and instead the outputs of the plant using normalising gains are directly fed into the second fuzzy system. The FMRLC controller was a significant improvement over the DFC, but yet again did not perform as well as the LQR controller.\\
 
-There are various design approaches to the swinging of the robotic gymnast that will be explained in the following text.\\
+\citet{Brown1997} attempts to swing the acrobat to the inverted balancing position using the energy based trajectory proposed by \citet{spong_swingup} without the partial linearisation feedback. \citet{Brown1997} was able to swing and balance the acrobat using this approach, but required greater input and were not as smooth as using with partial feedback linearisation.\\
 
 The ability to use have a linear response from the output of the plant allows the designer to force the output to follow a desired trajectory. In (Optimising Dynamic Motion of 2-link pendulums) the desired trajectory are described by using cubic B-spline shown in equation (\ref{eq:b_splines}).
 
@@ -31,14 +34,6 @@ The ability to use have a linear response from the output of the plant allows th
 
 The P vector describes the control points, and $B_{j,k}$ is the B-Spline basis function. Cubic B-splines are used to due to being continuous up to acceleration and improves the task for the joint motors and the input to the system.\\
 
-
-\citet{spong_swingup} implements the swing-up controller by using partial feedback linearisation which results in a linear response from either the actuated or unactuated pendulum. Using non-collocated linearisation he is able to allow the unactuated pendulum to follow a desired trajectory and shows this using the phase portrait of the zero dynamics of the system the system will converge to the unstable equilibrium position. When the swing-up controller brings the system to the inverted balancing position the controllers will switch using a linear quadratic regulator (LQR) to balance the system.\\
-
-\citet{spong_swingup} continues further how the swing-up can be achieved using collocated linearisation which linearises the response of the actuated pendulum. This allows the actuated pendulum to follow a desired trajectory and \citet{spong_swingup} provides a energy based trajectory that increases the energy in the system. The increase of energy in the system results in the pendulums to rise to the balancing position where a LQR controller is used to balance the system.\\
-
-\citet{Brown1997} provided two manually tuned nonlinear controller for the balancing of the robotic gymnast that was tested against a designed LQR controller. These two are the direct fuzzy controller (DFC) and a fuzzy model reference learning controller (FMRLC). The gains selected for the DFC controller were based of the LQR controller implemented and successfully balanced the gymnast. However the LQR controller provided smoother state trajectories and lower control input. The FMRLC uses no explicit dynamical reference model and instead the outputs of the plant using normalising gains are directly fed into the second fuzzy system. The FMRLC controller was a significant improvement over the DFC, but yet again did not perform as well as the LQR controller.\\
-
-\citet{Brown1997} attempts to swing the acrobat to the inverted balancing position using the energy based trajectory proposed by \citet{spong_swingup} without the partial linearisation feedback. \citet{Brown1997} was able to swing and balance the acrobat using this approach, but required greater input and were not as smooth as using with partial feedback linearisation.\\
 
 The mathematical derivation of the robotic gymnast was mostly done using the Euler-Lagrangian equation. This approach was used due to the  mechanical energy in the system are easily identified. Derivation of the robotic gymnast are done using simple approximation as point masses shown in \citep{derivation_controlPlaner} and \citep{tedrake}. \\
 

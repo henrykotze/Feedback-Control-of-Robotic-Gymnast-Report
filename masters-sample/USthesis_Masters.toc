@@ -18,77 +18,77 @@
 \contentsline {section}{\numberline {1.3}System Overview}{3}
 \contentsline {section}{\numberline {1.4}Project Execution}{4}
 \contentsline {section}{\numberline {1.5}Report Outline}{5}
-\contentsline {chapter}{\chapternumberline {2}Conceptualisation and Modelling}{7}
-\contentsline {section}{\numberline {2.1}System Concepts}{7}
-\contentsline {section}{\numberline {2.2}Mathematical Model}{8}
-\contentsline {section}{\numberline {2.3}Simulation Model}{9}
-\contentsline {section}{\numberline {2.4}System Identification}{10}
-\contentsline {section}{\numberline {2.5}Model Validation}{13}
-\contentsline {chapter}{\chapternumberline {3}Feedback Control Design}{16}
-\contentsline {section}{\numberline {3.1}Balancing Controller}{16}
-\contentsline {subsection}{\numberline {3.1.1}Controller Architecture}{16}
-\contentsline {subsection}{\numberline {3.1.2}Requirements/Specifications and Constraints}{17}
-\contentsline {subsection}{\numberline {3.1.3}Plant Linearisation}{17}
-\contentsline {subsection}{\numberline {3.1.4}Full State Feedback Design}{18}
-\contentsline {subsection}{\numberline {3.1.5}Simulation Response}{19}
-\contentsline {section}{\numberline {3.2}Swingup Controller}{20}
-\contentsline {subsection}{\numberline {3.2.1}Controller Architecture}{20}
-\contentsline {subsection}{\numberline {3.2.2}Requirements/Specifications and Constraints}{21}
-\contentsline {subsection}{\numberline {3.2.3}Feedback Linearisation}{21}
-\contentsline {subsection}{\numberline {3.2.4}Nonlinear Control Law}{22}
-\contentsline {subsection}{\numberline {3.2.5}Simulation Response}{22}
-\contentsline {section}{\numberline {3.3}Simulation Results}{23}
-\contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{25}
-\contentsline {section}{\numberline {4.1}Mechanical Hardware}{25}
-\contentsline {subsection}{\numberline {4.1.1}Mechanical Components}{25}
-\contentsline {subsection}{\numberline {4.1.2}Structural Force Analysis}{26}
-\contentsline {subsection}{\numberline {4.1.3}Inertia of Pendulums}{27}
-\contentsline {subsection}{\numberline {4.1.4}Center of Mass}{28}
-\contentsline {subsection}{\numberline {4.1.5}Motor}{29}
-\contentsline {subsection}{\numberline {4.1.6}Assembly}{29}
-\contentsline {section}{\numberline {4.2}Electronic Hardware}{29}
-\contentsline {subsection}{\numberline {4.2.1}System Description}{30}
-\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{31}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{32}
-\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{32}
-\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{32}
-\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{33}
-\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{33}
-\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{33}
-\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{34}
-\contentsline {subsubsection}{\numberline {4.2.5.1}Working Principle}{34}
-\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{34}
-\contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{35}
-\contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{35}
-\contentsline {subsection}{\numberline {4.2.6}Motor Driver}{37}
-\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{38}
-\contentsline {subsubsection}{\numberline {4.2.7.1}Angle Sensor Measurements}{38}
-\contentsline {subsubsection}{\numberline {4.2.7.2}Optical Encoder Measurements}{38}
-\contentsline {subsubsection}{\numberline {4.2.7.3} PWM Duty Cycle to Motor Current}{38}
-\contentsline {chapter}{\chapternumberline {5}Software Design}{40}
-\contentsline {section}{\numberline {5.1}Software Requirements}{40}
-\contentsline {subsection}{\numberline {5.1.1}Data Aquisition and Controller}{40}
-\contentsline {subsection}{\numberline {5.1.2}Embedded Program}{41}
-\contentsline {chapter}{\chapternumberline {6}Practical Results}{44}
-\contentsline {section}{\numberline {6.1}Swingup Controller}{44}
-\contentsline {section}{\numberline {6.2}Balancing Controller}{44}
-\contentsline {section}{\numberline {6.3}Swingup and Balancing}{44}
-\contentsline {chapter}{\chapternumberline {7}Conclusion}{45}
-\contentsline {section}{\numberline {7.1}Summary}{45}
-\contentsline {section}{\numberline {7.2}Recommendation}{45}
-\contentsline {chapter}{Appendices}{46}
-\contentsline {appendix}{\chapternumberline {A}}{47}
-\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{47}
-\contentsline {section}{\numberline {A.2}Collocated Linearisation}{49}
-\contentsline {section}{\numberline {A.3}Taylor Series Expansion Around Unstable Equilibrium Position}{49}
-\contentsline {section}{\numberline {A.4}Communication Structure}{49}
-\contentsline {section}{\numberline {A.5}Electronic Design Schematic}{50}
-\contentsline {section}{\numberline {A.6}Techno-Economy Assessment}{53}
-\contentsline {subsection}{\numberline {A.6.1}Budget}{53}
-\contentsline {subsection}{\numberline {A.6.2}Planning}{53}
-\contentsline {subsection}{\numberline {A.6.3}Technical Impact}{53}
-\contentsline {subsection}{\numberline {A.6.4}Return on Investment}{53}
-\contentsline {subsection}{\numberline {A.6.5}Potential for Commercialization}{53}
-\contentsline {section}{\numberline {A.7}Risk Analysis \& Safety Procedures}{53}
-\contentsline {section}{\numberline {A.8}Mechanical Drawings}{53}
-\contentsline {chapter}{List of References}{54}
+\contentsline {chapter}{\chapternumberline {2}Conceptualisation and Modelling}{6}
+\contentsline {section}{\numberline {2.1}System Concepts}{6}
+\contentsline {section}{\numberline {2.2}Mathematical Model}{7}
+\contentsline {section}{\numberline {2.3}Simulation Model}{8}
+\contentsline {section}{\numberline {2.4}System Identification}{9}
+\contentsline {section}{\numberline {2.5}Model Validation}{12}
+\contentsline {chapter}{\chapternumberline {3}Feedback Control Design}{15}
+\contentsline {section}{\numberline {3.1}Balancing Controller}{15}
+\contentsline {subsection}{\numberline {3.1.1}Controller Architecture}{15}
+\contentsline {subsection}{\numberline {3.1.2}Requirements/Specifications and Constraints}{16}
+\contentsline {subsection}{\numberline {3.1.3}Plant Linearisation}{16}
+\contentsline {subsection}{\numberline {3.1.4}Full State Feedback Design}{17}
+\contentsline {subsection}{\numberline {3.1.5}Simulation Response}{18}
+\contentsline {section}{\numberline {3.2}Swingup Controller}{19}
+\contentsline {subsection}{\numberline {3.2.1}Controller Architecture}{19}
+\contentsline {subsection}{\numberline {3.2.2}Requirements/Specifications and Constraints}{20}
+\contentsline {subsection}{\numberline {3.2.3}Feedback Linearisation}{20}
+\contentsline {subsection}{\numberline {3.2.4}Nonlinear Control Law}{21}
+\contentsline {subsection}{\numberline {3.2.5}Simulation Response}{21}
+\contentsline {section}{\numberline {3.3}Simulation Results}{22}
+\contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{24}
+\contentsline {section}{\numberline {4.1}Mechanical Hardware}{24}
+\contentsline {subsection}{\numberline {4.1.1}Mechanical Components}{24}
+\contentsline {subsection}{\numberline {4.1.2}Structural Force Analysis}{25}
+\contentsline {subsection}{\numberline {4.1.3}Inertia of Pendulums}{26}
+\contentsline {subsection}{\numberline {4.1.4}Center of Mass}{27}
+\contentsline {subsection}{\numberline {4.1.5}Motor}{28}
+\contentsline {subsection}{\numberline {4.1.6}Assembly}{28}
+\contentsline {section}{\numberline {4.2}Electronic Hardware}{28}
+\contentsline {subsection}{\numberline {4.2.1}System Description}{29}
+\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{30}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{31}
+\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{31}
+\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{31}
+\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{32}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{32}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{32}
+\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{33}
+\contentsline {subsubsection}{\numberline {4.2.5.1}Working Principle}{33}
+\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{33}
+\contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{34}
+\contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{34}
+\contentsline {subsection}{\numberline {4.2.6}Motor Driver}{36}
+\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{37}
+\contentsline {subsubsection}{\numberline {4.2.7.1}Angle Sensor Measurements}{37}
+\contentsline {subsubsection}{\numberline {4.2.7.2}Optical Encoder Measurements}{37}
+\contentsline {subsubsection}{\numberline {4.2.7.3} PWM Duty Cycle to Motor Current}{37}
+\contentsline {chapter}{\chapternumberline {5}Software Design}{39}
+\contentsline {section}{\numberline {5.1}Software Requirements}{39}
+\contentsline {subsection}{\numberline {5.1.1}Data Aquisition and Controller}{39}
+\contentsline {subsection}{\numberline {5.1.2}Embedded Program}{40}
+\contentsline {chapter}{\chapternumberline {6}Practical Results}{43}
+\contentsline {section}{\numberline {6.1}Swingup Controller}{43}
+\contentsline {section}{\numberline {6.2}Balancing Controller}{43}
+\contentsline {section}{\numberline {6.3}Swingup and Balancing}{43}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{44}
+\contentsline {section}{\numberline {7.1}Summary}{44}
+\contentsline {section}{\numberline {7.2}Recommendation}{44}
+\contentsline {chapter}{Appendices}{45}
+\contentsline {appendix}{\chapternumberline {A}}{46}
+\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{46}
+\contentsline {section}{\numberline {A.2}Collocated Linearisation}{48}
+\contentsline {section}{\numberline {A.3}Taylor Series Expansion Around Unstable Equilibrium Position}{48}
+\contentsline {section}{\numberline {A.4}Communication Structure}{48}
+\contentsline {section}{\numberline {A.5}Electronic Design Schematic}{49}
+\contentsline {section}{\numberline {A.6}Techno-Economy Assessment}{52}
+\contentsline {subsection}{\numberline {A.6.1}Budget}{52}
+\contentsline {subsection}{\numberline {A.6.2}Planning}{52}
+\contentsline {subsection}{\numberline {A.6.3}Technical Impact}{52}
+\contentsline {subsection}{\numberline {A.6.4}Return on Investment}{52}
+\contentsline {subsection}{\numberline {A.6.5}Potential for Commercialization}{52}
+\contentsline {section}{\numberline {A.7}Risk Analysis \& Safety Procedures}{52}
+\contentsline {section}{\numberline {A.8}Mechanical Drawings}{52}
+\contentsline {chapter}{List of References}{53}
