@@ -23,17 +23,17 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces The Swing-Up \& Balancing of the Robotic Gymnast}}{23}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Model of Rotating Shaft as a Simplified Beam}}{25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Drawing of Physical Model}}{26}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Electronic System Overview}}{29}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Simplified Drawing of Physical Model}}{27}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Electronic System Overview}}{30}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Simplified Model of a Potentiometer}}{32}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Unity Gain Amplifier Circuit}}{33}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{33}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{34}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{34}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{35}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces AND digital logic with inverter}}{35}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces AND Digital Logic Circuit Waveforms}}{35}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces AND Digital Logic Circuit Waveforms}}{36}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Simplified Circuit of Motor Feedback}}{36}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{37}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{38}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{40}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{40}

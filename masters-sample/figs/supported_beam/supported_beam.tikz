@@ -58,11 +58,11 @@
 \draw[->>,thick] (0,0) -- (-2,0)node[above]{$T$};
 
 %% Dimensions of Beam %%
-\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.3]{(0,-4)}{(2,-4)}{$l_{\text{R1}}$}
+\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.3]{(0,-4)}{(2,-4)}{$l_{\text{1}}$}
 
-\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.3]{(0,-5)}{(5,-5)}{$l_{\text{R2}}$}
+\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.3]{(0,-5)}{(5,-5)}{$l_{\text{2}}$}
 
-\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.32]{(0,-6)}{(8,-6)}{$l_{\text{R3}}$}
+\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.32]{(0,-6)}{(8,-6)}{$l_{\text{3}}$}
 
 \dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.6]{(0,-7)}{(10,-7)}{$L$}
 

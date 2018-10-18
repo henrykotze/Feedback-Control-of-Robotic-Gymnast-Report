@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  7 OCT 2018 10:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  18 OCT 2018 11:13
 entering extended mode
 **./xor_waveform.tex
 (xor_waveform.tex
@@ -614,17 +614,17 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 {C:/Users/Henry/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (xor_wavefo
 rm.aux) ) 
 Here is how much of TeX's memory you used:
- 16185 strings out of 492973
- 354992 string characters out of 3135932
- 452486 words of memory out of 3000000
- 19752 multiletter control sequences out of 15000+200000
+ 16179 strings out of 492973
+ 354877 string characters out of 3135932
+ 453915 words of memory out of 3000000
+ 19746 multiletter control sequences out of 15000+200000
  9118 words of font info for 28 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,6n,67p,423b,775s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program F
 iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on xor_waveform.pdf (1 page, 14264 bytes).
+Output written on xor_waveform.pdf (1 page, 14174 bytes).
 PDF statistics:
  18 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

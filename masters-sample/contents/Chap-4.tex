@@ -5,29 +5,28 @@
 %WHAT you are going to present in this chapter/section
 %WHY you are presenting it, and
 %HOW you are going to present it
-The mechancial design that created the physical model is presented here. The physical model allowed the abstract mathematical model to be implemented and experiments to be conducted. It will be presented by discussing the various components required and design decision made to implement a physical model that represents the mathematical model.\\
+The physical model allowed the abstract mathematical model to be implemented and experiments to be conducted. It will be presented by discussing the various components required and design decision made to implement a physical model that represents the mathematical model.\\
 
-Figure \ref{fig:mech_model} shows the physical model designed and used for experiments. It emphasises some of the more critical components that were required.\\
+It is important that the physical model holds the assumption made during the derivation of the robotic gymnast. These assumptions include planar dynamics of the robotic gymnast and rigid body dynamics. The assumption of rigid body dynamics was easily met due to the forces acting on the pendulums results in negligible strain and thus elongation can be ignored. The assumption of planar dynamics comes in affect with the connection between the rotating shaft and the non-actuated pendulum. If the assumption holds there should be no vibration of the pendulum in any other direction than the rotating plane. This assumption is true in the mechanical design due to 4 screws used to keep the unactuated pendulum perpendicular to the shaft. \\
 
-It is important that the physical model holds the assumption made during the derivation of the robotic gymnast. These assumptions include planar dynamics of the robotic gymnast and rigid body dynamics. The assumption of planar dynamics comes in affect with the connection between the rotating shaft and the non-actuated pendulum. If the assumption holds there should be no vibration of the pendulum in any other direction than the rotating plane of the pendulums. \\
-
-The assumption of rigid body dynamics is easily met due to the forces acting on the pendulums results in negligible strain and elongation can be ignored.
-
-\subsection{Mechanical Components}
-The components emphasised in Figure \ref{fig:mech_model} are discussed in the following section and explains their significance of use.\\
+\subsection{Assembly}
+Figure \ref{fig:mech_model} emphasises important components that are discussed in the following section and explains their significance of use.\\
 
 The electrical slipring converts the rotating wires that lead to the motor mounted on non-actuated pendulum to stationary wires allowing for free rotation and easy connection to the electrical design.\\
 
-The bearing housing holds the ball-bearings in place ensuring for no unwanted vibration and misalignment. These ballbearings were press-fitted into the housing, ensuring a secure connection.\\
+The bearing housing holds the ball-bearings in place ensuring for no vibration and misalignment. These ballbearings were press-fitted into the housing, ensuring a secure connection.\\
 
-The potentiometer's shaft is connected to the shaft by means of a rubber tube. The rubber tube was chosen due to easy connection, allows for misalignment and the delay of measurement due to elasticity of the rubber is negligible. \\
+The potentiometer's shaft is connected to the shaft by means of a rubber tube. The rubber tube was chosen due to easy connection and allows for misalignment. The delay of measurement due to elasticity of the rubber is negligible due to the system experiencing low acceleration. \\
 
-The non-actuated pendulum is connected to the shaft by means of using 3 screws. The diameter of the shaft was kept as small as possible to reduce the inertia and friction. This method of connection was deemed the best to achieve the diameter used.
 
 \subsection{Structural Force Analysis}
-Little calculation were done to determine whether sizes chosen for the diameters of the shaft were capable of withstanding the loads. Reason being based on experience that the chosen diameters are more than enough capable of withstanding the loads. The following section will provide the proof that the selected diameters are able to carry the loads.\\
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+The stress analysis of the rotating shaft is presented to provide the reader confidence in the shaft design. It will be presented by calculating the static yield safety factor and discussing whether the safety factor is sufficient.\\
 
-The shaft was modelled as a simple supported beam with the diameter being the smallest used in the actual design. This model is conservative due to the design being a supported by 3 distributed reaction forces. Figure \ref{fig:supp_beam} shows the conservative model.
+The shaft was analysed as a 3 point supported beam shown in Figure \ref{fig:supp_beam} with a constant diameter throughout, using the smallest diameter in the design. The forces acting on the beam is the torque $T$ due to the rotating pendulums, and the normal force $F$ due the centripetal force of rotation and weight of the pendulums.\\
+
 
 \begin{figure}[h]
 	\centering
@@ -36,23 +35,61 @@ The shaft was modelled as a simple supported beam with the diameter being the sm
 	\label{fig:supp_beam}
 \end{figure}
 
-The equations () and (\ref{eq:torsionForce}) shows the maximum axial- and torsion load the beam will experience with the configuration shown in Figure \ref{fig:supp_beam} (reference shigley). The principal stresses in the shaft was than determined through equations () and () (reference). Using the conservative Von Mises yield criteria shown in equation (\ref{eq:vonMises}) the safety factor on static yielding was determined using the constants defined in Table XXX.
+The beam is a static undetermined beam and was solved using the principle of superposition and results in the reaction forces shown in equations (\ref{eq:reactionForce1}), (\ref{eq:reactionForce2}) and (\ref{eq:reactionForce3}).
+
+\begin{equation} \label{eq:reactionForce1}
+R_{1} = \SI{100}{\newton}
+\end{equation}
+\begin{equation} \label{eq:reactionForce2}
+R_{2} = \frac{ 8Fl_{1}[l_{3}^2 - l_{2}^2] }{l_{3}[4l_{2}^2-3l_{3}^2] } = \SI{90}{\newton}
+\end{equation}
+\begin{equation} \label{eq:reactionForce3}
+R_{3} = \SI{33}{\newton}
+\end{equation}
+
+The maximum bending stress occurs at $x=\SI{0.1}{\meter}$ and the maximum torsion stress at $x=\SI{0.25}{\meter}$. The safety factor of yielding will be determine at these two position.\\
+
+Equations (\ref{eq:torsionForce}) and (\ref{eq:axialForce}) are used to determine the maximum stresses at these two points and using the Mohor circle the principle stresses are determined.  These stresses are shown in Table \ref{table:stresses}.\\
+
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		Stresses & $x = \SI{0.1}{\meter}$ & $x=\SI{0.25}{\meter}$ \\
+		\hline
+		\hline
+		$\sigma_{f_{1}}$ & \SI{5}{} & \\
+		\hline
+		$\sigma_{f_{2}}$ & \SI{3.3}{}& \\
+		\hline
+		$\sigma_{f_{3}}$ & \SI{3.3}{}& \\
+		\hline
+		$\tau_{f}$ & \SI{12}{}&  \\
+		\hline
+		$M_{max}$ & \SI{12}{}& \\
+		\hline
+	\end{tabular}
+	\caption{Stresses developed in Shaft}
+	\label{table:stresses}
+\end{table}
+
+The conservative Von Mises theory shown in equation (\ref{eq:vonMises}) was used to determine the safety factor on static yielding, where $S_{y}$ is the yield stress of extruded aluminium. A safety factor on static yielding of 2 was determined. This is acceptable and indicates the shaft is capable of withstanding the load.\\
+
+Fatigue due to cyclic loads were ignored due the shaft not rotating more than a 1000 rotation and the safety factor on static yielding  on a conservative model is sufficient.
 
 \begin{equation} \label{eq:axialForce}
-\sigma_{f} = \frac{F\cdot l_{r}}{I}
+\sigma_{f} = \frac{M\cdot r}{I}
 \end{equation}
 
 \begin{equation} \label{eq:torsionForce}
-\tau_{f} = \frac{T\cdot r}{J}
+\tau_{f} = \frac{T\cdot r}{J} + \frac{F_{max}}{22}
 \end{equation}
 
 
 \begin{equation} \label{eq:vonMises}
-n_{s} = \frac{\sigma_{v}}{\sigma_{2}} = \sqrt{\frac{1}{2}[(\sigma_{1}-\sigma_{2})^2+(\sigma_{2}-\sigma_{3})^2 + (\sigma_{3}-\sigma_{1})^2 ]}
+n_{s} = \frac{S_{y}}{\sqrt{\frac{(\sigma_{f_{1}}-\sigma_{f_{2}})^2+(\sigma_{f_{2}}-\sigma_{f_{3}})^2+(\sigma_{f_{3}}-\sigma_{f_{1}})^2}{2}}}
 \end{equation}
-
-
-The shaft will experience cyclic loading due to the rotation.
 
 \subsection{Inertia of Pendulums}
 \begin{figure}[h]
@@ -64,17 +101,17 @@ The shaft will experience cyclic loading due to the rotation.
 
 Figure \ref{fig:model_drawing} shows a functional drawing of the physical model to visually aid the reader in understanding how the inertia of the system was determined. In equation (\ref{eq:condense1}) and (\ref{eq:condense2}) the $I_{a}$ and $I_{b}$ represents the inertia of the non-actuating and actuated pendulum about the axis coming out of the page passing through their center of mass respectively.\\
 
-Each pendulum contains many parts that contribute to their inertia due to each part representing a different physical form. How the inertia values shown in Table \ref{table:system_param} were determined will be shown below with the physical system parameters shown in the Table \ref{table:model_param}\\
+Each pendulum contain parts that contribute to the pendulum's inertia due to each part representing a different physical form. How the inertia values shown in Table \ref{table:system_param} were determined will be shown below with the physical system parameters shown in the Table \ref{table:model_param}\\
 
 The actuated pendulum consist out of an aluminium square rod connected to the shaft and the motor mounting. The inertia of a square rod through it's center of mass is: $$ I_{cyl} = \frac{1}{12}m_{cyl}[w^2+L^2_{1}]$$
 
 The motor, gearbox and the motor mount was viewed as a point mass. It's inertia around the center of mass of the non-actuated pendulum is: $$I_{pointmass_1} = m_{pointmass_1}\cdot[L_{1}-l_{c1}]^2 $$
 
-The total inertia of the of the non-actuated pendulum is then: $$ I_{a} =I_{pointmass_1} +  I_{cyl} + m_{cyl}\cdot[l_{c2}-l_{cyl}]^2 $$
+The total inertia of the of the non-actuated pendulum around it's center of mass is : $$ I_{a} =I_{pointmass_1} +  I_{cyl} + m_{cyl}\cdot[l_{c2}-l_{cyl}]^2 $$, where the parallel axis theorem was used to move the aluminium rod's inertia to the center of mass of the unactuated pendulum.
 
-The actuated pendulum contains similar parts as the non-actuated pendulum. A pointmass at the bottom and an iron rod connected to the motor shaft and the pointmass. Determining the inertia is thus exactly the same as the non-actuated pendulum.\\
+The actuated pendulum contains similar parts as the non-actuated pendulum: a pointmass at the bottom and an iron rod connected to the motor shaft. Determining the inertia of the actuated pendulum is thus exactly the same as the unactuated pendulum.\\
 
-During the simulation it was noticed that the ratio between the unactuated and actuated pendulum should be 1 or greater for the swing-up controller to bring the robotic gymnast to the unstable equilibrium position in a feasible time frame. This is the reason behind adding another point-mass to the actuated pendulum to compensate for the inertia the motor creates as a point mass.
+During the simulation it was noticed that the ratio between the unactuated and actuated pendulum $\frac{I_{b}}{I_{a}}$ should be 1 or greater for the swing-up controller to bring the robotic gymnast to the unstable equilibrium position in a feasible time frame. This is the reason adding another pointmass to the actuated pendulum to compensate for the inertia the motor creates.
 
 
 \begin{table}[]
@@ -130,10 +167,7 @@ The center of mass for each pendulum from their hinge of rotation shown in Table
 \subsection{Motor}
 The chosen motor used during experiments was the \textit{Faulhaber DC 3257 012 CR} micromotor. It was used in combination with the \textit{Faulhaber Planetary Gearhead 32/3} Series. The gearbox is a 2 stage reduction gearbox with a overall rounded reduction ratio of 14:1. The motor is capable of providing a stall torque of \SI{539}{mNm} which is a converted output torque from the gearbox of \SI{7.646}{Nm}.\\
 
-The motor terminal connection is connected directly to the PCB of the electronic design being routed through the slipring. The motor assembly contains a encoder for position measurements and it's signal and power connection is also routed through the slipring and connected to the PCB.
-\subsection{Assembly}
-
-
+The motor terminal connection is connected directly to the PCB of the electronic design being routed through the slipring. The motor assembly contains a encoder for position measurements and it's signal and power connection is also routed through the slipring and connected to the PCB.\\
 
 \section{Electronic Hardware}
 %WHAT you are going to present in this chapter/section

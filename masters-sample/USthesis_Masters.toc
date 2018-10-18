@@ -40,26 +40,25 @@
 \contentsline {section}{\numberline {3.3}Simulation Results}{22}
 \contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{24}
 \contentsline {section}{\numberline {4.1}Mechanical Hardware}{24}
-\contentsline {subsection}{\numberline {4.1.1}Mechanical Components}{24}
+\contentsline {subsection}{\numberline {4.1.1}Assembly}{24}
 \contentsline {subsection}{\numberline {4.1.2}Structural Force Analysis}{25}
 \contentsline {subsection}{\numberline {4.1.3}Inertia of Pendulums}{26}
-\contentsline {subsection}{\numberline {4.1.4}Center of Mass}{27}
-\contentsline {subsection}{\numberline {4.1.5}Motor}{28}
-\contentsline {subsection}{\numberline {4.1.6}Assembly}{28}
-\contentsline {section}{\numberline {4.2}Electronic Hardware}{28}
+\contentsline {subsection}{\numberline {4.1.4}Center of Mass}{28}
+\contentsline {subsection}{\numberline {4.1.5}Motor}{29}
+\contentsline {section}{\numberline {4.2}Electronic Hardware}{29}
 \contentsline {subsection}{\numberline {4.2.1}System Description}{29}
 \contentsline {subsection}{\numberline {4.2.2}Microcontroller}{30}
 \contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{31}
 \contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{31}
-\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{31}
+\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{32}
 \contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{32}
 \contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{32}
-\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{32}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{33}
 \contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{33}
 \contentsline {subsubsection}{\numberline {4.2.5.1}Working Principle}{33}
-\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{33}
-\contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{34}
-\contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{34}
+\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{34}
+\contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{35}
+\contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{35}
 \contentsline {subsection}{\numberline {4.2.6}Motor Driver}{36}
 \contentsline {subsection}{\numberline {4.2.7}Verification Tests}{37}
 \contentsline {subsubsection}{\numberline {4.2.7.1}Angle Sensor Measurements}{37}
@@ -90,5 +89,6 @@
 \contentsline {subsection}{\numberline {A.6.4}Return on Investment}{52}
 \contentsline {subsection}{\numberline {A.6.5}Potential for Commercialization}{52}
 \contentsline {section}{\numberline {A.7}Risk Analysis \& Safety Procedures}{52}
-\contentsline {section}{\numberline {A.8}Mechanical Drawings}{52}
-\contentsline {chapter}{List of References}{53}
+\contentsline {section}{\numberline {A.8}Mechanical Drawings}{53}
+\contentsline {section}{\numberline {A.9}Microcontroller Settings}{64}
+\contentsline {chapter}{List of References}{78}

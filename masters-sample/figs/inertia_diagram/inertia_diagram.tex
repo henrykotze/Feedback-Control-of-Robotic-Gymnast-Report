@@ -93,7 +93,7 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 						%% Dimensions of actuated Pendulum %%
-	\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.25]{(-2,-8)}{(-2,-12)}{$l_{\text{iron}}$}
+	\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.25]{(-2,-8)}{(-2,-11)}{$l_{\text{iron}}$}
 	
 	\dimline[line style = {line width=0.7},extension start length=-0.25, extension end length=-0.4]{(-3,-8)}{(-3,-13)}{$l_{\text{c2}}$}
 	
@@ -138,7 +138,7 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 				%% Centroid symbol for pointmass 2 %%
 \draw (0,-15.75) circle [radius=0.25cm];
-\draw (-0.25,-15.75) -- (0.25,-15.75)  node[above]{$m_{\text{pm2}}$};
+\draw (-0.25,-15.75) -- (0.25,-15.75)  node[above]{$m_{\text{$pm_2$}}$};
 \draw (0,-15.75+0.25) -- (0,-15.75-0.25);
 \filldraw[fill=black,draw=black] (0,-15.75) -- (0.25,-15.75)
 arc[start angle = 0, end angle = 90, radius = 0.25] -- cycle;
@@ -148,7 +148,7 @@ arc[start angle = 180, end angle = 270, radius = 0.25] -- cycle ;
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 				%% Centroid symbol for pointmass 1 %%
 \draw (0,-8) circle [radius=0.25cm];
-\draw (-0.25,-8) -- (0.25,-8)  node[below]{$m_{\text{pm1}}$};
+\draw (-0.25,-8) -- (0.25,-8)  node[below]{$m_{\text{$pm_{1}$}}$};
 \draw (0,-8+0.25) -- (0,-8-0.25);
 \filldraw[fill=black,draw=black] (0,-8) -- (0.25,-8)
 arc[start angle = 0, end angle = 90, radius = 0.25] -- cycle;
@@ -166,7 +166,15 @@ arc[start angle = 0, end angle = 90, radius = 0.25] -- cycle;
 \filldraw[fill=black,draw=black] (0,-3) -- (-0.25,-3)
 arc[start angle = 180, end angle = 270, radius = 0.25] -- cycle ;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				%% Centroid symbol for iron ron %%
+\draw (0,-11) circle [radius=0.25cm];
+\draw (-0.25,-11) -- (0.25,-11)  node[above]{$m_{\text{iron}}$};
+\draw (0,-11+0.25) -- (0,-11-0.25);
+\filldraw[fill=black,draw=black] (0,-11) -- (0.25,-11)
+arc[start angle = 0, end angle = 90, radius = 0.25] -- cycle;
 
+\filldraw[fill=black,draw=black] (0,-11) -- (-0.25,-11)
+arc[start angle = 180, end angle = 270, radius = 0.25] -- cycle ;
 
 
 	
