@@ -1,0 +1,91 @@
+\begin{thebibliography}{11}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\providecommand{\selectlanguage}[1]{\relax}
+\edef\AFRstr{\string afrikaans}
+\ifx\AFRstr\languagename
+   \input{usbib.afr}%
+ \else
+   \input{usbib.eng}%
+\fi
+\newcommand{\Capitalize}[1]{\uppercase{#1}}
+\newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{mot(2007)}]{motorIC}
+ (2007 2).
+\newblock \emph{5.0 A H-Bridge woth Load Current Feeback}.
+\newblock Freescale Semiconductor, 12\bblth{} \bbledn{}.
+\newblock Document Number: MC33887.
+
+\bibitem[{stm(2017)}]{stm32_ADC:2017}
+ (2017).
+\newblock \emph{How to get the best ADC accuracy in the STM32
+  microcontrollers}.
+\newblock ST Electronics.
+
+\bibitem[{\citenamefont{Brown} \protect\BIBand{}
+  \citenamefont{Passino}(1997)}]{Brown1997}
+\bibnamefont{Brown}, \bibfnamefont{S.C.} \protect\BIBand{}
+  \bibnamefont{Passino}, \bibfnamefont{K.M.} (1997).
+\newblock {Intelligent Control for an Acrobot}.
+\newblock \emph{Journal of Intelligent and Robotic Systems}, \bblvol{}~18,
+  \bblno{}~3, \bblpp{} 209--248.
+\newblock ISSN 09210296.
+\newline\bblurlpre\url{http://link.springer.com/10.1023/A:1007953809856}
+
+\bibitem[{\citenamefont{Faulhaber}(2011)}]{faulhaberencoder}
+\bibnamefont{Faulhaber} (2011).
+\newblock \emph{Encoders, Magnetic Encoder, Series IE2-16}.
+\newblock Faulhaber, 11\bblth{} \bbledn{}.
+
+\bibitem[{\citenamefont{Gene F.~Franklin}(2015)}]{textbook}
+\bibnamefont{Gene F.~Franklin}, \bibfnamefont{J.~David~Powell, e.a.} (2015).
+\newblock \emph{Feedback Control of Dynamic Systems}.
+\newblock 7\bblth{} \bbledn{}. Pearson Education Limited, Edingburgh Gate,
+  Harlow, Essex CM20 2JE, England.
+\newblock ISBN 1-29-206890-6.
+
+\bibitem[{\citenamefont{Inman}(2015)}]{coulomb_friction}
+\bibnamefont{Inman}, \bibfnamefont{D.J.} (2015).
+\newblock \emph{Engineering Vibration}.
+\newblock Pearson Education Limited.
+
+\bibitem[{\citenamefont{Instruments}(2006)}]{hallsensor}
+\bibnamefont{Instruments}, \bibfnamefont{N.} (2006 9).
+\newblock \emph{Magnetic Encoder Fundamentals}.
+\newblock 10. National Instruments, The address.
+
+\bibitem[{\citenamefont{Lehl}(2012)}]{derivation_controlPlaner}
+\bibnamefont{Lehl}, \bibfnamefont{M.} (2012 10).
+\newblock \emph{Control Of Planar Pendulum Systems}.
+\newblock \bblphdthesis{}, Technische Universit\"{a}t M\"{u}nchen.
+
+\bibitem[{\citenamefont{Murray} \protect\BIBand{}
+  \citenamefont{Hauser}(1991)}]{murray}
+\bibnamefont{Murray}, \bibfnamefont{R.M.} \protect\BIBand{}
+  \bibnamefont{Hauser}, \bibfnamefont{J.} (1991).
+\newblock {A Case Study in Approximate Linearization: The Acrobot Example}.
+\newblock \bbltechrep{}.
+\newline\bblurlpre\url{http://www.cds.caltech.edu/{~}murray/preprints/erl-M91-46.pdf}
+
+\bibitem[{\citenamefont{Spong}(1995)}]{spong_swingup}
+\bibnamefont{Spong}, \bibfnamefont{M.W.} (1995).
+\newblock {The Swing Up Control Problem For The Acrobot}.
+\newblock \emph{IEEE Control Systems}.
+\newblock ISSN 1066033X.
+
+\bibitem[{\citenamefont{Tedrake}(2009)}]{tedrake}
+\bibnamefont{Tedrake}, \bibfnamefont{R.} (2009).
+\newblock Underactuated robotics: Algorithms for walking, running, swimming,
+  flying, and manipulation (course notes for mit 6.832).
+\newline\bblurlpre\url{http://underactuated.mit.edu/}
+
+\end{thebibliography}

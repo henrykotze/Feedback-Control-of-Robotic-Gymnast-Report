@@ -1,0 +1,170 @@
+\chapter{Introduction}
+\label{chp:intro}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Problem Statement}
+
+A feedback control system for a robotic gymnast that is able to swing from the "hanging" position to the "handstand" position must be designed, implemented and verified. Feedback control loops must be designed that use the "legs" of the gymnast to swing the "body" of the gymnast from the "hanging" position to a "handstand" position and then balance the gymnast on top of the horizontal bar. A mathematical model for the dynamics of the swinging robotic gymnast system must be derived or sourced from literature. The dynamics are analysed to propose an appropriate feedback control architecture that actuates the "legs" of the gymnast using feedback from sensors that measure the swinging motion of the gymnast on a horizontal bar. A practical demonstrator must be constructed and the correct operation must be demonstrated.\\
+
+
+\section{Literature Study}
+% WHAT you are going to present in this chapter/section
+% WHY you are presenting it, and
+% HOW you are going to present it
+\begin{comment}
+	Previous approaches used to control an underactuated system is to use the intrinsic dynamics of the system to attain the desired behaviour \citep{tedrake}. This leads to the approach to exploit the dynamics of the system by using the 'legs' of gymnast to swing.\\
+\end{comment}	
+
+Previous research attempts to the swinging and balancing of the robotic gymnast was to use 2 controllers. The first controller was responsible for swinging the robotic gymnast from the hanging position up towards the inverted position. When the swing-up controller has brought the gymnast near the inverted position, a new controller was used to bring the gymnast to balancing. The different approaches used in these 2 controllers by the various researchers are summarised below and concludes on the approach used in the report.\\
+
+\citet{spong_swingup} implements the swing-up controller by using partial feedback linearisation which results in a linear response from either the actuated or unactuated pendulum. Using non-collocated linearisation he is able to allow the unactuated pendulum to follow a desired trajectory and shows this using the phase portrait of the zero dynamics of the system the system will converge to the unstable equilibrium position. When the swing-up controller brings the system to the inverted balancing position the controllers will switch using a linear quadratic regulator (LQR) to balance the system.
+
+\citet{spong_swingup} continues further how the swing-up can be achieved using collocated linearisation which linearises the response of the actuated pendulum. This allows the actuated pendulum to follow a desired trajectory and \citet{spong_swingup} provides a energy based trajectory that increases the energy in the system. The increase of energy in the system results in the pendulums to rise to the balancing position where a LQR controller is used to balance the system. Both of these 2 implementation were succesfull in swinging and balancing the robotic gymnast in simulation.\\
+
+\citet{Brown1997} provided two manually tuned nonlinear controllers for the balancing of the robotic gymnast that was tested against a designed LQR controller. These two are the direct fuzzy controller (DFC) and a fuzzy model reference learning controller (FMRLC). The gains selected for the DFC controller were based of the LQR controller implemented and successfully balanced the gymnast. However the LQR controller provided smoother state trajectories and lower control input. The FMRLC uses no explicit dynamical reference model and instead the outputs of the plant using normalising gains are directly fed into the second fuzzy system. The FMRLC controller was a significant improvement over the DFC, but yet again did not perform as well as the LQR controller.\\
+
+\citet{Brown1997} attempts to swing the acrobat to the inverted balancing position using the energy based trajectory proposed by \citet{spong_swingup} without the partial linearisation feedback. \citet{Brown1997} was able to swing and balance the acrobat using this approach, but required greater input and were not as smooth as using with partial feedback linearisation.\\
+
+\begin{comment}
+\citet{Bsplines} also implements the partial feedback linearisation to create a linear response from the either the actuated or unactuated pendulum. The desired trajectory are described by using cubic B-spline shown in equation (\ref{eq:b_splines}).
+
+\begin{equation}
+\label{eq:b_splines}
+q(t,P)  = \sum_{j=0}^{m}p_{j}B_{j,k}(t)
+\end{equation}
+
+The P vector describes the control points, and $B_{j,k}$ is the B-Spline basis function. Cubic B-splines are used to due to being continuous up to acceleration and improves the task for the joint motors and the input to the system.\\
+
+\end{comment}
+
+
+The mathematical derivation of the robotic gymnast was mostly done using the Euler-Lagrangian equation. This approach was used due to the  mechanical energy in the system are easily identified. Derivation of the robotic gymnast are done using simple approximation as point masses shown in \citep{derivation_controlPlaner} and \citep{tedrake}. \\
+
+Based on the literature study the approached decided to used was the feedback linearisation with the energy based trajectory. The dynamics of the robotic gymnast will be derived without the approximation mentioned above. The linear controller to balance the robotic gymnast will be using the full state feedback.
+
+
+\begin{comment}
+
+
+The ordinary differential equations (ODE's) describing a system can be arranged as a set of linear differential equations. Describing a system in such a way is known as the State Space design approach, where the solution is the trajectory of the chosen state variables.\cite{textbook}
+
+These ODE's are required to be written as vectors in the state-variable form seen in equation (\ref{eq:statespace1}) and (\ref{eq:statespace2})
+\begin{equation} \label{eq:statespace1}
+\centering
+\boldsymbol{\dot{x}} = \boldsymbol{A}\boldsymbol{x} + \boldsymbol{B}u
+\end{equation}
+\begin{equation} \label{eq:statespace2}
+\centering
+\boldsymbol{y} = \boldsymbol{C}\boldsymbol{x} + Du
+\end{equation}
+The \textit{n}th-column vector $\boldsymbol{x}$ is called the state of the system for a \textit{n}th-order system. The \textbf{A} matrix is the system matrix, containing \textit{n}$\times$\textit{n} elements and the input matrix is the \textit{n}$\times 1$ \textbf{B} matrix. \textbf{C} is a $1\times$\textit{n} row matrix called the output matrix and the scalar D is known as the direct transmission term \cite{textbook}.
+
+A system parameter of great interest to control engineers are the poles of the system. It provides the characteristic response of the system starting at a initial condition with no forcing function. These poles,\textbf{s}, are the natural frequencies of the system and the state space representation allow these poles to be easy identified. The poles are the solution to the eigenvalue problem of the \textbf{A} matrix shown in equation (\ref{eq:statespace_eigen}) \cite{textbook}.
+\begin{equation} \label{eq:statespace_eigen}
+\centering
+\text{det}(s\boldsymbol{I} - \boldsymbol{A}) = 0
+\end{equation}
+
+The poles of the system can be assigned new positions to satisfy dynamic response specification by introducing feedback. The feedback is a linear combination of the state variables $\boldsymbol{x}$ resulting in the input of the system $u$ to be transformed as seen in equation (\ref{eq:feedbackgain}) and represented in Figure \ref{fig:linearSys}. Substituting equation (\ref{eq:feedbackgain}) into (\ref{eq:statespace1}) the characteristic equation is now describe as (\ref{eq:closedSysFeedback}). The corresponding characteristic equation is: $$\alpha_{s}=(s-s_{1})(s-s_{2})\ldots(s-s_{n}) $$ This shows by selecting the correct gain matrix \textbf{K} the poles of the system can be moved to a desired position.
+\begin{equation} \label{eq:feedbackgain}
+\centering
+u = -\boldsymbol{K}\boldsymbol{x}
+\end{equation}
+
+\begin{figure}
+	\centering
+	\input{"./figs/linear_control/linear_sys.tikz"}
+	\caption{State Space Representation with Feedback Gain}
+	\label{fig:linearSys}
+\end{figure}
+
+\begin{equation} \label{eq:closedSysFeedback}
+\centering
+\text{det}[s\boldsymbol{I}-(\boldsymbol{A}-\boldsymbol{B}\boldsymbol{K})] = 0
+\end{equation}
+
+The classical approach to controlling a system is by implementing a controller which reacts on the error of the desired state and the current state. These controllers are more commonly known as PID-controllers where the controller equation is shown in (\ref{eq:PID}).
+
+\begin{equation} \label{eq:PID}
+\centering
+u(t) = K[ e(t)+K_{I}\int_{0}^{t}e(\tau)d\tau +K_{D}\frac{de(t)}{dt}]
+\end{equation}
+
+Each term represent an effect it has on the system response when the PID-controller is implemented shown in Figure \ref{fig:PIDcontroller}. If the system or plant is assumed to be a second-order differential equation represented by:
+\begin{equation} \label{eq:PID_system}
+\centering
+\dddot{q}+(2\zeta\omega_{n}+K_{D})\ddot{q}+(\omega_{n}^2+K_{P})\dot{q}+K_{I} = 0
+\end{equation}
+
+From equation (7) it is visible that by tuning the PID constants the response of the system can controlled.
+\end{comment}
+
+
+\section{System Overview}
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+\begin{figure}[h]
+	\centering
+	\input{./figs/system_overview/system_overview.tikz}
+	\caption{System Overview of the Feedback Control of Robotic Gymnast}
+	\label{fig:system_overview}
+\end{figure}
+
+
+Figure \ref{fig:system_overview} provides an overview of the various subsystems that the project contains with the external factors that influence it. The project was subdivided into these subsystems because they can be developed separately with little interaction between each other. An brief overview on each subsystem is presented here.\\
+
+The external computer will contain the theoretical controller that determines the input to the mechanical components and receives information from the electronic design about the state of the system. This allows for the verification of system parameters, debugging and experimental tests.\\
+
+The electronic design acts as the middle-man between the mechanical design and external computer. It provides instructions to the mechanical design based on commands received from the external computer while sending data to the external computer. The electronic design contains the Printed Circuit Board (PCB) that conditions all the signals for processing.\\
+
+The mechanical design was responsible for creating a physical model that represents the mathematical model describing the system. The correct sensors was selected to measure the state variables while providing interfaces for the electronic design.\\
+
+External inputs to the system were the power that was supplied to the system and inputs by the user to test the various subsystem.
+
+\section{Project Execution}
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+% write as if i already happened
+
+The execution of the project occurred in a sequence of steps to achieve the results presented in the report. It is presented to provide the reader an understanding of how the project was developed in separate subsystems and combined in the end.\\
+ 
+First the mathematical model of the system was derived by using the appropriate approach. The derived mathematical model was then implemented on a simulation program where the dynamics of the system was verified and inspected.\\
+
+Following the successful implementation of the mathematical model the various controllers were designed and implemented on the simulation program. The behaviour of the simulated responses were inspected and analysed.\\
+
+The simulation provided the specification for the mechanical design to commence and created the physical model that provided an acceptable representation of the mathematical model.\\
+
+During manufacturing of the mechanical design the electronic design started. Conceptual designs were created capable of meeting the requirements and the selected design was manufactured. The electronic design was then tested to ensure it performs as designed with the opportunity to create revisions.\\
+
+Following the successful testing of the electronic design, the programming of the microcontroller and external computer started. This included the programming of the controller, data acquisition system and the conversions of the sampled data.\\
+
+Once the microcontroller could provide the external computer with system state information the system identification tests occurred to determine the various system parameters. These new system parameters were used in the simulation program to update the existing controllers and verify the responses in simulation.\\
+
+The updated controllers were then implemented onto the external computer for the system experiments to start. From these system experiments the response of the experiments were compared to those of the simulation.\\
+
+The report was written throughout the sequence of steps mentioned above and was completed and reviewed at the end.
+
+
+\section{Report Outline}
+%WHAT you are going to present in this chapter/section
+%WHY you are presenting it, and
+%HOW you are going to present it
+
+A brief overview of each chapter in the report is provided here. It acts as a primer for the reader and the identification of sections that may interest the reader more.\\
+
+Chapter 2 explains the system concepts that is reference throughout the report. It contains the mathematical derivation of the robotic gymnast and the simulated model. The system parameters with system identification tests are shown and shows the simulated model is a acceptable representation of the physical model.\\
+
+Chapter 3 describes the controller architecture to the swinging and balancing of the robotic gymnast. The specification for the controllers and the simulated responses of the controller are provided.\\
+
+Chapter 4 contains the designs of the mechanical and electronic systems of the project. The various components used in the designs are discussed and explained.\\
+
+Chapter 5 describes the software implemented to provide the report with these results. It explains the architecture of the software and the various functions implemented.\\
+
+Chapter 6 provides the practical results of the controllers explained in chapter 3 and hypothesise unexpected behaviour in the experiments.\\
+
+Chapter 7 concludes the report with a summary of the report and recommendation for future endeavours on the Feedback Control of a Robotic Gymnast. 
+
+ 
