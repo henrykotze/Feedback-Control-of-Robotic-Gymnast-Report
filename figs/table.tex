@@ -1,0 +1,41 @@
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{booktabs}% added by Stefan
+\usepackage{siunitx}%  added by Stefan
+\usepackage{tabularx}% added by Stefan
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+	\begin{table}[!htbp]
+		{\centering
+			\renewcommand{\arraystretch}{1.8}
+			\begin{tabularx}{\textwidth}{@{}p{10em}c>{\centering}p{6em}Xc>{\raggedleft}p{5em}@{}}
+				\toprule
+				Force & Range & Coupling constant & Acts on & Mediator & Theory\tabularnewline
+				\midrule
+				Gravity  sad asd asd asddd& $\infty$ & $\alpha_{g}\thickapprox10^{-39}$ & All\newline particles & Graviton\footnote{} & Geometro\-dyanics\tabularnewline
+				Weak nuclear  & $<10^{-18}$\ m & $\alpha_{w}\thickapprox10^{-6}$ & Leptons, hadrons & $W^{\pm},Z$ & Flavor\-dyanics\tabularnewline
+				Electro\-magnetism & $\infty$ & $\alpha\thickapprox\frac{1}{137}$ & All charged particles & Photon & Electro\-dynamics\tabularnewline
+				Strong nuclear  & $\thickapprox10^{-15}$ \ m & $\alpha_{g}\thickapprox1$ & Hadrons & Gluon & Chromo\-dynamics\tabularnewline
+				\bottomrule
+			\end{tabularx}
+			\par\smallskip}
+		\raggedright
+		\begin{minipage}[t]{1\columnwidth}%
+			$^{1}$only hypothesized, not discovered %
+		\end{minipage}
+		\par 
+		\caption{Properties of the four fundamental forces\cite{key-3}}
+	\end{table}
+\end{document}

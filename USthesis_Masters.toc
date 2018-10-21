@@ -79,15 +79,14 @@
 \contentsline {chapter}{Appendices}{46}
 \contentsline {appendix}{\chapternumberline {A}}{47}
 \contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{47}
-\contentsline {section}{\numberline {A.2}Collocated Linearisation}{49}
-\contentsline {section}{\numberline {A.3}Taylor Series Expansion Around Unstable Equilibrium Position}{49}
-\contentsline {section}{\numberline {A.4}Electronic Design Schematic}{50}
-\contentsline {section}{\numberline {A.5}Communication Structure}{53}
-\contentsline {section}{\numberline {A.6}Techno-Economy Assessment}{54}
-\contentsline {subsection}{\numberline {A.6.1}Budget}{54}
-\contentsline {subsection}{\numberline {A.6.2}Planning}{54}
-\contentsline {subsection}{\numberline {A.6.3}Technical Impact}{56}
-\contentsline {subsection}{\numberline {A.6.4}Return on Investment}{56}
-\contentsline {subsection}{\numberline {A.6.5}Potential for Commercialisation}{57}
-\contentsline {section}{\numberline {A.7}Risk Analysis \& Safety Procedures}{58}
+\contentsline {section}{\numberline {A.2}Taylor Series Expansion Around Unstable Equilibrium Position}{49}
+\contentsline {section}{\numberline {A.3}Electronic Design Schematic}{50}
+\contentsline {section}{\numberline {A.4}Communication Structure}{53}
+\contentsline {section}{\numberline {A.5}Techno-Economy Assessment}{54}
+\contentsline {subsection}{\numberline {A.5.1}Budget}{54}
+\contentsline {subsection}{\numberline {A.5.2}Planning}{54}
+\contentsline {subsection}{\numberline {A.5.3}Technical Impact}{55}
+\contentsline {subsection}{\numberline {A.5.4}Return on Investment}{56}
+\contentsline {subsection}{\numberline {A.5.5}Potential for Commercialisation}{57}
+\contentsline {section}{\numberline {A.6}Risk Analysis \& Safety Procedures}{58}
 \contentsline {chapter}{List of References}{61}
