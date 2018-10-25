@@ -47,7 +47,7 @@
 		\path (nonlinear)+(-1.5*\blockdist,0) node (suma2) [sum]{\Large$\Sigma$};
 		
 		% Desired input
-		\path (suma2)+(-1.5*\blockdist,0) node (desired) [longblock]{Desired Trajectory \ $\phi^{d} = \alpha \tan(\dot{\theta})$};
+		\path (suma2)+(-1.5*\blockdist,0) node (desired) [longblock]{Desired Trajectory \ $\phi^{d} = \alpha \arctan(\dot{\theta})$};
 		
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		% plant to output	

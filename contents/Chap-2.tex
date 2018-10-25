@@ -1,6 +1,6 @@
 \chapter{Conceptualisation and Modelling}
 \label{chp2:concept_model}
-
+[provide an overview]
 
 \section{System Concepts}
 %WHAT you are going to present in this chapter/section
@@ -8,7 +8,7 @@
 %HOW you are going to present it
 The report contains many variable names and use of terminology for concepts that is used throughout the report. These variables and terminologies are defined here.\\
 
-The double pendulum is a underactuated system which is defined as a system where the input to the system cannot command all of the state variables an instantaneous acceleration \citep{tedrake}. This is due to the control input only actuating the lower pendulum and the energy in the lower pendulum must be transferred to the upper pendulum to initiate an acceleration. \\
+The double pendulum is a underactuated system which is defined as a system where the input to the system cannot command all of the state variables an instantaneous acceleration \citeauthor{tedrake}. This is due to the control input only actuating the lower pendulum and the energy in the lower pendulum must be transferred to the upper pendulum to initiate an acceleration. \\
 
 The robotic gymnast is described as a double pendulum consisting out of an actuated- and unactuated pendulum as seen in Figure \ref{fig:doublePen}. The position of the unactuated pendulum is described by the angle $\theta$ whereas the actuated pendulum is described by $\phi$ relative to $\theta$. The angle's $\theta$ and $\phi$ are the independent parameters that describe the entire system.\\
 
@@ -34,7 +34,7 @@ LTI system
 	\label{fig:doublePen}
 \end{figure}
 
-The approach taken to derive the mathematical model of the robotic gymnast is presented in this section. It is presented to allow the reader to understand parameters used throughout the report and critical to the implementation of the swing-up controller. The swinging of the robotic gymnast consists of non-linear behaviour and is required to fully derive the dynamics of the system. The strenuous mathematical steps are removed from the reader and provided in Appendix \ref{sec:math_model}. A summary of the motivation and paradigm approach to the derivation is provided here.\\
+The approach taken to derive the mathematical model of the robotic gymnast is presented in this section. It is presented to allow the reader to understand parameters used throughout the report and critical to the implementation of the swing-up controller. The swinging of the robotic gymnast consists of non-linear behaviour and is required to fully derive the dynamics of the system. The detailed mathematical derivations are available in Appendix \ref{sec:math_model}. A summary of the motivation and paradigm approach to the derivation is provided here.\\
 
  Figure \ref{fig:doublePen} shows the free body diagram of the robotic gymnast which was modelled as two pendulums connected together with a hinge. Each pendulum was modelled as having their mass distributed arbitrary along their axis. A torque is actuating the lower pendulum and friction was modelled as a function of the angular velocity.\\
 
@@ -163,9 +163,9 @@ The second natural frequency was determined by analysing the response of the sys
 
 The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} can be characterised as equation (X) where the frequency of oscillation is caused by the damped natural frequency. This damped natural frequency was determined by measuring the time difference between peaks. The practical results contains a variation on the time difference between peaks and thus the mean of the time differences were calculated and shown in Table \ref{table:system_characteristic}.\\
 
-The friction forces, $f_{c_{1}}$ and $f_{c_{2}}$ that were set as unknowns in the derivation of the robotic gymnast will be expanded on in the following section by analysing how the decaying of the responses can be characterised.\\
+The friction torques, $f_{c_{1}}$ and $f_{c_{2}}$ that were set as unknowns in the derivation of the robotic gymnast will be expanded on in the following section by analysing how the decaying of the responses can be characterised.\\
 
-The response shown in Figure \ref{fig:q1_response} is under the influence of coulomb damping due to the response being characterised by the amplitude decaying linearly with a constant slope. Coulomb damping is caused by sliding friction and its force is opposite to the direction of velocity \citep{coulomb_friction}. It is thus characterised as  $$ f_{c_{1}} = 
+The response shown in Figure \ref{fig:q1_response} is under the influence of coulomb damping due to the response being characterised by the amplitude decaying linearly with a constant slope. Coulomb damping is caused by sliding friction and its torque is opposite to the direction of rotation \citep{coulomb_friction}. It is thus characterised as  $$ f_{c_{1}} = 
 \left \{
 \begin{tabular}{cc}
 $ -\mu N $ & $ \dot{\theta}> 0 $\\
@@ -182,9 +182,9 @@ It is shown in \citet{coulomb_friction} that the slope is defined as
 
 where $N$  is the normal force. The slope seen in the decay function in Figure \ref{fig:q1_response} was calculated using linear regression and by knowing the terms in equation (\ref{eq:coulomb_slope}) the combined $\mu N$ term can be calculated as shown in Table \ref{table:system_characteristic}.\\
 
-The response shown in Figure \ref{fig:q2_response} is under the influence of viscous damping due to the amplitude decaying exponentially with time and this behaviour is modelled by the following equation: $$\tau(t) = Ae^{-\zeta \omega_{n}t}$$ where $\omega_{n}$ is the natural frequency, $\zeta$ the damping ratio of the system and $A$ represents the initial condition. The damped natural frequencies of the system has already been determined and linear regression was used to determine the best $\zeta$ that will fit the measured data. The decaying function is shown in Figure \ref{fig:q2_response} with the $\zeta$ value shown in Table \ref{table:system_characteristic}. It is visible from the response that the damping ratio fits the data well and only starts to deviate near steady state.\\
+The response shown in Figure \ref{fig:q2_response} is under the influence of viscous damping due to the amplitude decaying exponentially with time and this behaviour is modelled by the following equation: $$\tau(t) = Ae^{-\zeta \omega_{n}t}$$ where $\omega_{n}$ is the natural frequency, $\zeta$ the damping ratio of the system and $A$ represents the initial amplitude. The damped natural frequencies of the system have already been determined and linear regression was used to determine the best $\zeta$ that will fit the measured data. The decaying function is shown in Figure \ref{fig:q2_response} with the $\zeta$ value shown in Table \ref{table:system_characteristic}. It is visible from the response that the damping ratio fits the data well and only starts to deviate near steady state.\\
 
-The damping force, $f_{c_{2}}$ that develops between the stator and rotor of the hinge can then be characterised as $2\zeta\omega_{n}(\dot{\phi}-\dot{\theta})$. The subtraction of $\dot{\theta}$ is due to the rotor of the hinge rotating relative to the stator.
+The damping moment, $f_{c_{2}}$ that develops between the stator and rotor of the hinge can then be characterised as $2\zeta\omega_{n}(\dot{\phi}-\dot{\theta})$. The subtraction of $\dot{\theta}$ is due to the rotor of the hinge rotating relative to the stator.
 
 \begin{comment}
 	\begin{table}{|c|c|c|}

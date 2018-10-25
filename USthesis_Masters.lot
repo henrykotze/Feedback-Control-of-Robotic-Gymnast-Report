@@ -3,15 +3,14 @@
 \babel@toc {english}{}
 \addvspace {10pt}
 \addvspace {10pt}
-\babel@toc {afrikaans}{}
-\babel@toc {english}{}
+\addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {table}{\numberline {2.1}{\ignorespaces System Parameters}}{12}
 \contentsline {table}{\numberline {2.2}{\ignorespaces Experimental Characteristics vs Simulation Model Characteristic}}{15}
 \addvspace {10pt}
-\contentsline {table}{\numberline {3.1}{\ignorespaces }}{25}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Gain Constant used during Simulation}}{25}
 \addvspace {10pt}
 \contentsline {table}{\numberline {4.1}{\ignorespaces Stresses developed in Shaft}}{31}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Physical Model Paramaters}}{33}

@@ -276,7 +276,7 @@ The various components used in the electronic design required different supply v
 The \SI{12}{\volt} supply was provided using an external bench power-supply and were done converted to \SI{5}{V} and \SI{3.3}{V} using linear voltage regulators. The schematic for each voltage regulator is shown in Appendix \ref{sec:schematics}, and includes a Light Emitting Diode (LED) to ensure the minimum load was met for each regulator. The LED also acts as a visual debugging method.
 
 \subsection{Potentiometer Sensor}
-\subsubsection{Working Principle}
+\subsubsection{Principle of Operation}
 \begin{figure}[h]
 	\centering
 	\input{"figs/potentiometer/potentiometer.tikz"}
@@ -297,7 +297,7 @@ The signal produced by the rotary potentiometer varies from 4.95V and 50mV as it
 The type of ADC used in the STM32F030C6 is a successive approximation register (SAR) and contains an internal capacitors that suffers from the effect of being depleted if the sampling frequency is too high \citep{stm32_ADC:2017}. Using an operational amplifier reduces the risk of depleting this internal capacitor because of the low output resistance. The schematic of the circuit is shown in Appendix \ref{sec:schematics}.\\
 
 \subsection{Magnetic Encoder}
-\subsubsection{Working Principle}
+\subsubsection{Principle of Operation}
 A rotating gear containing ferrous metal teeth is attached to the rotating shaft. The rotating metal teeth rotates near a hall-effect sensor which creates a change in the magnetic flux inside the hall-sensor. This change in magnetic flux is sensed by the hallsensor which produces a digital signal \citep{hallsensor}.
 \subsubsection{Digital Interface} 
 
@@ -315,7 +315,7 @@ A rotating gear containing ferrous metal teeth is attached to the rotating shaft
 	\label{fig:jk_xor_waveform}
 \end{figure}
 
-The encoder contains a sold state hallsensor which provides 2 channels with a 90\textdegree \space phase difference between them. \citep{faulhaberencoder}. These 2 signals under go a hardware filter that produces 2 signals that indicate the direction of the motor and the incremental position. The hardware filter was implemented to reduce the processing time the microcontroller was required to do to determine the incremental position and the rotational direction.\\
+The encoder contains a sold state hallsensor which provides 2 channels with a 90\textdegree \space phase difference between them. \citep{faulhaberencoder}. These 2 signals under go a hardware decoder that produces 2 signals that indicate the direction of the motor and the incremental position. The hardware filter was implemented to reduce the processing time the microcontroller was required to do to determine the incremental position and the rotational direction.\\
 
 The hardware filter consists out of a XOR, NOR and JK-Flipflop gates shown in Figure \ref{fig:jk_xor} and the schematic in Appendix \ref{sec:schematics}. The XOR gate produces the incremental change of position of the motor which is then read by the microcontroller using interrupts on rising and falling edges. The output of the XOR gate is shown in Figure \ref{fig:jk_xor_waveform}.\\
 

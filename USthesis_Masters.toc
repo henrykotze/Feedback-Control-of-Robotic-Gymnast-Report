@@ -3,14 +3,13 @@
 \babel@toc {afrikaans}{}
 \contentsline {chapter}{Uittreksel}{ii}
 \babel@toc {english}{}
-\contentsline {chapter}{Acknowledgements}{iii}
-\contentsline {chapter}{Dedications}{iv}
-\babel@toc {afrikaans}{}
-\babel@toc {english}{}
-\contentsline {chapter}{Contents}{v}
-\contentsline {chapter}{List of Figures}{vii}
-\contentsline {chapter}{List of Tables}{ix}
-\contentsline {chapter}{Nomenclature}{x}
+\contentsline {chapter}{Executive Summary}{iii}
+\contentsline {chapter}{ECSA Outcome Evaluation}{iv}
+\contentsline {chapter}{Acknowledgements}{v}
+\contentsline {chapter}{Contents}{vi}
+\contentsline {chapter}{List of Figures}{viii}
+\contentsline {chapter}{List of Tables}{x}
+\contentsline {chapter}{Nomenclature}{xi}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}
 \contentsline {section}{\numberline {1.2}The Robotic Gymnast System}{1}
@@ -52,10 +51,10 @@
 \contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{37}
 \contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{37}
 \contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{38}
-\contentsline {subsubsection}{\numberline {4.2.4.1}Working Principle}{38}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Principle of Operation}{38}
 \contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{38}
 \contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{39}
-\contentsline {subsubsection}{\numberline {4.2.5.1}Working Principle}{39}
+\contentsline {subsubsection}{\numberline {4.2.5.1}Principle of Operation}{39}
 \contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{39}
 \contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{40}
 \contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{41}
