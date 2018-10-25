@@ -10,9 +10,9 @@ The report contains many variable names and use of terminology for concepts that
 
 The double pendulum is a underactuated system which is defined as a system where the input to the system cannot command all of the state variables an instantaneous acceleration \citep{tedrake}. This is due to the control input only actuating the lower pendulum and the energy in the lower pendulum must be transferred to the upper pendulum to initiate an acceleration. \\
 
-The robotic gymnast is describe as a double pendulum consisting out of an actuated- and unactuated pendulum as seen in Figure \ref{fig:doublePen}. The position of the unactuated pendulum is described by the angle $\theta$ whereas the actuated pendulum is described by $\phi$ relative to $\theta$. The angle's $\theta$ and $\phi$ are the independent parameters that describe the entire system.\\
+The robotic gymnast is described as a double pendulum consisting out of an actuated- and unactuated pendulum as seen in Figure \ref{fig:doublePen}. The position of the unactuated pendulum is described by the angle $\theta$ whereas the actuated pendulum is described by $\phi$ relative to $\theta$. The angle's $\theta$ and $\phi$ are the independent parameters that describe the entire system.\\
 
-There are 2 position of interest where the system contain special characteristics. These 2 positions are the stable- and unstable equilibrium position. In the stable position the system is at rest hanging downwards where both $\theta$ and $\phi = \SI{0}{\radian}$. It is stable due to the system containing negative real poles resulting in the system returning to this position when disturbed. The unstable equilibrium position is where $\theta=\SI{2\pi}{\radian}$ and $\phi = \SI{0}{rad}$ resulting in the robotic gymnast balancing in the inverted position. In this position the system contains positive real poles and any disturbance will cause the system to grow away from this position.\\
+There are two position of interest where the system contain special characteristics. These 2 positions are the stable- and unstable equilibrium positions. In the stable position the system is at rest hanging downwards where both $\theta$ and $\phi = \SI{0}{\radian}$. It is stable due to the system containing negative real poles resulting in the system returning to this position when disturbed. The unstable equilibrium position is where $\theta=\SI{2\pi}{\radian}$ and $\phi = \SI{0}{rad}$ resulting in the robotic gymnast balancing in the inverted position. In this position the system contains positive real poles and any disturbance will cause the system to grow away from this position.\\
 
 
 \begin{comment}
@@ -34,7 +34,7 @@ LTI system
 	\label{fig:doublePen}
 \end{figure}
 
-The approach taken to derive the mathematical model of the robotic gymnast is presented in this section. It is presented to allow the reader to understand parameters used throughout the report and critical to the implementation of the swing-up controller. The swinging of the robotic gymnast consist of non-linear behaviour and it is  require to fully derive the dynamics of the system. The strenuous mathematical steps are removed from the reader and provided in Appendix \ref{sec:math_model}. A summary of the motivation and paradigm approach to the derivation is provided here.\\
+The approach taken to derive the mathematical model of the robotic gymnast is presented in this section. It is presented to allow the reader to understand parameters used throughout the report and critical to the implementation of the swing-up controller. The swinging of the robotic gymnast consists of non-linear behaviour and is required to fully derive the dynamics of the system. The strenuous mathematical steps are removed from the reader and provided in Appendix \ref{sec:math_model}. A summary of the motivation and paradigm approach to the derivation is provided here.\\
 
  Figure \ref{fig:doublePen} shows the free body diagram of the robotic gymnast which was modelled as two pendulums connected together with a hinge. Each pendulum was modelled as having their mass distributed arbitrary along their axis. A torque is actuating the lower pendulum and friction was modelled as a function of the angular velocity.\\
 
@@ -88,7 +88,8 @@ The friction that develops in the pendulums are for now represented by the $f_{c
 	%WHAT you are going to present in this chapter/section
 %WHY you are presenting it, and
 %HOW you are going to present it
-The mathematical model derived in the previous section was required to be implemented on a simulation program to test the controllers used. Simulating the model allows the designer to understand how system parameters influence the dynamics of the system and the verification of controllers implemented. It will be presented by discussing the non-linearities added to represent the physical model better.\\
+
+The mathematical model derived in the previous section was implemented in a simulation program so that the controllers can be tested in simulation. Simulating the model allows the designer to understand how system parameters influence the dynamics of the system and the verification of controllers implemented. It will be presented by discussing the non-linearities added to represent the physical model better.\\
 
 Simulation of the robotic gymnast was done using \textit{MATLAB Simulink}. The differential equations shown in equation (\ref{eq:condense1}) and (\ref{eq:condense2}) were implemented using the \textit{MATLAB Function} box. It was required to write $\ddot{\phi}$ and $\ddot{\theta}$ as the subject in each of the \textit{MATLAB Function} box to allow MATLAB to simulate the model.\\
 
@@ -109,7 +110,7 @@ Non-linear behaviour introduced by sensors and components were added such as sat
 
 The system identification tests are done to determine the characteristics that describe the behaviour of the system. These characteristics include the damping ratio's and natural frequencies of the system. These characteristics will be presented by showing measured responses and how these responses can be modelled. \\
 
-The project started off with a previous physical model which provided realistic system parameters to allow the simulation to be an acceptable representation of a physical model. From using these previous system parameters the simulation provided a set of specification for the new mechanical design. All responses shown and values calculated are based of the new mechanical design parameters shown in Table \ref{table:system_param}.\\
+The project started off with a previous physical model which provided realistic system parameters to allow the simulation to be an acceptable representation of a physical model. From using these previous system parameters the simulation provided a set of specifications for the new mechanical design. All responses shown and values calculated are based on the new mechanical design parameters shown in Table \ref{table:system_param}.\\
 
 
 		\begin{table}[]
@@ -141,7 +142,7 @@ The project started off with a previous physical model which provided realistic 
 \end{table}
 
 
-The system is described by 2 independent parameters and is expected to contain 2 natural frequencies each accompanied by a damping coefficient. The first natural frequency of the system was determined by inspecting the response of the system when starting at a initial condition and keeping $\phi = \SI{0}{\radian}$ throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and unactuated pendulum are constrained to this pipe to ensure the 2 pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{\radian}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at a initial condition of roughly $\theta = \frac{\pi}{6}$. The accuracy of the initial conditions is of little importance, but must allow the response to contain a few oscillation to accurately determine the parameter of interest.\\
+The system is described by two independent parameters and is expected to contain two natural frequencies each accompanied by a damping coefficient. The first natural frequency of the system was determined by inspecting the response of the system when starting at an initial condition and keeping $\phi = \SI{0}{\radian}$ throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and unactuated pendulum are constrained to this pipe to ensure the two pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{\radian}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at an initial condition of roughly $\theta = \frac{\pi}{6}$. The accuracy of the initial conditions is of little importance, but must allow the response to contain a few oscillations to accurately determine the parameter of interest.\\
 
 \begin{figure}[h]
 	\centering
@@ -151,7 +152,7 @@ The system is described by 2 independent parameters and is expected to contain 2
 \end{figure}
 
 
-The second natural frequency was determined by analysing the response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{\radian}$ throughout the response. This was accomplished by constraining the unactuated pendulum using hard stops. Figure \ref{fig:q2_response} shows the measured response of the system when $\phi$ starts at a initial condition and keeping $\theta = \SI{0}{\radian} $.\\
+The second natural frequency was determined by analysing the response of the system when $\phi$ starts at an initial condition and keeping $\theta = \SI{0}{\radian}$ throughout the response. This was accomplished by constraining the unactuated pendulum using hard stops. Figure \ref{fig:q2_response} shows the measured response of the system when $\phi$ starts at an initial condition and keeping $\theta = \SI{0}{\radian} $.\\
 
 \begin{figure}[h]
 	\centering
@@ -160,23 +161,11 @@ The second natural frequency was determined by analysing the response of the sys
 	\label{fig:q2_response}
 \end{figure}
 
-The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} can be characterise as equation (X) where the frequency of oscillation is due to the damped natural frequency. This damped natural frequency was determined by measuring the time difference between peaks. The practical results contains a variation on the time difference between peaks and thus the mean of the time differences were calculated and shown in Table \ref{table:system_characteristic}.\\
+The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} can be characterised as equation (X) where the frequency of oscillation is caused by the damped natural frequency. This damped natural frequency was determined by measuring the time difference between peaks. The practical results contains a variation on the time difference between peaks and thus the mean of the time differences were calculated and shown in Table \ref{table:system_characteristic}.\\
 
-\begin{comment}
-The damped natural frequencies of the system were identified by inspecting the frequency content of the time-domain responses. The frequency content of the initial condition responses of both experiments are shown in Figure \ref{fig:fft_system_response}, by applying the Fast Fourier Transform (FFT) algorithm to the time-domain signals. The FFT indicates the damped natural frequencies by the predominant peaks across the frequency spectrum which are tabulated in Table \ref{table:system_characteristic}.\\
+The friction forces, $f_{c_{1}}$ and $f_{c_{2}}$ that were set as unknowns in the derivation of the robotic gymnast will be expanded on in the following section by analysing how the decaying of the responses can be characterised.\\
 
-
-\begin{figure}[h]
-\centering
-\includegraphics[scale=1]{./figs/FFT_system.eps}
-\caption{Frequency Content of Time-Domain Initial Condition Responses}
-\label{fig:fft_system_response}
-\end{figure}
-\end{comment}
-
-The friction forces, $f_{c_{1}}$ and $f_{c_{2}}$ that were set as unknowns in the derivation of the robotic gymnast will be expanded on in the following text by analysing how the decaying of the responses can be characterised.\\
-
-The response shown in Figure \ref{fig:q1_response} is under the influence of coulomb damping due to the response being characterised by the amplitude decaying linearly with a constant slope. Coulomb damping is caused by sliding friction and it's force is opposite to the direction of velocity \citep{coulomb_friction}. It is thus characterised as  $$ f_{c_{1}} = 
+The response shown in Figure \ref{fig:q1_response} is under the influence of coulomb damping due to the response being characterised by the amplitude decaying linearly with a constant slope. Coulomb damping is caused by sliding friction and its force is opposite to the direction of velocity \citep{coulomb_friction}. It is thus characterised as  $$ f_{c_{1}} = 
 \left \{
 \begin{tabular}{cc}
 $ -\mu N $ & $ \dot{\theta}> 0 $\\
@@ -191,9 +180,9 @@ It is shown in \citet{coulomb_friction} that the slope is defined as
 -\frac{2\mu N \omega_{n}}{\pi mg}
 \end{equation}
 
-where $N$  is the normal force. The slope seen in the decay function in Figure \ref{fig:q1_response} was calculated using linear regression and by knowing the terms in equation (\ref{eq:coulomb_slope}) the combined $\mu N$ term can be calculated and shown in Table \ref{table:system_characteristic}.\\
+where $N$  is the normal force. The slope seen in the decay function in Figure \ref{fig:q1_response} was calculated using linear regression and by knowing the terms in equation (\ref{eq:coulomb_slope}) the combined $\mu N$ term can be calculated as shown in Table \ref{table:system_characteristic}.\\
 
-The response shown in Figure \ref{fig:q2_response} is under the influence of viscous damping due to the amplitude decaying exponentially with time and this behaviour is modelled by the following equation: $$\tau(t) = Ae^{-\zeta \omega_{n}t}$$ where $\omega_{n}$ is the natural frequency, $\zeta$ the damping ratio of the system and $A$ represent the initial condition. The damped natural frequencies of the system has already been determined and linear regression was used to determined the best $\zeta$ that will fit the measured data. The decaying function is shown in Figure \ref{fig:q2_response} with the $\zeta$ value shown in Table \ref{table:system_characteristic}. It is visible from the response that the damping ratio fits the data well and only starts to deviate near steady state.\\
+The response shown in Figure \ref{fig:q2_response} is under the influence of viscous damping due to the amplitude decaying exponentially with time and this behaviour is modelled by the following equation: $$\tau(t) = Ae^{-\zeta \omega_{n}t}$$ where $\omega_{n}$ is the natural frequency, $\zeta$ the damping ratio of the system and $A$ represents the initial condition. The damped natural frequencies of the system has already been determined and linear regression was used to determine the best $\zeta$ that will fit the measured data. The decaying function is shown in Figure \ref{fig:q2_response} with the $\zeta$ value shown in Table \ref{table:system_characteristic}. It is visible from the response that the damping ratio fits the data well and only starts to deviate near steady state.\\
 
 The damping force, $f_{c_{2}}$ that develops between the stator and rotor of the hinge can then be characterised as $2\zeta\omega_{n}(\dot{\phi}-\dot{\theta})$. The subtraction of $\dot{\theta}$ is due to the rotor of the hinge rotating relative to the stator.
 
@@ -221,11 +210,13 @@ The damping force, $f_{c_{2}}$ that develops between the stator and rotor of the
 %WHAT you are going to present in this chapter/section
 %WHY you are presenting it, and
 %HOW you are going to present it?
-The model implemented in simulation must be able describe the physical model to an acceptable degree to allow any further developments on the simulated model. The simulated model will be validated by comparing the experimental system characteristic values to those attained in simulation.\\
+The model implemented in simulation must be able to describe the physical model to an acceptable degree to allow any further developments on the simulated model. The simulated model will be validated by comparing the experimental system characteristic values to those attained in simulation.\\
 
 Table \ref{table:experiment_vs_simulation} shows the experimental values determined in the previous section against the simulation characteristic and indicates the simulation model represents the physical model well.\\
 
-Figure \ref{fig:sim_vs_measured_q1} and \ref{fig:sim_vs_measured_q2} provides an visually verification that the damping effects are modelled to an acceptable degree. It is visible from the responses that the simulated response becomes out of phase with time. This is expected due to the simulated model's natural frequency being larger and at this low frequency the effect of small difference is much larger over a large period. \\
+Figure \ref{fig:sim_vs_measured_q1} and \ref{fig:sim_vs_measured_q2} provides a visual verification of which the damping effects are modelled to an acceptable degree. It is visible that the simulated response fits the experimental response well, matching the frequency of oscillation during high velocities and large angles. It is only near steady state where the simulated responses deviates a little. \\\\
+
+Figure \ref{fig:sim_vs_measured_q2} does not describe the damping effect throughout the entire response. This is expected due to the damping force not being constant throughout the response as seen in Figure \ref{fig:q2_response}. The average of the damping coefficients were selected and results in variances.
 
 
 \begin{table}[]

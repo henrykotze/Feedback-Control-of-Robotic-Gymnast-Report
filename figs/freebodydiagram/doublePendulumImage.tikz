@@ -137,8 +137,8 @@
 	\draw[->] (6,-2)--(6,-3) node[right]{$g$};
 	
 	% Labels for pendulums
-	\draw[->] (1.75,-3.0310)--(2.75,-1.5) node[right]{Unactuated Pendulum};
-	\draw[->] (6.53108,-7.81217)--(8.53108,-5.81217) node[right]{Actuated Pendulum};
+	\draw[<-] (1.75,-3.0310)--(2.75,-1.5) node[right]{ \uline{Unactuated Pendulum} };
+	\draw[<-] (6.53108,-7.81217)--(8.53108,-5.81217) node[right]{ \uline{Actuated Pendulum} };
 	
 	
 \end{tikzpicture}
