@@ -20,7 +20,7 @@ Provided the robotic gymnast is in the vicinity of the unstable equilibrium posi
 
 Figure \ref{fig:linearSys2} shows the block diagram that implements the balancing controller, and it is clear that the state space representation of the system was used. This requires the system to be a linear time invariant (LTI) system, but the system described in equation (\ref{eq:condense1}) and (\ref{eq:condense2}) are not linear. This requirement was satisfied by linearising the system.\\
 
-Another aspect of the balancing controller is that there are no reference input to instruct the controller to guide the robotic gymnast to the unstable equilibrium position. The linearised system at the inverted position is unstable. The feedback control makes the close loop system stable around the inverted state that would normally be unstable for the uncontrolled system.
+Another aspect of the balancing controller is that there are no reference input to instruct the controller to guide the robotic gymnast to the unstable equilibrium position. The linearised system at the inverted position is unstable. The feedback control makes the close loop system stable around the inverted position that would normally be unstable for the uncontrolled system.
 
 
 \subsection{Requirements/Specifications and Constraints}
@@ -50,6 +50,7 @@ These requirements were selected to give the swing-up controller enough margin t
 
 
 \subsection{Plant Linearisation}
+\label{sec:linearisation}
 
 As mentioned previously, to implement the state space representation the system must be a LTI system. This was achieved by using the Taylor Series Expansion to linearise the system at the unstable equilibrium position.\\
 
@@ -79,6 +80,7 @@ The identified coulomb damping that the unactuated pendulum experience shown in 
 
 
 \subsection{Full State Feedback Design}
+\label{sec:statespace_feedback}
 The poles of the system are pairs of positive and negative real poles that indicate an unstable system. This is expected due to the system being linearised at the unstable equilibrium position. When the linearised system is at rest, any disturbance will result in a theoretically infinite growth of the state variables, but this behaviour can be controlled by introducing feedback. \\
 
 These poles will be moved to the desired position by using the method of dominant poles. The method of dominate poles chooses a pair of the poles for the closed-loop system and select the other open-loop poles to have real parts with much larger natural frequencies. This allows the higher-order system response to be characterised as a second-order response \citep{textbook}. \\
@@ -133,7 +135,7 @@ The response shows that the controller meets the requirement of balancing the ro
 % WHAT you are going to present in this chapter/section
 % WHY you are presenting it, and
 % HOW you are going to present it
-For the robotic gymnast to swing from the stable equilibrium position to the unstable equilibrium position the feedback control must deal with the nonlinearities of the system.The design approach, including how the feedback controller handles the nonlinearities, is explained in the following section.
+For the robotic gymnast to swing from the stable equilibrium position to the unstable equilibrium position the feedback control must deal with the nonlinearities of the system. The design approach, including how the feedback controller handles the nonlinearities, is explained in the following section.
 
 \subsection{Controller Architecture}
 \begin{figure}[h]
@@ -145,7 +147,7 @@ For the robotic gymnast to swing from the stable equilibrium position to the uns
 Figure \ref{fig:nonlinear_controller_arch} shows a high-level block diagram of the multiple parts of the swing-up controller. These parts are required to work in unison to allow the robotic gymnast to swing.\\
 
 
-The collocated linearisation block linearises the response from the motor torque input to the actuated pendulum angle output. The linear control law controls the angle of the actuated pendulum $\phi$ to follow a command reference angle ${\phi}^d$. The controller gains $Kp$ and $Kd$ are designed to provide a good transient response. The swing up trajectory generator implements a nonlinear control law that provides reference commands $\phi^3$ for the actuated pendulum angle $\phi$, as a function of the angular rate $\dot{\theta}$ of the unactuated pendulum. The maximum angle command for the actuated pendulum is limited by the $\arctan$ function and the constant parameter $\alpha$.\\\
+The collocated linearisation block linearises the response from the motor torque input to the actuated pendulum angle output. The linear control law controls the angle of the actuated pendulum $\phi$ to follow a command reference angle ${\phi}^d$. The controller gains $Kp$ and $Kd$ are designed to provide a good transient response. The swing up trajectory generator implements a nonlinear control law that provides reference commands $\phi^d$ for the actuated pendulum angle $\phi$, as a function of the angular rate $\dot{\theta}$ of the unactuated pendulum. The maximum angle command for the actuated pendulum is limited by the $\arctan$ function and the constant parameter $\alpha$.\\\
 
 The swing-up controller implements classical control theory approach where gains are selected to characterise the response of the system based on the error of the desired trajectory and the actual trajectory of the system.\\
 
@@ -156,14 +158,16 @@ Each of the blocks shown in the block diagram will be discussed in the section b
 % WHAT you are going to present in this chapter/section
 % WHY you are presenting it, and
 % HOW you are going to present it
-The requirements of the swing-up controller is to swing the robotic gymnast upwards under 30 seconds in the vicinity of the unstable equilibrium position. The vicinity of the unstable equilibrium position is defined as $\theta = \SI{2\pi}{\radian} \pm \frac{\pi}{30}$ and $\phi \in [-5^{\circ},5^{\circ}]$.\\
+The requirements of the swing-up controller is to swing the robotic gymnast upwards under 35 seconds in the vicinity of the unstable equilibrium position. The vicinity of the unstable equilibrium position is defined as $\theta = \SI{180}{\degree} \pm \SI{2}{\degree}$ and $\phi \in [-4^{\circ},4^{\circ}]$.\\
 
-The constraint placed on the swing up controller is that its torque command to the motor actuator should not exceed 50\% of the stall torque of the motor.
+The constraint placed on the swing up controller is that its torque command to the motor actuator should not exceed 50\% of the stall torque of the motor.\\
+
 
 The first requirement is to provide a feasible solution to the swing-up of the robotic gymnast and allow the swing-up sequence to be captivating. The second requirement is to ensure the linear approximation of the system is acceptable when the balancing controller is active to bring the system to the inverted position and balance. The constraint placed was to increase the safety in testing and prolonging the life of the motor.\\
 
 \subsection{Feedback Linearisation}
-\citet{murray} showed that it is not possible to linearise the dynamics of the robotic gymnast using static state feedback and non-linear transformation, but that it is possible to achieve a linear response from one of the outputs of the system (either the actuated or the unactuated pendulum angle) using nonlinear feedback that provides partial feedback linearisation.\\
+\label{sec:feedback_linearisation}
+\citet{murray} showed that it is not possible to linearise the dynamics of the robotic gymnast using static state feedback and non-linear transformation. However it is possible to achieve a linear response from one of the outputs of the system (either the actuated or the unactuated pendulum angle) using nonlinear feedback that provides partial feedback linearisation.\\
 
 Collocated linearisation is a form of partial feedback linearisation where a non-linear control input $\tau$ is used to linearise the response of the actuated pendulum $\ddot{\phi}$. By analysing equation (\ref{eq:condense2}), the input $\tau$ was chosen to cancel all the non-linearities of the system and add an additional outer loop control input $v_{2}$ as seen in equation (\ref{eq:collocated_lin3}). This results in the unactuated pendulum to see a indirect force and the problem can be reduced to finding the outer loop control input to force the actuated pendulum to swing upwards \citep{spong_swingup}.
 
@@ -181,13 +185,14 @@ d_{11}\ddot{\theta} + h_{1} + \psi_{1} = -d_{12}v_{2} \approx F
 The subtle practical implication of using collocated linearisation is that the system being controlled must be well defined. If this is not the case the non-linear input $\tau$ will introduce other unwanted dynamics that could lead to undesirable behaviour.
 
 \subsection{Nonlinear Control Law}
+\label{sec:nonlinear_control_law}
 
 The ability to control the actuated pendulum to follow a desired trajectory, provides the possibility to increase the energy of the system if the correct trajectory is chosen. The increase of energy in the system will cause the pendulums to rise from their stable equilibrium position and start swinging upwards. The desired trajectory for ${\phi}$ was chosen as equation (\ref{eq:desired_phi}) determined by \citet{spong_swingup}.
 \begin{equation} \label{eq:desired_phi}
 \phi^{d} =  \alpha \arctan(\dot{\theta})
 \end{equation}
 
-This desired trajectory was derived by analysing a single pendulum and approximating the force it experiences as seen in equation (\ref{eq:collocated_lin1}). By using this approximation \citeauthor{spong_swingup} showed that the desired trajectory will increase the energy in the system. The desired trajectory also tries to allow the actuated pendulum to swing in phase with the non-actuated pendulum and by this approach the energy of the actuated pendulum is transferred to the unactuated pendulum \citep{spong_swingup}.\\
+This desired trajectory was derived by analysing a single pendulum and approximating the force it experiences as seen in equation (\ref{eq:collocated_lin1}). By using this approximation \citeauthor{spong_swingup} showed that the desired trajectory will increase the energy in the system. The desired trajectory also tries to allow the actuated pendulum to swing in phase with the unactuated pendulum  and by this approach the energy of the actuated pendulum is transferred to the unactuated pendulum.\\
 
 The outer loop control input, $v_{2}$, then implements the classical control approach where gains are selected to characterise the response of the system based on the error seen in equation (\ref{eq:v2}). 
 
@@ -196,7 +201,7 @@ The outer loop control input, $v_{2}$, then implements the classical control app
 v_{2} = K_{p}(\phi^{d}-\phi)-K_{d}\dot{\phi}
 \end{equation}
 
-The coefficient $\alpha$ used in equation (\ref{eq:desired_phi}) constrains the actuated pendulum to stay within a interval of $ \phi \in [-\beta,\beta]$ where $\alpha < \beta$ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable equilibrium position.\\
+\citeauthor{spong_swingup} indicates that coefficient $\alpha$ used in equation (\ref{eq:desired_phi}) constrains the actuated pendulum to stay within a interval of $ \phi \in [-\beta,\beta]$ where $\alpha < \beta$. This provides better control over the system to stay within the null controllability region when the system reaches the unstable equilibrium position.
 
 Another side-effect of using the non-linear controller is that at rest the system will not start to swing-up. At rest, the conditions are: $\phi = \SI{0}{\radian}$ and $\dot{\phi} = \SI{0}{\radian/s}$, and results in the control output seen in equation (\ref{eq:v2}) to be zero. This effect was overcome by giving the system a small initial condition to start the swing-up controller.
 
@@ -227,9 +232,9 @@ Figure \ref{fig:swingup} shows the swing-up controller swinging the robotic gymn
 	\label{table:gain_constants}
 	\end{table}
 
-Firstly the robotic gymnast is required to start at an initial condition for the swing-up control law to be active and this is seen with $\theta$ starting at 11\textdegree. Secondly, the amplitude of $\phi$ is seen to decrease suddenly when the system nears the inverted position. This is due to $\alpha$ being reduced when the robotic gymnast nears the inverted position.\\
+Firstly the robotic gymnast is required to start at an initial condition for the swing-up control law to be active and this is seen with $\theta$ starting at -9\textdegree. Secondly, the amplitude of $\phi$ is seen to decrease suddenly when the system nears the inverted position. This is due to $\alpha$ being reduced when the robotic gymnast nears the inverted position.\\
 
-The response shows the swing-up controller meets the designed requirements by swinging the robotic gymnast to the vicinity of the unstable equilibrium within 30 seconds and $\theta$ and $\phi$ are in the designed region for the balancing controller to bring the system to the inverted position.
+The response shows the swing-up controller meets the designed requirements by swinging the robotic gymnast to the vicinity of the unstable equilibrium within 35 seconds and $\theta$ and $\phi$ are in the designed region for the balancing controller to bring the system to the inverted position.
 
 
 

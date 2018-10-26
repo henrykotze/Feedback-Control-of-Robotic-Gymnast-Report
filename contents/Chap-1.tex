@@ -33,18 +33,18 @@ A literature study was performed to survey different physical implementations of
 
 Previous attempts to swing up and balance the robotic gymnast used two separate controllers. The first controller is responsible for swinging the robotic gymnast from the hanging position up towards the inverted position. When the swing-up controller brought the gymnast near the inverted position, a new controller is used to balance the gymnast. The different types of swing up and balancing controllers used by previous researchers are summarised below, followed by a decision on the approaches selected for this project.\\
 
-\citet{spong_swingup} implemented the swing-up controller by using partial feedback linearisation which results in a linear response from either the \textit{actuated} or \textit{unactuated} pendulum. Using \textit{non-collocated} linearisation he was able to control the \textit{unactuated} pendulum to follow a desired trajectory. \citeauthor{spong_swingup} used the phase portrait of the zero dynamics of the system to show that the closed-loop system will converge to the inverted equilibrium position. \citeauthor{spong_swingup} also demonstrated how the swing-up can be achieved by using \textit{collocated} linearisation which linearises the response of the \textit{actuated} pendulum. This allows the actuated pendulum to follow a desired trajectory and \citeauthor{spong_swingup} provides a energy-based trajectory that increases the energy in the system. Once the both swing up controller brings the system to the inverted balancing position, the feedback control system switches over to a linear quadratic regulator (LQR) to balance the system.\\
+\citet{spong_swingup} implemented the swing-up controller by using partial feedback linearisation which results in a linear response from either the \textit{actuated} or \textit{unactuated} pendulum. Using \textit{non-collocated} linearisation he was able to control the \textit{unactuated} pendulum to follow a desired trajectory. \citeauthor{spong_swingup} used the phase portrait of the zero dynamics of the system to show that the closed-loop system will converge to the inverted equilibrium position. \citeauthor{spong_swingup} also demonstrated how the swing-up can be achieved by using \textit{collocated} linearisation which linearises the response of the \textit{actuated} pendulum. This allows the actuated pendulum to follow a desired trajectory and \citeauthor{spong_swingup} provides a energy-based trajectory that increases the energy in the system. Once both swing up controller brings the system to the inverted balancing position, the feedback control system switches over to a linear quadratic regulator (LQR) to balance the system.\\
 
-\citet{Brown1997} provided two manually tuned nonlinear controllers for the balancing of the robotic gymnast and tested and compared them against a designed LQR controller. The two nonlinear controller were a direct fuzzy controller (DFC) and a fuzzy model reference learning controller (FMRLC). The gains for the DFC controller were based on the gains of the LQR controller. The DFC controller was implemented and successfully balanced the gymnast. However the LQR controller provided smoother state trajectories and smaller control input. The FMRLC uses no explicit dynamical reference model and instead the outputs of the plant using normalising gains are directly fed into the second fuzzy system. The FMRLC controller was a significant improvement on the DFC, but yet again did not perform as well as the LQR controller.\\
+\citet{Brown1997} provided two manually tuned nonlinear controllers for the balancing of the robotic gymnast and tested and compared them against a designed LQR controller. The two nonlinear controllers were a direct fuzzy controller (DFC) and a fuzzy model reference learning controller (FMRLC). The gains for the DFC controller were based on the gains of the LQR controller. The DFC controller was implemented and successfully balanced the gymnast. However the LQR controller provided smoother state trajectories and smaller control input. The FMRLC uses no explicit dynamical reference model and instead the outputs of the plant using normalising gains are directly fed into the second fuzzy system. The FMRLC controller was a significant improvement on the DFC, but yet again did not perform as well as the LQR controller.\\
 
 
-\citeauthor{Brown1997} also attempted to swing the acrobat to the inverted balancing position using the energy based trajectory proposed by \citeauthor{spong_swingup}, but without the partial linearisation feedback. \citeauthor{Brown1997} were able to swing and balance the acrobat using this approach,but their approach resulted in larger input signals that were not as smooth as the input signals when using partial feedback linearisation.\\
+\citeauthor{Brown1997} also attempted to swing the robotic gymnast to the inverted balancing position using the energy based trajectory proposed by \citeauthor{spong_swingup}, but without the partial linearisation feedback. \citeauthor{Brown1997} were able to swing and balance the robotic gymnast using this approach, but their approach resulted in larger input signals that were not as smooth as the input signals when using partial feedback linearisation.\\
 
 
 
 In most of the literature, the mathematical model of the robotic gymnast is derived using the Euler-Lagrangian equation. This approach is used because the mechanical energy in the system is easily identified. \citet{derivation_controlPlaner} and \citet{tedrake} both derived the simplified mathematical models for the robotic gymnast using point mass approximations. \\
 
-Based on the literature study, it was decided to perform the swing up control using partial feedback linearisation and an energy-based reference trajectory, and to perform the balancing control using a linear full state feedback controller.
+Based on the literature study, it was decided to perform the swing up control using partial feedback linearisation and an energy-based reference trajectory. The balancing controller was decided to be a linear full state feedback controller.
 
 
 \begin{comment}
@@ -117,9 +117,9 @@ From equation (7) it is visible that by tuning the PID constants the response of
 \end{figure}
 
 
-Figure \ref{fig:system_overview}  provides an overview of the system that was developed in this project , and shows the individual subsystems with their internal and external interfaces. The individual subsystems could be developed separately with well-defined interfaces to one another. A brief overview of each subsystem is presented here.\\
+Figure \ref{fig:system_overview}  provides an overview of the system that was developed in this project, and shows the individual subsystems with their internal and external interfaces. The individual subsystems could be developed separately with well-defined interfaces to one another. A brief overview of each subsystem is presented here.\\
 
-The external computer executes the feedback control laws that perform the swing up and balancing, and supplies the commands for the motor actuator based on sensor feedback from the angle sensors for both the actuated and the non-actuated pendulums. This allows for the verification of system parameters, debugging and experimental tests.\\
+The external computer executes the feedback control laws that perform the swing up and balancing. It supplies the commands for the motor actuator based on sensor feedback from the angle sensors for both the actuated and the unactuated pendulums. This allows for the verification of system parameters, debugging and experimental tests.\\
 
 The electronic hardware acts as the interface between external computer and the robotic gymnast mechanical hardware. The external computer communicates with the electronic hardware using serial communications to send commands and to receive data. The electronic hardware interfaces directly with the motor actuator using a motor driver, and interfaces with the angle sensors using digital and analog interfaces. The electronic hardware is implemented on a printed circuit board (PCB).\\
 
@@ -133,11 +133,9 @@ The external interfaces to the system include the power supplied to the system a
 %HOW you are going to present it
 % write as if i already happened
 
-The project was executed in a sequence of steps in order to achieve the results as presented in the report. It is presented to provide the reader with an understanding of how the individual subsystems were developed individually and eventual	ly integrated into the full system.\\
+The project was executed in a sequence of steps in order to achieve the results as presented in the report. It is presented to provide the reader with an understanding of how the individual subsystems were developed individually and eventually integrated into the full system.\\
  
 First the mathematical model of the system was derived by using the appropriate approach. The derived mathematical model was then implemented on a simulation program where the dynamics of the system was verified and inspected.\\
-
-Following the successful implementation of the mathematical model the various controllers were designed and implemented on the simulation program. The behaviour of the simulated responses were inspected and analysed.\\
 
 The simulation provided the specification for the mechanical design to commence and created the physical model that provided an acceptable representation of the mathematical model.\\
 
@@ -146,8 +144,6 @@ During manufacturing of the mechanical design the electronic design started. Con
 Following the successful testing of the electronic design, the programming of the microcontroller and external computer started. This included the programming of the controller, data acquisition system and the conversions of the sampled data.\\
 
 Once the microcontroller could provide the external computer with system state information, the system identification tests occurred to determine the various system parameters. These new system parameters were used in the simulation program to update the existing controllers and verify the responses in simulation.\\
-
-The updated controllers were then implemented onto the external computer for the system experiments to start. From these system experiments the response of the experiments were compared to those of the simulation.\\
 
 The report was written throughout the sequence of steps mentioned above and was completed and reviewed at the end.
 
@@ -167,8 +163,6 @@ Chapter 4 contains the designs of the mechanical and electronic systems of the p
 
 Chapter 5 describes the software implemented to provide the report with these results. It explains the architecture of the software and the various functions implemented.\\
 
-Chapter 6 provides the practical results of the controllers explained in chapter 3 and hypothesise unexpected behaviour in the experiments.\\
-
-Chapter 7 concludes the report with a summary of the report and recommendation for future endeavours on the Feedback Control of a Robotic Gymnast. 
+Chapter 6 concludes the report with a summary of the report and recommendation for future endeavours on the Feedback Control of a Robotic Gymnast. 
 
  

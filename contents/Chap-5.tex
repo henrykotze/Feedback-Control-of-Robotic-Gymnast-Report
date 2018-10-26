@@ -6,11 +6,11 @@ This chapter presents the design and implementation of the software that was exe
 %HOW you are going to present it
 \section{Software Requirements}
 \label{sec:software_requirements}
-The software required to implement the retrieval of system state information, debugging and control laws are presented here. The software design was of crucial importance in the continuation of the project after the simulation phase. The software design allowed the determination of the system characteristic parameters and the verification of the simulation and controller.
+The software required to implement the retrieval of system state information, debugging and control laws are presented here. The software design was of crucial importance in the continuation of the project after the simulation phase. The software design allowed the determination of the system characteristic parameters and the verification of the simulation.
 
 \subsection{Communication}
 
-Communication between the external computer and the microcontroller occurred differently based on whether an experiment was done such as system identification or testing different parts of the electronic system. These difference are explained in the following section.\\
+Communication between the external computer and the microcontroller occurred differently based on whether an experiment was done such as system identification or testing different sunsystems of the electronic system. These difference are explained in the following section.\\
 
 If experiments are conducted the communication are bi-directional between the microcontroller and the external computer. The microcontroller streams the state variables of the system to the external computer in the structure shown in Figure \ref{fig:data_struct}. The star attached to the variables indicate that they are not sent in the correct units due to sending data types such as floats are computation hungry and are rather handled on the external computer. The external computer will then translate the variables into their correct units and compute the control input based on the control law. The external computer sends the control input back to the microcontroller to output the correct signals.\\
 
@@ -67,6 +67,6 @@ The information the swing-up and balancing controllers required was the angular 
 f'(x) \approx \frac{-3f(x)  +  4f(x-{\Delta}t)  -  f(x-2{\Delta}t)}{ 2{\Delta}t }
 \end{equation}
 
-The swing-up controller implements multiple cosine and sine functions. These functions were discretised into a lookup table up to the accuracy provided by the sensors. The discretisation was done to decrease the processing time done to compute the next control input command.
+The swing-up controller implements multiple cosine and sine functions. These functions were discretised into a lookup tables up to the accuracy provided by the sensors. The discretisation was done to decrease the processing time done to compute the next control input command.
 
 

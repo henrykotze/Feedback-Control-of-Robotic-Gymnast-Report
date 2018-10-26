@@ -6,18 +6,11 @@ This chapter presents variable names and use of terminology for concepts that is
 %WHAT you are going to present in this chapter/section
 %WHY you are presenting it, and
 %HOW you are going to present it
-The double pendulum is a underactuated system which is defined as a system where the input to the system cannot command all of the state variables an instantaneous acceleration \citeauthor{tedrake}. This is due to the control input only actuating the lower pendulum and the energy in the lower pendulum must be transferred to the upper pendulum to initiate an acceleration. \\
+The double pendulum is a underactuated system which is defined as a system where the input to the system cannot command all of the state variables an instantaneous acceleration \citep{tedrake}. This is due to the control input only actuating the lower pendulum and the energy in the lower pendulum must be transferred to the upper pendulum to initiate an acceleration. \\
 
 The robotic gymnast is described as a double pendulum consisting out of an actuated- and unactuated pendulum as seen in Figure \ref{fig:doublePen}. The position of the unactuated pendulum is described by the angle $\theta$ whereas the actuated pendulum is described by $\phi$ relative to $\theta$. The angle's $\theta$ and $\phi$ are the independent parameters that describe the entire system.\\
 
-There are two position of interest where the system contain special characteristics. These 2 positions are the stable- and unstable equilibrium positions. In the stable position the system is at rest hanging downwards where both $\theta$ and $\phi = \SI{0}{\radian}$. It is stable due to the system containing negative real poles resulting in the system returning to this position when disturbed. The unstable equilibrium position is where $\theta=\SI{2\pi}{\radian}$ and $\phi = \SI{0}{rad}$ resulting in the robotic gymnast balancing in the inverted position. In this position the system contains positive real poles and any disturbance will cause the system to grow away from this position.\\
-
-
-\begin{comment}
-region of controllability:he null controllability region is the set of states that can be steered to inverted unstable equilibrium position in a fixed time with a constrained control input \cite{null_controllability}.
-LTI system
-\end{comment}
-
+There are two position of interest where the system contain special characteristics. These 2 positions are the stable- and unstable equilibrium positions. In the stable position the system is at rest hanging downwards where both $\theta$ and $\phi = \SI{0}{\radian}$. The unstable equilibrium position is where $\theta=\SI{2\pi}{\radian}$ and $\phi = \SI{0}{rad}$ resulting in the robotic gymnast balancing in the inverted position.\\
 
 
 \section{Mathematical Model}
@@ -91,7 +84,7 @@ The mathematical model derived in the previous section was implemented in a simu
 
 Simulation of the robotic gymnast was done using \textit{MATLAB Simulink}. The differential equations shown in equation (\ref{eq:condense1}) and (\ref{eq:condense2}) were implemented using the \textit{MATLAB Function} box. It was required to write $\ddot{\phi}$ and $\ddot{\theta}$ as the subject in each of the \textit{MATLAB Function} box to allow MATLAB to simulate the model.\\
 
-Non-linear behaviour introduced by sensors and components were added such as saturation of the motor torque, gearbox backlash and quantisation of sensory data. These non-linearities were implemented to allow the simulation to be an acceptable representation of the physical system. The Simulink Model used for simulation is shown in Figure \ref{fig:sim_nonlinearfeedback}.
+Non-linear behaviour introduced by sensors and components were added such as saturation of the motor torque, gearbox backlash and quantisation of sensory data. These non-linearities were implemented to allow the simulation to be an acceptable representation of the physical system. The Simulink model used for simulation is shown in Figure \ref{fig:sim_nonlinearfeedback}.
 
 \begin{figure}[h]
 	\centering
@@ -140,7 +133,7 @@ The project started off with a previous physical model which provided realistic 
 \end{table}
 
 
-The system is described by two independent parameters and is expected to contain two natural frequencies each accompanied by a damping coefficient. The first natural frequency of the system was determined by inspecting the response of the system when starting at an initial condition and keeping $\phi = \SI{0}{\radian}$ throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and unactuated pendulum are constrained to this pipe to ensure the two pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{\radian}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at an initial condition of roughly $\theta = \frac{\pi}{6}$. The accuracy of the initial conditions is of little importance, but must allow the response to contain a few oscillations to accurately determine the parameter of interest.\\
+The system is described by two independent parameters and is expected to contain two natural frequencies each accompanied by a damping coefficient. The first natural frequency of the system was determined by inspecting the response of the system when starting at an initial condition and keeping $\phi = \SI{0}{\radian}$ throughout the response. This was done by using a lightweight PVC pipe that has negligible effect on the weight of the system. The actuated pendulum and unactuated pendulum are constrained to this pipe to ensure the two pendulums stay in-line with each other and thus ensuring $\phi = \SI{0}{\radian}$. The response of the system is shown in Figure \ref{fig:q1_response} starting at an initial condition of roughly $\theta = \SI{30}{\degree}$. The accuracy of the initial conditions is of little importance, but must allow the response to contain a few oscillations to accurately determine the parameter of interest.\\
 
 \begin{figure}[h]
 	\centering
@@ -215,7 +208,7 @@ The model implemented in simulation must be able to describe the physical model 
 
 Table \ref{table:experiment_vs_simulation} shows the experimental values determined in the previous section against the simulation characteristic and indicates the simulation model represents the physical model well.\\
 
-Figure \ref{fig:sim_vs_measured_q1} and \ref{fig:sim_vs_measured_q2} provides a visual verification of which the damping effects are modelled to an acceptable degree. It is visible that the simulated response fits the experimental response well, matching the frequency of oscillation during high velocities and large angles. It is only near steady state where the simulated responses deviates a little. \\\\
+Figure \ref{fig:sim_vs_measured_q1} and \ref{fig:sim_vs_measured_q2} provides a visual verification of which the damping effects are modelled to an acceptable degree. It is visible that the simulated response fits the experimental response well, matching the frequency of oscillation during high velocities and large angles. It is only near steady state where the simulated responses deviates a little. \\
 
 Figure \ref{fig:sim_vs_measured_q2} does not describe the damping effect throughout the entire response. This is expected due to the damping force not being constant throughout the response as seen in Figure \ref{fig:q2_response}. The average of the damping coefficients were selected and results in variances.
 
