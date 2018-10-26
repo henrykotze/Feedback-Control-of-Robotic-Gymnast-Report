@@ -2,7 +2,7 @@
 \usepackage[outline]{contour}
 
 \begin{document}
-	    \contourlength{1.2pt}
+	    \contourlength{1.5pt}
 	    
 	    \tikzset{
 	    	double arrow/.style args={#1 colored by #2 and #3}{
@@ -16,27 +16,27 @@
     %microcontroller
     %\draw[green,ultra thick,rounded corners] (6.5,5) node[above]{ \textbf{MCU} };
     
-	\draw[double arrow=2pt colored by black and white] (8,2) node[right,white]{\contour{black}{Point Mass} } -- (4.5,0.8) ;
+	\draw[double arrow=2pt colored by black and white] (8,2) node[right,black]{\contour{white}{\textbf{Point Mass}} } -- (4.5,0.8) ;
 	
-	\draw[black,thick,->] (3.8,3) -- (8,3) node[right,white]{\contour{black}{Actuated Pendulum}};
+	\draw[double arrow=2pt colored by black and white] (8,3) node[right,black]{\contour{white}{\textbf{Actuated Pendulum}}} --(3.8,3) ;
 	
-	\draw[black,thick,->] (3.8,6) -- (8,4) node[right,white]{\contour{black}{Motor Mounting}};
+	\draw[double arrow=2pt colored by black and white] (8,4) node[right,black]{\contour{white}{\textbf{Motor Mounting}}} -- (3.8,6) ;
 	
-	\draw[black,thick,->] (4.5,6.5) -- (8,5) node[right,white]{\contour{black}{DC Motor}};
+	\draw[double arrow=2pt colored by black and white] (8,5)node[right,black]{\contour{white}{\textbf{DC Motor}}} --(4.5,6.5)  ;
 	
-	\draw[black,thick,->] (5,7) -- (8,6) node[right,white]{\contour{black}{Encoder}};
+	\draw[double arrow=2pt colored by black and white] (8,6)node[right,black]{\contour{white}{\textbf{Encoder}}} -- (5,7) ;
     
-    \draw[black,thick,->] (2.8,9) -- (8,7) node[right,white]{\contour{black}{Unactuated Pendulum}};
+    \draw[double arrow=2pt colored by black and white] (8,7)node[right,black]{\contour{white}{\textbf{Unactuated Pendulum}}} -- (2.8,9) ;
     
-    \draw[black,thick,->] (2.8,11) -- (8,8) node[right,white]{\contour{black}{Slipring}};
+    \draw[double arrow=2pt colored by black and white] (8,8)node[right,black]{\contour{white}{\textbf{Slipring}}} -- (2.8,11)  ;
     
-    \draw[black,thick,->] (3.5,12.5) -- (8,9) node[right,white]{\contour{black}{Bearing Housing}};
+    \draw[double arrow=2pt colored by black and white] (8,9)node[right,black]{\contour{white}{\textbf{Bearing Housing}}} -- (3.5,12.5) ;
     
-    \draw[black,thick,->] (4.4,12.8) -- (8,10) node[right,white]{\contour{black}{Shaft}};
+    \draw[double arrow=2pt colored by black and white] (8,10) node[right,black]{\contour{white}{\textbf{Shaft}}} -- (4.4,12.8) ;
     
-    \draw[black,thick,->] (5.5,13.5) -- (8,11) node[right,white]{\contour{black}{Rubber Coupling}};
+    \draw[double arrow=2pt colored by black and white] (8,11)node[right,black]{\contour{white}{\textbf{Rubber Coupling}}} -- (5.5,13.5);
     
-    \draw[black,thick,->] (5.8,14.2) -- (8,12) node[right,white]{\contour{black}{Potentiometer}};
+    \draw[double arrow=2pt colored by black and white] (8,12)node[right,black]{\contour{white}{\textbf{Potentiometer}}} --  (5.8,14.2);
     
     
 \end{tikzpicture}

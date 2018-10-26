@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  24 OCT 2018 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  25 OCT 2018 19:33
 entering extended mode
 **./mech_layout.tex
 (mech_layout.tex
@@ -444,32 +444,34 @@ File: mech.jpg Graphic file (type jpg)
 Package pdftex.def Info: mech.jpg  used on input line 15.
 (pdftex.def)             Requested size: 345.0pt x 459.94379pt.
 
-contour: Using real outline for `Point Mass' on input line 19.
-contour: Using real outline for `Actuated Pendulum' on input line 21.
-contour: Using real outline for `Motor Mounting' on input line 23.
-contour: Using real outline for `DC Motor' on input line 25.
-contour: Using real outline for `Encoder' on input line 27.
-contour: Using real outline for `Unactuated Pendulum' on input line 29.
-contour: Using real outline for `Slipring' on input line 31.
-contour: Using real outline for `Bearing Housing' on input line 33.
-contour: Using real outline for `Shaft' on input line 35.
-contour: Using real outline for `Rubber Coupling' on input line 37.
-contour: Using real outline for `Potentiometer' on input line 39.
+contour: Using real outline for `\textbf {Point Mass}' on input line 19.
+contour: Using real outline for `\textbf {Actuated Pendulum}' on input line 21.
+
+contour: Using real outline for `\textbf {Motor Mounting}' on input line 23.
+contour: Using real outline for `\textbf {DC Motor}' on input line 25.
+contour: Using real outline for `\textbf {Encoder}' on input line 27.
+contour: Using real outline for `\textbf {Unactuated Pendulum}' on input line 2
+9.
+contour: Using real outline for `\textbf {Slipring}' on input line 31.
+contour: Using real outline for `\textbf {Bearing Housing}' on input line 33.
+contour: Using real outline for `\textbf {Shaft}' on input line 35.
+contour: Using real outline for `\textbf {Rubber Coupling}' on input line 37.
+contour: Using real outline for `\textbf {Potentiometer}' on input line 39.
 [1
 
 {C:/Users/Henry/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./mech.jpg>
 ] (mech_layout.aux) ) 
 Here is how much of TeX's memory you used:
  11832 strings out of 492973
- 241231 string characters out of 3135932
- 280029 words of memory out of 3000000
- 15485 multiletter control sequences out of 15000+200000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 241246 string characters out of 3135932
+ 281029 words of memory out of 3000000
+ 15484 multiletter control sequences out of 15000+200000
+ 3948 words of font info for 15 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,7n,56p,428b,822s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr10.pfb>
-Output written on mech_layout.pdf (1 page, 1993497 bytes).
+m/cmbx10.pfb>
+Output written on mech_layout.pdf (1 page, 1993072 bytes).
 PDF statistics:
  14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -33,11 +33,11 @@ $$
 
 
 The requirements set out for the balancing controller were to bring the robotic gymnast to the unstable equilibrium position from an initial condition range of:
-$$ \vec{q_{i}} = 
+$$ \vec{q_{i}} \in 
 \left \{
 \begin{tabular}{c}
-$ \theta \in [\SI{177}{\degree}, \SI{183}{\degree}]   $\\
-$ \phi \in  [\SI{-5}{\degree} , \SI{5}{\degree}] $ \\
+$ [\SI{177}{\degree}, \SI{183}{\degree}]   $\\
+$ [\SI{-5}{\degree} , \SI{5}{\degree}] $ \\
 
 \end{tabular}
 \right \}
@@ -73,7 +73,9 @@ $$
 \end{bmatrix}
 $$
 
-The eigenvalues of the system are all real indicating the response of the system when disturbed is an exponential function. This can be explained by realising the linearised system is modelled as a single pendulum. Once the single pendulum is disturbed from the unstable equilibrium position it would continue to rotate downwards and not with an oscillatory response. 
+The eigenvalues of the system are all real indicating the response of the system when disturbed is an exponential function. This can be explained by realising the linearised system is modelled as a single pendulum. Once the single pendulum is disturbed from the unstable equilibrium position it would continue to rotate downwards and not with an oscillatory response.\\
+
+The identified coulomb damping that the unactuated pendulum experience shown in Figure \ref{fig:q1_response} is not possible to linearised. This friction was approximated as viscous damping in the linear model and was acceptable due to the physical model showing characteristic of viscous damping near steady state visible in Figure \ref{fig:q1_response}.
 
 
 \subsection{Full State Feedback Design}
@@ -127,10 +129,6 @@ $$
 
 The response shows that the controller meets the requirement of balancing the robotic gymnast from required initial condition and reaches steady state within 1 seconds. The overshoot requirement of 10\% has also been achieved on the unactuated pendulum.\\
 
-The identified coulomb damping that the unactuated pendulum experience is not possible to linearised (ref). This friction was approximated as viscous damping in the linear model and was acceptable due to the physical model showing characteristic of viscous damping near steady state visible in Figure \ref{fig:q1_response}.
-
-
-
 \section{Swingup Controller}
 % WHAT you are going to present in this chapter/section
 % WHY you are presenting it, and
@@ -169,7 +167,7 @@ The first requirement is to provide a feasible solution to the swing-up of the r
 
 Collocated linearisation is a form of partial feedback linearisation where a non-linear control input $\tau$ is used to linearise the response of the actuated pendulum $\ddot{\phi}$. By analysing equation (\ref{eq:condense2}), the input $\tau$ was chosen to cancel all the non-linearities of the system and add an additional outer loop control input $v_{2}$ as seen in equation (\ref{eq:collocated_lin3}). This results in the unactuated pendulum to see a indirect force and the problem can be reduced to finding the outer loop control input to force the actuated pendulum to swing upwards \citep{spong_swingup}.
 
- The final result of the collocated linearisation is shown below, and the complete derivation can be found in Appendix \ref{sec:colocated_linearisation}.
+ The complete derivation is done by \citeauthor{spong_swingup} and the final result of the collocated linearisation is shown below.
 \begin{equation} \label{eq:collocated_lin3}
 \tau = d_{21}\ddot{\theta} + v_{2}d_{22}\ddot{\phi} + h_{2} + \psi_{2}
 \end{equation}
@@ -184,7 +182,7 @@ The subtle practical implication of using collocated linearisation is that the s
 
 \subsection{Nonlinear Control Law}
 
-The ability to control the actuated pendulum to follow a desired trajectory, provides the possibility to increase the energy of the system if the correct trajectory is chosen. The increase of energy in the system will cause the pendulums to rise from their stable equilibrium position and start swinging upwards. The desired trajectory for ${\phi}$ was chosen as equation (\ref{eq:desired_phi}) determined by \citeauthor{spong_swingup}.
+The ability to control the actuated pendulum to follow a desired trajectory, provides the possibility to increase the energy of the system if the correct trajectory is chosen. The increase of energy in the system will cause the pendulums to rise from their stable equilibrium position and start swinging upwards. The desired trajectory for ${\phi}$ was chosen as equation (\ref{eq:desired_phi}) determined by \citet{spong_swingup}.
 \begin{equation} \label{eq:desired_phi}
 \phi^{d} =  \alpha \arctan(\dot{\theta})
 \end{equation}
@@ -198,7 +196,7 @@ The outer loop control input, $v_{2}$, then implements the classical control app
 v_{2} = K_{p}(\phi^{d}-\phi)-K_{d}\dot{\phi}
 \end{equation}
 
-The coefficient $\alpha$ used in equation (\ref{eq:desired_phi}) constrains the actuated pendulum to stay within a interval of $ \phi \in [-\beta,\beta]$ where $\alpha < \beta$ \citep{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable equilibrium position.\\
+The coefficient $\alpha$ used in equation (\ref{eq:desired_phi}) constrains the actuated pendulum to stay within a interval of $ \phi \in [-\beta,\beta]$ where $\alpha < \beta$ \cite{spong_swingup}. This provides better control over the system to stay within the null controllability region when the system reaches the unstable equilibrium position.\\
 
 Another side-effect of using the non-linear controller is that at rest the system will not start to swing-up. At rest, the conditions are: $\phi = \SI{0}{\radian}$ and $\dot{\phi} = \SI{0}{\radian/s}$, and results in the control output seen in equation (\ref{eq:v2}) to be zero. This effect was overcome by giving the system a small initial condition to start the swing-up controller.
 
@@ -238,23 +236,23 @@ The response shows the swing-up controller meets the designed requirements by sw
 \section{Simulation Results}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=1]{./figs/swingup_balance}
+	\includegraphics[scale=0.9]{./figs/swingup_balance}
 	\caption{The Swing-Up \& Balancing of the Robotic Gymnast}
 	\label{fig:swingup_balance}
 \end{figure}
 
 Once both controllers were capable of meeting the requirements set out, they needed to be combined to achieve the swing-up and balancing of the robotic gymnast. Figure \ref{fig:swingup_balance} shows the response of both controllers combined that achieved the swing-up and balancing.\\
 
-During the swing-up the $\alpha$ value was reduced as the robotic gymnast started nearing the unstable equilibrium position as seen below.
+During the swing-up the $\alpha$ value was reduced by the algorithm as it pass through the positions seen in equation (\ref{eq:alpha}).
 
-
-$$ \alpha = 
+\begin{equation}
+\label{eq:alpha}
+\alpha = 
 \left \{
 \begin{tabular}{cc}
-$ \frac{\pi}{2} $ & $  \frac{-\pi}{2} < \theta < \frac{\pi}{2} $\\
-$ \frac{\pi}{12} $ & $ $\\
-$ \frac{\pi}{24}  $ &   $  \frac{-\pi}{1.1} >\theta \theta > \frac{\pi}{1.1}$ \\
+$ \SI{90}{\degree}$\: & $  \theta < \SI{45}{\degree} 	$\\
+$ \SI{45}{\degree}$\: & $  \SI{126}{\degree} < \theta > \SI{45}{\degree} $\\
+$ \SI{12}{\degree}$\: & $ \SI{177}{\degree} < \theta > \SI{126}{\degree}$ \\
 \end{tabular}
 \right \}
-$$
-
+\end{equation}

@@ -19,12 +19,6 @@
 \newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{mot(2007)}]{motorIC}
- (2007 2).
-\newblock \emph{5.0 A H-Bridge woth Load Current Feeback}.
-\newblock Freescale Semiconductor, 12\bblth{} \bbledn{}.
-\newblock Document Number: MC33887.
-
 \bibitem[{stm(2017)}]{stm32_ADC:2017}
  (2017).
 \newblock \emph{How to get the best ADC accuracy in the STM32
@@ -75,6 +69,12 @@
 \newblock {A Case Study in Approximate Linearization: The Acrobot Example}.
 \newblock \bbltechrep{}.
 \newline\bblurlpre\url{http://www.cds.caltech.edu/{~}murray/preprints/erl-M91-46.pdf}
+
+\bibitem[{\citenamefont{Semiconductor}(2007)}]{motorIC}
+\bibnamefont{Semiconductor}, \bibfnamefont{F.} (2007 2).
+\newblock \emph{5.0 A H-Bridge woth Load Current Feeback}.
+\newblock Freescale Semiconductor, 12\bblth{} \bbledn{}.
+\newblock Document Number: MC33887.
 
 \bibitem[{\citenamefont{Spong}(1995)}]{spong_swingup}
 \bibnamefont{Spong}, \bibfnamefont{M.W.} (1995).

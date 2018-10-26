@@ -7,6 +7,13 @@
 %WHAT you are going to present in this chapter/section
 %WHY you are presenting it, and
 %HOW you are going to present it
+A feedback control system was designed, implemented and verified in simulation to swing and balance a robotic gymanst. The feedback control system met all requirements and able to swing the robotic gymnast from the hanging position and balance in the inverted position.\\
+ 
+The mechanical and electronic hardware were designed to create a robotic gymnast system on which these feedback control systems can be tested. The designed electronic hardware was able to condition the signals for a microcontroller to interpret and supply the feedback control system with the correct signals. The electronic designed provided good resolution of the required state variables and capable of communicating with all peripherals. The mechanical hardware successfully interfaced with the electronic hardware and the provides the means to practically test the feedback control laws.\\
+
+Furthermore the characteristic of the robotic system was identified and used in simulation. The simulation was shown as a good representation of the designed robotic system to allow further developments on the simulated model. The simulated model fits the experimental responses well and contain the characteristics determine during the system identification.\\
+
+Software was written to acquire the data during experiments and communicate with the electronic hardware. The software allows for various modes of communication such as debugging of subcircuits and experiments\\
 
 \section{Recommendation}
 %WHAT you are going to present in this chapter/section
@@ -20,33 +27,7 @@ Implementing a digital low pass filter to remove the noise on the sampled signal
 
 The script executing on the external computer can be written in a language such as C or C++ to increase the execution time of the script.\\
 
+
 \newpage
-\section{Outcome Assessment}
-
-
-\begin{table}[!h]
-	\centering
-	\begin{tabular}{|p{5cm}|p{0.8cm}|p{4cm}|p{5cm}|}
-		
-		\hline
-		\textbf{ECSA Exit Level Outcomes} & \textbf{ELO} & \textbf{Section of Report} & \textbf{Comment}   \\
-		\hline
-		Problem Solving &1& \ref{sec:simulation_model} , \ref{sec:system_identification}, \ref{sec:electronic_hardware}, \ref{chp:software_design}, \ref{sec:system_overview} & The project was develop using a system engineering approach. Problems were solved in the simulation program, debugging of issues within the electronic system and implementing the controllers on the external computer      \\
-		\hline
-		Application of Scientific and Engineering Knowledge	&2&\ref{sec:mathematical_model}, \ref{sec:simulation_model}, \ref{sec:system_identification}, \ref{chp:feedback_control_design}&The mathematical model was derived and implemented on a simulation program. The system identification was done to identify how to model the system    \\
-		\hline
-		Engineering Design&3& \ref{sec:mechanical_hardware}, \ref{sec:electronic_hardware}, \ref{chp:software_design} & The mechanical, electronic and sofware designs were done to implement and test the mathematical model  	\\
-		\hline
-		Engineering Methods, Skills and Tools&5& \ref{sec:simulation_model}, \ref{sec:electronic_hardware}, \ref{sec:mechanical_hardware} & MATLAB, Electronic Design Automation (EDA) and  Computer-aided Design (CAD) programs were extensively used. \\
-		\hline
-		Professional and Technical Communication&6&\ref{chp:introduction} - \ref{chp:conclusion}  & The writing of the report to present the results of the project, an oral exam towards a engineering audience and creating a poster for a community \\
-		\hline
-		Individual, Team and Multidisciplinary Working&8&\ref{chp:introduction}-\ref{chp:conclusion}& The main objectives were achieved on time with supervision throughout the year from a study leader  \\
-		\hline
-		Independent Learning Ability&9& \ref{sec:literature_study}, \ref{chp:controller}&  Research on the various approaches were done and then implemented\\
-		\hline
-	\end{tabular}
-\end{table}
-
 
 	

@@ -2,6 +2,7 @@
                afrikaans, english,%.............. Global language selection
                ]{memoir}
 \usepackage{chngpage}
+\usepackage{array}
 \usepackage{ulem}
 \usepackage[outline]{contour}
 \usepackage{graphics}
@@ -128,15 +129,22 @@
  
  
 \include{titlepage}
+%\newpage
+%\include{executive_summary}
+%\newpage
+%\include{plagiarism}
+%\newpage
+%\include{ecsa_outcomes}
 %\end{comment}
  %\DeclarationDate{2018/10/27}
  %\DeclarationPage
-	\include{plagiarism}
 
 
- \include{frontmatter/Chap-Front}
 
- \tableofcontents
+\include{frontmatter/Chap-Front}
+
+
+ \tableofcontents	
  \clearpage
 
  \setcounter{lofdepth}{2}

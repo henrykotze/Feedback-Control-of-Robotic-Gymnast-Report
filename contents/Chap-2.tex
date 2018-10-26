@@ -1,13 +1,11 @@
 \chapter{Conceptualisation and Modelling}
 \label{chp2:concept_model}
-[provide an overview]
+This chapter presents variable names and use of terminology for concepts that is used throughout the report. The approach used to derive the dynamics of the robotic gymnast is discussed and how a simulation program was used to present the dynamics appropriately. The system identification tests are presented to show how the system characteristics were determined and that the simulated model describes the physical model accurately. The terminology for concepts are presented first, followed by the derivation of the dynamics of the robotic gymnast. A discussion of the simulated model is then presented and the chapter concludes with the system identification test and the verification of the simulated model.
 
 \section{System Concepts}
 %WHAT you are going to present in this chapter/section
 %WHY you are presenting it, and
 %HOW you are going to present it
-The report contains many variable names and use of terminology for concepts that is used throughout the report. These variables and terminologies are defined here.\\
-
 The double pendulum is a underactuated system which is defined as a system where the input to the system cannot command all of the state variables an instantaneous acceleration \citeauthor{tedrake}. This is due to the control input only actuating the lower pendulum and the energy in the lower pendulum must be transferred to the upper pendulum to initiate an acceleration. \\
 
 The robotic gymnast is described as a double pendulum consisting out of an actuated- and unactuated pendulum as seen in Figure \ref{fig:doublePen}. The position of the unactuated pendulum is described by the angle $\theta$ whereas the actuated pendulum is described by $\phi$ relative to $\theta$. The angle's $\theta$ and $\phi$ are the independent parameters that describe the entire system.\\
@@ -122,19 +120,19 @@ The project started off with a previous physical model which provided realistic 
 		\hline
 		$L_{1}$ & \SI{0.235}{m} \\
 		\hline
-		$L_{2}$ & \SI{0.314}{m} \\ 
+		$L_{2}$ & \SI{0.310}{m} \\ 
 		\hline
 		$I_{A}$ & \SI{ 0.0022}{kg\cdot m^2}\\
 		\hline
-		$I_{B}$ & \SI{0.0054}{kg\cdot m^2}\\
+		$I_{B}$ & \SI{0.0043}{kg\cdot m^2}\\
 		\hline
 		$m_{1}$ & \SI{0.576}{kg}\\
 		\hline
-		$m_{2}$ & \SI{0.492}{kg} \\
+		$m_{2}$ & \SI{0.563}{kg} \\
 		\hline
 		$l_{1}$ & \SI{0.205}{m}\\
 		\hline
-		$l_{2}$ & \SI{0.238}{m}\\
+		$l_{2}$ & \SI{0.194}{m}\\
 		\hline
 	\end{tabular}
 	\caption{System Parameters}
@@ -161,7 +159,7 @@ The second natural frequency was determined by analysing the response of the sys
 	\label{fig:q2_response}
 \end{figure}
 
-The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} can be characterised as equation (X) where the frequency of oscillation is caused by the damped natural frequency. This damped natural frequency was determined by measuring the time difference between peaks. The practical results contains a variation on the time difference between peaks and thus the mean of the time differences were calculated and shown in Table \ref{table:system_characteristic}.\\
+The responses shown in Figure \ref{fig:q1_response} and \ref{fig:q2_response} oscillate at the damped natural frequency $\omega_{d}$. The damped natural frequency was determined by measuring the time difference between peaks. The practical results contains a variation on the time difference between peaks and thus the mean of the time differences were calculated and shown in Table \ref{table:system_characteristic}.\\
 
 The friction torques, $f_{c_{1}}$ and $f_{c_{2}}$ that were set as unknowns in the derivation of the robotic gymnast will be expanded on in the following section by analysing how the decaying of the responses can be characterised.\\
 
@@ -186,25 +184,28 @@ The response shown in Figure \ref{fig:q2_response} is under the influence of vis
 
 The damping moment, $f_{c_{2}}$ that develops between the stator and rotor of the hinge can then be characterised as $2\zeta\omega_{n}(\dot{\phi}-\dot{\theta})$. The subtraction of $\dot{\theta}$ is due to the rotor of the hinge rotating relative to the stator.
 
-\begin{comment}
-	\begin{table}{|c|c|c|}
+\begin{table}[]
 	\centering
-	\hline
-	System Characteristic & Mean & Standard Deviation\\
-	\hline
-	\hline
-	$ f_{1} $ & \SI{0.906}{Hz} & 0.014 \\
-	$ f_{2} $ & \SI{1.081}{Hz} & 0.044 \\ 
-	\hline
-	$\mu N $ & 3 & 3 \\
-	\hline
-	$\zeta_{2}$ & 3 & 3 \\
-	\hline
+	\begin{tabular}{|c|c|}
+		\hline
+		System Characteristic & Mean\\
+		\hline
+		\hline
+		$ \omega_{d_{1}} $ &$ \SI{3.4683}{rad/s}$ \\
+		\hline
+		$ \omega_{d_{2}} $ &$ \SI{3.88}{rad/s}$  \\ 
+		\hline
+		$ f_{c_{1}} $ &$ \SI{0.024}{Nm}$  \\
+		\hline
+		$ f_{c_{2}} $ &$ \SI{0.013}{\frac{Nm\cdot s}{rad}}$  \\ 
+		\hline
+		$ \zeta_{2} $ &$ \SI{0.0963}{}$\\
+		\hline
 	\end{tabular}
-	\caption{System Characteristic \& their Statistical Properties from 5 Experiments}
+	\caption{Experimental System Characteristics}
 	\label{table:system_characteristic}
-	\end{table}
-\end{comment}
+\end{table}
+
 
 \section{Model Validation}
 %WHAT you are going to present in this chapter/section
@@ -221,14 +222,14 @@ Figure \ref{fig:sim_vs_measured_q2} does not describe the damping effect through
 
 \begin{table}[]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c|}
 		\hline
-		System & $\omega_{n_{1}}$  & $\omega_{n_{2}}$  & $\zeta_{1}$ & $\zeta_{2}$ \\
+		System & $\omega_{d_{1}}$  & $\omega_{d_{2}}$ \\
 		\hline
 		\hline
-		Experimental  & 5.692 &  6.793 & & \\
+		Experimental  & 3.96 &  3.88\\
 		\hline
-		Simulation & 5.654 & 6.704 & & \\ 
+		Simulation & 6.75 & 6.704\\ 
 		\hline
 	\end{tabular}
 	\caption{Experimental Characteristics vs Simulation Model Characteristic}
@@ -237,14 +238,14 @@ Figure \ref{fig:sim_vs_measured_q2} does not describe the damping effect through
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=1]{./figs/sim_vs_measured_q1.eps}
+	\includegraphics[scale=0.8]{./figs/sim_vs_measured_q1.eps}
 	\caption{Comparison between Simulated and Measured Response with $\phi = \SI{0}{\radian}$ throughout}
 	\label{fig:sim_vs_measured_q1}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=1]{./figs/sim_vs_measured_q2.eps}
+	\includegraphics[scale=0.8]{./figs/sim_vs_measured_q2.eps}
 	\caption{Comparison between Simulated and Measured Response with $\theta = \SI{0}{\radian}$ throughout}
 	\label{fig:sim_vs_measured_q2}
 \end{figure}

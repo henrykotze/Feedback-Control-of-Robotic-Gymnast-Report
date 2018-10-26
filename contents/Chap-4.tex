@@ -7,7 +7,7 @@ This chapter presents the design and implementation of the physical gymnastic ro
 \begin{figure}[h]
 	\centering
 	\includegraphics{./figs/mech_layout/mech_layout.pdf}
-	\caption{PCB}
+	\caption{Mechanical Hardware}
 	\label{fig:mech_layout}
 \end{figure}
 %WHAT you are going to present in this chapter/section
@@ -46,16 +46,16 @@ The shaft was analysed as a 3 point supported beam shown in Figure \ref{fig:supp
 The beam is a static undetermined beam and was solved using the principle of superposition and results in the reaction forces shown in equations (\ref{eq:reactionForce1}), (\ref{eq:reactionForce2}) and (\ref{eq:reactionForce3}).
 
 \begin{equation} \label{eq:reactionForce1}
-R_{1} = \SI{100}{\newton}
+R_{1} = \SI{-237.7941}{\newton}
 \end{equation}
 \begin{equation} \label{eq:reactionForce2}
-R_{2} = \frac{ 8Fl_{1}[l_{3}^2 - l_{2}^2] }{l_{3}[4l_{2}^2-3l_{3}^2] } = \SI{90}{\newton}
+R_{2} = \frac{ 8Fl_{1}[l_{3}^2 - l_{2}^2] }{l_{3}[4l_{2}^2-3l_{3}^2] } = \SI{241.5}{\newton}
 \end{equation}
 \begin{equation} \label{eq:reactionForce3}
-R_{3} = \SI{33}{\newton}
+R_{3} = \SI{122.29}{\newton}
 \end{equation}
 
-The maximum bending stress occurs at $x=\SI{0.1}{\meter}$ and the maximum torsion stress at $x=\SI{0.25}{\meter}$. The safety factor of yielding will be determined at these two positions.\\
+The maximum bending stress occurs at $x=\SI{0.085}{\meter}$ and the maximum torsion stress at $x=\SI{0.14}{\meter}$. The safety factor of yielding will be determined at these two positions.\\
 
 Equations (\ref{eq:torsionForce}) and (\ref{eq:axialForce}) are used to determine the maximum stresses at these two points and using the Mohor circle the principle stresses are determined.  These stresses are shown in Table \ref{table:stresses}.\\
 
@@ -64,7 +64,7 @@ Equations (\ref{eq:torsionForce}) and (\ref{eq:axialForce}) are used to determin
 	\centering
 	\begin{tabular}{|c|c|c|}
 		\hline
-		Stresses & $x = \SI{0.1}{\meter}$ & $x=\SI{0.25}{\meter}$ \\
+		Stresses & $x = \SI{0.085}{\meter}$ & $x=\SI{0.14}{\meter}$ \\
 		\hline
 		\hline
 		$\sigma_{f_{1}}$ & \SI{5}{} & \\
@@ -87,11 +87,11 @@ The conservative Von Mises theory shown in equation (\ref{eq:vonMises}) was used
 Fatigue due to cyclic loads were ignored due the shaft not rotating more than a 1000 times and the safety factor on static yielding  on a conservative model is sufficient.
 
 \begin{equation} \label{eq:axialForce}
-\sigma_{f} = \frac{M\cdot r}{I}
+\sigma_{f} = \frac{M\cdot r}{I_{m}}
 \end{equation}
 
 \begin{equation} \label{eq:torsionForce}
-\tau_{f} = \frac{T\cdot r}{J} + \frac{F_{max}}{22}
+\tau_{f} = \frac{T\cdot r}{J} + \frac{4F_{max}}{3A}
 \end{equation}
 
 
@@ -129,17 +129,17 @@ During the simulation it was noticed that the ratio between the unactuated and a
 		Non-Actuated Pendulum& Value & Actuated Pendulum & Value \\
 		\hline
 		\hline
-		$m_{\text{cyl}}$ & \SI{0.1443}{} & $m_{\text{iron}}$ &\\
+		$m_{\text{cyl}}$ & \SI{0.1443}{\kilogram} & $m_{\text{iron}}$ & \SI{0.257}{\kilogram} \\
 		\hline
-		$w_{\text{cyl}}$ & \SI{3.3}{}& $w_{\text{iron}}$& \\
+		$w_{\text{cyl}}$ & \SI{12}{mm}& $w_{\text{iron}}$& \SI{12}{mm} \\
 		\hline
-		$m_{\text{pointmass1}}$ & \SI{0.4320}{\kilogram}& $m_{\text{pointmass2}}$& \\
+		$m_{\text{pointmass1}}$ & \SI{0.432}{\kilogram}& $m_{\text{pointmass2}}$& \SI{0.306}{\kilogram}\\
 		\hline
-		$l_{\text{cyl}}$ & \SI{0.235}{\meter}& $l_{\text{iron}}$& \\
+		$l_{\text{cyl}}$ & \SI{0.235}{\meter}& $l_{\text{iron}}$& \SI{0.223}{\meter} \\
 		\hline
-		$L_{\text{c1}}$ & \SI{0.235}{\meter} & $L_{\text{c2}}$&\\
+		$L_{\text{c1}}$ & \SI{0.2056}{\meter} & $L_{\text{c2}}$& \SI{0.1940}{\meter}\\
 		\hline
-		$L_{1}$ & \SI{12}{}& $L_{2}$& \\
+		$L_{1}$ & \SI{0.235}{\meter}& $L_{2}$& \SI{0.303}{\meter} \\
 		\hline
 	\end{tabular}
 	\caption{Physical Model Paramaters}

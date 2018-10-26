@@ -1,77 +1,136 @@
+\begin{comment}
 \begin{abstract}[english]%===================================================
-This report presents the design, implementation, and testing of a feedback control system for a robotic gymnast. Feedback control systems were designed to swing up and balance an under-actuated robotic gymnast system. A physical system, consisting of mechanical and electronic hardware, was designed and constructed, and the feedback controllers were implemented in software. The feedback control system was verified both in simulation and on the physical system..
+This report presents the design, implementation, and testing of a feedback control system for a robotic gymnast. Feedback control systems were designed to swing up and balance an underactuated robotic gymnast system. A physical system, consisting of mechanical and electronic hardware, was designed and constructed, and the feedback controllers were implemented in software. The feedback control system was verified in simulation using the physical system characteristics.
 \end{abstract}
 
 
 \begin{abstract}[afrikaans]%=================================================
-In die projek word die swaaiende en balanseering beheerwette vir 'n robotiese gimnas genavors, ontwerp en getoets op 'n fisiese model. Die eletroniese, meganiese en sagteware ontwerpe word bespreek om ten einde te wys hoe die fisiese model, beheerders en so voort geimplementeer en getoets is.
+Die projek bevat die ontwerp, implementeering en toetse van 'n terugvoer beheerstelsel vir 'n robotiese gimnas. Die terugvoer beheerwette was ontwerp om die robotiese gimnas op te swaai en te balansseer. Die fisiese sisteem wat uit meganiese en elektroniese hardeware bestaan was ontwerp, geimplimenteer en getoets en die beheerwette was in sagteware geimplimenteer. Die terugvoer beheerwette was in simulasie geverifieer met die fisiese sisteem eienskappe.
 \end{abstract}
+\end{comment}
 
-\chapter{Executive Summary}
+	
+	\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+	\begin{table}[!h]
+			\addcontentsline{toc}{chapter}{Executive Summary}
+		\centering
+		\begin{tabular}{|P{15cm}|}
+			\hline
+			\textbf{Executive Summary} \\
+			\hline
+			\hline
+			\textbf{Project Title} \\
+			\hline 
+			The feedback control of a robotic gymnast \\
+			\hline
+			\textbf{Objectives} \\
+			\hline 
+			Design, implement and verify a feedback control system that is able to swing and balance a underactuated robotic gymnast. A physical system, consisting of mechanical and electronic hardware, must be designed and constructed, and the feedback controllers implemented in software. Verify the feedback control system in simulation using the physical system characteristics.\\
+			\hline
+			\textbf{Which aspects of the project are unique?} \\
+			\hline
+			The electronic hardware that translates sensor signals into information that is used by the control system. The software that allows the testing of the system and acquisition of system information. The mechanical hardware that allows continuous rotation of the robotic gymnast without the loss of system information. \\
+			The implementation of the simulation of the robotic gymnast that visually presents the response of the system. \\
+			\hline
+			\textbf{What are the (expected) findings?} \\
+			\hline
+			The simulation is an acceptable representation of the physical system and the control system is able to swing and balance in simulation. A robotic gymnast system that consist out of mechanical-, electronic hardware with software to test the control systems practically.\\
+			\hline 
+			\textbf{What value do the results have?} \\
+			\hline
+			Further development on the simulated model can continue to test other feedback control system to swing and balance the robotic gymnast. These control systems can be practically tested on the robotic gymnast system to determine how well they perform.\\
+			\hline 
+			\textbf{If more than one student is involved, what is each one's contribution?} \\
+			\hline 
+			Not Applicable \\
+			\hline 
+			\textbf{Which aspects of the project will carry on after completion?} \\
+			\hline
+			The robotic gymnast hardware will serve as a testbed for testing and demonstrating different swing up and balancing feedback control algorithms. \\
+			\hline 
+			\textbf{What are the expected advantages of continuation?} \\
+			\hline 
+			Different feedback control algorithms to perform the swing up and balancing of the robotic gymnast can be evaluated and compared. \\
+			\hline 
+			\textbf{What arrangements have been made to expedite continuation?} \\
+			\hline 
+			The robotic gymnast mechanical hardware, electronics, and software will be given to the study leader for use in future projects. \\
+			\hline
+			
+			
+			
+			
+			
+		\end{tabular}
+	\end{table}
+\newpage
+\begin{center}
+	\textbf{\Large Plagiarism Declaration}
+		\addcontentsline{toc}{chapter}{Plagiarism Declaration}
+\end{center}
+
+I have read and understand the Stellenbosch University Policy on Plagiarism and the definitions of plagiarism and self-plagiarism contained in the Policy [Plagiarism: The use of the ideas or material of others without acknowledgement, or the re-use of one's own previously evaluated or published material without acknowledgement or indication thereof (self-plagiarism or text-recycling)].\\
+
+I also understand that direct translations are plagiarism, unless accompanied by an appropriate acknowledgement of the source. I also know that verbatim copy that has not been explicitly indicated as such, is plagiarism.\\
+
+I know that plagiarism is a punishable offence and may be referred to the University's Central Disciplinary Committee (CDC) who has the authority to expel me for such an offence.\\
+
+I know that plagiarism is harmful for the academic environment and that it has a negative impact on any profession.\\
+
+Accordingly all quotations and contributions from any source whatsoever (including the internet) have been cited fully (acknowledged); further, all verbatim copies have been expressly indicated as such (e.g. through quotation marks) and the sources are cited fully.\\
+
+I declare that, except where a source has been cited, the work contained in this assignment is my own work and that I have not previously (in its entirety or in part) submitted it for grading in this module/assignment or another module/assignment.\\
+
+I declare that have not allowed, and will not allow, anyone to use my work (in paper, graphics, electronic, verbal or any other format) with the intention of passing it off as his/her own work.\\
+
+I know that a mark of zero may be awarded to assignments with plagiarism and also that no opportunity be given to submit an improved assignment.\\
+
+\begin{flushleft}
+	
+	Name:\hspace{1.52cm} \makebox[1.5in]{\hrulefill}\\
+	Student No:\hspace{0.5cm} \makebox[1.5in]{\hrulefill}\\
+	Signature:\hspace{0.85cm} \makebox[1.5in]{\hrulefill}\\
+	Date:\hspace{1.7cm} \makebox[1.5in]{\hrulefill}\\
+	
+\end{flushleft}
+\newpage
+
+
+\begin{center}
+	\addcontentsline{toc}{chapter}{ECSA Exit Level Outcomes}
+	\textbf{\Large ECSA Exit Level Outcomes}
+\end{center}
 \begin{table}[!h]
 	\centering
-	\begin{tabular}{|c|}
-		\hline
-		\textbf{Executive Summary} \\
-		\hline
-		\hline
-		\textbf{Project Title} \\
-		\hline 
-		mewe \\
-		\hline
-		\textbf{Objectives} \\
-		\hline 
-		adsad \\
-		\hline
-		\textbf{Which aspects of the project are unique?} \\
-		\hline
-		asdasd \\
-		\hline
-		\textbf{What are the (expected) findings?} \\
-		\hline
-		ddd \\
-		\hline 
-		\textbf{What value do the results have?} \\
-		\hline
-		ddd \\
-		\hline 
-		\textbf{If more than one student is involved, what is each one's contribution?} \\
-		\hline 
-		ddd \\
-		\hline 
-		\textbf{Which aspects of the project will carry on after completion?} \\
-		\hline
-		ddd \\
-		\hline 
-		\textbf{What are the expected advantages of continuation?} \\
-		\hline 
-		ddd \\
-		\hline 
-		\textbf{What arrangements have been made to expedite continuation?} \\
-		\hline 
-		ddd \\
-		\hline
+	\begin{tabular}{|p{4cm}|p{0.8cm}|p{2cm}|p{7cm}|}
 		
-		
-		
-		
-		
+		\hline
+		\textbf{ECSA Exit Level Outcomes} & \textbf{ELO} & \textbf{Section of Report} & \textbf{Comment}   \\
+		\hline
+		Problem Solving &1& \ref{sec:simulation_model} , \ref{sec:system_identification}, \ref{sec:electronic_hardware}, \ref{chp:software_design}, \ref{sec:system_overview} & The project was develop using a system engineering approach. Problems were solved in the simulation program, debugging of issues within the electronic system and implementing the controllers on the external computer      \\
+		\hline
+		Application of Scientific and Engineering Knowledge	&2&\ref{sec:mathematical_model}, \ref{sec:simulation_model}, \ref{sec:system_identification}, \ref{chp:feedback_control_design}&The mathematical model was derived and implemented on a simulation program. The system identification was done to identify the characteristics of the  system.   \\
+		\hline
+		Engineering Design&3& \ref{sec:mechanical_hardware}, \ref{sec:electronic_hardware}, \ref{chp:software_design} & The mechanical, electronic and sofware designs were done to construct the robotic gymnast system.  	\\
+		\hline
+		Engineering Methods, Skills and Tools&5& \ref{sec:simulation_model}, \ref{sec:electronic_hardware}, \ref{sec:mechanical_hardware} & MATLAB, Electronic Design Automation (EDA) and  Computer-aided Design (CAD) programs were extensively used. \\
+		\hline
+		Professional and Technical Communication&6&\ref{chp:introduction} - \ref{chp:conclusion}  & The writing of the report to present the results of the project, an oral exam towards a engineering audience and creating a poster for a community. \\
+		\hline
+		Individual, Team and Multidisciplinary Working&8&\ref{chp:introduction}-\ref{chp:conclusion}& The main objectives were achieved on time with supervision throughout the year from a study leader.  \\
+		\hline
+		Independent Learning Ability&9& \ref{sec:literature_study}, \ref{chp:controller}&  Research on the various approaches were done and then implemented\\
+		\hline
 	\end{tabular}
 \end{table}
+\newpage
 
+\begin{center}
+\textbf{\Large Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\end{center}
 
-\chapter{ECSA Outcome Evaluation}
-
-\textbf{Problem Solving:}\\
-\textbf{Application of Scientific and Engineering Knowledge:}\\
-\textbf{Engineering Design:}\\
-\textbf{Engineering Methods, Skills and Tools:}\\
-\textbf{Professional and Technical Communication:}
-\textbf{Individual, Team and Multidisciplinary Working:}
-\textbf{Independent Learning Ability:}
-
-\chapter{Acknowledgements}%==================================================
-
+%\chapter{Acknowledgements}%==================================================
 I would like to express my sincere gratitude to the following people
 and organisations.\\
 
@@ -83,6 +142,7 @@ Mr$.$ Croukamp, Mr$.$ van Eenden and Mr$.$ Lecholo for assisting me with the mec
 
 The group of final year student working together in the 4th floor labs. You all made the experience more worthwhile and encouraged me through  difficult times. 
 
+\newpage
 
 \begin{comment}
 \chapter{Dedications}%=======================================================

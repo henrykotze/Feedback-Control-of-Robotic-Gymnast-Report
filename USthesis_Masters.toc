@@ -1,15 +1,12 @@
 \babel@toc {english}{}
-\contentsline {chapter}{Abstract}{i}
-\babel@toc {afrikaans}{}
-\contentsline {chapter}{Uittreksel}{ii}
-\babel@toc {english}{}
-\contentsline {chapter}{Executive Summary}{iii}
-\contentsline {chapter}{ECSA Outcome Evaluation}{iv}
-\contentsline {chapter}{Acknowledgements}{v}
-\contentsline {chapter}{Contents}{vi}
-\contentsline {chapter}{List of Figures}{viii}
-\contentsline {chapter}{List of Tables}{x}
-\contentsline {chapter}{Nomenclature}{xi}
+\contentsline {chapter}{Executive Summary}{i}
+\contentsline {chapter}{Plagiarism Declaration}{ii}
+\contentsline {chapter}{ECSA Exit Level Outcomes}{iii}
+\contentsline {chapter}{Acknowledgements}{iv}
+\contentsline {chapter}{Contents}{v}
+\contentsline {chapter}{List of Figures}{vii}
+\contentsline {chapter}{List of Tables}{ix}
+\contentsline {chapter}{Nomenclature}{x}
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}
 \contentsline {section}{\numberline {1.1}Problem Statement}{1}
 \contentsline {section}{\numberline {1.2}The Robotic Gymnast System}{1}
@@ -22,66 +19,64 @@
 \contentsline {section}{\numberline {2.2}Mathematical Model}{9}
 \contentsline {section}{\numberline {2.3}Simulation Model}{10}
 \contentsline {section}{\numberline {2.4}System Identification}{11}
-\contentsline {section}{\numberline {2.5}Model Validation}{14}
-\contentsline {chapter}{\chapternumberline {3}Feedback Control Design}{18}
-\contentsline {section}{\numberline {3.1}Balancing Controller}{18}
-\contentsline {subsection}{\numberline {3.1.1}Controller Architecture}{19}
-\contentsline {subsection}{\numberline {3.1.2}Requirements/Specifications and Constraints}{19}
-\contentsline {subsection}{\numberline {3.1.3}Plant Linearisation}{19}
-\contentsline {subsection}{\numberline {3.1.4}Full State Feedback Design}{20}
-\contentsline {subsection}{\numberline {3.1.5}Simulation Response}{21}
-\contentsline {section}{\numberline {3.2}Swingup Controller}{22}
-\contentsline {subsection}{\numberline {3.2.1}Controller Architecture}{22}
-\contentsline {subsection}{\numberline {3.2.2}Requirements/Specifications and Constraints}{23}
-\contentsline {subsection}{\numberline {3.2.3}Feedback Linearisation}{23}
-\contentsline {subsection}{\numberline {3.2.4}Nonlinear Control Law}{24}
-\contentsline {subsection}{\numberline {3.2.5}Simulation Response}{25}
-\contentsline {section}{\numberline {3.3}Simulation Results}{26}
-\contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{28}
-\contentsline {section}{\numberline {4.1}Mechanical Hardware}{28}
-\contentsline {subsection}{\numberline {4.1.1}Assembly}{29}
-\contentsline {subsection}{\numberline {4.1.2}Structural Force Analysis}{30}
-\contentsline {subsection}{\numberline {4.1.3}Inertia of Pendulums}{31}
-\contentsline {subsection}{\numberline {4.1.4}Center of Mass}{33}
-\contentsline {subsection}{\numberline {4.1.5}Motor}{34}
-\contentsline {section}{\numberline {4.2}Electronic Hardware}{34}
-\contentsline {subsection}{\numberline {4.2.1}System Description}{34}
-\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{35}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{36}
-\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{37}
-\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{37}
-\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{38}
-\contentsline {subsubsection}{\numberline {4.2.4.1}Principle of Operation}{38}
-\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{38}
-\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{39}
-\contentsline {subsubsection}{\numberline {4.2.5.1}Principle of Operation}{39}
-\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{39}
-\contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{40}
-\contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{41}
-\contentsline {subsection}{\numberline {4.2.6}Motor Driver}{42}
-\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{43}
-\contentsline {subsubsection}{\numberline {4.2.7.1} PWM Duty Cycle to Motor Current}{43}
-\contentsline {chapter}{\chapternumberline {5}Software Design}{45}
-\contentsline {section}{\numberline {5.1}Software Requirements}{45}
-\contentsline {subsection}{\numberline {5.1.1}Communication}{45}
-\contentsline {subsection}{\numberline {5.1.2}Embedded Program}{46}
-\contentsline {subsection}{\numberline {5.1.3}Controller}{47}
-\contentsline {chapter}{\chapternumberline {6}Conclusion}{49}
-\contentsline {section}{\numberline {6.1}Summary}{49}
+\contentsline {section}{\numberline {2.5}Model Validation}{15}
+\contentsline {chapter}{\chapternumberline {3}Feedback Control Design}{17}
+\contentsline {section}{\numberline {3.1}Balancing Controller}{17}
+\contentsline {subsection}{\numberline {3.1.1}Controller Architecture}{18}
+\contentsline {subsection}{\numberline {3.1.2}Requirements/Specifications and Constraints}{18}
+\contentsline {subsection}{\numberline {3.1.3}Plant Linearisation}{18}
+\contentsline {subsection}{\numberline {3.1.4}Full State Feedback Design}{19}
+\contentsline {subsection}{\numberline {3.1.5}Simulation Response}{20}
+\contentsline {section}{\numberline {3.2}Swingup Controller}{20}
+\contentsline {subsection}{\numberline {3.2.1}Controller Architecture}{20}
+\contentsline {subsection}{\numberline {3.2.2}Requirements/Specifications and Constraints}{22}
+\contentsline {subsection}{\numberline {3.2.3}Feedback Linearisation}{22}
+\contentsline {subsection}{\numberline {3.2.4}Nonlinear Control Law}{23}
+\contentsline {subsection}{\numberline {3.2.5}Simulation Response}{24}
+\contentsline {section}{\numberline {3.3}Simulation Results}{25}
+\contentsline {chapter}{\chapternumberline {4}Hardware Design and Implementation}{27}
+\contentsline {section}{\numberline {4.1}Mechanical Hardware}{27}
+\contentsline {subsection}{\numberline {4.1.1}Assembly}{28}
+\contentsline {subsection}{\numberline {4.1.2}Structural Force Analysis}{29}
+\contentsline {subsection}{\numberline {4.1.3}Inertia of Pendulums}{30}
+\contentsline {subsection}{\numberline {4.1.4}Center of Mass}{32}
+\contentsline {subsection}{\numberline {4.1.5}Motor}{33}
+\contentsline {section}{\numberline {4.2}Electronic Hardware}{33}
+\contentsline {subsection}{\numberline {4.2.1}System Description}{33}
+\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{34}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{35}
+\contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{36}
+\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{36}
+\contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{37}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Principle of Operation}{37}
+\contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{37}
+\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{38}
+\contentsline {subsubsection}{\numberline {4.2.5.1}Principle of Operation}{38}
+\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{38}
+\contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{39}
+\contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{40}
+\contentsline {subsection}{\numberline {4.2.6}Motor Driver}{41}
+\contentsline {subsection}{\numberline {4.2.7}Verification Tests}{42}
+\contentsline {subsubsection}{\numberline {4.2.7.1} PWM Duty Cycle to Motor Current}{42}
+\contentsline {chapter}{\chapternumberline {5}Software Design}{44}
+\contentsline {section}{\numberline {5.1}Software Requirements}{44}
+\contentsline {subsection}{\numberline {5.1.1}Communication}{44}
+\contentsline {subsection}{\numberline {5.1.2}Embedded Program}{45}
+\contentsline {subsection}{\numberline {5.1.3}Controller}{46}
+\contentsline {chapter}{\chapternumberline {6}Conclusion}{48}
+\contentsline {section}{\numberline {6.1}Summary}{48}
 \contentsline {section}{\numberline {6.2}Recommendation}{49}
-\contentsline {section}{\numberline {6.3}Outcome Assessment}{50}
-\contentsline {chapter}{Appendices}{51}
-\contentsline {appendix}{\chapternumberline {A}}{52}
-\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{52}
-\contentsline {section}{\numberline {A.2}Taylor Series Expansion Around Unstable Equilibrium Position}{54}
-\contentsline {section}{\numberline {A.3}Additional Simulation Results}{55}
-\contentsline {section}{\numberline {A.4}Electronic Design Schematic}{56}
-\contentsline {section}{\numberline {A.5}Communication Structure}{59}
-\contentsline {section}{\numberline {A.6}Techno-Economy Assessment}{60}
-\contentsline {subsection}{\numberline {A.6.1}Budget}{60}
-\contentsline {subsection}{\numberline {A.6.2}Planning}{60}
-\contentsline {subsection}{\numberline {A.6.3}Technical Impact}{61}
-\contentsline {subsection}{\numberline {A.6.4}Return on Investment}{62}
-\contentsline {subsection}{\numberline {A.6.5}Potential for Commercialisation}{63}
-\contentsline {section}{\numberline {A.7}Risk Analysis \& Safety Procedures}{64}
-\contentsline {chapter}{List of References}{67}
+\contentsline {chapter}{Appendices}{50}
+\contentsline {appendix}{\chapternumberline {A}}{51}
+\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{51}
+\contentsline {section}{\numberline {A.2}Taylor Series Expansion Around Unstable Equilibrium Position}{53}
+\contentsline {section}{\numberline {A.3}Electronic Design Schematic}{54}
+\contentsline {section}{\numberline {A.4}Communication Structure}{57}
+\contentsline {section}{\numberline {A.5}Techno-Economy Assessment}{58}
+\contentsline {subsection}{\numberline {A.5.1}Budget}{58}
+\contentsline {subsection}{\numberline {A.5.2}Planning}{58}
+\contentsline {subsection}{\numberline {A.5.3}Technical Impact}{60}
+\contentsline {subsection}{\numberline {A.5.4}Return on Investment}{60}
+\contentsline {subsection}{\numberline {A.5.5}Potential for Commercialisation}{61}
+\contentsline {section}{\numberline {A.6}Risk Analysis \& Safety Procedures}{62}
+\contentsline {chapter}{List of References}{65}

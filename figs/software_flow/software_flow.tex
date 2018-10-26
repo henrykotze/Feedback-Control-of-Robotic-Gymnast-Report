@@ -15,8 +15,8 @@
 \tikzstyle{line} = [draw, -latex']
 \tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=3cm,
     minimum height=2em]
-    
-\begin{tikzpicture}[node distance = 2cm,scale=1]
+    \centering
+\begin{tikzpicture}[node distance = 2cm]
     % Place nodes
     \node [block] (init_perip) {Initialise Peripherals};
     \node [block, below of=init_perip] (init_vars) {Initialise Variables};
@@ -47,21 +47,21 @@
     % Draw edges
     \path [line] (init_perip) -- (init_vars);
    	\path [line] (init_vars) -- (uart);
-    \path [line] (uart) -- node[near start]{no} (adc);
+    \path [line] (uart) -- node[near start,left]{no} (adc);
     \path [line] (adc) -- node [near start]{}(encoder);
-    \path [line] (encoder) -- node[near start] {no}(stream);
-    \path [line,] (uart) -- node[]{yes}(command_stuct);
-    \path [line,] (command_stuct) -- node[]{yes}(exec_command);
+    \path [line] (encoder) -- node[near start,left] {no}(stream);
+    \path [line,] (uart) -- node[above]{yes}(command_stuct);
+    \path [line,] (command_stuct) -- node[above]{yes}(exec_command);
     \path [line,] (adc) -- node[]{}(encoder);
     \path [line,] (encoder) -- node[]{}(stream);
-    \path [line,] (stream) -- node[]{yes}(stream_system_id);
-    \path [line,] (stream_system_id) -- node[]{no}(stream_experiments);
-    \path [line,] (stream_experiments) -- node[]{yes}(torque);
-    \path [line,] (encoder) -- node[]{yes}(encoder_op);
-    \path [line,] (command_stuct.south) |- node[near start]{no}(adc.east);
+    \path [line,] (stream) -- node[above]{yes}(stream_system_id);
+    \path [line,] (stream_system_id) -- node[above]{no}(stream_experiments);
+    \path [line,] (stream_experiments) -- node[right]{yes}(torque);
+    \path [line,] (encoder) -- node[above]{yes}(encoder_op);
+    \path [line,] (command_stuct.south) |- node[near start,right]{no}(adc.east);
     
     
-    \path [line,] (stream.south) -- node[near start]{no}([yshift=-1cm]stream.south) -- ([xshift=-2cm,yshift=-1cm]stream.south) |- (uart.west)  ;
+    \path [line,] (stream.south) -- node[near start,left]{no}([yshift=-1cm]stream.south) -- ([xshift=-2cm,yshift=-1cm]stream.south) |- (uart.west)  ;
     
   %  \path [line,dashed] (system) -- (init);
   %  \path [line,dashed] (system) |- (evaluate);

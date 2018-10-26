@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  24 OCT 2018 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6730 64-bit) (preloaded format=pdflatex 2018.7.12)  25 OCT 2018 19:23
 entering extended mode
 **./PCB.tex
 (PCB.tex
@@ -442,31 +442,33 @@ G,.JBIG2,.JB2,.eps]
 <PCB.jpg, id=4, 4047.12pt x 3035.34pt>
 File: PCB.jpg Graphic file (type jpg)
 <use PCB.jpg>
-Package pdftex.def Info: PCB.jpg  used on input line 7.
+Package pdftex.def Info: PCB.jpg  used on input line 14.
 (pdftex.def)             Requested size: 345.0pt x 258.71838pt.
 
-contour: Using real outline for `MCU' on input line 13.
-contour: Using real outline for `XOR, NOR Digital Circuit' on input line 19.
-contour: Using real outline for `UART' on input line 22.
-contour: Using real outline for `AND Digital Circuit' on input line 27.
-contour: Using real outline for `Op-Amp' on input line 31.
-contour: Using real outline for `Regulators' on input line 35.
-contour: Using real outline for `Motor Driver' on input line 39.
+contour: Using real outline for `\textbf {MCU}' on input line 20.
+contour: Using real outline for `\textbf {XOR, NOR Digital Circuit}' on input l
+ine 26.
+contour: Using real outline for `\textbf {UART}' on input line 29.
+contour: Using real outline for `\textbf {AND Digital Circuit}' on input line 3
+4.
+contour: Using real outline for `\textbf {Op-Amp}' on input line 38.
+contour: Using real outline for `\textbf {Regulators}' on input line 42.
+contour: Using real outline for `\textbf {Motor Driver}' on input line 46.
 [1
 
 {C:/Users/Henry/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./PCB.jpg>]
  (PCB.aux) ) 
 Here is how much of TeX's memory you used:
- 11768 strings out of 492973
- 239799 string characters out of 3135932
+ 11773 strings out of 492973
+ 239909 string characters out of 3135932
  278029 words of memory out of 3000000
- 15422 multiletter control sequences out of 15000+200000
- 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 15426 multiletter control sequences out of 15000+200000
+ 3948 words of font info for 15 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,7n,56p,420b,618s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
-fb>
-Output written on PCB.pdf (1 page, 1902370 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.
+pfb>
+Output written on PCB.pdf (1 page, 1901907 bytes).
 PDF statistics:
  14 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

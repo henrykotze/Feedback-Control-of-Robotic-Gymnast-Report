@@ -92,7 +92,7 @@ minimum height=1.5em,drop shadow]
 \path (r1)+(-4.05,0) \prog{1}{Serial Wire Debug};
 
 %Signal Conditioning
-\path (uC1.east)+(2.0,0) \sigcond{1}{MCP602 OpAmp};
+\path (uC1.east)+(2.0,0) \sigcond{1}{OPA342 OpAmp};
 
 %JK Flipflops
 \path (uC1.west)+(-2.0,-3.0) \encdig{1}{J-K Flipflop \& Nor's};

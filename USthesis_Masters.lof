@@ -1,9 +1,4 @@
 \babel@toc {english}{}
-\babel@toc {afrikaans}{}
-\babel@toc {english}{}
-\addvspace {10pt}
-\addvspace {10pt}
-\addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Overview of the Robotic Gymnast System}}{2}
@@ -11,37 +6,37 @@
 \addvspace {10pt}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Free Body Diagram of the Double Pendulum}}{9}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces MATLAB Simulink Model}}{11}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{12}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{13}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Initial Condition System Response while $ \phi = \SI {0}{rad} $ }}{13}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Initial Condition System Response while $ \theta = \SI {0}{rad} $ }}{14}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Comparison between Simulated and Measured Response with $\phi = \SI {0}{\radian }$ throughout}}{16}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison between Simulated and Measured Response with $\theta = \SI {0}{\radian }$ throughout}}{17}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Comparison between Simulated and Measured Response with $\theta = \SI {0}{\radian }$ throughout}}{16}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces State Space Representation of the Balancing Controller}}{18}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces State Space Representation of the Balancing Controller}}{17}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Balancing of the Robotic Gymnast}}{21}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Block Diagram of the Non-Linear Controller}}{22}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Swing-up of the Robotic Gymnast}}{25}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The Swing-Up \& Balancing of the Robotic Gymnast}}{26}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Block Diagram of the Non-Linear Controller}}{21}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Swing-up of the Robotic Gymnast}}{24}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces The Swing-Up \& Balancing of the Robotic Gymnast}}{25}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces PCB}}{29}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Model of Rotating Shaft as a Simplified Beam}}{30}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Simplified Drawing of Physical Model}}{32}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces PCB}}{35}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Electronic System Overview}}{36}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Simplified Model of a Potentiometer}}{38}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Unity Gain Amplifier Circuit}}{38}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{39}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{39}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{40}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces AND digital logic with inverter}}{41}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces AND Digital Logic Circuit Waveforms}}{41}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Simplified Circuit of Motor Feedback}}{42}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{43}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Mechanical Hardware}}{28}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Model of Rotating Shaft as a Simplified Beam}}{29}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Simplified Drawing of Physical Model}}{31}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces PCB}}{34}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Electronic System Overview}}{35}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Simplified Model of a Potentiometer}}{37}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Unity Gain Amplifier Circuit}}{37}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Digital Logic Circuit containing JK-Flipflops, XOR- and NOR Gates}}{38}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Waveform of the JK-Flipflop,XOR, and NOR Gate Circuit}}{38}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Logic Level Converter \& Inverter Circuit}}{39}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces AND digital logic with inverter}}{40}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces AND Digital Logic Circuit Waveforms}}{40}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Simplified Circuit of Motor Feedback}}{41}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Relationship between Duty-Cycle of PWM Signal and Current through Motor}}{42}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{46}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{46}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Embedded Software Flow}}{48}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Structure for Streaming Data during Experiments}}{45}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Data Structure for Sending Commands}}{45}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Embedded Software Flow}}{47}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{59}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Planned Gantt Chart of the Project}}{60}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Actual Gantt Chart of the Project}}{61}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Data Structure for Sending Commands}}{57}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Planned Gantt Chart of the Project}}{58}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Actual Gantt Chart of the Project}}{59}
