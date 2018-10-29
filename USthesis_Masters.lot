@@ -8,14 +8,14 @@
 \addvspace {10pt}
 \contentsline {table}{\numberline {3.1}{\ignorespaces Gain Constant used during Simulation}}{23}
 \addvspace {10pt}
-\contentsline {table}{\numberline {4.1}{\ignorespaces Stresses developed in Shaft}}{29}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Stresses Developed in Shaft}}{29}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Physical Model Paramaters}}{31}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Center of Mass for Each Pendulum from their Rotating Hinge}}{31}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Suppy Voltage's for the different components}}{35}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Center of Mass for Each Pendulum from their Rotating Hinge}}{32}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Suppy Voltage's for the Different Components}}{36}
 \contentsline {table}{\numberline {4.5}{\ignorespaces Values of Constants used in Equation (\ref {eq:duty2current})}}{42}
 \addvspace {10pt}
 \addvspace {10pt}
 \addvspace {10pt}
-\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of Communication Commands and their Effects}}{56}
-\contentsline {table}{\numberline {A.2}{\ignorespaces Categories of the Budget }}{57}
-\contentsline {table}{\numberline {A.3}{\ignorespaces Hours worked during the different phases of the project}}{58}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Categories of the Budget }}{50}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Hours worked during the different phases of the project}}{51}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Summary of Communication Commands and their Effects}}{63}

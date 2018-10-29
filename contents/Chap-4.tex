@@ -35,6 +35,8 @@ The stress analysis of the rotating shaft is presented to provide the reader con
 
 The shaft was analysed as a 3 point supported beam shown in Figure \ref{fig:supp_beam} with a constant diameter throughout, using the smallest diameter in the design. The forces acting on the beam is the torque $T$ due to the rotating pendulums, and the normal force $F$ due the centripetal force of rotation and weight of the pendulums.\\
 
+The normal force $F$ was selected as $\SI{25}{\newton}$ and the torque as $T = \SI{0.5}{Nm}$. These values were selected based of the simulation results that represent the worst conditions on the previous model.
+
 
 \begin{figure}[h]
 	\centering
@@ -43,46 +45,46 @@ The shaft was analysed as a 3 point supported beam shown in Figure \ref{fig:supp
 	\label{fig:supp_beam}
 \end{figure}
 
-The beam is a static undetermined beam and was solved using the principle of superposition and results in the reaction forces shown in equations (\ref{eq:reactionForce1}), (\ref{eq:reactionForce2}) and (\ref{eq:reactionForce3}).
+The beam is a static undetermined and was solved using the principle of superposition \citep{shigley1}. This results in the reaction forces shown in equations (\ref{eq:reactionForce1}), (\ref{eq:reactionForce2}) and (\ref{eq:reactionForce3}). 
 
 \begin{equation} \label{eq:reactionForce1}
-R_{1} = \SI{-237.7941}{\newton}
+R_{1} = \SI{-17.045}{\newton}
 \end{equation}
 \begin{equation} \label{eq:reactionForce2}
-R_{2} = \frac{ 8Fl_{1}[l_{3}^2 - l_{2}^2] }{l_{3}[4l_{2}^2-3l_{3}^2] } = \SI{241.5}{\newton}
+R_{2} = \frac{ 8Fl_{1}[l_{3}^2 - l_{2}^2] }{l_{3}[4l_{2}^2-3l_{3}^2] } = \SI{20.45}{\newton}
 \end{equation}
 \begin{equation} \label{eq:reactionForce3}
-R_{3} = \SI{122.29}{\newton}
+R_{3} = \SI{21.59}{\newton}
 \end{equation}
 
-The maximum bending stress occurs at $x=\SI{0.085}{\meter}$ and the maximum torsion stress at $x=\SI{0.14}{\meter}$. The safety factor of yielding will be determined at these two positions.\\
+The maximum bending stress occurs at $x=\SI{0.085}{\meter}$ and the maximum torsion stress at $x=\SI{0}{\meter}$. The safety factor of yielding will be determined at these two positions.\\
 
-Equations (\ref{eq:torsionForce}) and (\ref{eq:axialForce}) are used to determine the maximum stresses at these two points and using the Mohor circle the principle stresses are determined.  These stresses are shown in Table \ref{table:stresses}.\\
+Equations (\ref{eq:torsionForce}) and (\ref{eq:axialForce}) are used to determine the maximum stresses at these two points and using the Mohr circle the principle stresses are determined.  These stresses are shown in Table \ref{table:stresses}.\\
 
 
 \begin{table}[]
 	\centering
 	\begin{tabular}{|c|c|c|}
 		\hline
-		Stresses & $x = \SI{0.085}{\meter}$ & $x=\SI{0.14}{\meter}$ \\
+		Stresses & $x = \SI{0}{\meter}$ & $x=\SI{0.085}{\meter}$ \\
 		\hline
 		\hline
-		$\sigma_{f_{1}}$ & \SI{5}{} & \\
+		$\sigma_{f_{1}}$ & $\SI{300}{kPa}$ & $\SI{282}{kPa}$ \\
 		\hline
-		$\sigma_{f_{2}}$ & \SI{3.3}{}& \\
+		$\sigma_{f_{2}}$ & $\SI{0}{kPa}$& $\SI{-245}{kPa}$ \\
 		\hline
-		$\sigma_{f_{3}}$ & \SI{3.3}{}& \\
+		$\sigma_{f_{3}}$ & $\SI{0}{Pa}$& $\SI{0}{Pa}$ \\
 		\hline
-		$\tau_{f}$ & \SI{12}{}&  \\
+		$\tau_{f}$ & $\SI{300}{kPa}$&$\SI{263}{kPa}$  \\
 		\hline
-		$M_{max}$ & \SI{12}{}& \\
+		$M_{max}$ & $\SI{0}{Nm}$&$\SI{-0.2899}{Nm}$ \\
 		\hline
 	\end{tabular}
-	\caption{Stresses developed in Shaft}
+	\caption{Stresses Developed in Shaft}
 	\label{table:stresses}
 \end{table}
 
-The conservative Von Mises theory shown in equation (\ref{eq:vonMises}) was used to determine the safety factor on static yielding, where $S_{y}$ is the yield stress of extruded aluminium. A safety factor on static yielding of 2 was determined. This is acceptable and indicates the shaft is capable of withstanding the load.\\
+The conservative Von Mises theory shown in equation (\ref{eq:vonMises}) was used to determine the safety factor on static yielding, where $S_{y}$ is the yield stress of extruded aluminium and is $\SI{290}{MPa}$. The minimum safety factor on static yielding occurred at $x=\SI{0.085}{\meter}$ and was calculated as 634. This shows the loads will be no problem for the shaft.\\
 
 Fatigue due to cyclic loads were ignored due the shaft not rotating more than a 1000 times and the safety factor on static yielding  on a conservative model is sufficient.
 
@@ -126,7 +128,7 @@ During the simulation it was noticed that the ratio between the unactuated and a
 	\centering
 	\begin{tabular}{|c|c|c|c|}
 		\hline
-		Non-Actuated Pendulum& Value & Actuated Pendulum & Value \\
+		Unactuated Pendulum& Value & Actuated Pendulum & Value \\
 		\hline
 		\hline
 		$m_{\text{cyl}}$ & \SI{0.1443}{\kilogram} & $m_{\text{iron}}$ & \SI{0.257}{\kilogram} \\
@@ -181,10 +183,16 @@ The motor terminal connection is connected directly to the PCB of the electronic
 
 \section{Electronic Hardware}
 \label{sec:electronic_hardware}
+\begin{figure}[h]
+	\centering
+	\includegraphics{./figs/elec_sys/elec.pdf}
+	\caption{Electronic Hardware Setup}
+	\label{fig:elec_sys}
+\end{figure}
 %WHAT you are going to present in this chapter/section
 %WHY you are presenting it, and
 %HOW you are going to present it
-The electronic hardware was a crucial component for the successful implementation of the robotic gymnast. The electronic design provided the means to determine the system characteristics and verification of the simulated model. It will be presented by discussing the various components implemented to achieve the results in this report.
+The electronic hardware shown in Figure \ref{fig:elec_sys} was a crucial component for the successful implementation of the robotic gymnast. The electronic design provided the means to determine the system characteristics and verification of the simulated model. It will be presented by discussing the various components implemented to achieve the results in this report.
 
 \subsection{System Description}
 
@@ -271,7 +279,7 @@ The various components used in the electronic design required different supply v
 		Motor Driver & \SI{12}{} \\
 		\hline
 	\end{tabular}
-	\caption{Suppy Voltage's for the different components}
+	\caption{Suppy Voltage's for the Different Components}
 	\label{table:supplyVoltage}
 \end{table}
 
@@ -343,7 +351,7 @@ The resolution of the encoder is 16 lines per revolution per channel, equalling 
  \begin{figure}[h]
  	\centering
  	\input{"./figs/AND_gates/ANDgates.tikz"}
- 	\caption{AND digital logic with inverter}
+ 	\caption{AND Digital Logic with Inverter}
  	\label{fig:andCircuit}
  \end{figure}
  

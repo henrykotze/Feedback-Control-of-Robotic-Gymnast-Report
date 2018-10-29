@@ -38,23 +38,23 @@
 \contentsline {section}{\numberline {4.1}Mechanical Hardware}{26}
 \contentsline {subsection}{\numberline {4.1.1}Assembly}{27}
 \contentsline {subsection}{\numberline {4.1.2}Structural Force Analysis}{28}
-\contentsline {subsection}{\numberline {4.1.3}Inertia of Pendulums}{29}
+\contentsline {subsection}{\numberline {4.1.3}Inertia of Pendulums}{30}
 \contentsline {subsection}{\numberline {4.1.4}Center of Mass}{31}
 \contentsline {subsection}{\numberline {4.1.5}Motor}{32}
 \contentsline {section}{\numberline {4.2}Electronic Hardware}{32}
 \contentsline {subsection}{\numberline {4.2.1}System Description}{32}
-\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{33}
+\contentsline {subsection}{\numberline {4.2.2}Microcontroller}{34}
 \contentsline {subsubsection}{\numberline {4.2.2.1}Programming / Debug Interface}{35}
 \contentsline {subsubsection}{\numberline {4.2.2.2}PC UART Interface }{35}
-\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{35}
+\contentsline {subsection}{\numberline {4.2.3}Voltage Regulation}{36}
 \contentsline {subsection}{\numberline {4.2.4}Potentiometer Sensor}{36}
 \contentsline {subsubsection}{\numberline {4.2.4.1}Principle of Operation}{36}
 \contentsline {subsubsection}{\numberline {4.2.4.2}Interface}{36}
-\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{37}
-\contentsline {subsubsection}{\numberline {4.2.5.1}Principle of Operation}{37}
-\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{37}
-\contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{38}
-\contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{39}
+\contentsline {subsection}{\numberline {4.2.5}Magnetic Encoder}{38}
+\contentsline {subsubsection}{\numberline {4.2.5.1}Principle of Operation}{38}
+\contentsline {subsubsection}{\numberline {4.2.5.2}Digital Interface}{38}
+\contentsline {subsubsection}{\numberline {4.2.5.3}Logic Level Converters}{39}
+\contentsline {subsubsection}{\numberline {4.2.5.4}AND Digital Circuit}{40}
 \contentsline {subsection}{\numberline {4.2.6}Motor Driver}{40}
 \contentsline {subsection}{\numberline {4.2.7}Verification Tests}{41}
 \contentsline {subsubsection}{\numberline {4.2.7.1} PWM Duty Cycle to Motor Current}{41}
@@ -68,15 +68,15 @@
 \contentsline {section}{\numberline {6.2}Recommendation}{48}
 \contentsline {chapter}{Appendices}{49}
 \contentsline {appendix}{\chapternumberline {A}}{50}
-\contentsline {section}{\numberline {A.1}Derivation of the Mathematical Model}{50}
-\contentsline {section}{\numberline {A.2}Taylor Series Expansion Around Unstable Equilibrium Position}{52}
-\contentsline {section}{\numberline {A.3}Electronic Design Schematic}{53}
-\contentsline {section}{\numberline {A.4}Communication Structure}{56}
-\contentsline {section}{\numberline {A.5}Techno-Economy Assessment}{57}
-\contentsline {subsection}{\numberline {A.5.1}Budget}{57}
-\contentsline {subsection}{\numberline {A.5.2}Planning}{57}
-\contentsline {subsection}{\numberline {A.5.3}Technical Impact}{59}
-\contentsline {subsection}{\numberline {A.5.4}Return on Investment}{59}
-\contentsline {subsection}{\numberline {A.5.5}Potential for Commercialisation}{60}
-\contentsline {section}{\numberline {A.6}Risk Analysis \& Safety Procedures}{61}
+\contentsline {section}{\numberline {A.1}Techno-Economy Assessment}{50}
+\contentsline {subsection}{\numberline {A.1.1}Budget}{50}
+\contentsline {subsection}{\numberline {A.1.2}Planning}{51}
+\contentsline {subsection}{\numberline {A.1.3}Technical Impact}{52}
+\contentsline {subsection}{\numberline {A.1.4}Return on Investment}{53}
+\contentsline {subsection}{\numberline {A.1.5}Potential for Commercialisation}{53}
+\contentsline {section}{\numberline {A.2}Risk Analysis \& Safety Procedures}{54}
+\contentsline {section}{\numberline {A.3}Derivation of the Mathematical Model}{57}
+\contentsline {section}{\numberline {A.4}Taylor Series Expansion Around Unstable Equilibrium Position}{59}
+\contentsline {section}{\numberline {A.5}Electronic Design Schematic}{60}
+\contentsline {section}{\numberline {A.6}Communication Structure}{63}
 \contentsline {chapter}{List of References}{64}

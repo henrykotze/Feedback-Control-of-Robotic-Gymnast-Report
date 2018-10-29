@@ -15,9 +15,9 @@ In this report a feedback control system for a robotic gymnast that is able to s
 	\label{fig:overview}
 \end{figure}
 
-Figure \ref{fig:overview} provides an overview of the robotic gymnast system to create a mental picture for the variables and concepts used throughout the report. There are 2 pendulums that are attach together with a hinge. At this hinge there is a torque being applied by a motor to the actuated pendulum. The entire system rotates around the fixed hinge at the top to which the unactuated pendulum is connected. The system is describe using two independent parameters, $\theta$ and $\phi$ which describes the entire system.\\
+Figure \ref{fig:overview} provides an overview of the robotic gymnast system to create a mental picture for the variables and concepts used throughout the report. There are 2 pendulums that are attach together with a hinge. At this hinge there is a torque being applied by a motor to the actuated pendulum. The entire system rotates around the fixed hinge at the top to which the unactuated pendulum is connected. The system is describe using two independent parameters, $\theta$ and $\phi$. $\theta$ described the response of the unactuated pendulum whereas $\phi$ describes the behaviour of the actuated pendulum relative to $\theta$.\\
 
-The goal is to use the feedback of the independent parameters to apply a torque to the actuated pendulum to swing the gymnast from the hanging position and balance in the inverted position. This is accomplished by designing a microcontroller to interface with sensors to provide information about the independent parameters and implement the control laws for the balancing and swinging in software.\\
+The goal is to use the feedback of the independent parameters to apply a torque to the actuated pendulum to swing the gymnast from the hanging position and balance in the inverted position. This is accomplished by using a microcontroller to interface with sensors to provide information about the independent parameters and implement the control laws in software.\\
 
 
 \section{Literature Study}
